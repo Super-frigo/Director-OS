@@ -1,0 +1,130 @@
+# Director OS Core Project Schema
+# Version: 1.0
+#
+# This schema defines the canonical representation of a film project.
+#
+# It represents:
+#   - Creative intent
+#   - Narrative structure
+#   - Visual language
+#   - Production requirements
+#
+# It does NOT represent:
+#   - AI model prompts
+#   - Platform parameters
+#   - Vendor-specific settings
+#
+# Those responsibilities belong to Engine and Compiler layers.
+#
+# ADR Compliance: ADR-001, ADR-006
+
+project:
+  schema_version: "1.0"
+
+  # ---------------------------------------------------------------
+  # 1. Metadata
+  # Purpose: Identify and describe the project.
+  # ---------------------------------------------------------------
+  metadata:
+    title:                      # string
+    author:                     # string
+    description:                # string
+    created:                    # datetime
+
+  # ---------------------------------------------------------------
+  # 2. Story Model
+  # Purpose: Represent narrative intention.
+  # ---------------------------------------------------------------
+  story:
+    premise:                    # string
+    theme:                      # [string]
+    genre:                      # [string]
+    structure:
+      acts:                     # list
+        - id:                   # string (act_1, act_2, act_3, ...)
+          summary:              # string
+
+  # ---------------------------------------------------------------
+  # 3. World Model
+  # Purpose: Describe the film universe.
+  # ---------------------------------------------------------------
+  world:
+    era:                        # string
+    locations:
+      - id:                     # string (unique identifier)
+        name:                   # string
+        description:            # string
+        atmosphere:             # string
+        visual_identity:        # string
+
+  # ---------------------------------------------------------------
+  # 4. Character Model
+  # Purpose: Define persistent character identity.
+  # Note: Describes identity, NOT model prompts.
+  # ---------------------------------------------------------------
+  characters:
+    - id:                       # string (unique identifier)
+      name:                     # string
+      role:                     # string (protagonist, antagonist, supporting, ...)
+      personality:              # [string]
+      motivation:
+        primary:                # string
+      relationships:            # list (references to other character ids)
+      visual_identity:
+        age_range:              # string
+        appearance:             # string
+        clothing:               # string
+
+  # ---------------------------------------------------------------
+  # 5. Scene Model
+  # Purpose: Represent cinematic units.
+  # ---------------------------------------------------------------
+  scenes:
+    - id:                       # string (unique identifier)
+      title:                    # string
+      location:                 # string (references world.locations[].id)
+      time:                     # string
+      emotion:                  # string
+      narrative_goal:           # string
+      characters:               # [string] (references characters[].id)
+      shots:                    # list of shot references or inline shot definitions
+
+  # ---------------------------------------------------------------
+  # 6. Shot Model
+  # Purpose: Represent camera and cinematic intention.
+  # Note: Describes cinematic intent, NOT platform-specific parameters.
+  # ---------------------------------------------------------------
+  shots:
+    - id:                       # string (unique identifier)
+      purpose:                  # string
+      composition:
+        framing:                # string (wide, medium, close_up, extreme_close_up, ...)
+      camera:
+        movement:               # string (static, slow_push, dolly, track, crane, handheld, ...)
+        perspective:            # string (observer, subjective, over_shoulder, ...)
+      lighting:
+        mood:                   # string
+      sound:                    # string
+      duration:
+        approximate:            # string (e.g. "8_seconds")
+
+  # ---------------------------------------------------------------
+  # 7. Visual Language
+  # Purpose: Define the overall cinematic identity.
+  # ---------------------------------------------------------------
+  visual_language:
+    style:                      # string
+    color:
+      palette:                  # [string]
+    lighting:                   # string
+    camera_philosophy:          # string
+    references:                 # [string]
+
+  # ---------------------------------------------------------------
+  # 8. Production Intent
+  # Purpose: Represent high-level execution goals.
+  # ---------------------------------------------------------------
+  production_intent:
+    objectives:                 # [string]
+    priorities:                 # dict
+    constraints:                # [string]
