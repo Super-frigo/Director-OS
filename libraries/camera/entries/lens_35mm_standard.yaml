@@ -1,0 +1,53 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: lens_35mm_standard
+    name: 35mm — The Standard
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: "Field of view approximating human natural perception. Minimal distortion. The most versatile storytelling lens."
+    principles:
+      - "Wide enough to include context, tight enough for intimacy"
+      - "No noticeable compression or expansion of space"
+      - "Neutral perspective that does not draw attention to itself"
+    emotional_effects:
+      - grounded
+      - objective
+      - documentary
+    techniques:
+      - "Use for dialogue scenes to maintain spatial honesty"
+      - "Default lens when narrative should speak, not the camera"
+      - "Works equally well for MS and full-body framing"
+    constraints:
+      - "Not ideal for dramatic compression (use 85mm+)"
+      - "Not ideal for extreme environmental context (use 24mm-)"
+  applicability:
+    emotions:
+      - neutral
+      - contemplative
+      - grounded
+    genres:
+      - drama
+      - documentary
+      - noir
+      - realism
+    keywords:
+      - conversation
+      - observation
+      - everyday
+  engine_guidance:
+    when_to_use: "Default storytelling scenarios where camera should not impose a strong subjective feeling"
+    recommended_actions:
+      - "Set as primary lens for dialogue-heavy scenes"
+      - "Combine with EYE_LEVEL angle for maximum neutrality"
+    avoid:
+      - "Scenes requiring psychological distortion"
+      - "Action sequences needing spatial exaggeration"
+  relationships:
+    related:
+      - lens_50mm_portrait
+      - lens_24mm_wide
+    conflicts:
+      - lens_85mm_compression
+  version: "1.0"
