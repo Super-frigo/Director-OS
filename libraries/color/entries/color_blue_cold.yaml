@@ -1,0 +1,60 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: color_blue_cold
+    name: Blue — Cold & Distance
+    author: Director OS
+  category: visual_style
+  knowledge:
+    concept: "The color of cold, distance, technology, and emotional detachment. In cinema, blue often represents isolation, night, or the absence of humanity."
+    principles:
+      - "Cool tones push elements visually to the background"
+      - "Blue light signifies night even in well-lit scenes"
+      - "Increasing blue saturation intensifies emotional coldness"
+      - "Mixed with green = sickly/artificial; mixed with cyan = technological"
+    emotional_effects:
+      - coldness
+      - isolation
+      - melancholy
+      - detachment
+      - technology
+    techniques:
+      - "Color grade shadows toward blue for night scenes"
+      - "Blue practical lights (neon, monitor glow) for technological environments"
+      - "Blue backlight on skin creates separation and coldness simultaneously"
+      - "Full blue monochrome for post-human or digital spaces"
+    constraints:
+      - "Pure blue on skin tones reads as unrealistic or horror"
+      - "Excessive blue suppresses emotional warmth — audience fatigue"
+  applicability:
+    emotions:
+      - sadness
+      - loneliness
+      - coldness
+      - detachment
+    genres:
+      - science_fiction
+      - thriller
+      - noir
+      - horror
+    keywords:
+      - night
+      - cold
+      - technology
+      - isolation
+  engine_guidance:
+    when_to_use: "Scene requires emotional distance, technological atmosphere, or nighttime realism"
+    recommended_actions:
+      - "Shift shadow tones toward blue for melancholic night scenes"
+      - "Use cyan-blue for futuristic or digital environments"
+    avoid:
+      - "Romantic or warm reunion scenes"
+      - "Scenes requiring audience emotional warmth"
+  relationships:
+    related:
+      - color_teal_orange
+      - color_green_sick
+    conflicts:
+      - color_yellow_warm
+      - color_red_passion
+  version: "1.0"

@@ -1,0 +1,60 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: color_green_sick
+    name: Green — Envy, Sickness & The Artificial
+    author: Director OS
+  category: visual_style
+  knowledge:
+    concept: "The most complex emotional color. Green signals nature and life at its purest, but also sickness, envy, artificiality, and the uncanny in cinema."
+    principles:
+      - "Green light on skin reads as sickness or death"
+      - "Underground/night-vision green signals surveillance or hidden worlds"
+      - "Desaturated green for institutional coldness (hospitals, offices)"
+      - "Vibrant green for lush natural environments or artificial digital spaces"
+    emotional_effects:
+      - sickness
+      - envy
+      - artificial
+      - nature
+      - uncanny
+    techniques:
+      - "Green fluorescent practicals for institutional horror"
+      - "Green tint for underwater or underground sequences"
+      - "Matrix green for digital/virtual reality spaces"
+      - "Desaturated muted green for military utilitarian environments"
+    constraints:
+      - "Green skin tones are almost always negative — use with clear intent"
+      - "Excessive green lacks emotional range — needs contrast color"
+      - "Natural green (forest) and sickly green (decay) are opposites"
+  applicability:
+    emotions:
+      - sickness
+      - envy
+      - unease
+      - artificial
+    genres:
+      - horror
+      - science_fiction
+      - thriller
+    keywords:
+      - sickness
+      - artificial
+      - surveillance
+      - nature
+  engine_guidance:
+    when_to_use: "Scene requires unease, artificiality, institutional coldness, or the literal color of nature"
+    recommended_actions:
+      - "Use green fluorescents for institutional horror environments"
+      - "Desaturated green for utilitarian military or workspace settings"
+    avoid:
+      - "Romantic scenes (unless specifically sickly or uneasy)"
+      - "Warm human-centric narratives"
+  relationships:
+    related:
+      - color_blue_cold
+      - color_teal_orange
+    conflicts:
+      - color_red_passion
+      - color_yellow_warm
+  version: "1.0"
