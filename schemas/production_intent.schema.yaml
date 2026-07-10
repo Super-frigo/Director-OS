@@ -1,15 +1,25 @@
 # Director OS Production Intent Schema
 # Version: 1.0
 #
-# This schema defines the output contract of the Engine Layer.
+# Production Intent defines the output contract of the Engine Layer.
 #
-# ProductionIntent describes:
-#   "What should be created"
+# It represents the structured production decisions required to realize
+# a creative intention.
 #
-# It does NOT describe:
-#   "How a specific AI model should receive it"
+# Production Intent is:
+#   - Platform independent
+#   - Model independent
+#   - Human understandable
+#   - Compiler compatible
 #
-# Those platform-specific translations belong to Compiler Layer.
+# Production Intent is NOT:
+#   - AI prompt
+#   - Model parameter
+#   - API request
+#   - Rendering configuration
+#
+# Architecture:
+#   Project  ──►  Engine  ──►  Production Intent  ──►  Compiler  ──►  AI Model
 #
 # ADR Compliance: ADR-003 (Engine Layer)
 
@@ -17,55 +27,118 @@ production_intent:
   schema_version: "1.0"
 
   # ---------------------------------------------------------------
-  # Scene Reference
-  # Links back to the source scene in the Project.
+  # 1. Metadata
+  # Purpose: Identify this production decision.
   # ---------------------------------------------------------------
-  scene_id:                     # string (references project.scenes[].id)
+  metadata:
+    id:                         # string
+    source_project:             # string
+    engine_version:             # string
+    created:                    # datetime
 
   # ---------------------------------------------------------------
-  # Creative Goal
-  # High-level creative intention for this scene/shot.
+  # 2. Scene Reference
+  # Production Intent must always reference its origin.
   # ---------------------------------------------------------------
-  creative_goal:                # string
+  scene:
+    scene_id:                   # string (references project.scenes[].id)
+    shot_id:                    # string (references project.shots[].id)
 
   # ---------------------------------------------------------------
-  # Visual Direction
-  # Atmospheric and compositional direction.
+  # 3. Creative Goal
+  # Purpose: Define why this shot or scene exists.
+  # ---------------------------------------------------------------
+  creative_goal:
+    primary:                    # string
+    emotional_target:           # [string]
+
+  # ---------------------------------------------------------------
+  # 4. Narrative Intent
+  # Purpose: Maintain storytelling purpose.
+  # ---------------------------------------------------------------
+  narrative_intent:
+    story_function:             # string
+    information_delivery:       # string
+    dramatic_purpose:           # string
+
+  # ---------------------------------------------------------------
+  # 5. Visual Direction
+  # Purpose: Define visual execution intent.
+  # Note: Describe intent, NOT prompt text.
   # ---------------------------------------------------------------
   visual_direction:
-    atmosphere:                 # [string]
+    style:                      # string
+    mood:                       # [string]
     composition:                # string
+    color:                      # string
+    texture:                    # string
+    atmosphere:                 # string
 
   # ---------------------------------------------------------------
-  # Camera Strategy
-  # Cinematographic intent for this scene/shot.
+  # 6. Camera Strategy
+  # Purpose: Describe camera language.
   # ---------------------------------------------------------------
   camera_strategy:
-    movement:                   # string
-    framing:                    # string
-    perspective:                # string
-    lens_suggestion:            # string
+    framing:                    # string (wide, medium, close_up, ...)
+    movement:                   # string (static, slow_push, tracking, ...)
+    perspective:                # string (observer, subjective, ...)
+    lens_character:             # string
+    focus_behavior:             # string
 
   # ---------------------------------------------------------------
-  # Character Requirements
-  # What must be preserved about characters.
+  # 7. Character Direction
+  # Purpose: Preserve character performance.
   # ---------------------------------------------------------------
-  character_requirements:
-    maintain:                   # [string] (what to preserve)
-    state_changes:              # [string] (any state updates)
+  character_direction:
+    characters:
+      - id:                     # string (references project.characters[].id)
+        performance:            # string
+        emotional_state:        # string
+        action:                 # string
 
   # ---------------------------------------------------------------
-  # Consistency Requirements
-  # Cross-scene continuity constraints.
+  # 8. Environment Direction
+  # Purpose: Describe environment execution.
+  # ---------------------------------------------------------------
+  environment_direction:
+    location:                   # string (references project.world.locations[].id)
+    atmosphere:                 # [string]
+    important_elements:         # [string]
+    environmental_motion:       # string
+
+  # ---------------------------------------------------------------
+  # 9. Temporal Design
+  # Purpose: Control time behavior.
+  # ---------------------------------------------------------------
+  temporal_design:
+    pacing:                     # string
+    motion_style:               # string
+    duration:                   # string (e.g. "8_seconds")
+
+  # ---------------------------------------------------------------
+  # 10. Audio Intent
+  # Purpose: Describe sound intention (creative intent only).
+  # ---------------------------------------------------------------
+  audio_intent:
+    atmosphere:                 # string
+    important_sounds:           # [string]
+    emotional_role:             # string
+
+  # ---------------------------------------------------------------
+  # 11. Consistency Requirements
+  # Purpose: Maintain continuity.
   # ---------------------------------------------------------------
   consistency_requirements:
-    continuity_rules:           # [string]
-    references:                 # [string] (scene ids to maintain consistency with)
+    characters:                 # string
+    locations:                  # string
+    visual_style:               # string
+    previous_events:            # string
 
   # ---------------------------------------------------------------
-  # Constraints
-  # Explicit boundaries for execution.
+  # 12. Constraints
+  # Purpose: Define restrictions and boundaries.
   # ---------------------------------------------------------------
   constraints:
+    must:                       # [string]
     avoid:                      # [string]
-    required:                   # [string]
+    limitations:                # [string]
