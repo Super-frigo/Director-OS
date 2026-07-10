@@ -1,0 +1,108 @@
+# Director OS Library Schema
+# Version: 1.0
+#
+# Library Schema defines the structure of reusable creative knowledge
+# inside Director OS.
+#
+# A Library stores domain knowledge that can be retrieved and composed
+# by the Engine Layer.
+#
+# Library knowledge is:
+#   - Reusable
+#   - Structured
+#   - Human understandable
+#   - Machine interpretable
+#
+# Library knowledge is NOT:
+#   - Project data
+#   - AI prompts
+#   - Model parameters
+#   - Temporary decisions
+#
+# ADR Compliance: ADR-004 (Library Driven Knowledge System)
+
+library:
+  schema_version: "1.0"
+
+  # ---------------------------------------------------------------
+  # 1. Metadata
+  # Purpose: Identify knowledge unit.
+  # ---------------------------------------------------------------
+  metadata:
+    id:                         # string (unique identifier)
+    name:                       # string
+    author:                     # string
+    created:                    # datetime
+    updated:                    # datetime
+
+  # ---------------------------------------------------------------
+  # 2. Category
+  # Purpose: Define knowledge domain.
+  # Supported: cinematography, storytelling, character,
+  #            visual_style, genre, production, sound, editing,
+  #            model_capability
+  # ---------------------------------------------------------------
+  category:                     # string
+
+  # ---------------------------------------------------------------
+  # 3. Knowledge
+  # Purpose: The actual creative knowledge (core of Library).
+  # ---------------------------------------------------------------
+  knowledge:
+    concept:                    # string
+    principles:                 # [string]
+    emotional_effects:          # [string]
+    techniques:                 # [string]
+    constraints:                # [string]
+
+  # ---------------------------------------------------------------
+  # 4. Applicability
+  # Purpose: Define when this knowledge should be used.
+  # ---------------------------------------------------------------
+  applicability:
+    scenes:                     # [string]
+    emotions:                   # [string]
+    genres:                     # [string]
+    keywords:                   # [string]
+    conditions:                 # [string]
+
+  # ---------------------------------------------------------------
+  # 5. Engine Guidance
+  # Purpose: Provide reasoning hints for Engine.
+  # Note: This guides Engine reasoning, NOT AI model prompts.
+  # ---------------------------------------------------------------
+  engine_guidance:
+    when_to_use:                # string
+    recommended_actions:        # [string]
+    avoid:                      # [string]
+
+  # ---------------------------------------------------------------
+  # 6. Relationships
+  # Purpose: Connect knowledge units.
+  # ---------------------------------------------------------------
+  relationships:
+    related:                    # [string] (ids)
+    conflicts:                  # [string] (ids)
+    extensions:                 # [string] (ids)
+
+  # ---------------------------------------------------------------
+  # 7. Examples
+  # Purpose: Provide references for understanding.
+  # ---------------------------------------------------------------
+  examples:
+    successful:                 # [string]
+    failure:                    # [string]
+
+  # ---------------------------------------------------------------
+  # 8. References
+  # Purpose: Record knowledge origin.
+  # ---------------------------------------------------------------
+  references:
+    sources:                    # [string]
+    inspirations:               # [string]
+
+  # ---------------------------------------------------------------
+  # 9. Version
+  # Purpose: Track knowledge evolution.
+  # ---------------------------------------------------------------
+  version:                      # string

@@ -6,6 +6,7 @@
 |-------------------------------|---------|----------|
 | project.schema.yaml           | 1.0     | Accepted |
 | production_intent.schema.yaml | 1.0     | Accepted |
+| library.schema.yaml           | 1.0     | Accepted |
 | execution_package.schema.yaml | 1.0     | Accepted |
 
 ## Purpose
@@ -15,7 +16,7 @@ All YAML schemas define the canonical data representation used across Director O
 ## Pipeline
 
 ```
-project.schema.yaml
+project.schema.yaml  (Project Layer)
         |
         v
 production_intent.schema.yaml  (Engine Output)
@@ -27,9 +28,12 @@ execution_package.schema.yaml  (Compiler Output)
 AI Model
 ```
 
+Library (`library.schema.yaml`) is queried by Engine during interpretation and is not part of the linear pipeline.
+
 ## Design Principles
 
 - **Project owns meaning** — "What is this film?"
-- **Engine owns interpretation** — "How should this film be realized?"
+- **Library owns knowledge** — "What is known about filmmaking?"
+- **Engine owns interpretation** — "Which knowledge applies here?"
 - **Compiler owns translation** — "How does this model understand it?"
 - **Review owns evaluation** — "Does the result match the intention?"
