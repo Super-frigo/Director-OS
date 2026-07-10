@@ -1,0 +1,71 @@
+# Director OS Production Intent Schema
+# Version: 1.0
+#
+# This schema defines the output contract of the Engine Layer.
+#
+# ProductionIntent describes:
+#   "What should be created"
+#
+# It does NOT describe:
+#   "How a specific AI model should receive it"
+#
+# Those platform-specific translations belong to Compiler Layer.
+#
+# ADR Compliance: ADR-003 (Engine Layer)
+
+production_intent:
+  schema_version: "1.0"
+
+  # ---------------------------------------------------------------
+  # Scene Reference
+  # Links back to the source scene in the Project.
+  # ---------------------------------------------------------------
+  scene_id:                     # string (references project.scenes[].id)
+
+  # ---------------------------------------------------------------
+  # Creative Goal
+  # High-level creative intention for this scene/shot.
+  # ---------------------------------------------------------------
+  creative_goal:                # string
+
+  # ---------------------------------------------------------------
+  # Visual Direction
+  # Atmospheric and compositional direction.
+  # ---------------------------------------------------------------
+  visual_direction:
+    atmosphere:                 # [string]
+    composition:                # string
+
+  # ---------------------------------------------------------------
+  # Camera Strategy
+  # Cinematographic intent for this scene/shot.
+  # ---------------------------------------------------------------
+  camera_strategy:
+    movement:                   # string
+    framing:                    # string
+    perspective:                # string
+    lens_suggestion:            # string
+
+  # ---------------------------------------------------------------
+  # Character Requirements
+  # What must be preserved about characters.
+  # ---------------------------------------------------------------
+  character_requirements:
+    maintain:                   # [string] (what to preserve)
+    state_changes:              # [string] (any state updates)
+
+  # ---------------------------------------------------------------
+  # Consistency Requirements
+  # Cross-scene continuity constraints.
+  # ---------------------------------------------------------------
+  consistency_requirements:
+    continuity_rules:           # [string]
+    references:                 # [string] (scene ids to maintain consistency with)
+
+  # ---------------------------------------------------------------
+  # Constraints
+  # Explicit boundaries for execution.
+  # ---------------------------------------------------------------
+  constraints:
+    avoid:                      # [string]
+    required:                   # [string]

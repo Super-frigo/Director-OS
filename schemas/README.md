@@ -2,9 +2,10 @@
 
 ## Schemas
 
-| File                  | Version | Status   |
-|-----------------------|---------|----------|
-| project.schema.yaml   | 1.0     | Accepted |
+| File                          | Version | Status   |
+|-------------------------------|---------|----------|
+| project.schema.yaml           | 1.0     | Accepted |
+| production_intent.schema.yaml | 1.0     | Accepted |
 
 ## Purpose
 
