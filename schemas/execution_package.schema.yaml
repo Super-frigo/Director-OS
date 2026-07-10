@@ -1,0 +1,63 @@
+# Director OS Execution Package Schema
+# Version: 1.0
+#
+# Execution Package is a platform-specific representation
+# ready for AI model execution.
+#
+# This is the output contract of the Compiler Layer.
+#
+# Architecture:
+#   Production Intent  ──►  Compiler  ──►  Execution Package  ──►  AI Model
+#
+# ADR Compliance: ADR-002 (Compiler Must Be Isolated)
+
+execution_package:
+  schema_version: "1.0"
+
+  # ---------------------------------------------------------------
+  # 1. Target
+  # Purpose: Identify execution destination.
+  # ---------------------------------------------------------------
+  target:
+    provider:                   # string
+    model:                      # string
+    version:                    # string
+
+  # ---------------------------------------------------------------
+  # 2. Instructions
+  # Purpose: Contains model-readable instructions.
+  # Note: This is the first layer where prompt language may exist.
+  # Before Compiler: No Prompt.
+  # After Compiler: Platform Prompt Allowed.
+  # ---------------------------------------------------------------
+  instructions:
+    prompt:                     # string (platform-specific prompt text)
+    actions:                    # [string]
+    camera:                     # string
+
+  # ---------------------------------------------------------------
+  # 3. Parameters
+  # Purpose: Contains model-specific controls.
+  # Note: Only Compiler can create these fields.
+  # ---------------------------------------------------------------
+  parameters:
+    duration:                   # string
+    resolution:                 # string
+    motion_strength:            # string
+    style_preset:               # string
+
+  # ---------------------------------------------------------------
+  # 4. Assets
+  # Purpose: Contains required external resources.
+  # ---------------------------------------------------------------
+  assets:
+    references:                 # [string]
+
+  # ---------------------------------------------------------------
+  # 5. Validation
+  # Purpose: Compiler reports warnings and transformations.
+  # ---------------------------------------------------------------
+  validation:
+    warnings:                   # [string]
+    unsupported_features:       # [string]
+    transformations:            # [string]
