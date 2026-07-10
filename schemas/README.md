@@ -8,6 +8,7 @@
 | production_intent.schema.yaml | 1.0     | Accepted |
 | library.schema.yaml           | 1.0     | Accepted |
 | execution_package.schema.yaml | 1.0     | Accepted |
+| review.schema.yaml            | 1.0     | Accepted |
 
 ## Purpose
 
@@ -26,9 +27,15 @@ execution_package.schema.yaml  (Compiler Output)
         |
         v
 AI Model
+        |
+        v
+review.schema.yaml  (Review Feedback)
+        |
+        v
+Improvement Loop
 ```
 
-Library (`library.schema.yaml`) is queried by Engine during interpretation and is not part of the linear pipeline.
+Library (`library.schema.yaml`) is queried by Engine during interpretation and receives feedback from Review.
 
 ## Design Principles
 

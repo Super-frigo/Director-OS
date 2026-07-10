@@ -1,0 +1,119 @@
+# Director OS Review Schema
+# Version: 1.0
+#
+# Review Schema defines how Director OS evaluates generated results
+# and produces structured feedback.
+#
+# Review provides the feedback loop between:
+#   - Creative Intent
+#   - Production Decisions
+#   - Generated Results
+#   - Future Improvements
+#
+# Review is NOT a simple quality score.
+# Review represents:
+#   - Alignment analysis
+#   - Problem detection
+#   - Improvement suggestions
+#   - Knowledge feedback
+#
+# ADR Compliance: ADR-005 (Architecture Review System)
+
+review:
+  schema_version: "1.0"
+
+  # ---------------------------------------------------------------
+  # 1. Metadata
+  # Purpose: Identify the review.
+  # ---------------------------------------------------------------
+  metadata:
+    id:                         # string
+    reviewer:                   # string
+    created:                    # datetime
+    version:                    # string
+
+  # ---------------------------------------------------------------
+  # 2. Target
+  # Purpose: Define what is being reviewed.
+  # Types: generated_video, image, shot, scene, full_project
+  # ---------------------------------------------------------------
+  target:
+    type:                       # string
+    project:                    # string
+    scene:                      # string
+    shot:                       # string
+    generation:                 # string
+
+  # ---------------------------------------------------------------
+  # 3. Comparison Context
+  # Purpose: Define expected intention vs actual result.
+  # ---------------------------------------------------------------
+  comparison:
+    intended:                   # string (production_intent_id)
+    generated:                  # string (asset_id)
+
+  # ---------------------------------------------------------------
+  # 4. Evaluation Dimensions
+  # Purpose: Multi-dimensional quality analysis.
+  # ---------------------------------------------------------------
+  evaluation:
+    dimensions:
+      narrative:
+        score:                  # int (1-10)
+        notes:                  # string
+      character:
+        score:                  # int (1-10)
+        issues:                 # [string]
+      visual:
+        score:                  # int (1-10)
+        notes:                  # string
+      cinematography:
+        score:                  # int (1-10)
+        issues:                 # [string]
+      emotion:
+        target:                 # string
+        detected:               # string
+        mismatch:               # bool
+      consistency:
+        character:              # string (passed / warning / failed)
+        style:                  # string (passed / warning / failed)
+
+  # ---------------------------------------------------------------
+  # 5. Issues
+  # Purpose: Record discovered problems.
+  # ---------------------------------------------------------------
+  issues:
+    - id:                       # string
+      severity:                 # string (low / medium / high / critical)
+      category:                 # string
+      description:              # string
+      evidence:                 # string
+
+  # ---------------------------------------------------------------
+  # 6. Suggestions
+  # Purpose: Provide correction directions.
+  # Note: Review suggests. Review does not modify.
+  # ---------------------------------------------------------------
+  suggestions:
+    - target:                   # string
+      recommendation:           # string
+      expected_improvement:     # string
+
+  # ---------------------------------------------------------------
+  # 7. Confidence
+  # Purpose: Represent evaluation certainty.
+  # ---------------------------------------------------------------
+  confidence:
+    overall:                    # float (0.0 - 1.0)
+    dimensions:                 # dict
+
+  # ---------------------------------------------------------------
+  # 8. Knowledge Feedback
+  # Purpose: Allow Review to improve Library.
+  # Note: Review does NOT directly update Library.
+  # Flow: Review -> Human/System Validation -> Library Update
+  # ---------------------------------------------------------------
+  knowledge_feedback:
+    discovered_patterns:        # [string]
+    suggested_updates:          # [string]
+    related_knowledge:          # [string] (library ids)
