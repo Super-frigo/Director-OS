@@ -1,4 +1,4 @@
-# Director OS — Architecture Decision Records
+﻿# Director OS 鈥?Architecture Decision Records
 
 This directory documents all Architecture Decision Records (ADR) for Director OS.
 
