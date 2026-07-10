@@ -1,0 +1,59 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: movement_static
+    name: Static Camera
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: "Camera remains fixed on a tripod or solid surface. No physical movement during the shot. The oldest and most fundamental camera technique."
+    principles:
+      - "Zero camera movement — all narrative information comes from within the frame"
+      - "Audience becomes an observer, not a participant"
+      - "Movement inside the frame (actors, objects) gains relative emphasis"
+      - "Longer static shots build anticipation or discomfort"
+    emotional_effects:
+      - observation
+      - tension
+      - formality
+      - stillness
+      - inevitability
+    techniques:
+      - "Lock tripod firmly — even micro-shake breaks the effect"
+      - "Use with deep composition so the eye explores the frame"
+      - "Hold past the comfortable point to create tension"
+      - "Static + slow-mo creates dreamlike detachment"
+    constraints:
+      - "Risk of visual boredom without strong composition or subject movement"
+      - "Not suitable for action sequences without alternating coverage"
+  applicability:
+    emotions:
+      - tension
+      - calm
+      - inevitability
+      - observation
+    genres:
+      - noir
+      - drama
+      - thriller
+      - documentary
+    keywords:
+      - tripod
+      - locked_off
+      - formal
+      - patient
+  engine_guidance:
+    when_to_use: "Scene demands observation, formality, or the weight of an unstoppable moment"
+    recommended_actions:
+      - "Use for execution scenes, interrogations, ceremonial moments"
+      - "Combine with deep focus for maximum frame exploration"
+    avoid:
+      - "Chaotic or POV sequences"
+      - "Moments requiring subjective instability"
+  relationships:
+    related:
+      - movement_slow_push
+      - movement_pan
+    conflicts:
+      - movement_handheld
+  version: "1.0"
