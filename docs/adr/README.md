@@ -13,6 +13,7 @@ This directory documents all Architecture Decision Records (ADR) for Director OS
 | ADR-004   | Library Driven Knowledge System      | Accepted  |
 | ADR-005   | Architecture Review System           | Accepted  |
 | ADR-006   | Canonical Project Representation     | Accepted  |
+| ADR-007   | Retrieval Strategy for Library System | Accepted  |
 
 ## Template
 
