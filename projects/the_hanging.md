@@ -426,7 +426,7 @@ history:
     changes:
       - module: all
         action: created
-    notes: 初始创意: "一个男人目睹了一场绞刑，背景是民国时代"。黑色悬疑,15s,侦探视角。完成第一版全部设计。
+    notes: "初始创意: \"一个男人目睹了一场绞刑，背景是民国时代\"。黑色悬疑,15s,侦探视角。完成第一版全部设计。"
 
   - version: 1.0.0
     timestamp: 2026-07-11T00:10:00Z
@@ -434,4 +434,4 @@ history:
     changes:
       - module: all
         action: completed
-    notes: VALIDATE passed。Continuity 检查通过。项目状态: Ready。
+    notes: "VALIDATE passed。Continuity 检查通过。项目状态: Ready。"

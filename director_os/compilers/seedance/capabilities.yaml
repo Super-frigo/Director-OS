@@ -1,0 +1,104 @@
+"""Seedance capability definitions.
+
+This defines what Seedance supports, what it doesn't,
+and what translation rules the Compiler must follow.
+
+This is model capability knowledge — NOT creative knowledge.
+It belongs to the Compiler, not the creative pipeline.
+"""
+model:
+  name: seedance
+  version: "latest"
+
+capabilities:
+  camera_control:
+    supported: true
+    styles:
+      - static
+      - slow_push
+      - slow_pan
+      - dolly_in
+      - dolly_out
+      - tracking
+      - handheld
+      - crane
+    unsupported:
+      - whip_pan
+      - snap_zoom
+      - complex_multi_axis
+
+  framing:
+    supported: true
+    styles:
+      - extreme_wide
+      - wide
+      - medium
+      - close_up
+      - extreme_close_up
+      - over_shoulder
+
+  lens_simulation:
+    supported: true
+    styles:
+      - standard
+      - wide_angle
+      - telephoto
+    unsupported:
+      - anamorphic_flare_control
+      - tilt_shift
+      - split_diopter
+
+  lighting_control:
+    supported: false
+    note: "Lighting must be described in natural language within the prompt"
+
+  color_grading:
+    supported: false
+    note: "Color must be described in natural language within the prompt"
+
+  motion_control:
+    supported: true
+    max_duration_seconds: 15
+    note: "Best results with single-subject scenes and slow camera moves"
+
+  duration_control:
+    supported: true
+    max_seconds: 15
+    note: "Single clip maximum"
+
+  character_consistency:
+    supported: partial
+    note: "Requires explicit visual description every shot"
+    recommendation: "Repeat key character appearance details each shot"
+
+  image_reference:
+    supported: true
+    note: "Reference images improve consistency"
+
+  audio:
+    supported: false
+    note: "Audio is not generated. Sound design must be described in prompt."
+
+  multi_scene:
+    supported: false
+    note: "Each clip is a single scene. Use multiple clips for multi-scene narratives."
+
+limitations:
+  long_complex_action:
+    stability: medium
+    note: "Actions longer than 10 seconds may drift"
+
+  multiple_characters:
+    stability: low
+    note: "Increases inconsistency risk. Limit to 1-2 subjects."
+
+  fast_movement:
+    stability: low
+    note: "Fast camera or subject movement may produce jitter"
+
+  lighting_changes:
+    stability: low
+    note: "Lighting shifts between clips may feel abrupt"
+
+  text_rendering:
+    supported: false

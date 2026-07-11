@@ -1,0 +1,38 @@
+# Layer Analysis Schema v1.0
+#
+# Six-layer structured analysis pipeline for Director OS.
+# Each layer extracts one dimension of cinematographic context
+# from the Project, feeding the Compiler with rich structured data.
+
+layer_pipeline:
+  schema_version: "1.0"
+  layers:
+    - id: l1_baseline
+      name: 基底定调
+      input: 时代词、风格暗示
+      output: 分辨率 + 风格定位 + 时代锚定
+
+    - id: l2_spatial
+      name: 空间建构
+      input: 场景描述、方位词
+      output: 场景平面图 + 纵深层次 + 视觉锚点
+
+    - id: l3_lighting
+      name: 光影系统
+      input: 光源词、情绪词
+      output: 光源拓扑图 + 色温方案
+
+    - id: l4_camera
+      name: 镜头语法
+      input: 动作节奏、转折点位置
+      output: 景别序列 + 机位调度 + 时间轴分镜
+
+    - id: l5_character
+      name: 角色矩阵
+      input: 人物数量、身份关系、动作/表情描写
+      output: 差异化选角方案
+
+    - id: l6_microtexture
+      name: 微观质感
+      input: 细节描写
+      output: 光学参数 + 皮肤纹理 + 眼神细节

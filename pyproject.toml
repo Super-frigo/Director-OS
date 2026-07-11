@@ -1,0 +1,11 @@
+[project]
+name = "director-os"
+version = "0.1.0"
+description = "AI-native filmmaking operating system"
+requires-python = ">=3.11"
+dependencies = [
+    "PyYAML>=6.0",
+]
+
+[project.scripts]
+director-os = "director_os.cli:main"

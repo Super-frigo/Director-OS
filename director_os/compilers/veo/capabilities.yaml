@@ -1,0 +1,82 @@
+"""Veo platform capability definitions.
+
+Veo (Google DeepMind) — video generation with cinematic understanding.
+"""
+model:
+  name: veo
+  version: "latest"
+
+capabilities:
+  camera_control:
+    supported: true
+    styles:
+      - static
+      - dolly_in
+      - dolly_out
+      - crane_up
+      - crane_down
+      - tracking
+      - handheld
+      - steadicam
+      - pan
+      - tilt
+      - arc
+      - rack_focus
+    note: "Professional cinematography terminology strongly recommended"
+
+  framing:
+    supported: true
+    styles:
+      - extreme_wide
+      - wide
+      - medium
+      - close_up
+      - extreme_close_up
+      - over_shoulder
+      - pov
+      - two_shot
+
+  lens_simulation:
+    supported: true
+    note: "Lens characteristics and focal length descriptions well understood"
+
+  lighting_control:
+    supported: true
+    note: "Professional lighting terms (key, rim, fill, practical) recommended"
+
+  color_grading:
+    supported: true
+    note: "Film stock, color palette, and grade references understood"
+
+  motion_control:
+    supported: true
+    max_duration_seconds: 60
+    note: "Supports longer single clips than most platforms"
+
+  duration_control:
+    supported: true
+    max_seconds: 60
+
+  character_consistency:
+    supported: true
+    note: "Good with detailed character descriptions"
+
+  image_reference:
+    supported: true
+
+  audio:
+    supported: false
+    note: "Describe audio in prompt text only"
+
+  multi_scene:
+    supported: true
+    note: "Can handle scene transitions within a single generation"
+
+limitations:
+  extreme_camera_moves:
+    stability: medium
+    note: "Very fast or complex multi-axis moves may cause artifacts"
+
+  dense_crowds:
+    stability: medium
+    note: "Multiple characters may cause consistency drift"
