@@ -1,0 +1,57 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: height_birds_eye
+    name: Bird's Eye — Fate and Pattern
+    author: Director OS (imported from AI-Director-OS shot_library)
+  category: cinematography
+  knowledge:
+    concept: "Camera directly overhead, looking straight down. An omniscient, god-like perspective. Removes character identity and reveals pattern, layout, or fate. Often used for establishing shots or death moments."
+    principles:
+      - "Ultimate power position — absolute perspective"
+      - "Character becomes pattern element, not individual"
+      - "Reveals spatial relationships invisible at ground level"
+      - "Often carries finality — used for death, endings, or epiphanies"
+    emotional_effects:
+      - fate
+      - omniscience
+      - pattern
+      - finality
+      - abstraction
+    techniques:
+      - "Use for scene openings to establish geography"
+      - "Use for death scenes as soul leaving the body"
+      - "Choreographed action from above for visual spectacle"
+      - "Pull-out from bird's eye to extreme wide = cosmic scale"
+    constraints:
+      - "Can feel gimmicky if overused"
+      - "Emotionally distancing — character becomes an object in composition"
+  applicability:
+    emotions:
+      - fate
+      - awe
+      - abstraction
+      - finality
+    genres:
+      - epic
+      - action
+      - thriller
+      - drama
+    keywords:
+      - overhead
+      - bird's eye
+      - top shot
+      - god view
+      - establishing
+  engine_guidance:
+    when_to_use: "Scene requires omniscient perspective, geographic establishment, or a sense of fate"
+    recommended_actions:
+      - "Use sparingly for maximum impact"
+      - "Pair with slow pull-out for cosmic scale"
+    avoid:
+      - "Emotionally intimate scenes"
+      - "When audience needs character connection"
+  relationships:
+    related:
+      - height_high_angle
+  version: "1.0"

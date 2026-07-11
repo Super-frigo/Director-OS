@@ -1,0 +1,69 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: style_arcane
+    name: Arcane — Hand-Painted 2D-3D Hybrid
+    author: Director OS (imported from AI-Director-OS)
+  category: visual_style
+  knowledge:
+    concept: "Non-photorealistic rendering (NPR) with hand-painted textures overlaid on 3D models. Oil-painted brushstrokes, visible cross-hatching in shadows, and dramatic chiaroscuro lighting. Every frame should feel like a gallery painting."
+    principles:
+      - "3D models with 2D hand-painted texture overlays — painterly rendering"
+      - "Outline width varies with lighting, not fixed"
+      - "Large color blocks with visible brush stroke direction"
+      - "Cross-hatching in shadows instead of smooth gradients"
+      - "Chiaroscuro: extremely bright highlights vs extremely dark shadows"
+      - "Facial lighting keyed to character emotion — up-light for anger, rim-light for sadness"
+    emotional_effects:
+      - dramatic
+      - painterly
+      - artistic
+      - theatrical
+      - intense
+    techniques:
+      - "Use 2D hand-drawn keyframes for smoke, fire, magic — reject particle systems"
+      - "70% shadow area + 30% dramatic highlight per frame"
+      - "Color palette shifts with character arc — pure during stability, chaotic during conflict"
+      - "Low camera angle + wide lens for power relationships"
+      - "Extreme close-ups on micro-expressions with frame-by-frame correction"
+      - "Frame-skipping in fast action sequences to enhance hand-drawn feel"
+      - "Dutch Angle heavily used for destabilized scenes"
+    constraints:
+      - "Not suitable for photorealistic or naturalistic projects"
+      - "Requires high artistic skill to execute convincingly"
+      - "Can be visually exhausting in long sequences"
+  applicability:
+    emotions:
+      - dramatic
+      - intense
+      - conflicted
+      - artistic
+    genres:
+      - fantasy
+      - steampunk
+      - animation
+      - action
+    keywords:
+      - hand-painted
+      - oil painting
+      - brushstroke
+      - chiaroscuro
+      - NPR
+      - painterly
+      - 2D-3D hybrid
+  engine_guidance:
+    when_to_use: "Project requires a hand-crafted, painterly aesthetic with strong dramatic lighting and stylized texture"
+    recommended_actions:
+      - "Set render engine to NPR/painterly mode"
+      - "Combine with Dutch Angle for maximum disorientation"
+      - "Use extreme close-ups for emotional beats"
+    avoid:
+      - "Photorealistic skin rendering"
+      - "Smooth gradients in shadow areas"
+      - "Particle-based effects"
+  relationships:
+    related:
+      - style_pixar
+    conflicts:
+      - style_blade_runner_2049
+  version: "1.0"

@@ -1,0 +1,59 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: style_reject_list
+    name: Quality Guardrails — Four Red Lines for AI Visual Output
+    author: Director OS (imported from AI-Director-OS)
+  category: visual_style
+  knowledge:
+    concept: "Four critical quality issues in AI-generated images that must be avoided: game CG appearance, over-sharpening, AI plastic skin, and perfect skin. These guardrails ensure output maintains cinematic quality rather than cheap AI tell-tales."
+    principles:
+      - "Avoid game-CG PBR surfaces: over-polished Unreal/Unity default materials"
+      - "Avoid over-sharpening: white halos at edges, every pixel competing for attention"
+      - "Avoid AI plastic skin: waxy, poreless, no subsurface scattering — looks like a mannequin"
+      - "Avoid perfect skin: no pores, no wrinkles, no blemishes — everyone looks through the same beauty filter"
+    emotional_effects:
+      - authentic
+      - cinematic
+      - organic
+    techniques:
+      - "Introduce material imperfections: roughness variation, scratches, stains"
+      - "Use NPR to break pure physical rendering"
+      - "Retain hand-drawn feel or film grain"
+      - "Use depth of field to create focus — non-focus areas should be naturally soft"
+      - "Sharpen only key areas (eyes, important props)"+
+      - "Accept 'not sharp enough' as an aesthetic — soft light > hard sharpening"
+      - "Explicitly request skin texture keywords: pores, skin texture, subtle imperfections"
+      - "Specify material properties: rough metal, weathered wood, organic fabric"
+      - "Retain skin details: freckles, wrinkles, scars, blemishes"
+      - "Allow uneven skin tone — flush, pigmentation, visible capillaries"
+      - "Age, experience, emotion should be written on the skin"
+    constraints:
+      - "These are quality guardrails, not creative constraints — adjust per project needs"
+  applicability:
+    emotions:
+      - authentic
+      - natural
+      - cinematic
+    genres:
+      - all
+    keywords:
+      - quality
+      - guardrails
+      - anti-plastic
+      - skin texture
+      - film grain
+      - imperfections
+  engine_guidance:
+    when_to_use: "Before every compilation — validate output against the four red lines"
+    recommended_actions:
+      - "Check for game-engine rendering feel (look at materials and render model)"
+      - "Check if sharpening is excessive (look for halos at object edges)"
+      - "Check if skin looks plastic (look for subsurface scattering and texture)"
+      - "Check if skin has 'living human' imperfections (pores, wrinkles, uneven tone)"
+    avoid:
+      - "game CG, 3D render, Unreal Engine, Unity, plastic skin"
+      - "over-sharpened, perfect skin, airbrushed, wax figure"
+      - "glossy, synthetic appearance, halo artifacts"
+      - "beauty filter, porcelain skin, digital sheen"
+  version: "1.0"

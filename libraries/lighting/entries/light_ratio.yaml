@@ -1,0 +1,54 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: light_ratio
+    name: Light Ratio — Emotional Contrast
+    author: Director OS (imported from AI-Director-OS shot_library)
+  category: lighting
+  knowledge:
+    concept: "The ratio between key light (bright side) and fill light (shadow side). High ratio = high contrast = tension and mystery. Low ratio = low contrast = hope and innocence. The ratio IS the emotional temperature of the image."
+    principles:
+      - "1:1 to 2:1 — Low contrast/High Key — hope, innocence, comedy, safety"
+      - "2:1 to 4:1 — Medium contrast — natural, realistic, standard narrative"
+      - "4:1 to 8:1 — High contrast/Low Key — tension, mystery, noir, psychological"
+      - "8:1+ — Extreme contrast — horror, brutality, expressionist"
+    emotional_effects:
+      - varies_by_ratio
+    techniques:
+      - "Low ratio: flood shadow side with fill light"
+      - "Medium ratio: minimal fill, natural falloff"
+      - "High ratio: remove fill light, let shadows fall to black"
+      - "Extreme: single hard source, no fill, black shadows"
+    constraints:
+      - "High ratio loses shadow detail — intentional information hiding"
+      - "Low ratio can feel flat without contrast in composition"
+  applicability:
+    emotions:
+      - tension
+      - mystery
+      - hope
+      - innocence
+      - fear
+    genres:
+      - all
+    keywords:
+      - light ratio
+      - contrast
+      - high key
+      - low key
+      - high contrast
+      - low contrast
+  engine_guidance:
+    when_to_use: "Setting the emotional contrast level for a scene"
+    recommended_actions:
+      - "High ratio for thriller, noir, horror, tense drama"
+      - "Low ratio for comedy, romance, children's content, safety"
+    avoid:
+      - "High ratio in happy, resolution scenes"
+      - "Low ratio in scenes requiring hidden information"
+  relationships:
+    related:
+      - light_direction_emotion
+      - light_quality
+      - light_low_key_noir
+  version: "1.0"

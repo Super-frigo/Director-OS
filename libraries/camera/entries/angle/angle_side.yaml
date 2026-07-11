@@ -1,0 +1,55 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: angle_side
+    name: Side Angle — Observation and Distance
+    author: Director OS (imported from AI-Director-OS shot_library)
+  category: cinematography
+  knowledge:
+    concept: "Camera positioned perpendicular to the subject. The observer's perspective — we watch rather than engage. Often used for silhouette and profile reveals. Creates emotional distance and objectivity."
+    principles:
+      - "Observer's perspective — we watch the character, not connect with them"
+      - "Emotional distance — the character becomes a subject of observation"
+      - "Profile reveals shape, silhouette, and form over expression"
+      - "Two-shot side angle creates tension between characters"
+    emotional_effects:
+      - distance
+      - observation
+      - objectivity
+      - mystery
+    techniques:
+      - "Use for silhouette reveals and dramatic profiling"
+      - "Combine with backlight for rim-lit profile shots"
+      - "Side angle two-shots for tense conversations"
+    constraints:
+      - "Lacks emotional directness of front angle"
+      - "Can feel cold or clinical in long sequences"
+  applicability:
+    emotions:
+      - distance
+      - mystery
+      - observation
+      - tension
+    genres:
+      - noir
+      - thriller
+      - drama
+      - documentary
+    keywords:
+      - side
+      - profile
+      - silhouette
+      - observer
+  engine_guidance:
+    when_to_use: "Audience should observe rather than engage — emotional distance serves the story"
+    recommended_actions:
+      - "Use for silhouette and dramatic profile reveals"
+      - "Pair with rim light for shape definition"
+    avoid:
+      - "Moments requiring audience empathy or connection"
+      - "Emotional peak beats"
+  relationships:
+    related:
+      - angle_front
+      - angle_back
+  version: "1.0"

@@ -1,34 +1,35 @@
 # Lighting Library
 
-Status: Planned
+Status: Active
 
 ## Purpose
 
-Lighting Library 存储灯光方案的知识库,为 Shot Design 提供光线参考。
+Lighting Library stores lighting scheme knowledge for Shot Design reference.
 
-## Planned Categories
+## Categories
 
-- Three-Point Lighting Variations — 三点布光的变体
-- Mood Lighting Schemes — 情绪光线方案( noir / romantic / suspense / dream )
-- Natural Light Scenarios — 自然光场景( golden hour / blue hour / overcast )
-- Practical Light Guide — 实际光源利用技巧
-- Color Temperature Reference — 色温的情绪映射表
-- High Key / Low Key Reference — 高调与低调光方案
+### Mood Lighting Schemes
+- [Low-Key Noir](entries/light_low_key_noir.yaml) — High contrast, deep shadows, mystery
+- [Golden Hour](entries/light_golden_hour.yaml) — Warm, flattering, nostalgic
 
-## Example Entry Format
+### Light Direction & Emotion
+- [Light Direction Emotion](entries/light_direction_emotion.yaml) — Source direction to emotional vocabulary
 
-```yaml
-- name: "Film Noir Key Light"
-  scheme: low_key
-  setup:
-    key: "Hard light from 45-degree upper side"
-    fill: "Minimal fill, 1:8 ratio"
-    back: "Rim light for silhouette separation"
-  mood: "Mysterious, tense, dramatic"
-  best_for:
-    - detective scenes
-    - psychological tension
-    - character reveal moments
-  color_temp: 3200K
-  notes: "The darker the shadows, the more hidden the truth."
-```
+### Light Quality
+- [Light Quality Reference](entries/light_quality.yaml) — Hard vs soft light emotional effects
+
+### Light Ratio
+- [Light Ratio Reference](entries/light_ratio.yaml) — Contrast ratio and emotional temperature
+
+### Color Temperature
+- [Color Temperature Reference](entries/light_color_temperature.yaml) — Kelvin scale and emotional mapping
+
+### Special Effects
+- [Special Lighting Effects](entries/light_special_effects.yaml) — Volumetric, neon, candle, screen, strobe
+
+### Emotion Mapping
+- [Emotion-to-Light Mapping](entries/light_emotion_mapping.yaml) — Target emotion → lighting setup table
+
+## Usage
+
+Lighting Agent queries this library during Shot DESIGN and COMPILE stages to select mood and technical lighting setups.

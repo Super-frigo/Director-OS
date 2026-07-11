@@ -1,0 +1,54 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: light_emotion_mapping
+    name: Emotion-to-Light Mapping Table
+    author: Director OS (imported from AI-Director-OS shot_library)
+  category: lighting
+  knowledge:
+    concept: "Complete mapping from audience emotional targets to concrete lighting setups. When you know what the audience should feel, this table tells you the light direction, quality, color temperature, and special effects to achieve it."
+    principles:
+      - "Loneliness: side light + hard light + cold temperature + high contrast"
+      - "Hope: backlight/rim + soft light + warm temperature + volumetric"
+      - "Fear: underlight + hard light + cold temperature + strobe effect"
+      - "Love/Intimacy: soft light + warm temperature + low contrast + candlelight"
+      - "Oppression: top light + hard light + cold temperature + high contrast"
+      - "Mystery: backlight + soft light + neutral temperature + neon/ambient"
+      - "Epic/Sublime: backlight + hard light + volumetric + wide coverage"
+    emotional_effects:
+      - mapped_to_setups
+    techniques:
+      - "Loneliness setup: single hard side light, no fill, cool blue"
+      - "Hope setup: strong rim light through haze, warm tone"
+      - "Fear setup: up-light from practical, hard quality, flicker"
+      - "Love setup: large diffusion close to subject, warm, soft falloff"
+      - "Oppression setup: overhead hard light, deep shadows, cold"
+      - "Mystery setup: rim only, face in shadow, neutral/mixed"
+      - "Epic setup: backlit subject, volumetric beams, wide"
+    constraints:
+      - "Each emotion has a recommended setup, not a rule — adapt to context"
+      - "Complex emotions may need hybrid setups"
+  applicability:
+    emotions:
+      - all
+    genres:
+      - all
+    keywords:
+      - emotion lighting
+      - mood
+      - light mapping
+      - emotional lighting
+  engine_guidance:
+    when_to_use: "Selecting lighting for a shot based on target audience emotion"
+    recommended_actions:
+      - "Consult table during shot design phase"
+      - "Adapt setups to scene context and character state"
+    avoid:
+      - "Rigid application without considering scene specifics"
+  relationships:
+    related:
+      - light_direction_emotion
+      - light_quality
+      - light_color_temperature
+      - light_special_effects
+  version: "1.0"

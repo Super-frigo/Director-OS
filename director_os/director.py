@@ -1,4 +1,4 @@
-"""Director — the single public interface to Director OS."""
+﻿"""Director — the single public interface to Director OS."""
 
 from pathlib import Path
 
@@ -23,6 +23,7 @@ class Director:
         self.intent: ProductionIntent | None = None
         self.engine = EnginePipeline()
         self.library = LibraryLoader()
+        self.library.load_all()
         self._compilers = {
             "seedance": SeedanceCompiler,
             "veo": VeoCompiler,

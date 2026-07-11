@@ -1,0 +1,52 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: angle_ots
+    name: Over-the-Shoulder — Dialogue Standard
+    author: Director OS (imported from AI-Director-OS shot_library)
+  category: cinematography
+  knowledge:
+    concept: "Camera placed just behind and to the side of one character, showing the other character's face and part of the foreground shoulder. The standard dialogue coverage shot — puts the audience on one character's side."
+    principles:
+      - "Creates spatial relationship between speakers"
+      - "We are positioned with one character, looking at the other"
+      - "The foreground shoulder anchors us in physical space"
+      - "Shot-reverse-shot alternates OTS from each side"
+    emotional_effects:
+      - engagement
+      - spatial awareness
+      - sidedness
+      - dialogue intimacy
+    techniques:
+      - "Use for all dialogue coverage in shot-reverse-shot pattern"
+      - "Match lens on both OTS directions for visual consistency"
+      - "Shallow depth of field keeps foreground shoulder soft"
+      - "Eye-line must match precisely across reverse shots"
+    constraints:
+      - "Can feel formulaic without variation"
+      - "Over-the-shoulder excludes the foreground character's face"
+  applicability:
+    emotions:
+      - engagement
+      - intimacy
+      - connection
+    genres:
+      - all
+    keywords:
+      - OTS
+      - over-shoulder
+      - shot-reverse-shot
+      - dialogue
+  engine_guidance:
+    when_to_use: "Conversation between two or more characters"
+    recommended_actions:
+      - "Standard coverage for all scripted dialogue"
+      - "Alternate OTS direction for each speaker"
+    avoid:
+      - "Solo monologues"
+      - "When audience should be objective observer (use side instead)"
+  relationships:
+    related:
+      - angle_three_quarter
+      - angle_back
+  version: "1.0"

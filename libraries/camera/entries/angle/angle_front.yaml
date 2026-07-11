@@ -1,0 +1,55 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: angle_front
+    name: Front Angle — Confrontation and Honesty
+    author: Director OS (imported from AI-Director-OS shot_library)
+  category: cinematography
+  knowledge:
+    concept: "Camera facing the subject directly. The most confrontational angle — the character faces the audience head-on. Creates a sense of honesty, directness, or threat. Can also break the fourth wall."
+    principles:
+      - "Direct address — no hiding, no escape"
+      - "Maximum facial information — all expressions visible"
+      - "Can feel confrontational, defiant, or vulnerable depending on context"
+      - "Breaking fourth wall when character looks into lens"
+    emotional_effects:
+      - honesty
+      - confrontation
+      - defiance
+      - vulnerability
+      - directness
+    techniques:
+      - "Use in moments of truth, confession, or revelation"
+      - "Combine with close-up for maximum emotional impact"
+      - "Slow push-in to front angle = intensifying confrontation"
+    constraints:
+      - "Can feel flat without strong performance or composition"
+      - "Overuse removes the specialness of direct address"
+  applicability:
+    emotions:
+      - honesty
+      - confrontation
+      - defiance
+      - vulnerability
+    genres:
+      - drama
+      - documentary
+      - thriller
+    keywords:
+      - front
+      - head-on
+      - direct address
+      - fourth wall
+  engine_guidance:
+    when_to_use: "A character must confront something (or someone) directly — including the audience"
+    recommended_actions:
+      - "Use in truth-telling or confession scenes"
+      - "Pair with close-up for emotional intensity"
+    avoid:
+      - "Action sequences requiring dynamic coverage"
+      - "When subtlety and indirection serve the narrative"
+  relationships:
+    related:
+      - angle_three_quarter
+      - angle_side
+  version: "1.0"
