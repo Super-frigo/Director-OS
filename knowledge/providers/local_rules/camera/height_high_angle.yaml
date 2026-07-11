@@ -1,0 +1,60 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: height_high_angle
+    name: High Angle — Vulnerability and Surveillance
+    author: Director OS (imported from AI-Director-OS shot_library)
+  category: cinematography
+  knowledge:
+    concept: "Camera positioned above the subject, looking downward. Creates a sense of vulnerability, weakness, or being watched. The audience looks down — diminishing the subject's power."
+    principles:
+      - "Downward perspective makes subject appear smaller, weaker"
+      - "Implies surveillance or an external force in control"
+      - "The higher the angle, the more the subject is diminished"
+      - "Can suggest fate, destiny, or an unseen power"
+    emotional_effects:
+      - vulnerability
+      - weakness
+      - surveillance
+      - isolation
+      - fate
+    techniques:
+      - "Use for characters trapped, defeated, or exposed"
+      - "Combine with wide lens for environmental overwhelm"
+      - "Bird's eye extreme for death, ending, or fateful moments"
+      - "Push-in high angle = pressure closing in"
+    constraints:
+      - "Overuse makes characters feel perpetually weak"
+      - "Can distance audience emotionally from the character"
+  applicability:
+    emotions:
+      - vulnerability
+      - fear
+      - isolation
+      - exposure
+    genres:
+      - thriller
+      - horror
+      - drama
+      - epic
+    keywords:
+      - high angle
+      - overhead
+      - bird's eye
+      - surveillance
+      - vulnerable
+  engine_guidance:
+    when_to_use: "Character needs to feel trapped, exposed, or under the weight of fate"
+    recommended_actions:
+      - "Pair with wide shot to emphasize environmental scale"
+      - "Use in defeat or revelation scenes"
+    avoid:
+      - "Empowering or triumphant moments"
+      - "When character should feel in control"
+  relationships:
+    related:
+      - height_eye_level
+      - height_birds_eye
+    conflicts:
+      - height_low_angle
+  version: "1.0"

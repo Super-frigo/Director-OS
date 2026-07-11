@@ -1,0 +1,77 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: style_denis_villeneuve
+    name: Denis Villeneuve — Slow Cinema & Existential Scale
+    author: Director OS (imported from AI-Director-OS)
+  category: visual_style
+  knowledge:
+    concept: "Slow, contemplative cinema where camera movement breathes with the audience. Massive negative space — deserts, snowfields, black voids — emphasizing human smallness. Minimal dialogue, maximal visual storytelling. Every frame asks an existential question."
+    principles:
+      - "Camera movement IS emotion — every push-in breathes, every track observes"
+      - "Tension from stillness — accumulate pressure, release in one slow movement"
+      - "Generous duration for audience to 'enter' the frame, not just see it"
+      - "Large negative space: the emptier the frame, the smaller the human"
+      - "Minimal dialogue — one frame speaks louder than ten lines"
+      - "Human scale crushed by environment — characters below 1/3 of frame"
+      - "Nature/architecture is immovable — humans move through it, not vice versa"
+    emotional_effects:
+      - existential
+      - contemplative
+      - sublime
+      - isolated
+      - humbled
+    techniques:
+      - "Desaturated earth tones (sand, stone, cold gray) with strategic color accents"
+      - "Extremely low saturation — colors are 'suppressed', not removed"
+      - "Only key objects/characters get saturated color — color as narrative signal"
+      - "Cool color temperature overall — even warm tones carry a gray veil"
+      - "Naturalistic light — every source is motivated (sun, window, lamp)"
+      - "Silhouette + backlight — emotions left to audience imagination"
+      - "Dark areas allowed to be unclear — darkness is the boundary of information"
+      - "Fixed camera before moving camera — let the audience 'stand' first"
+      - "Wide establishing shots that return characters to their environment"
+      - "Low angle not to glorify heroes, but to respect every character's weight"
+    constraints:
+      - "Not suitable for fast-paced, high-dialogue, or action-heavy projects"
+      - "Requires patient audience — not for short-form content"
+      - "Can feel pretentious without genuine thematic depth"
+  applicability:
+    emotions:
+      - existential
+      - contemplative
+      - lonely
+      - awe
+      - humbled
+    genres:
+      - science_fiction
+      - drama
+      - epic
+      - arthouse
+      - thriller
+    keywords:
+      - slow cinema
+      - negative space
+      - wide composition
+      - desaturated
+      - naturalistic
+      - atmospheric
+      - meditative
+  engine_guidance:
+    when_to_use: "Project demands existential weight, meditative pacing, and the visual poetry of scale"
+    recommended_actions:
+      - "Prefer wide shots over close-ups"
+      - "Give shots room to breathe — longer takes, slower cuts"
+      - "Use naturalistic motivated light sources"
+    avoid:
+      - "Fast-paced cutting"
+      - "Heavy dialogue scenes"
+      - "Heroic low angles"
+      - "Warm, saturated sunsets"
+  relationships:
+    related:
+      - style_blade_runner_2049
+      - color_desaturated_gray
+    conflicts:
+      - style_pixar
+  version: "1.0"

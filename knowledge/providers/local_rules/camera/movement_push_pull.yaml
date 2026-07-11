@@ -1,0 +1,63 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: movement_push_pull
+    name: Push-In / Pull-Out — Emotional Approach and Retreat
+    author: Director OS (imported from AI-Director-OS shot_library)
+  category: cinematography
+  knowledge:
+    concept: "Camera moves physically toward (push-in) or away from (pull-out) the subject using a dolly or slider. Push-in intensifies emotional engagement; pull-out creates separation, release, or finality."
+    principles:
+      - "Push-in: physically moving closer = emotionally intensifying"
+      - "Pull-out: physically moving away = emotionally releasing, concluding"
+      - "Speed of movement correlates with intensity of emotion"
+      - "Slow push-in builds anticipation; fast push-in creates shock"
+      - "Slow pull-out creates melancholy; fast pull-out creates disorientation"
+    emotional_effects:
+      - intensity
+      - anticipation
+      - release
+      - finality
+      - melancholy
+    techniques:
+      - "Very slow push-in for Villeneuve-style emotional accumulation"
+      - "Push to close-up for moment of revelation or decision"
+      - "Pull-out from close-up to reveal context (the reverse of push-in)"
+      - "Pull-out at scene end for emotional release"
+      - "Pull-out + crane up = ultimate departure"
+    constraints:
+      - "Requires dolly/track — zoom push lacks physical depth perception"
+      - "Fast pushes draw attention to camera movement itself"
+  applicability:
+    emotions:
+      - intensity
+      - anticipation
+      - melancholy
+      - release
+      - finality
+    genres:
+      - drama
+      - thriller
+      - romance
+      - epic
+    keywords:
+      - dolly in
+      - dolly out
+      - push in
+      - pull out
+      - emotional movement
+  engine_guidance:
+    when_to_use: "Scene requires emotional intensification (push) or release/conclusion (pull)"
+    recommended_actions:
+      - "Push in during decision moments, revelations, emotional peaks"
+      - "Pull out for endings, departures, and moments of isolation"
+    avoid:
+      - "Using zoom instead of physical dolly — different visual effect"
+      - "Fast movement in contemplative scenes"
+  relationships:
+    related:
+      - movement_static
+      - movement_tracking
+    conflicts:
+      - movement_handheld
+  version: "1.0"

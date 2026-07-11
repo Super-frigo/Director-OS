@@ -1,0 +1,49 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: lens_50mm_portrait
+    name: 50mm — Natural Portrait
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: "Focal length closest to human single-eye perspective. Flattering for portraiture with minimal distortion."
+    principles:
+      - "Slightly narrower than 35mm, reducing background distraction"
+      - "Natural proportion rendering — no facial distortion at MCU distance"
+      - "Compromise between environmental context and subject focus"
+    emotional_effects:
+      - honesty
+      - presence
+      - calm
+    techniques:
+      - "MCU framing for character introductions"
+      - "OTS shots in dialogue — feels natural, not voyeuristic"
+      - "Match with DEEP_FOCUS for documentary-style observation"
+    constraints:
+      - "Less dramatic than 85mm for emotional peaks"
+      - "Not wide enough for strong environmental statements"
+  applicability:
+    emotions:
+      - honesty
+      - presence
+      - quiet
+    genres:
+      - drama
+      - documentary
+      - comedy
+    keywords:
+      - portrait
+      - conversation
+      - introduction
+  engine_guidance:
+    when_to_use: "Character needs to be present without dramatic commentary from the camera"
+    recommended_actions:
+      - "Primary lens for character introduction shots"
+      - "Default for calm dialogue in medium framing"
+    avoid:
+      - "High-intensity emotional climaxes (use 85mm instead)"
+  relationships:
+    related:
+      - lens_35mm_standard
+      - lens_85mm_compression
+  version: "1.0"

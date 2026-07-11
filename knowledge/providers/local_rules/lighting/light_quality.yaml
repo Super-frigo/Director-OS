@@ -1,0 +1,54 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: light_quality
+    name: Light Quality — The Hardness of Emotion
+    author: Director OS (imported from AI-Director-OS shot_library)
+  category: lighting
+  knowledge:
+    concept: "Light quality ranges from hard (sharp, defined shadows) to soft (diffuse, gradual falloff). Hard light reveals truth and creates tension; soft light comforts and romanticizes. The choice between them is a choice about how the audience perceives reality."
+    principles:
+      - "Hard Light: sharp shadow edges, high contrast, reveals texture and imperfection"
+      - "Hard light = emotional sharpness, cruelty, truth, drama"
+      - "Soft Light: gentle shadow falloff, wraps around subjects, flattering"
+      - "Soft light = warmth, memory, romance, safety"
+      - "Mixed light = the complexity of the present moment"
+    emotional_effects:
+      - varies
+    techniques:
+      - "Hard light: small, distant source — direct sun, bare bulb"
+      - "Soft light: large, close source — diffusion frame, softbox, overcast sky"
+      - "Hard light for film noir, westerns, interrogation scenes"
+      - "Soft light for romance, flashbacks, children's stories"
+      - "Mix hard key with soft fill for depth without cruelty"
+    constraints:
+      - "Hard light can be unflattering to subjects — requires intentionality"
+      - "Soft light can feel flat without directional variation"
+  applicability:
+    emotions:
+      - tension
+      - warmth
+      - truth
+      - romance
+      - drama
+    genres:
+      - all
+    keywords:
+      - hard light
+      - soft light
+      - diffusion
+      - shadow edge
+      - light quality
+  engine_guidance:
+    when_to_use: "Determining the emotional texture of light for a scene"
+    recommended_actions:
+      - "Hard light for scenes of confrontation, revelation, or harsh reality"
+      - "Soft light for intimate moments, romance, or nostalgic flashbacks"
+    avoid:
+      - "Soft light in harsh truth-telling scenes"
+      - "Hard light in gentle, comforting moments"
+  relationships:
+    related:
+      - light_direction_emotion
+      - light_ratio
+  version: "1.0"

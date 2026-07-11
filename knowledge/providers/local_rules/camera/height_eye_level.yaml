@@ -1,0 +1,56 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: height_eye_level
+    name: Eye Level — Equality and Presence
+    author: Director OS (imported from AI-Director-OS shot_library)
+  category: cinematography
+  knowledge:
+    concept: "Camera at the character's eye height. The most neutral, immersive camera position. Creates a sense of equality between audience and subject — we are with them, not above or below them."
+    principles:
+      - "Neutral perspective — no power commentary from the camera"
+      - "Maximum audience immersion — we see the world at their level"
+      - "Default for dialogue scenes — feels natural, not interpretive"
+      - "The most versatile and frequently used camera height"
+    emotional_effects:
+      - intimacy
+      - presence
+      - equality
+      - naturalism
+    techniques:
+      - "Default for conversational dialogue coverage"
+      - "Use for POV and over-the-shoulder sequences"
+      - "Combine with 50mm lens for most natural perspective"
+      - "Intercut with low/high angles for dynamic punctuation"
+    constraints:
+      - "Can feel flat without compositional or movement variation"
+      - "Does not provide dramatic commentary — use angles sparingly for emphasis"
+  applicability:
+    emotions:
+      - intimacy
+      - presence
+      - calm
+      - natural
+    genres:
+      - drama
+      - documentary
+      - comedy
+      - romance
+    keywords:
+      - eye level
+      - neutral
+      - immersive
+      - dialogue
+  engine_guidance:
+    when_to_use: "Scene demands neutrality, intimacy, or natural audience immersion"
+    recommended_actions:
+      - "Default camera height for dialogue-heavy sequences"
+      - "Use for documentary-style observation"
+    avoid:
+      - "When dramatic power dynamics need visual emphasis"
+      - "Scenes requiring grandeur or oppressive scale"
+  relationships:
+    related:
+      - height_low_angle
+      - height_high_angle
+  version: "1.0"

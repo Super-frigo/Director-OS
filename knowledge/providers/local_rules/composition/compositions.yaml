@@ -1,0 +1,714 @@
+# Composition Library — structured knowledge entries
+#
+# Each entry follows the format defined in libraries/composition/README.md:
+#   name, effect, technique, best_for, example_films, notes
+#
+# Additionally, each entry carries query fields (emotions, scene_types, keywords)
+# for the retrieval function in query.py.  These are NOT part of the README spec
+# but are required for the Library → Engine retrieval pipeline (ADR-004).
+#
+# Coverage: 14 entries covering 14 of 17 CompositionRule values.
+# Gaps: GOLDEN_SPIRAL, DYNAMIC_SYMMETRY, HEADROOM are not yet authored.
+#       LOOKROOM is partially covered by RULE_OF_SPACE.
+
+entries:
+  # ── 1. RULE_OF_THIRDS ──────────────────────────────────────────────────
+  - id: comp_rule_of_thirds
+    rule: RULE_OF_THIRDS
+    name: "Rule of Thirds"
+    effect: >
+      Creates balanced but dynamic framing. The off-center subject generates visual
+      tension while preserving naturalness — the eye is drawn to the intersection
+      points rather than the center.
+    technique: >
+      Divide frame into 9 equal zones (two horizontal lines, two vertical lines).
+      Place key subject at one of the four intersection points. Align horizon with
+      upper or lower third line. Give the subject look room on the side they face.
+    best_for:
+      - "Dialogue scenes (OTS + rule of thirds = spatial clarity)"
+      - "Landscape establishing shots (horizon on third)"
+      - "Character introduction (subject off-center, environment visible)"
+      - "Moderate tension (not as aggressive as asymmetry)"
+    example_films:
+      - "The Social Network (Fincher's disciplined thirds)"
+      - "Mad Max: Fury Road (center-framed action, but thirds for dialogue)"
+      - "Blade Runner 2049 (horizon placement)"
+    notes: >
+      The most widely taught composition rule. Its strength is flexibility — it works
+      for nearly any emotion. Its weakness is that overuse becomes invisible. Reserve
+      CENTER_COMPOSITION and ASYMMETRICAL for scenes that demand a stronger signal.
+    emotions:
+      - neutral
+      - moderate_tension
+      - observation
+    scene_types:
+      - dialogue
+      - establishing
+      - travel
+    keywords:
+      - balance
+      - intersection
+      - horizon
+      - off_center
+      - natural
+    framings: [MS, MLS, LS, ELS]
+    lenses: [35mm, 50mm]
+    conflicts_with: [CENTER_COMPOSITION]
+
+  # ── 2. GOLDEN_RATIO ───────────────────────────────────────────────────
+  - id: comp_golden_ratio
+    rule: GOLDEN_RATIO
+    name: "Golden Ratio (1:1.618)"
+    effect: >
+      Produces compositions that feel intrinsically harmonious at a subconscious
+      level. The golden spiral or golden rectangle guides the eye along a natural
+      curve toward the subject, creating a sense of inevitability and order.
+    technique: >
+      Place the subject at the golden section point (~38.2% from either edge).
+      Use the golden spiral overlay to guide secondary elements. Align leading
+      lines with the spiral's curve. Works best with architectural or natural
+      settings that already contain spiral forms.
+    best_for:
+      - "Philosophical or contemplative scenes"
+      - "Nature and landscape (shells, galaxies, ferns)"
+      - "Renaissance-inspired period pieces"
+      - "Moments of revelation or epiphany"
+    example_films:
+      - "The Grand Budapest Hotel (Anderson's mathematical precision)"
+      - "2001: A Space Odyssey (Kubrick's golden-ratio compositions)"
+      - "Pi (1998, Aronofsky)"
+    notes: >
+      Harder to deploy than RULE_OF_THIRDS because it requires more precise staging.
+      Most audiences will not consciously notice it, but the effect is measurable in
+      eye-tracking studies. Overuse reads as affected or academic.
+    emotions:
+      - harmony
+      - contemplation
+      - awe
+      - order
+    scene_types:
+      - contemplation
+      - revelation
+      - nature
+    keywords:
+      - golden
+      - spiral
+      - proportion
+      - mathematical
+      - harmonious
+      - fibonacci
+    framings: [MS, MLS, LS]
+    lenses: [35mm, 50mm, 85mm]
+    conflicts_with: [ASYMMETRICAL, DUTCH_ANGLE]
+
+  # ── 3. CENTER_COMPOSITION ─────────────────────────────────────────────
+  - id: comp_center_composition
+    rule: CENTER_COMPOSITION
+    name: "Center Composition"
+    effect: >
+      Direct, confrontational, and authoritative. The centered subject commands the
+      frame, demanding the audience's full attention. No ambiguity — this is the
+      most declarative composition. When used sparingly after off-center shots,
+      it signals a shift in power or focus.
+    technique: >
+      Place the subject precisely on the vertical and horizontal centerlines. Use
+      symmetrical background elements to reinforce the center axis. Keep the
+      subject large enough to justify the centering (CU or MS are ideal). Avoid
+      centering passive subjects — it reads as lazy, not intentional.
+    best_for:
+      - "Character realization or decision moments"
+      - "Authority figures and power dynamics"
+      - "Direct address / breaking the fourth wall"
+      - "Religious or iconic imagery"
+    example_films:
+      - "The Shining (center-framed twins, Jack's breakdown)"
+      - "There Will Be Blood (Plainview's sermons)"
+      - "Moonrise Kingdom (Wes Anderson's centered tableaus)"
+    notes: >
+      Center composition is high-risk/high-reward. Used correctly, it's the most
+      powerful framing tool. Used incorrectly, it reads as amateur snapshot.
+      The key is intentionality — every centered shot should feel earned.
+    emotions:
+      - confrontation
+      - authority
+      - intensity
+      - focus
+      - unease
+    scene_types:
+      - confrontation
+      - realization
+      - authority
+    keywords:
+      - center
+      - symmetry
+      - direct
+      - power
+      - iconic
+      - confront
+      - stare
+      - face_on
+    framings: [CU, MCU, MS]
+    lenses: [50mm, 85mm, 100mm]
+    conflicts_with: [RULE_OF_THIRDS]
+
+  # ── 4. SYMMETRY ───────────────────────────────────────────────────────
+  - id: comp_symmetry
+    rule: SYMMETRY
+    name: "Symmetry"
+    effect: >
+      Imposes order, control, and sometimes oppressive perfection. Symmetrical
+      compositions feel designed, deliberate, and often unnatural in a way that
+      can be beautiful or unsettling depending on context. In horror or thriller
+      genres, perfect symmetry signals something wrong beneath the surface.
+    technique: >
+      Mirror the left and right halves of the frame. Use a single-point perspective
+      corridor, centered doorway, or reflective surface. The axis must be exact —
+      even slight asymmetry breaks the spell. Pair with static camera and deep focus
+      to let the frame breathe.
+    best_for:
+      - "Institutional power (courtrooms, corporations, churches)"
+      - "Psychological unease (perfection as menace)"
+      - "Order vs chaos themes"
+      - "Transitional moments (character passes through axis)"
+    example_films:
+      - "The Grand Budapest Hotel (perfected symmetry as aesthetic)"
+      - "The Shining (hotel corridors)"
+      - "Her (reflective symmetry in intimate scenes)"
+    notes: >
+      Symmetry + slight imperfection = the uncanny valley of composition. Even a
+      single asymmetrical element in an otherwise perfect frame draws immediate
+      attention. Use this deliberately — it's one of the most powerful tools.
+    emotions:
+      - order
+      - control
+      - oppression
+      - beauty
+      - uncanny
+      - unease
+    scene_types:
+      - power
+      - institution
+      - psychological
+      - transition
+    keywords:
+      - mirror
+      - balance
+      - perfect
+      - axis
+      - corridor
+      - reflection
+      - oppressive
+      - designed
+    framings: [MS, MLS, LS]
+    lenses: [24mm, 35mm, 50mm]
+    conflicts_with: [ASYMMETRICAL, HANDHELD]
+
+  # ── 5. LEADING_LINES ──────────────────────────────────────────────────
+  - id: comp_leading_lines
+    rule: LEADING_LINES
+    name: "Leading Lines"
+    effect: >
+      Directs the viewer's gaze along a predetermined path toward the subject or
+      vanishing point. Creates depth, narrative direction, and a sense of journey.
+      The strongest leading lines are environmental — roads, railings, rivers,
+      architectural edges — and feel discovered rather than imposed.
+    technique: >
+      Identify natural lines in the environment that converge on or point toward
+      the subject. Lines can be literal (roads, bridges) or implied (eyeline,
+      gesture, light shafts). Place subject at or near the convergence point.
+      Diagonal lines are more dynamic than horizontal or vertical.
+    best_for:
+      - "Journey or travel sequences"
+      - "Mystery (lines leading into the unknown)"
+      - "Character isolation (subject small at end of long line)"
+      - "Emphasis (all lines converge on critical detail)"
+    example_films:
+      - "The Third Man (Vienna's tilted streets and sewers)"
+      - "Road to Perdition (dock and hallway lines)"
+      - "Inception (corridor and stair lines)"
+    notes: >
+      Leading lines work best when they have a destination. Lines pointing to
+      nothing create frustration. Combine with DOLLY_IN movement for maximum
+      directional pull. Avoid lines that lead the eye out of frame.
+    emotions:
+      - direction
+      - journey
+      - mystery
+      - focus
+      - inevitability
+    scene_types:
+      - journey
+      - mystery
+      - emphasis
+      - isolation
+    keywords:
+      - lines
+      - direction
+      - path
+      - converge
+      - vanishing_point
+      - depth
+      - guide
+      - road
+    framings: [MS, MLS, LS, ELS]
+    lenses: [24mm, 35mm, 50mm]
+    conflicts_with: []
+
+  # ── 6. FRAME_WITHIN_FRAME ─────────────────────────────────────────────
+  - id: comp_frame_within_frame
+    rule: FRAME_WITHIN_FRAME
+    name: "Frame Within Frame"
+    effect: >
+      Creates a voyeuristic quality — the audience feels they are watching from a
+      hidden position. Adds depth through foreground layering and often carries
+      thematic weight: entrapment, observation, or emotional separation.
+    technique: >
+      Use doorways, windows, arches, mirrors, or foreground objects (out of focus
+      or in focus) to create a secondary frame around the subject. The framing
+      element should feel natural to the location, not forced. At least 3 depth
+      layers: frame element → subject → background.
+    best_for:
+      - "Character isolation or emotional distance"
+      - "Surveillance or being-watched themes"
+      - "Transition between worlds or states"
+      - "Confinement and entrapment"
+    example_films:
+      - "The Godfather (doorway framing of the baptism)"
+      - "The Grand Budapest Hotel (window and door frames)"
+      - "In the Mood for Love (doorways, mirrors, corridors)"
+    notes: >
+      Each frame is a layer of separation from the truth. The framing element
+      should carry meaning — a prison door frame, a window showing the outside
+      world, a mirror fragmenting identity. Combine with static camera for
+      maximum voyeuristic effect.
+    emotions:
+      - voyeurism
+      - entrapment
+      - observation
+      - distance
+      - separation
+      - isolation
+    scene_types:
+      - isolation
+      - surveillance
+      - transition
+      - confinement
+    keywords:
+      - doorway
+      - window
+      - observation
+      - confine
+      - layer
+      - voyeur
+      - separation
+    framings: [MCU, MS, MLS, LS]
+    lenses: [35mm, 50mm, 85mm]
+    conflicts_with: []
+
+  # ── 7. DIAGONAL ───────────────────────────────────────────────────────
+  - id: comp_diagonal
+    rule: DIAGONAL
+    name: "Diagonal Composition"
+    effect: >
+      Injects energy, instability, and forward momentum into the frame. Diagonal
+      compositions feel active and unresolved — the eye moves constantly along
+      the slanted axis, never settling. Stronger and more aggressive than
+      LEADING_LINES because the tilt itself creates tension.
+    technique: >
+      Align key visual elements (character posture, architectural lines, light
+      direction) along a diagonal axis — typically bottom-left to top-right for
+      Western reading direction, or top-left to bottom-right for descent/danger.
+      Combine with DUTCH_ANGLE for maximum instability. Use SHALLOW_FOCUS to
+      isolate diagonal subject from confusing background.
+    best_for:
+      - "Action sequences and chase scenes"
+      - "Psychological instability or disorientation"
+      - "Conflict escalation"
+      - "Transition from order to chaos"
+    example_films:
+      - "The Third Man (expressionist diagonals)"
+      - "Battle of Algiers (diagonal street compositions)"
+      - "Oldboy (hallway fight scene)"
+    notes: >
+      Diagonal composition + handheld camera = maximum kinetic energy. Diagonal
+      + static camera = simmering tension. Be careful: too many diagonals in
+      a row exhausts the audience. Interleave with BALANCED or CENTER_COMPOSITION
+      for rest.
+    emotions:
+      - energy
+      - instability
+      - tension
+      - danger
+      - dynamism
+    scene_types:
+      - action
+      - tension
+      - conflict
+      - psychological
+    keywords:
+      - diagonal
+      - tilt
+      - energy
+      - unstable
+      - kinetic
+      - slant
+      - dynamic
+    framings: [MS, MLS, LS]
+    lenses: [24mm, 35mm, 50mm]
+    conflicts_with: [SYMMETRY, BALANCED]
+
+  # ── 8. TRIANGULAR ─────────────────────────────────────────────────────
+  - id: comp_triangular
+    rule: TRIANGULAR
+    name: "Triangular Composition"
+    effect: >
+      Creates visual stability through the strongest geometric shape. Triangle
+      compositions anchor the frame and establish hierarchy — the apex draws
+      the eye while the base provides foundation. Renaissance painters used
+      triangular composition for religious and royal portraits for this reason.
+    technique: >
+      Arrange subjects or elements so their positions form a triangle. The apex
+      can be at the top (authority, aspiration) or bottom (grounding, stability).
+      For multi-character scenes, arrange heads at triangle vertices. Architectural
+      triangles (roofs, arches) reinforce the effect.
+    best_for:
+      - "Group dynamics and power hierarchy"
+      - "Stable, grounded emotional states"
+      - "Classical or period-piece compositions"
+      - "Family or institutional portraits"
+    example_films:
+      - "The Godfather (triangular groupings in the wedding scene)"
+      - "Barry Lyndon (Kubrick's triangular period compositions)"
+      - "Parasite (triangular family arrangements)"
+    notes: >
+      The triangle is the most stable shape — use it when you want the audience
+      to feel secure, then break it when you want them to feel destabilized.
+      An inverted triangle (apex down) reads as precarious and unstable.
+    emotions:
+      - stability
+      - hierarchy
+      - authority
+      - order
+      - security
+    scene_types:
+      - group_scene
+      - family
+      - institution
+      - stability
+    keywords:
+      - triangle
+      - pyramid
+      - hierarchy
+      - stable
+      - apex
+      - group
+      - foundation
+    framings: [MS, MLS, LS]
+    lenses: [35mm, 50mm]
+    conflicts_with: [ASYMMETRICAL]
+
+  # ── 9. CIRCULAR ───────────────────────────────────────────────────────
+  - id: comp_circular
+    rule: CIRCULAR
+    name: "Circular Composition"
+    effect: >
+      Encloses and contains. Circular compositions feel complete, self-sufficient,
+      and sometimes claustrophobic. The eye circulates within the frame rather
+      than exiting — useful for scenes about cycles, obsession, or enclosure.
+    technique: >
+      Use round architectural elements (arches, domes, wells), circular props
+      (tables, mirrors), or arrange subjects in a circular formation. The circle
+      can be literal or implied through camera movement (ARC_L, ARC_R). Fisheye
+      or wide lenses exaggerate circular distortion.
+    best_for:
+      - "Obsession or circular thinking themes"
+      - "Rituals and ceremonies"
+      - "Enclosure and claustrophobia"
+      - "Unity and community (campfire, round table)"
+    example_films:
+      - "The Lighthouse (circular framing and 1.19:1 aspect)"
+      - "Russian Ark (circular movement through the Hermitage)"
+      - "2001: A Space Odyssey (circular space station)"
+    notes: >
+      Circular composition + circular camera movement = total immersion. Breaking
+      the circle — a character stepping out of the formation — is a powerful
+      visual statement. Use sparingly; the effect is strong but fatiguing.
+    emotions:
+      - enclosure
+      - unity
+      - obsession
+      - completeness
+      - claustrophobia
+    scene_types:
+      - ritual
+      - obsession
+      - enclosure
+      - community
+    keywords:
+      - circle
+      - round
+      - enclose
+      - cycle
+      - dome
+      - ritual
+      - complete
+      - loop
+    framings: [MS, MLS, LS, ELS]
+    lenses: [14mm, 18mm, 24mm]
+    conflicts_with: [DIAGONAL]
+
+  # ── 10. NEGATIVE_SPACE ────────────────────────────────────────────────
+  - id: comp_negative_space
+    rule: NEGATIVE_SPACE
+    name: "Negative Space Composition"
+    effect: >
+      Places the subject in a small portion of the frame, leaving the rest empty.
+      This visual silence amplifies emotion through absence — loneliness, awe,
+      contemplation, or insignificance. The emptiness becomes an active story
+      element, not just background.
+    technique: >
+      Subject occupies less than 1/3 of frame area. Position subject at the edge
+      looking into the void. Use wide lenses for maximum scale contrast. Hold the
+      shot longer than normal — negative space needs time to register. Ensure the
+      empty space has visual interest (texture, light gradient, weather).
+    best_for:
+      - "Character isolation or emotional void"
+      - "Awe and scale (tiny human vs vast nature)"
+      - "Despair or existential emptiness"
+      - "Contemplation and reflection"
+    example_films:
+      - "Lawrence of Arabia (desert compositions)"
+      - "No Country for Old Men (West Texas emptiness)"
+      - "Lost in Translation (alienation in Tokyo)"
+    notes: >
+      Negative space is the hardest composition to do well because it requires
+      courage — the courage to show less. It fails when the empty space is boring.
+      It succeeds when the emptiness feels intentional, meaningful, and beautifully
+      lit. Pair with long duration and minimal movement.
+    emotions:
+      - loneliness
+      - isolation
+      - awe
+      - despair
+      - reflection
+      - insignificance
+      - contemplation
+    scene_types:
+      - isolation
+      - contemplation
+      - despair
+    keywords:
+      - isolation
+      - emptiness
+      - silence
+      - vastness
+      - alone
+      - void
+      - scale
+      - minimal
+    framings: [LS, ELS]
+    lenses: [14mm, 18mm, 24mm, 35mm]
+    conflicts_with: [CENTER_COMPOSITION]
+
+  # ── 11. RULE_OF_SPACE ─────────────────────────────────────────────────
+  - id: comp_rule_of_space
+    rule: RULE_OF_SPACE
+    name: "Rule of Space (Look Room)"
+    effect: >
+      Provides breathing room in the direction a subject faces or moves. Without
+      look room, the frame feels tight, anxious, or claustrophobic. With proper
+      look room, the audience subconsciously registers the subject's relationship
+      to off-screen space — what they're looking at, where they're going.
+    technique: >
+      Leave 2/3 of the frame in front of the subject's gaze or movement direction.
+      For dialogue, position speakers so they face into the frame's center. Adjust
+      room size to match emotional state: tight room = anxious, generous room = calm.
+    best_for:
+      - "Dialogue scenes (look room maintains spatial clarity)"
+      - "Movement and travel shots (room ahead of direction)"
+      - "Pinpointing off-screen threat or object of attention"
+      - "Creating spatial continuity between shots"
+    example_films:
+      - "Heat (Pacino and De Niro diner scene — precise look room)"
+      - "Before Sunrise (walk-and-talk look room)"
+      - "Jaws (look room toward the water = dread)"
+    notes: >
+      Violating the rule of space is an effective tension tool. Removing look room
+      (subject facing the edge of frame) creates immediate anxiety — the audience
+      feels trapped. Use this deliberately, not accidentally.
+    emotions:
+      - calm
+      - anticipation
+      - direction
+      - anxiety
+      - curiosity
+    scene_types:
+      - dialogue
+      - travel
+      - tension
+    keywords:
+      - look_room
+      - gaze
+      - direction
+      - breathing_room
+      - off_screen
+      - anticipate
+      - space
+    framings: [CU, MCU, MS, MLS]
+    lenses: [35mm, 50mm, 85mm]
+    conflicts_with: [CENTER_COMPOSITION]
+
+  # ── 12. DYNAMIC_SYMMETRY ──────────────────────────────────────────────
+  - id: comp_dynamic_symmetry
+    rule: DYNAMIC_SYMMETRY
+    name: "Dynamic Symmetry"
+    effect: >
+      More complex than simple symmetry. Uses intersecting diagonal grids
+      (baroque and sinister diagonals) to create compositions that feel both
+      ordered and alive. The grid provides multiple anchor points, creating
+      visual rhythm that guides the eye through a choreographed path.
+    technique: >
+      Overlay the dynamic symmetry grid (root-2, root-3, or root-5 rectangle
+      with reciprocal diagonals). Place key subjects at grid intersections.
+      Secondary elements align with grid lines. This requires pre-visualization
+      or post-hoc grid checking — it's hard to do intuitively.
+    best_for:
+      - "Painterly, composed period pieces"
+      - "Multi-subject scenes requiring visual hierarchy"
+      - "Scenes about hidden order or conspiracy"
+      - "When RULE_OF_THIRDS feels too simple"
+    example_films:
+      - "Barry Lyndon (Kubrick's dynamic symmetry replicating 18th-century painting)"
+      - "The Fall (Tarsem's composed imagery)"
+      - "The Master (PTA's precise multi-subject framing)"
+    notes: >
+      Dynamic symmetry is the grad-school version of rule of thirds. It's most
+      effective when the audience doesn't notice it — they just feel that the
+      image is unusually satisfying. Hardest to deploy in moving shots.
+    emotions:
+      - order
+      - complexity
+      - satisfaction
+      - hidden_structure
+      - elegance
+    scene_types:
+      - period_piece
+      - conspiracy
+      - multi_subject
+    keywords:
+      - grid
+      - dynamic
+      - reciprocal
+      - complex
+      - baroque
+      - diagonal_grid
+      - composition
+      - painterly
+    framings: [MS, MLS, LS]
+    lenses: [35mm, 50mm]
+    conflicts_with: [HANDHELD]
+
+  # ── 13. BALANCED ──────────────────────────────────────────────────────
+  - id: comp_balanced
+    rule: BALANCED
+    name: "Balanced Composition"
+    effect: >
+      Distributes visual weight evenly across the frame, creating equilibrium
+      and calm. Unlike SYMMETRY (which mirrors), BALANCED achieves equilibrium
+      through counterweight: a large dark object on one side balanced by a
+      small bright object on the other. Feels natural, unhurried, stable.
+    technique: >
+      Identify the visual weight of each element (size, brightness, color
+      saturation, complexity) and ensure the frame's center of mass is roughly
+      centered. Use negative space as a counterweight. Balanced compositions
+      work well for establishing normalcy before disruption.
+    best_for:
+      - "Establishing normalcy or everyday life"
+      - "Calm before the storm"
+      - "Resolution and closure scenes"
+      - "Romantic or peaceful moments"
+    example_films:
+      - "Spirited Away (balanced compositions in the bathhouse)"
+      - "Paterson (Jarmusch's balanced everyday frames)"
+      - "Columbus (architectural balance)"
+    notes: >
+      Balanced composition is the default resting state. It's what feels "right"
+      without calling attention to itself. The most effective use is to establish
+      balance, then break it — the disruption feels physical to the audience.
+    emotions:
+      - calm
+      - stability
+      - peace
+      - resolution
+      - normalcy
+    scene_types:
+      - everyday
+      - resolution
+      - romance
+      - peace
+    keywords:
+      - balance
+      - equilibrium
+      - weight
+      - calm
+      - stable
+      - counterweight
+      - rest
+    framings: [MCU, MS, MLS, LS]
+    lenses: [35mm, 50mm]
+    conflicts_with: [ASYMMETRICAL, DIAGONAL]
+
+  # ── 14. ASYMMETRICAL ──────────────────────────────────────────────────
+  - id: comp_asymmetrical
+    rule: ASYMMETRICAL
+    name: "Asymmetrical Composition"
+    effect: >
+      Creates unease, tension, and visual instability. The frame's weight tilts
+      to one side, making the audience physically uncomfortable. Unlike DIAGONAL
+      (which channels energy), ASYMMETRICAL creates disorientation — the frame
+      feels "wrong" in an unnameable way. Essential for psychological tension.
+    technique: >
+      Deliberately unbalance the frame: heavy visual mass on one side with nothing
+      counterbalancing. Place the subject uncomfortably close to the frame edge.
+      Use lighting to create uneven weight. Combine with DUTCH_ANGLE or SHALLOW_FOCUS
+      for maximum disorientation. The effect is strongest when preceded by BALANCED.
+    best_for:
+      - "Psychological horror and dread"
+      - "Character losing control or sanity"
+      - "Moral ambiguity — nothing feels right"
+      - "Power imbalance between characters"
+    example_films:
+      - "The Shining (asymmetrical framing in Jack's descent)"
+      - "Requiem for a Dream (drug-induced asymmetry)"
+      - "Mother! (Arronofsky's claustrophobic asymmetry)"
+    notes: >
+      Asymmetrical composition is a weapon, not a tool. Use it sparingly and with
+      clear purpose. If every shot is asymmetrical, none of them are. The power
+      comes from contrast with balanced compositions earlier in the film.
+    emotions:
+      - unease
+      - tension
+      - anxiety
+      - dread
+      - instability
+      - wrongness
+      - fear
+    scene_types:
+      - tension
+      - horror
+      - psychological
+      - anxiety
+    keywords:
+      - asymmetric
+      - imbalance
+      - unease
+      - wrong
+      - tilt
+      - weight
+      - unstable
+      - dread
+      - anxious
+      - fear
+    framings: [CU, MCU, MS]
+    lenses: [50mm, 85mm, 100mm]
+    conflicts_with: [CENTER_COMPOSITION, SYMMETRY, BALANCED]

@@ -1,5 +1,5 @@
 # Director OS Engine Contract
-# Version: 1.0
+# Version: 1.1 (updated for ADR-008)
 
 ## Purpose
 
@@ -27,6 +27,9 @@ Project Representation
       |
       v
 Engine Layer
+      |
+      v
+Knowledge Resolution     ← ADR-008
       |
       v
 Production Intent
@@ -80,9 +83,9 @@ Engine creates production strategies:
 - Character continuity rules
 - Scene execution plans
 
-## 3. Knowledge Retrieval
+## 3. Knowledge Resolution Requests
 
-Engine may query Libraries.
+Engine requests knowledge through the Knowledge Resolution layer (ADR-008).
 
 Flow:
 ```text
@@ -92,14 +95,28 @@ Project
 Engine
   |
   v
-Library Query
+Knowledge Request (query + context)
   |
   v
-Knowledge
+Resolution Pipeline
+  ├── Local Rules (deterministic fallback)
+  ├── Cached LLM (coverage extension)
+  └── Future Providers
   |
   v
-Decision
+Resolved Knowledge (source-traceable)
+  |
+  v
+Creative Decision
 ```
+
+Engine is the consumer of knowledge, not the owner. It requests knowledge
+through the resolution interface and receives resolved, source-traceable
+results. Engine does not call LLM directly — that is the Resolution layer's
+responsibility.
+
+When local rules lack coverage for a specific domain, the Resolution layer
+can query an LLM, cache the result, and return it deterministically.
 
 ## 4. Consistency Management
 
@@ -121,8 +138,8 @@ EngineInput:
     Project Representation
   context:
     optional runtime context
-  libraries:
-    available knowledge
+  resolution:
+    Knowledge Resolution interface (ADR-008)
 ```
 
 Example:
@@ -134,6 +151,8 @@ engine_input:
     emotion: tension
   context:
     previous_scene: scene_000
+  resolution:
+    available_providers: [local_rules, cached_llm]
 ```
 
 ---
@@ -205,7 +224,9 @@ camera:
 
 Engine must be deterministic when possible.
 
-Same Project + same Library Version should produce comparable Production Intent.
+Same Project + same Knowledge Resolution cache should produce comparable
+Production Intent. The Resolution layer's caching mechanism (ADR-008)
+ensures LLM-derived knowledge is deterministic on repeat queries.
 
 ## Rule 4: Modularity
 
@@ -223,6 +244,21 @@ engines/
   +-- production_engine
 ```
 
+## Rule 5: Request Knowledge, Do Not Store It
+
+Engine requests knowledge through the Resolution interface (ADR-008).
+
+Engine does not:
+- Call LLM directly
+- Manage knowledge caches
+- Decide which provider to use
+- Store creative rules internally
+
+Engine only:
+- Forms knowledge requests (query + context)
+- Consumes resolved knowledge
+- Applies knowledge to creative decisions
+
 ---
 
 # Engine Pipeline
@@ -233,19 +269,19 @@ Full flow:
 Project
   |
   v
-Story Engine
+Story Engine ──→ Knowledge Resolution
   |
   v
-Scene Engine
+Scene Engine ──→ Knowledge Resolution
   |
   v
-Character Engine
+Character Engine ──→ Knowledge Resolution
   |
   v
-Visual Engine
+Visual Engine ──→ Knowledge Resolution
   |
   v
-Shot Engine
+Shot Engine ──→ Knowledge Resolution
   |
   v
 Production Intent
@@ -254,15 +290,20 @@ Production Intent
 Compiler
 ```
 
+Each Engine may request knowledge independently. The Resolution layer
+provides consistent, cached, source-traceable results.
+
 ---
 
 # Engine Does NOT Do
 
 - Generate final prompts
 - Call AI video APIs
+- Call LLM directly (this is the Resolution layer's responsibility)
 - Store project state
 - Replace human creative decisions
 - Contain platform-specific knowledge
+- Manage knowledge caches or provider selection
 
 ---
 
@@ -272,6 +313,10 @@ Project defines: "What exists"
 
 Engine defines: "How it should be realized"
 
+Knowledge Resolution provides: "The filmmaking knowledge needed to decide" (ADR-008)
+
 Compiler defines: "How machines receive it"
 
 The Engine Layer transforms Director OS from a data system into an intelligent filmmaking system.
+
+The Knowledge Resolution layer ensures that intelligence is powered by the best available knowledge — from local rules, cached LLM, or future providers — while maintaining the determinism the Compiler depends on.

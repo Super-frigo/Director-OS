@@ -1,0 +1,43 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: model_veo_capabilities
+    name: Veo (Google DeepMind) Platform Capabilities
+    author: Director OS
+  category: model_capability
+  knowledge:
+    concept: "Veo is Google DeepMind's video generation model with strong cinematic understanding and longer-form support."
+    principles:
+      - "Responds well to professional cinematography terminology"
+      - "Longer prompt descriptions produce richer results"
+      - "Supports camera movement notation better than most platforms"
+      - "Color grading and lighting references are well understood"
+    emotional_effects: []
+    techniques:
+      - "Use industry-standard camera language (dolly, crane, tracking, etc.)"
+      - "Describe lighting with professional terms (key light, rim light, etc.)"
+      - "Specify lens characteristics and film stock references"
+      - "Emotional tone descriptors improve output quality"
+    constraints:
+      - "Very long complex scenes may lose consistency"
+      - "Quick cuts between wildly different scenes may cause style shifts"
+  applicability:
+    emotions: []
+    genres: []
+    keywords:
+      - veo
+      - deepmind
+      - google
+      - text_to_video
+  engine_guidance:
+    when_to_use: "Compiler is targeting Veo platform"
+    recommended_actions:
+      - "Use full cinematic vocabulary (not simplified)"
+      - "Include color and lighting direction"
+    avoid:
+      - "Overly terse prompts"
+  relationships:
+    related:
+      - model_seedance_capabilities
+      - model_kling_capabilities
+  version: "1.0"

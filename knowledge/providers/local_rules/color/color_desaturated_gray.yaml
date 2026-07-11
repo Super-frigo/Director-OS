@@ -1,0 +1,61 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: color_desaturated_gray
+    name: Desaturated / Gray — Realism & Death
+    author: Director OS
+  category: visual_style
+  knowledge:
+    concept: "The absence of color. Represents depression, realism, historic distance, or emotional death. Removes the comfort of visual beauty."
+    principles:
+      - "Zero saturation = zero emotional manipulation through color"
+      - "Grayscale forces focus on composition, texture, and performance"
+      - "Partial desaturation (one color remaining) = symbolic focus"
+      - "Low saturation with high contrast = noir; low saturation with low contrast = realism"
+    emotional_effects:
+      - depression
+      - realism
+      - historical distance
+      - emotional death
+      - seriousness
+    techniques:
+      - "Full desaturation for flashbacks to traumatic past"
+      - "Partial desaturation with single color accent for symbolic focus"
+      - "Low-contrast desaturated for documentary realism"
+      - "High-contrast black and white for timeless or noir effect"
+    constraints:
+      - "Audience may find long desaturated sequences emotionally draining"
+      - "Color accents lose impact if audience expects grayscale"
+      - "Not suitable for commercial or high-energy content"
+  applicability:
+    emotions:
+      - depression
+      - seriousness
+      - historical_distance
+      - grim
+    genres:
+      - war
+      - documentary
+      - noir
+      - historical
+    keywords:
+      - black_and_white
+      - realism
+      - depression
+      - serious
+  engine_guidance:
+    when_to_use: "Scene requires emotional gravity, historical distance, or the removal of comforting beauty"
+    recommended_actions:
+      - "Full desaturation for trauma flashbacks or documentary realism"
+      - "Keep one color accent for symbolic focus"
+    avoid:
+      - "Commercial, energetic, or hopeful content"
+      - "Scenes where audience should feel warmth or beauty"
+  relationships:
+    related:
+      - color_blue_cold
+      - comp_negative_space
+    conflicts:
+      - color_teal_orange
+      - color_yellow_warm
+  version: "1.0"

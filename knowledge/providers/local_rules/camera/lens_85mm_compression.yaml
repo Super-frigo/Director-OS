@@ -1,0 +1,56 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: lens_85mm_compression
+    name: 85mm — Portrait & Compression
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: "Telephoto focal length that compresses spatial depth and isolates the subject. Standard for close-ups and emotional intensity."
+    principles:
+      - "Narrow field of view forces viewer focus on subject"
+      - "Background compression creates intimacy and tension"
+      - "Shallow depth of field separates subject from environment"
+    emotional_effects:
+      - intimacy
+      - tension
+      - obsession
+      - vulnerability
+    techniques:
+      - "CU and MCU framing for emotional close-ups"
+      - "Use to visually isolate a character in a crowd"
+      - "Rack focus between foreground and background for POV shifts"
+    constraints:
+      - "Requires more distance from subject (not for tight spaces)"
+      - "Not suitable for establishing shots or environmental context"
+  applicability:
+    emotions:
+      - intimacy
+      - tension
+      - fear
+      - desire
+      - suspicion
+    genres:
+      - thriller
+      - romance
+      - psychological_drama
+      - horror
+    keywords:
+      - close_up
+      - revelation
+      - confrontation
+  engine_guidance:
+    when_to_use: "Scene requires emotional closeness or psychological intensity"
+    recommended_actions:
+      - "Use in THE_FACE type beats (character reaction shots)"
+      - "Pair with SHALLOW_FOCUS to emphasize a single subject"
+    avoid:
+      - "Action sequences (too narrow, disorienting)"
+      - "Establishing shots or location reveals"
+  relationships:
+    related:
+      - lens_50mm_portrait
+      - lens_135mm_tele
+    conflicts:
+      - lens_35mm_standard
+  version: "1.0"

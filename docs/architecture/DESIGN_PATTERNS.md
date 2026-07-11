@@ -24,15 +24,32 @@ A single Context object accumulates data as it flows through the Creative Cycle 
 
 The Project is never overwritten in place. New versions are created by reading the current Project, applying a diff, and writing a new version alongside the old one. History grows monotonically.
 
-## 7. Repository Structure as System Map
+## 7. Knowledge Resolution Pipeline
+
+Knowledge flows through a resolution pipeline, not a static library query.
+
+```
+Engine → Knowledge Request → [Local Rules | Cached LLM | Future Providers] → Resolved Knowledge
+```
+
+The Resolution Pipeline (ADR-008) is responsible for:
+
+- Accepting knowledge requests from Engine
+- Routing to available providers
+- Merging and ranking results
+- Returning resolved, source-traceable knowledge
+
+Providers are swappable. Local rules guarantee determinism. Cached LLM extends coverage. The Compiler never sees unresolved knowledge or calls LLM directly.
+
+## 8. Repository Structure as System Map
 
 The directory layout mirrors the system architecture:
 
 ```
-docs/        →  System specification
-libraries/   →  Domain knowledge (read-only reference data)
-engines/     →  Core logic (agent implementations)
-compilers/   →  Platform adapters
-projects/    →  User projects (instances of the data model)
-examples/    →  Sample projects for learning and testing
+docs/         → System specification
+knowledge/    → Knowledge Resolution (providers, cache, resolver)
+engines/      → Core logic (creative reasoning)
+compilers/    → Platform adapters
+projects/     → User projects (instances of the data model)
+examples/     → Sample projects for learning and testing
 ```

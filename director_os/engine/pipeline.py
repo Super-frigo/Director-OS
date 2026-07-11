@@ -7,13 +7,18 @@ from ..models.project import Project
 from ..models.production_intent import ProductionIntent, CharacterDirection
 from ..layers import LayerPipeline
 from ..models.library_entry import LibraryEntry
+from .analyzer import RequirementAnalyzer, AnalysisResult
+from .enricher import ProjectEnricher, EnrichmentResult
 
 
 @dataclass
 class EngineInput:
     project: Project
     context: dict = field(default_factory=dict)
+    # Legacy: dict-of-lists for backward compatibility
     libraries: dict = field(default_factory=dict)
+    # New: Knowledge Resolver (ADR-008). When set, _query_library() delegates here.
+    resolver: object | None = None  # director_os.knowledge.KnowledgeResolver
 
 
 class BaseEngine:
@@ -24,6 +29,11 @@ class BaseEngine:
 
     def _query_library(self, inp: EngineInput, category: str = "", emotion: str = "", genre: str = "") -> list[LibraryEntry]:
         """Query libraries by category / emotion / genre."""
+        # --- New path: Knowledge Resolver (ADR-008) ---
+        if inp.resolver is not None:
+            return _resolve_knowledge(inp.resolver, category, emotion, genre)
+
+        # --- Legacy path: direct LibraryEntry search ---
         results: list[LibraryEntry] = []
         pool: list[LibraryEntry] = []
         if category:
@@ -45,6 +55,44 @@ class BaseEngine:
 def _get_duration(s: object) -> str:
     """Extract duration string from a Shot or scalar."""
     return str(s) if s is not None else ""
+
+
+def _resolve_knowledge(resolver, domain: str, emotion: str = "", genre: str = "") -> list:
+    """Bridge: call Knowledge Resolver and convert results to LibraryEntry list.
+
+    This keeps backward compatibility with the existing engine code that
+    consumes LibraryEntry objects. When engines are refactored to consume
+    KnowledgeEntry directly, this bridge can be removed.
+    """
+    from ..knowledge import KnowledgeRequest
+    from ..models.library_entry import LibraryEntry as LE
+
+    query_parts = []
+    if emotion:
+        query_parts.append(emotion)
+    if genre:
+        query_parts.append(genre)
+
+    request = KnowledgeRequest(
+        domain=domain,
+        query=" ".join(query_parts) if query_parts else domain,
+        context={"emotion": emotion, "genre": genre},
+    )
+    resolved = resolver.resolve(request)
+
+    # Convert KnowledgeEntry -> LibraryEntry (bridge)
+    result: list = []
+    for ke in resolved.entries:
+        le = LE(
+            metadata={"id": ke.entry_id, "name": ke.description[:60] if ke.description else ke.entry_id},
+            category=ke.domain,
+            knowledge={"concept": ke.description, "principles": ke.rules},
+            applicability={"emotions": ke.keywords, "genres": [genre] if genre else [], "keywords": ke.keywords},
+            engine_guidance={"when_to_use": "", "recommended_actions": ke.rules},
+            examples={"successful": ke.examples},
+        )
+        result.append(le)
+    return result
 
 
 class StoryEngine(BaseEngine):
@@ -218,6 +266,9 @@ class EnginePipeline:
             "shot": ShotEngine(),
         }
         self.layer_pipeline = LayerPipeline()
+        # Vision Step 5: explicit analysis + enrichment stages
+        self.analyzer = RequirementAnalyzer()
+        self.enricher = ProjectEnricher()
 
     def analyze_layers(self, project, intent_dict: dict, shots: list[dict]) -> dict:
         """Run 6-layer analysis on the project and intent."""
@@ -227,6 +278,20 @@ class EnginePipeline:
         results: dict[str, Any] = {}
         for name, engine in self.engines.items():
             results[name] = engine.process(inp)
+
+        # --- Vision Step 5: Analyze → Resolve → Enrich ---
+        knowledge_enrichment: dict[str, Any] = {}
+        if inp.resolver is not None:
+            analysis = self.analyzer.analyze(inp.project, results)
+            all_entries = []
+            for req in analysis.requests:
+                resolved = inp.resolver.resolve(req)
+                all_entries.extend(resolved.entries)
+            if all_entries:
+                from ..knowledge import ResolvedKnowledge
+                merged = ResolvedKnowledge(entries=all_entries)
+                enrichment = self.enricher.enrich({}, merged)
+                knowledge_enrichment = enrichment.enriched
 
         story_out = results.get("story", {})
         char_out = results.get("character", {})
@@ -264,10 +329,16 @@ class EnginePipeline:
                 "theme": story_out.get("theme", []),
             },
             visual_direction={
+                # Core visual fields
                 "style": vis_out.get("style", ""),
                 "mood": vis_out.get("mood", []),
                 "composition": vis_out.get("composition", ""),
                 "color": vis_out.get("color", ""),
+                # Knowledge enrichment from Resolution pipeline
+                "composition_guidance": _safe_guidance(knowledge_enrichment, "composition_guidance"),
+                "lighting_guidance": _safe_guidance(knowledge_enrichment, "lighting_guidance"),
+                "camera_guidance": _safe_guidance(knowledge_enrichment, "camera_guidance"),
+                "style_guidance": _safe_guidance(knowledge_enrichment, "style_guidance"),
                 "texture": vis_out.get("texture", ""),
                 "atmosphere": vis_out.get("atmosphere", ""),
                 "lighting": vis_out.get("lighting", ""),
@@ -301,3 +372,11 @@ def _first_shot_field(shots: list[dict], field: str, default: str = "") -> str:
         if val:
             return val
     return default
+
+
+def _safe_guidance(enrichment: dict, key: str) -> dict:
+    """Safely extract a guidance field from the enrichment result."""
+    vd = enrichment.get("visual_direction", {})
+    if not isinstance(vd, dict):
+        return {}
+    return vd.get(key, {})

@@ -43,15 +43,26 @@ that are expensive to fix later.
 
 *Violates: [6. Explicit Validation](ARCHITECTURE_PRINCIPLES.md#6-explicit-validation)*
 
-## 6. Writing Libraries as Free-Form Notes
+## 6. Bypassing Knowledge Resolution
 
-Storing film knowledge as unstructured text paragraphs in libraries. Libraries
-must follow defined schemas so that Agents can query them programmatically.
-Unstructured notes look like documentation but cannot be used by the system.
+Hardcoding film knowledge directly into Engine logic, calling LLMs from the
+Compiler, or storing creative rules as inline strings. All knowledge requests
+must flow through the Knowledge Resolution pipeline (ADR-008) so that sources
+are traceable, results are cached for determinism, and local rules provide
+a reliable fallback.
 
-*Violates: [5. Structured Over Narrative](ARCHITECTURE_PRINCIPLES.md#5-structured-over-narrative)*
+*Violates: [9. Knowledge Resolution over Knowledge Storage](ARCHITECTURE_PRINCIPLES.md#9-knowledge-resolution-over-knowledge-storage)*
 
-## 7. Working Without a Project
+## 7. Calling LLM from the Compiler
+
+The Compiler must remain purely deterministic. Calling an LLM during compilation
+introduces non-determinism at the final stage of the pipeline, making results
+unrepeatable. LLM interaction belongs in the Knowledge Resolution layer (Engine
+phase), where results are cached and the Compiler only sees resolved output.
+
+*Violates: [9. Knowledge Resolution over Knowledge Storage](ARCHITECTURE_PRINCIPLES.md#9-knowledge-resolution-over-knowledge-storage), [2. Strict Layering](ARCHITECTURE_PRINCIPLES.md#2-strict-layering)*
+
+## 8. Working Without a Project
 
 Starting a session or conversation without an associated Project file. Every
 creative cycle should be grounded in a Project. Without one, there is no source

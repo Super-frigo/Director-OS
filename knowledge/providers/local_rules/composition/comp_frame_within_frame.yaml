@@ -1,0 +1,58 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: comp_frame_within_frame
+    name: Frame Within Frame
+    author: Director OS
+  category: composition
+  knowledge:
+    concept: "Using foreground elements (doorways, windows, arches, objects) to create a frame around the subject. Adds depth and voyeuristic quality."
+    principles:
+      - "Foreground element in focus or out of focus serves as frame"
+      - "Creates a sense of observing from a hidden position"
+      - "Adds visual depth with at least 3 layers (frame / subject / background)"
+      - "The framing object often carries thematic meaning"
+    emotional_effects:
+      - voyeurism
+      - entrapment
+      - observation
+      - separation
+    techniques:
+      - "Doorway or window frame for literal confinement metaphor"
+      - "Blurred foreground leaves/obstacles for subjective observer"
+      - "Architectural elements (columns, beams) for natural frames"
+      - "Reflection in mirror or glass as meta-frame"
+    constraints:
+      - "Requires careful staging — frame element shouldn't distract"
+      - "Moving shots need consistent foreground element"
+  applicability:
+    emotions:
+      - entrapment
+      - voyeurism
+      - distance
+      - observation
+    genres:
+      - thriller
+      - horror
+      - noir
+      - drama
+    keywords:
+      - doorway
+      - window
+      - observation
+      - confinement
+  engine_guidance:
+    when_to_use: "Character is being watched, confined, or emotionally separated from their environment"
+    recommended_actions:
+      - "Combine with STATIC camera for maximum voyeuristic effect"
+      - "Use architectural elements for natural frame creation"
+    avoid:
+      - "Wide open exterior scenes without foreground objects"
+      - "Fast editing sequences (the frame needs time to read)"
+  relationships:
+    related:
+      - comp_negative_space
+      - lens_50mm_portrait
+    conflicts:
+      - comp_flat_lighting
+  version: "1.0"
