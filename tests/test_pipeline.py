@@ -27,24 +27,31 @@ def test_pipeline():
         visual_identity=VisualIdentity(age_range="adult", appearance="gaunt face, deep-set eyes", clothing="dark long gown"),
     ))
 
-    print(f"1. Project: {d.project.metadata.title}")
+    # Assert project was created correctly
+    assert d.project.metadata.title == "The Hanging"
+    assert d.project.story.premise == (
+        "A detective witnesses an execution he unknowingly sentenced an innocent man to."
+    )
+    assert len(d.project.characters) == 1
+    assert d.project.characters[0].id == "detective"
+
+    # Validate project
     issues = d.validate_project()
-    print(f"   Premise: {d.project.story.premise}")
-    print(f"   Issues:  {issues if issues else 'None'}")
+    # No shots, no story_beats — expect validation issues
+    assert isinstance(issues, list)
 
-    # 2. Engine
+    # 2. Engine → plan() should not crash with minimal project
     intent = d.plan()
-    print(f"\n2. Production Intent generated")
-    print(f"   Creative Goal: {intent.creative_goal.get('primary', '')[:60]}")
+    assert intent is not None
+    assert intent.creative_goal is not None
+    assert isinstance(intent.creative_goal, dict)
 
-    # 3. Compiler
+    # 3. Compiler → compile() should produce a non-empty prompt
     pkg = d.compile("seedance")
+    assert pkg is not None
     prompt = pkg.instructions.get("prompt", "")
-    print(f"\n3. Seedance Prompt:")
-    print(f"   {prompt[:120] if prompt else '(empty - minimal project has no shot data)'}")
-    print(f"\n   Target provider: {pkg.target.get('provider', '')}")
-
-    print("\nPipeline test passed")
+    assert isinstance(prompt, str)
+    assert pkg.target.get("provider") == "seedance"
 
 
 if __name__ == "__main__":

@@ -1,7 +1,14 @@
-﻿"""Load Director OS project YAML files into Python models."""
+"""Load Director OS project YAML files into Python models.
+
+Raises ValueError if the project file fails schema validation.
+Uses schemas/project_schema.validate_yaml() as the canonical gate before
+mapping to dataclass models.
+"""
 
 from pathlib import Path
 import re
+
+from schemas.project_schema import validate_yaml
 
 from .models.project import (
     Project, Metadata, Creative, Story, StoryBeat, World, Location,
@@ -18,7 +25,7 @@ def _load_yaml_with_markdown(path: Path) -> dict:
     raw = path.read_text(encoding="utf-8-sig")
     cleaned_lines = []
     for line in raw.splitlines():
-        if re.match(r"^#{2,}\\s+", line):
+        if re.match(r"^#{2,}\s+", line):
             continue
         if line.strip() == "---":
             continue
@@ -38,6 +45,15 @@ def load_project(path: str | Path) -> Project:
         raise ImportError("PyYAML is required. Install with: pip install pyyaml")
 
     raw = data.get("project", data) if isinstance(data, dict) else {}
+
+    # --- Schema validation gate ---
+    validation_errors = validate_yaml(raw)
+    if validation_errors:
+        err_list = "\n  - ".join(validation_errors)
+        raise ValueError(
+            f"Project file '{path}' failed schema validation with "
+            f"{len(validation_errors)} error(s):\n  - {err_list}"
+        )
 
     project = Project(
         schema_version=raw.get("schema_version", "1.0"),
@@ -61,7 +77,7 @@ def load_project(path: str | Path) -> Project:
     return project
 
 
-# ?? individual section mappers ??????????????????????????????????????
+# -- individual section mappers ------------------------------------------
 
 def _meta(d: dict) -> Metadata:
     return Metadata(
@@ -182,20 +198,22 @@ def _shot(d: dict) -> Shot:
         shot_id=d.get("shot_id", d.get("id", "")),
         beat_ref=d.get("beat_ref", d.get("beat", "")),
         order=d.get("order", 1),
-        duration=float(d.get("duration", d.get("duration", 0))),
+        # duration: try shot-level first, then camera sub-dict (schema accepts both)
+        duration=float(d.get("duration") or cam.get("duration", 0)),
         subject=Subject(
             character=subj.get("character", ""),
             action=subj.get("action", ""),
             position=subj.get("position", ""),
             state=subj.get("state", ""),
         ),
-        framing=cam.get("framing", ""),
-        angle=cam.get("angle", cam.get("angle", "")),
-        height=cam.get("height", ""),
-        lens=cam.get("lens", ""),
-        movement=cam.get("movement", ""),
-        focus=cam.get("focus", ""),
-        aperture=cam.get("aperture", ""),
+        # Camera fields: read from camera sub-dict first, fall back to shot-level (schema accepts both)
+        framing=cam.get("framing") or d.get("framing", ""),
+        angle=cam.get("angle") or d.get("angle", ""),
+        height=cam.get("height") or d.get("height", ""),
+        lens=cam.get("lens") or d.get("lens", ""),
+        movement=cam.get("movement") or d.get("movement", ""),
+        focus=cam.get("focus") or d.get("focus", ""),
+        aperture=cam.get("aperture") or d.get("aperture", ""),
         composition=d.get("composition", {}),
         lighting=LightingSetup.from_dict(lt),
         color=ShotColor(
@@ -319,5 +337,3 @@ def _history(d: dict) -> HistoryEntry:
         changes=d.get("changes", []),
         notes=d.get("notes", ""),
     )
-
-

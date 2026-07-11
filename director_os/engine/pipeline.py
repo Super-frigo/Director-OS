@@ -44,7 +44,7 @@ class BaseEngine:
 
 def _get_duration(s: object) -> str:
     """Extract duration string from a Shot or scalar."""
-    return str(s) if s else ""
+    return str(s) if s is not None else ""
 
 
 class StoryEngine(BaseEngine):
