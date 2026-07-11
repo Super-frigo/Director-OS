@@ -9,7 +9,6 @@ from .engine.pipeline import EnginePipeline, EngineInput
 from .compilers.seedance.compiler import SeedanceCompiler
 from .compilers.veo.compiler import VeoCompiler
 from dataclasses import asdict
-from .library.loader import LibraryLoader
 
 
 class Director:
@@ -22,8 +21,13 @@ class Director:
         self.project: Project | None = None
         self.intent: ProductionIntent | None = None
         self.engine = EnginePipeline()
-        self.library = LibraryLoader()
-        self.library.load_all()
+        # Knowledge Resolution (ADR-008): multi-provider pipeline
+        from .knowledge import KnowledgeResolver, LocalRulesProvider
+        self.resolver = KnowledgeResolver()
+        self.resolver.register(LocalRulesProvider())
+
+        # Try to initialize LLM provider from environment
+        self._init_llm_provider()
         self._compilers = {
             "seedance": SeedanceCompiler,
             "veo": VeoCompiler,
@@ -46,7 +50,7 @@ class Director:
             raise RuntimeError("No project loaded. Call load_project() or new_project() first.")
         inp = EngineInput(
             project=self.project,
-            libraries=self.library._by_category,
+            resolver=self.resolver,  # ADR-008: Knowledge Resolution pipeline
         )
         self.intent = self.engine.run(inp)
         return self.intent
@@ -81,3 +85,33 @@ class Director:
         if not self.project:
             return ["No project loaded"]
         return self.project.validate()
+
+    def _init_llm_provider(self) -> None:
+        """Initialize LLM provider from environment variables if available.
+
+        Set OPENAI_API_KEY to enable LLM-powered knowledge resolution.
+        Set OPENAI_BASE_URL for non-OpenAI providers (DeepSeek, etc.).
+        Set OPENAI_MODEL to override the default model (gpt-4o).
+        """
+        import os
+        api_key = os.getenv("OPENAI_API_KEY", "")
+        if not api_key:
+            return  # No LLM configured — local rules only
+
+        try:
+            from .knowledge import LLMProvider, CacheManager
+            from .knowledge.llm_client import OpenAIClient
+
+            model = os.getenv("OPENAI_MODEL", "gpt-4o")
+            base_url = os.getenv("OPENAI_BASE_URL", "")
+
+            client = OpenAIClient(
+                api_key=api_key,
+                model=model,
+                base_url=base_url,
+            )
+            cache = CacheManager()
+            self.resolver.set_cache(cache)
+            self.resolver.register(LLMProvider(client=client, cache_manager=cache))
+        except Exception:
+            pass  # LLM init failure is non-fatal — local rules still work

@@ -45,7 +45,7 @@ def test_resolved_knowledge_defaults():
 # ============================================================================
 
 def test_local_rules_loads_entries():
-    """Provider should load entries from the existing libraries/ directory."""
+    """Provider should load entries from knowledge/providers/local_rules/."""
     p = LocalRulesProvider()
     assert len(p._entries) > 0
     assert "composition" in p._by_domain
@@ -92,20 +92,21 @@ def test_local_rules_can_handle():
 # LLMProvider (stub)
 # ============================================================================
 
-def test_llm_provider_returns_empty():
-    p = LLMProvider()
-    req = KnowledgeRequest(domain="composition", query="test")
-    result = p.resolve(req)
-    assert result == []
+def test_llm_provider_requires_client():
+    with pytest.raises(ValueError):
+        LLMProvider()
 
 
 def test_llm_provider_with_cache_hit():
+    from unittest.mock import MagicMock
     cm = CacheManager(cache_dir=tempfile.mkdtemp())
     entry = KnowledgeEntry(entry_id="c1", domain="test", description="cached", source="cached_llm")
     req = KnowledgeRequest(domain="test", query="cached query")
     cm.put(req, [entry], model="test")
 
-    p = LLMProvider(cache_manager=cm)
+    mock_client = MagicMock()
+    mock_client.model_name = "test"
+    p = LLMProvider(client=mock_client, cache_manager=cm)
     result = p.resolve(req)
     assert len(result) == 1
     assert result[0].entry_id == "c1"

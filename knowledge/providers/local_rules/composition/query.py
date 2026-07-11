@@ -14,7 +14,7 @@ Weight-balanced scoring (v2):
   - W_semantic and W_shot are tunable (default 0.5 each)
 
 Usage:
-    from libraries.composition.query import query_compositions
+    from knowledge.providers.local_rules.composition.query import query_compositions
 
     matches = query_compositions({
         "emotion": "unease",
@@ -275,7 +275,7 @@ class QueryResult:
 def load_entries(entries_path: Optional[Path] = None) -> List[Dict[str, Any]]:
     """Load composition entries from the YAML knowledge base."""
     if entries_path is None:
-        entries_path = Path(__file__).resolve().parent / "entries" / "compositions.yaml"
+        entries_path = Path(__file__).resolve().parent / "compositions.yaml"
     if not entries_path.exists():
         raise FileNotFoundError(f"Composition entries not found: {entries_path}")
     with open(entries_path, "r", encoding="utf-8") as f:

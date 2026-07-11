@@ -1,0 +1,69 @@
+# Cache Warmup Queries
+# =====================
+# These queries are run by scripts/warmup_cache.py to pre-fill the LLM cache.
+# After warmup, all Engine queries that match these combinations hit cache
+# immediately without calling the LLM.
+#
+# Coverage strategy: cross-product of common creative parameters per domain.
+
+version: "1.0"
+
+domains:
+  composition:
+    - { emotion: "loneliness", scene_type: "interior", character_count: 1 }
+    - { emotion: "tension", scene_type: "alleyway", character_count: 2 }
+    - { emotion: "fear", scene_type: "confined_space", character_count: 1 }
+    - { emotion: "joy", scene_type: "exterior_wide", character_count: 3 }
+    - { emotion: "sadness", scene_type: "interior_dim", character_count: 1 }
+    - { emotion: "anger", scene_type: "interior_harsh", character_count: 1 }
+    - { emotion: "hope", scene_type: "exterior_open", character_count: 1 }
+    - { emotion: "confusion", scene_type: "urban_crowded", character_count: 1 }
+    - { emotion: "intimacy", scene_type: "interior_warm", character_count: 2 }
+    - { emotion: "power", scene_type: "interior_grand", character_count: 1 }
+
+  lighting:
+    - { mood: "noir", location: "bar", time_of_day: "night", genre: "thriller" }
+    - { mood: "romantic", location: "restaurant", time_of_day: "evening", genre: "romance" }
+    - { mood: "tense", location: "alleyway", time_of_day: "night", genre: "thriller" }
+    - { mood: "hopeful", location: "field", time_of_day: "golden_hour", genre: "drama" }
+    - { mood: "mysterious", location: "forest", time_of_day: "dusk", genre: "mystery" }
+    - { mood: "cold", location: "office", time_of_day: "day", genre: "sci_fi" }
+    - { mood: "warm", location: "home", time_of_day: "golden_hour", genre: "family" }
+    - { mood: "clinical", location: "hospital", time_of_day: "day", genre: "drama" }
+
+  camera:
+    - { character_state: "vulnerable", shot_size: "CU", movement_type: "static", emotion: "fear" }
+    - { character_state: "powerful", shot_size: "LS", movement_type: "slow_push", emotion: "confidence" }
+    - { character_state: "confused", shot_size: "MS", movement_type: "handheld", emotion: "confusion" }
+    - { character_state: "determined", shot_size: "MCU", movement_type: "tracking", emotion: "determination" }
+    - { character_state: "isolated", shot_size: "ELS", movement_type: "slow_pull", emotion: "loneliness" }
+    - { character_state: "intimate", shot_size: "CU", movement_type: "static", emotion: "love" }
+    - { character_state: "threatened", shot_size: "OTS", movement_type: "dolly_in", emotion: "fear" }
+    - { character_state: "triumphant", shot_size: "LS", movement_type: "crane_up", emotion: "joy" }
+
+  color:
+    - { emotion: "loneliness", genre: "drama", era: "contemporary", style_reference: "" }
+    - { emotion: "tension", genre: "thriller", era: "contemporary", style_reference: "" }
+    - { emotion: "nostalgia", genre: "drama", era: "1970s", style_reference: "" }
+    - { emotion: "hope", genre: "adventure", era: "contemporary", style_reference: "" }
+    - { emotion: "dread", genre: "horror", era: "contemporary", style_reference: "" }
+    - { emotion: "wonder", genre: "sci_fi", era: "future", style_reference: "" }
+
+  storytelling:
+    - { genre: "thriller", premise: "", beat_count: 15, structure_type: "three_act" }
+    - { genre: "romance", premise: "", beat_count: 12, structure_type: "three_act" }
+    - { genre: "horror", premise: "", beat_count: 10, structure_type: "three_act" }
+    - { genre: "comedy", premise: "", beat_count: 14, structure_type: "three_act" }
+    - { genre: "drama", premise: "", beat_count: 16, structure_type: "three_act" }
+    - { genre: "sci_fi", premise: "", beat_count: 18, structure_type: "hero_journey" }
+    - { genre: "noir", premise: "", beat_count: 12, structure_type: "three_act" }
+
+  visual_style:
+    - { style: "Wong Kar-wai", director: "", era: "1990s", genre: "romance" }
+    - { style: "Christopher Nolan", director: "", era: "contemporary", genre: "thriller" }
+    - { style: "Wes Anderson", director: "", era: "contemporary", genre: "comedy" }
+    - { style: "David Fincher", director: "", era: "contemporary", genre: "thriller" }
+    - { style: "Hayao Miyazaki", director: "", era: "contemporary", genre: "animation" }
+    - { style: "Denis Villeneuve", director: "", era: "contemporary", genre: "sci_fi" }
+    - { style: "Park Chan-wook", director: "", era: "2000s", genre: "thriller" }
+    - { style: "Zhang Yimou", director: "", era: "2000s", genre: "drama" }

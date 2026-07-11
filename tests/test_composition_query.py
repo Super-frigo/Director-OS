@@ -1,4 +1,4 @@
-"""Tests for libraries/composition/query.py v2 -- token-based matching, balanced weights.
+"""Tests for knowledge/providers/local_rules/composition/query.py v2 -- token-based matching, balanced weights.
 
 Key regression tests:
   - Substring false positives eliminated ("instability" != "stability")
@@ -15,7 +15,7 @@ if str(ROOT) not in sys.path:
 
 import pytest
 
-from libraries.composition.query import (
+from knowledge.providers.local_rules.composition.query import (
     query_compositions,
     query_compositions_detailed,
     load_entries,
@@ -226,7 +226,7 @@ def test_semantic_score_normalized():
 # ============================================================================
 
 def test_set_weights_valid():
-    import libraries.composition.query as qmod
+    import knowledge.providers.local_rules.composition.query as qmod
     qmod.set_weights(0.3, 0.7)
     assert qmod.W_SEMANTIC == 0.3
     assert qmod.W_SHOT == 0.7

@@ -1,0 +1,269 @@
+# Domain Prompt Templates for LLM Knowledge Provider
+# ===================================================
+# These prompts are sent to the LLM when the Knowledge Resolver needs
+# domain knowledge not covered by local rules. The response is parsed
+# into KnowledgeEntry YAML and cached for determinism.
+#
+# Each domain has:
+#   system: the system-level instruction (role + format requirements)
+#   user_template: template filled with query context vars
+#   output_schema: the expected YAML structure
+
+version: "1.0"
+model_target: "gpt-5"  # or claude-4, gemini-2.5, etc.
+
+domains:
+
+  # ==========================================================================
+  # Composition
+  # ==========================================================================
+  composition:
+    system: |
+      You are a cinematography composition expert for Director OS, an AI-native
+      filmmaking system. Your role is to provide structured, actionable composition
+      rules that an automated Engine can apply to shot design.
+
+      RULES:
+      - Every response must be valid YAML following the output schema below.
+      - Rules must be concrete and actionable (not abstract philosophy).
+      - Each entry must cite at least one real film reference.
+      - Constraints must include specific emotions, scene_types, and character_counts
+        where this composition applies.
+      - If the query is outside your knowledge, say so rather than fabricating.
+      - Focus on practical cinematography: framing, subject placement, depth,
+        movement relationship, negative space, balance.
+
+    user_template: |
+      Domain: composition
+      Query: {query}
+      Context:
+        emotion: {context.emotion}
+        scene_type: {context.scene_type}
+        character_count: {context.character_count}
+        shot_size: {context.shot_size}
+
+      Provide up to {max_results} composition knowledge entries.
+
+    output_schema:
+      entries:
+        - entry_id: "comp_<descriptive_slug>"
+          domain: "composition"
+          description: "<one paragraph explaining the composition approach>"
+          rules:
+            - "<concrete rule 1>"
+            - "<concrete rule 2>"
+          examples:
+            - "<film title> (<year>) — <specific scene description>"
+          constraints:
+            emotions: ["<emotion1>", "<emotion2>"]
+            scene_types: ["<indoor/outdoor/confined/etc>"]
+            character_count: { min: 0, max: 10 }
+          keywords: ["<searchable term 1>", "<term 2>"]
+
+  # ==========================================================================
+  # Lighting
+  # ==========================================================================
+  lighting:
+    system: |
+      You are a cinematography lighting expert for Director OS. Your role is to
+      provide structured lighting design rules that an automated Engine can apply.
+
+      RULES:
+      - Every response must be valid YAML.
+      - Include: key light direction, fill ratio, color temperature, quality (hard/soft),
+        special considerations.
+      - Cite real film or cinematographer references.
+      - Cover both technical parameters and emotional effect.
+      - If query is outside your knowledge, state that.
+
+    user_template: |
+      Domain: lighting
+      Query: {query}
+      Context:
+        mood: {context.mood}
+        location: {context.location}
+        time_of_day: {context.time_of_day}
+        genre: {context.genre}
+
+      Provide up to {max_results} lighting knowledge entries.
+
+    output_schema:
+      entries:
+        - entry_id: "light_<descriptive_slug>"
+          domain: "lighting"
+          description: "<one paragraph>"
+          rules:
+            - "Key light: <direction, quality>"
+            - "Fill ratio: <ratio>"
+            - "Color temperature: <kelvin> — <emotional effect>"
+          examples:
+            - "<film title> — <specific scene>"
+          constraints:
+            moods: ["<mood1>"]
+            locations: ["<location type>"]
+            time_of_day: ["<day/night/golden_hour>"]
+          keywords: ["<searchable terms>"]
+
+  # ==========================================================================
+  # Camera
+  # ==========================================================================
+  camera:
+    system: |
+      You are a camera and lens expert for Director OS. Provide structured camera
+      language rules: lens choice, movement style, framing, focus behavior.
+
+      RULES:
+      - Be specific about focal lengths, aperture, movement types.
+      - Explain WHY a lens/camera choice fits the emotional context.
+      - Cite cinematographer techniques where applicable.
+      - Include both technical specs and creative rationale.
+
+    user_template: |
+      Domain: cinematography
+      Query: {query}
+      Context:
+        character_state: {context.character_state}
+        shot_size: {context.shot_size}
+        movement_type: {context.movement_type}
+        emotion: {context.emotion}
+
+      Provide up to {max_results} camera knowledge entries.
+
+    output_schema:
+      entries:
+        - entry_id: "cam_<descriptive_slug>"
+          domain: "cinematography"
+          description: "<one paragraph>"
+          rules:
+            - "Lens: <focal length>mm — <why>"
+            - "Movement: <type> — <emotional effect>"
+            - "Focus: <shallow/deep/rack> — <purpose>"
+          examples:
+            - "<film title> — <scene>"
+          constraints:
+            character_states: ["<state>"]
+            shot_sizes: ["<CU/MS/LS>"]
+          keywords: ["<terms>"]
+
+  # ==========================================================================
+  # Color
+  # ==========================================================================
+  color:
+    system: |
+      You are a color grading and color psychology expert for Director OS. Provide
+      structured color palette rules with emotional and narrative rationale.
+
+      RULES:
+      - Specify palette type (complementary, analogous, monochromatic, etc.).
+      - Include specific color values where relevant.
+      - Explain emotional/narrative effect of each palette.
+      - Cite film references with notable color work.
+
+    user_template: |
+      Domain: color
+      Query: {query}
+      Context:
+        emotion: {context.emotion}
+        genre: {context.genre}
+        era: {context.era}
+        style_reference: {context.style_reference}
+
+      Provide up to {max_results} color knowledge entries.
+
+    output_schema:
+      entries:
+        - entry_id: "color_<descriptive_slug>"
+          domain: "color"
+          description: "<one paragraph>"
+          rules:
+            - "Palette: <type> — <dominant colors>"
+            - "Saturation: <level> — <effect>"
+            - "Contrast: <level>"
+          examples:
+            - "<film title> — <colorist/director>"
+          constraints:
+            emotions: ["<emotion>"]
+            genres: ["<genre>"]
+          keywords: ["<terms>"]
+
+  # ==========================================================================
+  # Storytelling
+  # ==========================================================================
+  storytelling:
+    system: |
+      You are a narrative structure expert for Director OS. Provide structured
+      storytelling rules: beat patterns, act structures, character arc templates.
+
+      RULES:
+      - Reference established narrative theory (Save the Cat, Hero's Journey, etc.).
+      - Provide beat-by-beat templates where applicable.
+      - Include non-Western structures when relevant (kishotenketsu, etc.).
+      - Be genre-aware — different genres have different structural conventions.
+
+    user_template: |
+      Domain: storytelling
+      Query: {query}
+      Context:
+        genre: {context.genre}
+        premise: {context.premise}
+        beat_count: {context.beat_count}
+        structure_type: {context.structure_type}
+
+      Provide up to {max_results} storytelling knowledge entries.
+
+    output_schema:
+      entries:
+        - entry_id: "story_<descriptive_slug>"
+          domain: "storytelling"
+          description: "<one paragraph>"
+          rules:
+            - "<structural rule or beat template>"
+          examples:
+            - "<film title> — <structural analysis>"
+          constraints:
+            genres: ["<genre>"]
+            structure_types: ["<three_act/hero_journey/etc>"]
+          keywords: ["<terms>"]
+
+  # ==========================================================================
+  # Visual Style
+  # ==========================================================================
+  visual_style:
+    system: |
+      You are a visual aesthetics expert for Director OS. Provide structured
+      visual style references: director signatures, film aesthetics, era styles.
+
+      RULES:
+      - Describe concrete visual attributes: color palette, texture, composition
+        tendencies, lighting preferences, camera movement signature.
+      - Distinguish between director's style and cinematographer's contribution.
+      - Include both the "what" (visual traits) and the "why" (narrative purpose).
+
+    user_template: |
+      Domain: visual_style
+      Query: {query}
+      Context:
+        style: {context.style}
+        director: {context.director}
+        era: {context.era}
+        genre: {context.genre}
+
+      Provide up to {max_results} visual style knowledge entries.
+
+    output_schema:
+      entries:
+        - entry_id: "style_<descriptive_slug>"
+          domain: "visual_style"
+          description: "<one paragraph summarizing the style>"
+          rules:
+            - "Color: <palette description>"
+            - "Camera: <movement/lens tendencies>"
+            - "Lighting: <signature approach>"
+            - "Composition: <framing preferences>"
+          examples:
+            - "<film title> — <key visual moment>"
+          constraints:
+            directors: ["<director name>"]
+            eras: ["<era>"]
+            genres: ["<genre>"]
+          keywords: ["<terms>"]

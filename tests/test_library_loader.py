@@ -132,10 +132,10 @@ def test_query_category_then_emotion_filter(sample_entries):
 # ============================================================================
 
 def test_load_all_existing_dir():
-    """load_all() should discover YAML files in the libraries/ directory."""
+    """load_all() should discover YAML files in the knowledge/providers/local_rules/ directory."""
     loader = LibraryLoader()
-    loader.load_all()
-    # The project has libraries/ with entries
+    loader.load_all("knowledge/providers/local_rules")
+    # The project has knowledge/providers/local_rules/ with entries
     assert len(loader._entries) > 0
 
 

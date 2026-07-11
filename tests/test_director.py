@@ -156,5 +156,5 @@ def test_validate_project_invalid():
 
 def test_director_initialises_library():
     d = Director()
-    assert d.library is not None
-    assert len(d.library._entries) > 0  # load_all() was called in __init__
+    assert d.resolver is not None
+    assert d.resolver.provider_count > 0  # resolver registered in __init__
