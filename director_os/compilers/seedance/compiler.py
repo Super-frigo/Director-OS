@@ -79,22 +79,6 @@ class SeedanceCompiler(Compiler):
             }
         }
 
-        return {
-            "execution_package": {
-                "schema_version": "1.0",
-                "target": {
-                    "provider": "seedance",
-                    "model": production_intent.get("target_model", "default"),
-                    "version": production_intent.get("target_version", ""),
-                },
-                "instructions": {
-                    "prompt": prompt,
-                },
-                "parameters": parameters,
-                "validation": validation,
-            }
-        }
-
     # ── shot-level compilation ──────────────────────────────────────
 
     def compile_shots(self, production_intent: dict) -> list[dict]:

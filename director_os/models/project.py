@@ -305,6 +305,17 @@ class Project:
             issues.append("at least one character is required")
         if self.shots and not self.story_beats:
             issues.append("story_beats should be defined when shots exist")
+
+        # Cross-check: sum of shot durations vs declared output duration.
+        # Tolerates a 1s rounding margin (e.g. 15s target, 15.x s of shots).
+        shot_total = sum(s.duration for s in self.shots if s.duration)
+        target = self.output_profile.duration
+        if shot_total and target and abs(shot_total - target) > 1:
+            issues.append(
+                f"output.duration ({target}s) differs from total shot duration "
+                f"({shot_total:g}s) by {abs(shot_total - target):g}s"
+            )
+
         char_ids = {c.id for c in self.characters}
         for scene in self.scenes:
             for cid in scene.characters:

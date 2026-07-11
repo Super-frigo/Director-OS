@@ -186,6 +186,58 @@ def test_validate_with_beats_and_shots():
     assert not any("story_beats" in i.lower() for i in issues)
 
 
+def test_validate_duration_mismatch():
+    """Total shot duration diverging from output.duration should warn."""
+    p = Project(
+        metadata=Metadata(title="T"),
+        story=Story(premise="P"),
+        characters=[Character(id="c1", role="hero")],
+        story_beats=[StoryBeat(beat="b1", type="OPENING")],
+        shots=[
+            Shot(shot_id="S1", duration=5.0),
+            Shot(shot_id="S2", duration=5.0),
+            Shot(shot_id="S3", duration=5.0),
+        ],
+        output_profile=OutputProfile(duration=10),  # 15s of shots vs 10s target
+    )
+    issues = p.validate()
+    assert any("output.duration" in i and "15" in i for i in issues)
+
+
+def test_validate_duration_match():
+    """Matching shot total and output.duration should not warn."""
+    p = Project(
+        metadata=Metadata(title="T"),
+        story=Story(premise="P"),
+        characters=[Character(id="c1", role="hero")],
+        story_beats=[StoryBeat(beat="b1", type="OPENING")],
+        shots=[
+            Shot(shot_id="S1", duration=5.0),
+            Shot(shot_id="S2", duration=5.0),
+        ],
+        output_profile=OutputProfile(duration=10),
+    )
+    issues = p.validate()
+    assert not any("output.duration" in i for i in issues)
+
+
+def test_validate_duration_within_tolerance():
+    """A 1s difference is tolerated (rounding margin)."""
+    p = Project(
+        metadata=Metadata(title="T"),
+        story=Story(premise="P"),
+        characters=[Character(id="c1", role="hero")],
+        story_beats=[StoryBeat(beat="b1", type="OPENING")],
+        shots=[
+            Shot(shot_id="S1", duration=5.5),
+            Shot(shot_id="S2", duration=4.5),
+        ],
+        output_profile=OutputProfile(duration=10),
+    )
+    issues = p.validate()
+    assert not any("output.duration" in i for i in issues)
+
+
 # ============================================================================
 # LightingSetup.from_dict()
 # ============================================================================
