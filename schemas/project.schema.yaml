@@ -1,6 +1,18 @@
 # Director OS Core Project Schema
 # Version: 1.0
 #
+# ==============================================================================
+# DEPRECATED — This file is superseded by docs/PROJECT_SCHEMA.md.
+#
+# This schema was an early draft (8 modules, scenes intermediary, different field
+# naming). The canonical schema lives at docs/PROJECT_SCHEMA.md (14 modules,
+# flat structure, SHOT_GRAMMAR-compatible Shot fields). See ADR-006 for the
+# decision record. The Python dataclasses in director_os/models/project.py
+# implement the PROJECT_SCHEMA.md shape, not this one.
+#
+# This file is preserved for historical reference only.
+# ==============================================================================
+#
 # This schema defines the canonical representation of a film project.
 #
 # It represents:
