@@ -1,6 +1,6 @@
 # Director OS — ROADMAP
 
-## Phase 1: Foundation (Current)
+## Phase 1: Foundation (Complete)
 
 Director OS 核心规范和架构定义。
 
@@ -10,41 +10,47 @@ Director OS 核心规范和架构定义。
 - [x] WORKFLOW_SPEC.md — 端到端工作流
 - [x] STORY_GRAMMAR.md — 故事结构化语法
 - [x] SHOT_GRAMMAR.md — 镜头结构化语法
-- [ ] COMPILER_SPEC.md — 编译器架构规范
+- [x] COMPILER_SPEC.md — 编译器架构规范
+- [x] Architecture Principles + ADR-000~008
 
-## Phase 2: Knowledge Libraries
+## Phase 2: Knowledge Libraries (In Progress)
 
 构建专业电影知识库,为 Agent 提供创作参考。
+知识库现位于 `knowledge/providers/local_rules/`(ADR-008 Knowledge Resolution 架构)。
 
-- [ ] Camera Library — 镜头与焦距知识库
-- [ ] Lighting Library — 灯光方案库
+- [x] Camera Library — 镜头与焦距知识库 (23 entries)
+- [x] Lighting Library — 灯光方案库 (8 entries)
 - [ ] Director Library — 导演风格档案
 - [ ] Cinematographer Library — 摄影指导风格档案
-- [ ] Composition Library — 构图法则库
-- [ ] Color Library — 色彩方案库
+- [x] Composition Library — 构图法则库 (3 entries)
+- [x] Color Library — 色彩方案库 (6 entries)
 - [ ] Animation Library — 动画风格库
 - [ ] Advertising Library — 广告类型与格式库
+- [x] Visual Style Library — 视觉风格库 (5 entries)
+- [x] Storytelling Library — 故事结构库 (3 entries)
+- [x] Model Capabilities — 各 AI 视频平台能力档案 (3 entries)
 
-## Phase 3: Compilers
+## Phase 3: Compilers (Partial)
 
 实现各平台的 Prompt 编译适配层。
 
-- [ ] COMPILER_SPEC.md — 编译器架构规范
-- [ ] Seedance Compiler
-- [ ] Veo Compiler
+- [x] COMPILER_SPEC.md — 编译器架构规范
+- [x] Seedance Compiler
+- [x] Veo Compiler
 - [ ] Kling Compiler
 - [ ] Runway Compiler
-- [ ] Compiler test suite
+- [x] Compiler test suite (241+ tests passing)
 
-## Phase 4: Examples & Projects
+## Phase 4: Examples & Projects (Partial)
 
 构建示例项目和模板库。
 
-- [ ] Cinematic Example — 电影级短片
+- [x] Cinematic Example — `projects/the_hanging.md` (民国黑色悬疑短片)
+- [x] Project Template — `projects/template.md`
+- [x] Additional — `projects/ballroom_rendezvous.md`
 - [ ] Animation Example — 动画短片
 - [ ] Commercial Example — 广告片
 - [ ] Music Video Example — 音乐视频
-- [ ] Project Template
 
 ## Phase 5: Multi-Agent Implementation
 
@@ -70,4 +76,4 @@ Director OS 核心规范和架构定义。
 
 ---
 
-*Last updated: 2026-07-11*
+*Last updated: 2026-07-12*

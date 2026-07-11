@@ -39,6 +39,24 @@ DirectorOS/
 ├── README.md                 # 项目总览
 ├── ROADMAP.md                # 开发路线图
 ├── CHANGELOG.md              # 变更日志
+├── SYSTEM_PROMPT.md          # 可移植的 Director 系统提示
+├── pyproject.toml            # Python 包定义
+│
+├── director_os/              # Python 核心实现
+│   ├── director.py           # Director — 唯一公共入口
+│   ├── cli.py                # 命令行接口
+│   ├── models/               # Project / ProductionIntent / ExecutionPackage 数据模型
+│   ├── engine/               # Engine 层 (story/character/visual/shot + pipeline)
+│   ├── layers/               # 6 层镜头分析 (baseline/spatial/lighting/camera/character/microtexture)
+│   ├── knowledge/            # Knowledge Resolution 架构 (ADR-008)
+│   └── compilers/            # 平台编译器
+│       ├── seedance/         # Seedance Compiler (已实现)
+│       └── veo/              # Veo Compiler (已实现)
+│
+├── knowledge/                # 知识库 (ADR-008 Resolution 架构)
+│   └── providers/
+│       ├── local_rules/      # 本地 YAML 规则 (原 libraries/ 迁移至此)
+│       └── llm_cache/        # LLM 响应缓存
 │
 ├── docs/                     # 核心规范文档
 │   ├── PROJECT_SCHEMA.md
@@ -47,37 +65,38 @@ DirectorOS/
 │   ├── WORKFLOW_SPEC.md
 │   ├── STORY_GRAMMAR.md
 │   ├── SHOT_GRAMMAR.md
-│   └── COMPILER_SPEC.md
+│   ├── COMPILER_SPEC.md
+│   ├── adr/                  # 架构决策记录 (ADR-000 ~ ADR-008)
+│   ├── architecture/         # 架构原则、设计模式、反模式
+│   └── spec/                 # 详细规范 (knowledge-resolution)
 │
-├── libraries/                # 专业知识库
-│   ├── camera/               # 镜头库
-│   ├── lighting/             # 灯光库
-│   ├── directors/            # 导演风格库
-│   ├── cinematographers/     # 摄影风格库
-│   ├── composition/          # 构图库
-│   ├── color/                # 色彩库
-│   ├── animation/            # 动画库
-│   └── advertising/          # 广告类型库
-│
-├── compilers/                # 编译器适配层
-│   ├── seedance.md
-│   ├── veo.md
-│   ├── kling.md
-│   └── runway.md
-│
-├── examples/                 # 示例项目
-│   ├── cinematic/
-│   ├── animation/
-│   ├── commercial/
-│   └── music_video/
-│
-└── projects/                 # 创作中的项目
-    └── template.md
+├── schemas/                  # JSON/YAML Schema 定义
+├── tests/                    # 测试套件 (241+ tests)
+├── projects/                 # 创作中的项目
+│   ├── the_hanging.md        # 示例: 民国黑色悬疑短片
+│   ├── ballroom_rendezvous.md
+│   └── template.md
+└── examples/                 # 项目类型模板
 ```
 
 ---
 
 ## Quick Start
+
+### CLI
+
+```bash
+# 加载已有项目并编译为平台 Prompt
+python -m director_os.cli load projects/the_hanging.md --compile seedance
+
+# 验证项目结构
+python -m director_os.cli validate projects/the_hanging.md
+
+# 新建项目
+python -m director_os.cli new --title "My Film" --premise "A story about..."
+```
+
+### 创作流程
 
 1. **提出创意** — 用自然语言告诉 Director 你的想法
 2. **Director 规划** — Director 会自动规划故事、角色、视觉策略
@@ -88,12 +107,12 @@ DirectorOS/
 
 ## Supported Platforms
 
-| Compiler  | Status     |
-|-----------|------------|
-| Seedance  | Planned    |
-| Veo       | Planned    |
-| Kling     | Planned    |
-| Runway    | Planned    |
+| Compiler  | Status       |
+|-----------|--------------|
+| Seedance  | Implemented  |
+| Veo       | Implemented  |
+| Kling     | Planned      |
+| Runway    | Planned      |
 
 ---
 
