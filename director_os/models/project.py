@@ -124,6 +124,8 @@ class LightingSetup:
     back_light: str = ""
     mood: str = ""
     color_temp: str = ""
+    position: str = ""
+    intensity: int = 0
 
     @classmethod
     def from_dict(cls, d: dict) -> "LightingSetup":
@@ -133,6 +135,8 @@ class LightingSetup:
             back_light=d.get("back_light", d.get("back", "")),
             mood=d.get("mood", ""),
             color_temp=d.get("color_temp", d.get("temperature", "")),
+            position=d.get("position", ""),
+            intensity=d.get("intensity", 0),
         )
 
 

@@ -2,7 +2,7 @@
 
 from pathlib import Path
 
-from .models.project import Project
+from .models.project import Project, HistoryEntry
 from .models.production_intent import ProductionIntent
 from .models.execution_package import ExecutionPackage
 from .engine.pipeline import EnginePipeline, EngineInput
@@ -85,6 +85,63 @@ class Director:
         if not self.project:
             return ["No project loaded"]
         return self.project.validate()
+
+    def save_project(self, path: str | Path, message: str = "") -> list[str]:
+        """Validate, auto-version, and write Project to disk.
+
+        Follows Architecture Principle 6 (validation blocks commit) and
+        Principle 7 (immutable history).  Every save appends a HistoryEntry
+        with auto-incremented version and ISO timestamp.
+
+        Returns the validation issues list (empty if valid, ValueError if
+        save is blocked by validation errors).
+        """
+        if not self.project:
+            raise RuntimeError("No project loaded. Call load_project() or new_project() first.")
+
+        # 1. Validate — fail fast per Principle 6
+        issues = self.project.validate()
+        if issues:
+            raise ValueError(
+                f"Project has {len(issues)} validation issue(s) — "
+                "fix them before saving:\n  - " + "\n  - ".join(issues)
+            )
+
+        # 2. Auto-version
+        from datetime import datetime, timezone
+        now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+        # Determine next version from history or metadata
+        if self.project.history:
+            last = self.project.history[-1]
+            prev = last.version or self.project.metadata.version or "0.1.0"
+        else:
+            prev = self.project.metadata.version or "0.1.0"
+
+        # Bump patch: 0.1.0 → 0.1.1, 1.2.3 → 1.2.4
+        try:
+            parts = prev.split(".")
+            parts[-1] = str(int(parts[-1]) + 1)
+            next_ver = ".".join(parts)
+        except (ValueError, IndexError):
+            next_ver = "0.1.1"
+
+        self.project.metadata.version = next_ver
+        self.project.metadata.updated_at = now
+
+        # 3. Append history entry
+        self.project.history.append(HistoryEntry(
+            version=next_ver,
+            timestamp=now,
+            author="Director",
+            notes=message or f"Saved project '{self.project.metadata.title}'",
+        ))
+
+        # 4. Write to disk
+        from .loader import save_project_file
+        save_project_file(self.project, path)
+
+        return issues  # empty — we already validated above
 
     def _init_llm_provider(self) -> None:
         """Initialize LLM provider from environment variables if available.

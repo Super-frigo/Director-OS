@@ -10,10 +10,12 @@ This directory documents all Architecture Decision Records (ADR) for Director OS
 | ADR-001   | Project Is The Single Source Of Truth| Accepted  |
 | ADR-002   | Compiler Must Be Isolated            | Accepted  |
 | ADR-003   | Engine Layer Introduction            | Accepted  |
-| ADR-004   | Library Driven Knowledge System      | Accepted  |
+| ADR-004   | Library Driven Knowledge System      | Superseded by ADR-008 |
 | ADR-005   | Architecture Review System           | Accepted  |
 | ADR-006   | Canonical Project Representation     | Accepted  |
-| ADR-007   | Retrieval Strategy for Library System | Accepted  |
+| ADR-007   | Retrieval Strategy for Library System| Context note in ADR-008 |
+| ADR-008   | Knowledge Resolution Architecture    | Accepted  |
+| ADR-009   | Agent Implementation Strategy        | Accepted  |
 
 ## Template
 

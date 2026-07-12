@@ -35,6 +35,11 @@ def main() -> None:
     val_p = sub.add_parser("validate", help="Validate a project file")
     val_p.add_argument("path", type=Path)
 
+    # ── save ──────────────────────────────────────────────────────
+    save_p = sub.add_parser("save", help="Save a project file (with auto-version and history)")
+    save_p.add_argument("path", type=Path)
+    save_p.add_argument("--message", "-m", default="", help="Commit message (recorded in history)")
+
     args = parser.parse_args()
     director = Director()
 
@@ -85,6 +90,22 @@ def main() -> None:
             else:
                 print("No issues found — project is valid.")
         except FileNotFoundError as e:
+            print(f"Error: {e}", file=sys.stderr)
+            sys.exit(1)
+        except Exception as e:
+            print(f"Error: {e}", file=sys.stderr)
+            sys.exit(1)
+
+    elif args.command == "save":
+        try:
+            project = director.load_project(args.path)
+            print(f"Project loaded: {project.metadata.title} (v{project.metadata.version})")
+            director.plan()
+            issues = director.save_project(args.path, message=args.message)
+            print(f"Saved: {project.metadata.title} v{project.metadata.version}")
+            if issues:
+                print(f"  Warnings: {issues}")
+        except Exception as e:
             print(f"Error: {e}", file=sys.stderr)
             sys.exit(1)
 

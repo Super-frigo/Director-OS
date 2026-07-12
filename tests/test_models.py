@@ -278,6 +278,20 @@ def test_lighting_setup_from_dict_empty():
     assert ls.back_light == ""
     assert ls.mood == ""
     assert ls.color_temp == ""
+    assert ls.position == ""
+    assert ls.intensity == 0
+
+
+def test_lighting_setup_from_dict_position_intensity():
+    """position and intensity fields (added ADR-009) survive round-trip."""
+    ls = LightingSetup.from_dict({
+        "key_light": "NATURAL",
+        "position": "BACK_45",
+        "intensity": 3,
+    })
+    assert ls.key_light == "NATURAL"
+    assert ls.position == "BACK_45"
+    assert ls.intensity == 3
 
 
 def test_lighting_setup_from_dict_partial():
