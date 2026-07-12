@@ -1,0 +1,58 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: director_hayao_miyazaki
+    name: "Hayao Miyazaki — Hand-Drawn Reverence"
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: "Hand-drawn 2D animation built around flight/levitation as a recurring visual motif, deep reverence for nature, and quiet non-narrative pauses ('ma') that let atmosphere breathe."
+    principles:
+      - "Naturalistic, fluid hand-drawn motion over rigid mechanical animation"
+      - "Environmental animism — nature and machines are treated as characters with will"
+      - "Deliberate quiet beats ('ma') with no plot advancement, only mood and observation"
+      - "Strong-willed, resourceful young protagonists driving their own arcs"
+    emotional_effects:
+      - wonder
+      - tenderness
+      - quiet_melancholy
+    techniques:
+      - "Include lingering shots of food, weather, or landscape with no dialogue"
+      - "Animate flight/floating sequences with fluid, unhurried camera drift"
+      - "Use painterly, detailed background art against simpler character line work"
+      - "Minimize expository dialogue; let physical action and environment carry meaning"
+    constraints:
+      - "Pacing and quiet beats do not suit fast, plot-dense commercial formats"
+      - "Requires hand-drawn or painterly visual language; clashes with hard-edged CG realism"
+  applicability:
+    emotions:
+      - wonder
+      - tenderness
+      - nostalgic
+    genres:
+      - animation
+      - fantasy
+      - family
+    keywords:
+      - hand_drawn
+      - flight
+      - nature
+      - ma
+      - pause
+  engine_guidance:
+    when_to_use: "Project is animated or animation-adjacent and wants gentle wonder over spectacle"
+    recommended_actions:
+      - "Suggest quiet, non-plot 'breathing' beats between major story beats"
+      - "Recommend painterly background treatment and fluid flight/movement sequences"
+    avoid:
+      - "Rapid-fire plot pacing"
+      - "Hard-edged photorealistic CG rendering"
+  relationships:
+    related:
+      - animation_2d_hand_drawn
+    conflicts:
+      - director_david_fincher
+  references:
+    sources:
+      - "General critical consensus on Miyazaki's directing style and Studio Ghibli's visual language"
+  version: "1.0"

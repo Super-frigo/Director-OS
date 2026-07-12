@@ -1,0 +1,60 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: director_denis_villeneuve
+    name: "Denis Villeneuve — Contemplative Scale"
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: "Vast, contemplative compositions that dwarf human figures against monumental environments, paired with slow pacing and sound design that carries emotional weight in place of dialogue."
+    principles:
+      - "Wide, patient compositions establish scale before intimacy"
+      - "Slow pacing with intentional silence lets images breathe"
+      - "Massive architectural or landscape scale is set against small, vulnerable human moments"
+      - "Sound design and score do emotional work that dialogue is deliberately withheld from doing"
+    emotional_effects:
+      - awe
+      - dread
+      - contemplative
+    techniques:
+      - "Use ELS/EST to establish human vs. environment scale before cutting closer"
+      - "Slow deliberate push-ins or static holds instead of fast cutting"
+      - "Desaturated earth-tone palettes with sparing, deliberate color accents"
+      - "Natural or strongly motivated lighting sources"
+    constraints:
+      - "Pacing is too slow for fast-cut commercial or comedic contexts"
+      - "Restraint can read as emotional distance if overused in intimate scenes"
+  applicability:
+    emotions:
+      - awe
+      - dread
+      - contemplative
+    genres:
+      - science_fiction
+      - drama
+      - thriller
+    keywords:
+      - scale
+      - silence
+      - monumental
+      - restraint
+  engine_guidance:
+    when_to_use: "Project needs slow-burn, awe-driven visual storytelling with minimal dialogue reliance"
+    recommended_actions:
+      - "Favor ELS/EST establishing shots with human figures placed small in frame"
+      - "Recommend slow push-in or static-hold movement over cutting"
+      - "Pull toward desaturated, earth-tone color guidance"
+    avoid:
+      - "Fast cutting"
+      - "Handheld chaos"
+      - "Comedic or lighthearted tone"
+  relationships:
+    related:
+      - director_christopher_nolan
+      - color_desaturated_gray
+    conflicts:
+      - director_wes_anderson
+  references:
+    sources:
+      - "General critical consensus on Villeneuve's directing style and technical choices"
+  version: "1.0"

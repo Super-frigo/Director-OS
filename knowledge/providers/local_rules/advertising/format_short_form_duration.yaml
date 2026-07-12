@@ -1,0 +1,49 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: format_short_form_duration
+    name: "Format — Short-Form Duration Structure (15s / 30s / 60s)"
+    author: Director OS
+  category: storytelling
+  knowledge:
+    concept: "Different commercial durations demand fundamentally different beat structures — a 15s spot is not a trimmed 60s spot, it is built differently from the start."
+    principles:
+      - "15s: single idea, single beat — no room for setup/payoff arcs, relies on instant recognition"
+      - "30s: one setup + one turn — the industry-standard problem/solution or joke structure"
+      - "60s+: full arc — room for a genuine emotional turn, secondary character beats, and a slower open"
+      - "Cut-downs (60s→30s→15s) should be planned from the initial edit, not improvised after"
+    emotional_effects:
+      - varies_by_duration
+    techniques:
+      - "For 15s: lead with the strongest visual/branding image in the first 2-3 seconds"
+      - "For 30s: place the 'turn' or reveal at roughly the two-thirds mark"
+      - "For 60s+: allow the first 10-15s to establish situation before any brand presence"
+    constraints:
+      - "Treating a 15s spot as a compressed 60s spot produces confused, over-stuffed pacing"
+      - "Platform context (skippable pre-roll vs. social feed vs. TV) further constrains duration choice"
+  applicability:
+    emotions: []
+    genres:
+      - advertising
+      - commercial
+    keywords:
+      - duration
+      - 15s
+      - 30s
+      - 60s
+      - cutdown
+  engine_guidance:
+    when_to_use: "Project's Output Profile specifies a target commercial duration"
+    recommended_actions:
+      - "Match beat count and setup complexity to the specified duration tier"
+      - "Flag when a story arc is too complex for its target duration"
+    avoid:
+      - "Applying 60s-style slow setup to a 15s deliverable"
+  relationships:
+    related:
+      - platform_vertical_social
+    conflicts: []
+  references:
+    sources:
+      - "General advertising industry conventions on duration-based commercial structure"
+  version: "1.0"

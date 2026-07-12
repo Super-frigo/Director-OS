@@ -1,0 +1,56 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: ad_type_brand_story
+    name: "Ad Type — Brand Story"
+    author: Director OS
+  category: storytelling
+  knowledge:
+    concept: "Long-form emotional narrative that builds brand identity and feeling rather than pitching specific product features. The product is present but subordinate to the story."
+    principles:
+      - "Character and emotional arc lead; product is a supporting presence, not the subject"
+      - "Brand values are demonstrated through character behavior, not stated in voiceover"
+      - "Emotional payoff typically lands before or independent of any product reveal"
+      - "Works best when the brand already has category familiarity — story sells trust, not awareness"
+    emotional_effects:
+      - trust
+      - warmth
+      - identification
+    techniques:
+      - "Open on a human situation with no visible branding for the first several seconds"
+      - "Reserve the logo/product for a brief, understated close rather than a hard sell"
+      - "Use music and pacing closer to short-film conventions than commercial conventions"
+    constraints:
+      - "Weak for driving immediate conversion or urgent calls to action"
+      - "Requires longer runtime (60s+) to land emotionally; feels rushed under 30s"
+  applicability:
+    emotions:
+      - warmth
+      - trust
+      - nostalgia
+    genres:
+      - advertising
+      - commercial
+      - brand_film
+    keywords:
+      - brand_story
+      - emotional_arc
+      - long_form
+      - identity
+  engine_guidance:
+    when_to_use: "Client goal is brand affinity/trust-building rather than immediate conversion"
+    recommended_actions:
+      - "Recommend 60s+ runtime and short-film pacing conventions"
+      - "Suggest delaying logo/product reveal to the final beat"
+    avoid:
+      - "Direct-response or urgency-driven briefs"
+      - "Sub-15s formats where there is no time for a real arc"
+  relationships:
+    related:
+      - ad_type_emotional_resonance
+    conflicts:
+      - ad_type_product_demonstration
+  references:
+    sources:
+      - "General advertising industry conventions on brand-film structure"
+  version: "1.0"

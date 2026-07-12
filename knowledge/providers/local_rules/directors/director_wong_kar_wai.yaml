@@ -1,0 +1,61 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: director_wong_kar_wai
+    name: "Wong Kar-wai — Fragmented Longing"
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: "Fragmented time and memory rendered through handheld intimacy, saturated neon color, and unspoken romantic longing, often narrated through interior voiceover."
+    principles:
+      - "Time is expressed subjectively — fragmented, repeated, or stretched rather than linear"
+      - "Handheld camera stays physically close to characters in confined urban spaces"
+      - "Saturated, often complementary color contrast (deep green/red) charges mundane spaces"
+      - "Repetition of small motifs (clocks, corridors, objects) tracks emotional drift"
+    emotional_effects:
+      - longing
+      - nostalgia
+      - romantic_melancholy
+    techniques:
+      - "Use step-printing or slow-shutter blur for expressive, dreamlike motion"
+      - "Shoot handheld and tight in narrow, confined interiors and corridors"
+      - "Push color grade toward saturated neon greens and reds against practical night light"
+      - "Layer interior voiceover monologue over otherwise wordless visual sequences"
+    constraints:
+      - "Stylization can overwhelm plot clarity if overused"
+      - "Not suited to bright, symmetrical, or clinical visual languages"
+  applicability:
+    emotions:
+      - longing
+      - melancholy
+      - romantic
+    genres:
+      - romance
+      - drama
+      - arthouse
+    keywords:
+      - neon
+      - handheld
+      - memory
+      - voiceover
+      - saturation
+  engine_guidance:
+    when_to_use: "Project centers on romantic longing, memory, or urban intimacy"
+    recommended_actions:
+      - "Recommend handheld, tight framing in confined interior spaces"
+      - "Pull color guidance toward saturated neon green/red contrast"
+      - "Suggest interior voiceover over dialogue-heavy scenes"
+    avoid:
+      - "Symmetrical locked-off framing"
+      - "Clinical, desaturated, or clean digital tone"
+  relationships:
+    related:
+      - color_green_sick
+      - movement_handheld
+    conflicts:
+      - director_wes_anderson
+      - director_christopher_nolan
+  references:
+    sources:
+      - "General critical consensus on Wong Kar-wai's directing style and technical choices"
+  version: "1.0"

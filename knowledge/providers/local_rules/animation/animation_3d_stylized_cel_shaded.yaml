@@ -1,0 +1,56 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: animation_3d_stylized_cel_shaded
+    name: "3D Stylized Cel-Shaded (三渲二)"
+    author: Director OS
+  category: visual_style
+  knowledge:
+    concept: "3D-rendered models flattened with cel-shading and outline passes to mimic the look of 2D hand-drawn animation while retaining 3D production efficiency."
+    principles:
+      - "Flat-shaded lighting bands replace continuous gradients to read as 2D"
+      - "Rim/outline passes emulate hand-drawn line art around silhouettes"
+      - "Camera can use true 3D movement while the render stays visually 2D"
+      - "Hair, cloth, and effects are often given hand-painted-texture treatment to hide 3D geometry"
+    emotional_effects:
+      - stylized
+      - hybrid_modern
+      - dynamic
+    techniques:
+      - "Apply toon-shader banding with 2-3 discrete light steps instead of smooth gradients"
+      - "Render a clean outline pass around character silhouettes"
+      - "Use hand-painted or flat textures on hair/cloth to reduce 3D 'plastic' feel"
+    constraints:
+      - "Can look uncanny if shading bands and outline weight are inconsistent"
+      - "Requires careful lighting design to avoid revealing underlying 3D geometry"
+  applicability:
+    emotions:
+      - dynamic
+      - stylized
+      - modern
+    genres:
+      - animation
+      - action
+      - fantasy
+    keywords:
+      - cel_shading
+      - toon_shader
+      - outline
+      - hybrid
+  engine_guidance:
+    when_to_use: "Project wants 2D anime-adjacent style with 3D camera flexibility and production efficiency"
+    recommended_actions:
+      - "Specify discrete cel-shading bands and outline treatment explicitly"
+      - "Recommend hand-painted texture treatment for hair/cloth elements"
+    avoid:
+      - "Fully photorealistic lighting requirements"
+      - "Traditional 2D-only production pipelines"
+  relationships:
+    related:
+      - animation_2d_hand_drawn
+    conflicts:
+      - animation_2d_hand_drawn
+  references:
+    sources:
+      - "General animation industry terminology for cel-shading / '三渲二' techniques"
+  version: "1.0"

@@ -13,19 +13,19 @@ Director OS 核心规范和架构定义。
 - [x] COMPILER_SPEC.md — 编译器架构规范
 - [x] Architecture Principles + ADR-000~008
 
-## Phase 2: Knowledge Libraries (In Progress)
+## Phase 2: Knowledge Libraries (Complete)
 
 构建专业电影知识库,为 Agent 提供创作参考。
 知识库现位于 `knowledge/providers/local_rules/`(ADR-008 Knowledge Resolution 架构)。
 
-- [x] Camera Library — 镜头与焦距知识库 (23 entries)
+- [x] Camera Library — 镜头与焦段知识库 (23 entries)
 - [x] Lighting Library — 灯光方案库 (8 entries)
-- [ ] Director Library — 导演风格档案
-- [ ] Cinematographer Library — 摄影指导风格档案
+- [x] Director Library — 导演风格档案 (6 entries: Nolan/Anderson/Villeneuve/Miyazaki/Fincher/Wong Kar-wai)
+- [x] Cinematographer Library — 摄影指导风格档案 (6 entries: Deakins/Lubezki/van Hoytema/Young/Richardson/Storaro)
 - [x] Composition Library — 构图法则库 (3 entries)
 - [x] Color Library — 色彩方案库 (6 entries)
-- [ ] Animation Library — 动画风格库
-- [ ] Advertising Library — 广告类型与格式库
+- [x] Animation Library — 动画风格库 (partial: 2D hand-drawn/cel-shaded/stop-motion/motion graphics/12 principles, VFX animation pending)
+- [x] Advertising Library — 广告类型与格式库 (partial: 4 ad types + duration/platform formats, industry conventions/viral analysis pending)
 - [x] Visual Style Library — 视觉风格库 (5 entries)
 - [x] Storytelling Library — 故事结构库 (3 entries)
 - [x] Model Capabilities — 各 AI 视频平台能力档案 (3 entries)
@@ -39,7 +39,7 @@ Director OS 核心规范和架构定义。
 - [x] Veo Compiler
 - [ ] Kling Compiler
 - [ ] Runway Compiler
-- [x] Compiler test suite (241+ tests passing)
+- [x] Compiler test suite (244 tests passing)
 
 ## Phase 4: Examples & Projects (Partial)
 

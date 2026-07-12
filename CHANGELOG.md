@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## 1.1.0 (2026-07-12)
+
+### Added
+
+- **knowledge/providers/local_rules/directors/** — 6 director style entries (Christopher Nolan / Wes Anderson / Denis Villeneuve / Hayao Miyazaki / David Fincher / Wong Kar-wai), `category: cinematography`
+- **knowledge/providers/local_rules/cinematographers/** — 6 cinematographer style entries (Roger Deakins / Emmanuel Lubezki / Hoyte van Hoytema / Bradford Young / Robert Richardson / Vittorio Storaro), `category: cinematography`
+- **knowledge/providers/local_rules/animation/** — 5 animation style/technique entries (2D hand-drawn / cel-shaded / stop motion / motion graphics / 12 principles + 1 REF frame rate quick reference, excluded from retrieval), `category: visual_style`
+- **knowledge/providers/local_rules/advertising/** — 6 ad type & format entries (brand story / product demonstration / emotional resonance / social cause PSA / duration structure / vertical vs horizontal platform), `category: storytelling`
+- Phase 2 knowledge libraries now complete (all 11 domains populated)
+
+### Known Gaps (documented in provider.md files)
+
+- Animation Library: VFX Animation (particles/fluids/cloth) not yet covered
+- Advertising Library: Industry Conventions, Viral Formula Analysis, CTA refinement not yet covered
+- Engine Pipeline: precise matching by Project `creative.references` named directors/cinematographers not yet implemented (Phase 5/6 candidate)
+
 ## 1.0.0 (2026-07-11)
 
 ### Added

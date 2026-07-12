@@ -1,0 +1,58 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: ad_type_product_demonstration
+    name: "Ad Type — Product Demonstration"
+    author: Director OS
+  category: storytelling
+  knowledge:
+    concept: "Feature-led advertising built on a clear problem-solution structure, with the product as the visual and narrative hero throughout."
+    principles:
+      - "Structure follows problem → product intervention → resolved outcome"
+      - "Product is framed as hero: dedicated close-ups, clean isolation from clutter"
+      - "Claims are demonstrated visually wherever possible rather than only stated"
+      - "Pacing is brisk and information-dense relative to brand-story formats"
+    emotional_effects:
+      - confidence
+      - clarity
+      - practical_reassurance
+    techniques:
+      - "Open with a clearly dramatized problem/pain point in the first few seconds"
+      - "Use clean, well-lit hero shots (often macro/CU) to isolate the product from environment"
+      - "Show the product in use, not just displayed statically"
+      - "End on a clear, visually reinforced outcome/benefit"
+    constraints:
+      - "Can feel cold or purely transactional without at least one human beat"
+      - "Overloading with feature claims reduces retention and clarity"
+  applicability:
+    emotions:
+      - confidence
+      - clarity
+      - practical
+    genres:
+      - advertising
+      - commercial
+      - tech
+      - retail
+    keywords:
+      - problem_solution
+      - product_hero
+      - demo
+      - feature_led
+  engine_guidance:
+    when_to_use: "Client goal is clear feature communication and short-term conversion"
+    recommended_actions:
+      - "Recommend problem→solution beat structure"
+      - "Suggest dedicated product hero shots (CU/macro) with clean isolation"
+    avoid:
+      - "Briefs prioritizing pure brand affinity over feature clarity"
+      - "Slow, contemplative pacing"
+  relationships:
+    related: []
+    conflicts:
+      - ad_type_brand_story
+      - ad_type_emotional_resonance
+  references:
+    sources:
+      - "General advertising industry conventions on demo-format commercials"
+  version: "1.0"

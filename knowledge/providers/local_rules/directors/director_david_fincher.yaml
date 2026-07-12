@@ -1,0 +1,61 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: director_david_fincher
+    name: "David Fincher — Precise Procedural"
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: "Obsessively precise digital filmmaking: desaturated low-key tone, controlled repetitive performance, and procedural/investigative narrative pacing."
+    principles:
+      - "Extensive takes to strip performance down to a controlled, unshowy baseline"
+      - "Digital color grading pulled toward green-yellow desaturation"
+      - "Slow, deliberate, technically precise camera moves (crane, subtle dolly) over handheld"
+      - "Procedural, detail-accumulating pacing rather than emotional outbursts"
+    emotional_effects:
+      - unease
+      - clinical_tension
+      - obsessive_focus
+    techniques:
+      - "Light in low-key with a single dominant motivated source and deep shadow"
+      - "Grade toward desaturated green-yellow or cool neutral tones"
+      - "Use smooth, near-imperceptible camera movement rather than visible handheld energy"
+      - "Structure scenes around accumulating procedural detail rather than exposition"
+    constraints:
+      - "Clinical control can undercut warmth or spontaneity"
+      - "Not suited to loose, improvisational, or overtly emotional genres"
+  applicability:
+    emotions:
+      - unease
+      - tension
+      - controlled
+    genres:
+      - thriller
+      - crime
+      - drama
+    keywords:
+      - low_key
+      - desaturated
+      - procedural
+      - precision
+      - control
+  engine_guidance:
+    when_to_use: "Project is a tense, controlled thriller or procedural requiring clinical precision"
+    recommended_actions:
+      - "Recommend low-key lighting with a single dominant source"
+      - "Pull color guidance toward desaturated green-yellow"
+      - "Favor smooth, deliberate movement over handheld or whip camera work"
+    avoid:
+      - "Warm, spontaneous, comedic tone"
+      - "Loose handheld coverage"
+  relationships:
+    related:
+      - light_low_key_noir
+      - color_desaturated_gray
+    conflicts:
+      - director_hayao_miyazaki
+      - director_wes_anderson
+  references:
+    sources:
+      - "General critical consensus on Fincher's directing style and technical choices"
+  version: "1.0"

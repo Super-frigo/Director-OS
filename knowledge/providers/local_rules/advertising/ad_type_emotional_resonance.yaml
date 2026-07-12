@@ -1,0 +1,56 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: ad_type_emotional_resonance
+    name: "Ad Type — Emotional Resonance"
+    author: Director OS
+  category: storytelling
+  knowledge:
+    concept: "Emotion-first storytelling that minimizes explicit product messaging until very late, relying on a strong universal feeling (joy, relief, connection) to carry brand association."
+    principles:
+      - "The emotional truth of the situation matters more than any product attribute"
+      - "Universal, relatable human moments are prioritized over specific demographic targeting"
+      - "Product/brand appears briefly and lightly — often just before or at the CTA"
+      - "Music and performance carry more narrative weight than dialogue or voiceover"
+    emotional_effects:
+      - catharsis
+      - connection
+      - joy_or_relief
+    techniques:
+      - "Build the entire runtime around a single escalating emotional beat rather than multiple claims"
+      - "Use music as the primary pacing and emotional driver"
+      - "Hold on unguarded, naturalistic performance rather than polished delivery"
+    constraints:
+      - "Risk of emotional messaging reading as manipulative if not earned by specificity"
+      - "Weak vehicle for communicating concrete product features or pricing"
+  applicability:
+    emotions:
+      - catharsis
+      - connection
+      - joy
+    genres:
+      - advertising
+      - commercial
+      - social_good
+    keywords:
+      - emotional_appeal
+      - universal_moment
+      - music_driven
+  engine_guidance:
+    when_to_use: "Client goal is emotional brand association over feature communication"
+    recommended_actions:
+      - "Recommend building the whole spot around one escalating emotional beat"
+      - "Suggest reserving explicit branding until the final seconds"
+    avoid:
+      - "Feature-heavy or comparison-based briefs"
+      - "Contexts requiring detailed factual claims"
+  relationships:
+    related:
+      - ad_type_brand_story
+      - ad_type_social_cause_psa
+    conflicts:
+      - ad_type_product_demonstration
+  references:
+    sources:
+      - "General advertising industry conventions on emotion-led commercial structure"
+  version: "1.0"

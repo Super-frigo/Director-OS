@@ -1,0 +1,57 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: cinematographer_robert_richardson
+    name: "Robert Richardson — High-Contrast Punctuation"
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: "Bold, high-contrast lighting built on aggressive backlight and top-light, visible lens flares, and operatic bursts of primary color used as visual punctuation."
+    principles:
+      - "Push strong top-light or backlight for graphic, high-contrast separation"
+      - "Treat visible lens flares as an intentional stylistic signature, not a flaw"
+      - "Use bold, saturated primary-color gels to punctuate key emotional beats"
+      - "Contrast is graphic and immediate rather than naturalistic"
+    emotional_effects:
+      - operatic
+      - kinetic
+      - larger_than_life
+    techniques:
+      - "Rig hard backlight/top-light sources that flare directly into the lens"
+      - "Gel key moments with bold primary color for emotional emphasis"
+      - "Push contrast in-camera rather than relying solely on the grade"
+    constraints:
+      - "Aggressive flare and contrast can overwhelm subtle, quiet dramatic material"
+      - "Not suited to naturalistic, restrained, or motivated-light-only approaches"
+  applicability:
+    emotions:
+      - operatic
+      - kinetic
+      - bold
+    genres:
+      - action
+      - biography
+      - war
+    keywords:
+      - flare
+      - backlight
+      - high_contrast
+      - color_punctuation
+  engine_guidance:
+    when_to_use: "Project wants bold, operatic visual punctuation over naturalistic restraint"
+    recommended_actions:
+      - "Recommend strong backlight/top-light with visible flare"
+      - "Suggest bold primary-color gel accents at key emotional beats"
+    avoid:
+      - "Quiet, naturalistic, motivated-light-only scenes"
+      - "Low-contrast, desaturated tonal treatment"
+  relationships:
+    related:
+      - light_special_effects
+    conflicts:
+      - cinematographer_roger_deakins
+      - cinematographer_bradford_young
+  references:
+    sources:
+      - "General critical consensus on Robert Richardson's cinematography and technical interviews"
+  version: "1.0"

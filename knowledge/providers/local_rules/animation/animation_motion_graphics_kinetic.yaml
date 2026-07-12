@@ -1,0 +1,55 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: animation_motion_graphics_kinetic
+    name: "Motion Graphics — Kinetic Type & Data"
+    author: Director OS
+  category: visual_style
+  knowledge:
+    concept: "Type- and graphic-driven animation for brand, UI, and data storytelling, built on geometric motion and cuts synced tightly to rhythm or narration."
+    principles:
+      - "Motion is driven by graphic/typographic elements, not photographed subjects"
+      - "Cuts and reveals sync tightly to a rhythmic beat — music, voiceover cadence, or UI logic"
+      - "Geometric shape language and grid discipline keep compositions legible at speed"
+      - "Color and iconography carry brand or data meaning directly"
+    emotional_effects:
+      - energetic
+      - clean
+      - informative
+    techniques:
+      - "Sync type/graphic reveals precisely to a musical or vocal beat grid"
+      - "Use consistent grid and shape language across the whole sequence"
+      - "Animate data/iconography with clear easing curves for legibility"
+    constraints:
+      - "Not suited to character-driven emotional narrative"
+      - "Overly fast cutting can sacrifice legibility of information-dense content"
+  applicability:
+    emotions:
+      - energetic
+      - clean
+      - informative
+    genres:
+      - advertising
+      - explainer
+      - branding
+    keywords:
+      - kinetic_type
+      - data_visualization
+      - UI_animation
+      - rhythm
+  engine_guidance:
+    when_to_use: "Project needs brand, explainer, or data-driven graphic storytelling rather than character animation"
+    recommended_actions:
+      - "Recommend syncing key reveals to a rhythmic beat grid"
+      - "Suggest consistent grid/shape-language discipline across the sequence"
+    avoid:
+      - "Character-driven emotional narrative requirements"
+      - "Slow, contemplative pacing"
+  relationships:
+    related: []
+    conflicts:
+      - animation_stop_motion_clay
+  references:
+    sources:
+      - "General motion design industry terminology"
+  version: "1.0"

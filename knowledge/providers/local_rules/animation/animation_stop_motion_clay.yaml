@@ -1,0 +1,55 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: animation_stop_motion_clay
+    name: "Stop Motion — Clay & Puppet"
+    author: Director OS
+  category: visual_style
+  knowledge:
+    concept: "Physical clay or puppet figures captured frame-by-frame, retaining tactile imperfections — fingerprints, seams, subtle jitter — that give the medium its handmade warmth."
+    principles:
+      - "Physical imperfection (fingerprints, seams, micro-jitter) is a feature, not a flaw"
+      - "Every frame is a discrete physical manipulation, producing a distinctive staccato motion quality"
+      - "Practical lighting and sets behave like miniature live-action production"
+      - "Armature and rig constraints shape achievable motion range"
+    emotional_effects:
+      - handmade
+      - tactile
+      - whimsical_uncanny
+    techniques:
+      - "Preserve visible fingerprints/tool marks on clay surfaces intentionally"
+      - "Shoot on-twos for classic stop-motion staccato rhythm"
+      - "Light miniature sets with genuine practical sources and real shadow falloff"
+    constraints:
+      - "Extremely labor- and time-intensive per second of footage"
+      - "Limited range of motion compared to fully rigged 3D or 2D animation"
+  applicability:
+    emotions:
+      - whimsical
+      - tactile
+      - uncanny_charm
+    genres:
+      - animation
+      - family
+      - fantasy
+    keywords:
+      - stop_motion
+      - clay
+      - puppet
+      - tactile
+  engine_guidance:
+    when_to_use: "Project wants a tactile, handmade, slightly uncanny charm distinct from digital animation"
+    recommended_actions:
+      - "Recommend preserving visible physical imperfection in surface texture description"
+      - "Suggest practical miniature lighting setups"
+    avoid:
+      - "Requirements for smooth, high-fluidity motion"
+      - "Fully digital, seamless CG aesthetics"
+  relationships:
+    related: []
+    conflicts:
+      - animation_motion_graphics_kinetic
+  references:
+    sources:
+      - "General animation industry terminology for stop-motion practice"
+  version: "1.0"

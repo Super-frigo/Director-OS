@@ -1,0 +1,57 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: animation_2d_hand_drawn
+    name: "2D Hand-Drawn Animation"
+    author: Director OS
+  category: visual_style
+  knowledge:
+    concept: "Traditional frame-by-frame drawn animation with expressive, imperfect line quality and exaggerated squash-and-stretch physicality."
+    principles:
+      - "Line weight and imperfection carry expressive, handmade character"
+      - "Squash-and-stretch communicates weight and elasticity of motion"
+      - "On-twos or on-ones timing choices directly shape perceived energy"
+      - "Backgrounds are often painted separately from character line work, creating depth through style contrast"
+    emotional_effects:
+      - warm
+      - handmade
+      - nostalgic
+    techniques:
+      - "Use on-twos timing for a classic, slightly stylized rhythm; on-ones for fluid realism"
+      - "Exaggerate squash-and-stretch on impacts and anticipation beats"
+      - "Keep clean, confident line weight consistent per character"
+    constraints:
+      - "Labor-intensive per frame; not suited to rapid iterative production"
+      - "Can clash tonally with photorealistic live-action elements in mixed media"
+  applicability:
+    emotions:
+      - warm
+      - whimsical
+      - nostalgic
+    genres:
+      - animation
+      - family
+      - fantasy
+    keywords:
+      - hand_drawn
+      - squash_stretch
+      - line_art
+      - traditional
+  engine_guidance:
+    when_to_use: "Project wants a warm, handmade, classically animated feel"
+    recommended_actions:
+      - "Specify on-twos or on-ones timing explicitly for target energy level"
+      - "Recommend exaggerated squash-and-stretch on key action beats"
+    avoid:
+      - "Photorealistic rendering requirements"
+      - "Contexts requiring rapid, low-cost iteration at high volume"
+  relationships:
+    related:
+      - director_hayao_miyazaki
+      - animation_twelve_principles
+    conflicts:
+      - animation_3d_stylized_cel_shaded
+  references:
+    sources:
+      - "General animation industry terminology and traditional animation practice"
+  version: "1.0"

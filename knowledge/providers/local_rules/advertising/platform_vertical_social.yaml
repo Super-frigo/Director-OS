@@ -1,0 +1,49 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: platform_vertical_social
+    name: "Platform — Vertical Social (TikTok / Reels / Shorts) vs. Horizontal (TV/YouTube)"
+    author: Director OS
+  category: storytelling
+  knowledge:
+    concept: "Vertical social formats and horizontal TV/YouTube formats demand different framing, pacing, and hook conventions rather than a simple aspect-ratio crop of the same cut."
+    principles:
+      - "Vertical feeds are sound-off-first and thumb-stop-driven — the hook must work silently in the first 1-2 seconds"
+      - "Horizontal/TV assumes a captive or semi-captive viewer and can afford a slower, sound-on open"
+      - "Vertical framing favors CU/MCU with the subject centered; wide establishing shots lose impact on a narrow tall frame"
+      - "Text-on-screen and captions are near-mandatory for vertical social, optional for TV"
+    emotional_effects: []
+    techniques:
+      - "Design the opening frame to communicate the core idea with sound off"
+      - "Reframe (not just crop) key shots for vertical delivery — recompose around CU/MCU"
+      - "Bake in captions/on-screen text for vertical cuts"
+    constraints:
+      - "A horizontal wide-shot-heavy cut will not translate well to vertical without reshooting or recomposing coverage"
+      - "Native vertical content can feel undersized when shown on a horizontal TV context"
+  applicability:
+    emotions: []
+    genres:
+      - advertising
+      - commercial
+      - social_media
+    keywords:
+      - vertical
+      - horizontal
+      - aspect_ratio
+      - sound_off
+      - hook
+  engine_guidance:
+    when_to_use: "Project's Output Profile specifies a target platform/aspect ratio"
+    recommended_actions:
+      - "For vertical: recommend CU/MCU-heavy coverage and a silent-readable opening hook"
+      - "For horizontal/TV: allow slower opens and wider establishing coverage"
+    avoid:
+      - "Assuming a single cut/coverage plan serves both vertical and horizontal without recomposition"
+  relationships:
+    related:
+      - format_short_form_duration
+    conflicts: []
+  references:
+    sources:
+      - "General advertising and social platform production conventions"
+  version: "1.0"

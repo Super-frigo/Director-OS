@@ -1,0 +1,62 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: director_wes_anderson
+    name: "Wes Anderson — Symmetrical Storybook"
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: "Meticulously symmetrical, planimetric framing combined with curated pastel palettes and deadpan performance, treating the frame like an illustrated storybook page."
+    principles:
+      - "Strict frontal symmetry with the subject centered on the frame's vertical axis"
+      - "Camera moves flat and perpendicular to the set: lateral tracks, whip pans, snap zooms"
+      - "Production design is a narrative device, not backdrop — every object is composed"
+      - "Deadpan performance and flat vocal delivery contrast with visually ornate framing"
+    emotional_effects:
+      - whimsical
+      - melancholic_under_comedy
+      - nostalgic
+    techniques:
+      - "Lock the camera perpendicular to walls/sets for flat, poster-like geometry"
+      - "Center the subject; use door frames, windows, and shelving as natural frame-within-frame"
+      - "Block color in curated pastel or complementary palettes across wardrobe and set"
+      - "Use overhead 'tabletop' inserts for objects and documents"
+    constraints:
+      - "Symmetry and stillness can flatten raw emotional urgency"
+      - "Not suited to visceral, chaotic, or handheld-driven realism"
+      - "Requires heavy production design control; weak in loose documentary contexts"
+  applicability:
+    emotions:
+      - whimsical
+      - wistful
+      - controlled
+    genres:
+      - comedy
+      - dramedy
+      - family
+    keywords:
+      - symmetry
+      - pastel
+      - deadpan
+      - storybook
+      - production_design
+  engine_guidance:
+    when_to_use: "Project wants a stylized, curated, gently melancholic comedic tone with strong visual whimsy"
+    recommended_actions:
+      - "Default to centered framing and locked-off or flat lateral movement"
+      - "Pull palette guidance toward pastel/complementary blocking"
+      - "Suggest frame-within-frame composition using set architecture"
+    avoid:
+      - "Handheld or chaotic camera work"
+      - "Gritty, naturalistic, desaturated tone"
+  relationships:
+    related:
+      - comp_frame_within_frame
+      - color_yellow_warm
+    conflicts:
+      - movement_handheld
+      - director_wong_kar_wai
+  references:
+    sources:
+      - "General critical consensus on Anderson's directing style and technical choices"
+  version: "1.0"

@@ -1,0 +1,57 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: cinematographer_vittorio_storaro
+    name: "Vittorio Storaro — Writing With Light"
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: "Color and light treated as a deliberate psychological narrative device — 'writing with light' — where classical three-point lighting is elevated into symbolic, act-by-act color structure within formal widescreen geometry."
+    principles:
+      - "Assign deliberate, consistent color meaning to characters, acts, or emotional states"
+      - "Use light and color together as a 'second script' running parallel to dialogue"
+      - "Build formal, classically balanced widescreen compositions"
+      - "Lighting design evolves across the film to track psychological/narrative progression"
+    emotional_effects:
+      - symbolic
+      - classical
+      - psychologically_layered
+    techniques:
+      - "Map a specific color to a character arc or thematic idea and track it across the film"
+      - "Use classical three-point lighting as a controlled base, then push toward symbolic color"
+      - "Compose in formal, geometrically balanced widescreen frames"
+    constraints:
+      - "Highly symbolic color-mapping requires disciplined, film-wide planning to read clearly"
+      - "Not suited to loose, improvisational, documentary-style shoots"
+  applicability:
+    emotions:
+      - symbolic
+      - classical
+      - layered
+    genres:
+      - drama
+      - epic
+      - period
+    keywords:
+      - color_symbolism
+      - three_point
+      - widescreen
+      - second_script
+  engine_guidance:
+    when_to_use: "Project benefits from a deliberate, film-wide color-as-meaning strategy"
+    recommended_actions:
+      - "Recommend mapping specific colors to characters or acts consistently across the Project"
+      - "Suggest formal, balanced widescreen composition"
+    avoid:
+      - "Loose documentary or improvisational shooting styles"
+      - "Inconsistent, scene-by-scene color choices"
+  relationships:
+    related:
+      - color_teal_orange
+      - color_red_passion
+    conflicts:
+      - cinematographer_emmanuel_lubezki
+  references:
+    sources:
+      - "General critical consensus on Storaro's cinematography and published interviews on his color theory"
+  version: "1.0"

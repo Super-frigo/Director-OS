@@ -1,0 +1,56 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: ad_type_social_cause_psa
+    name: "Ad Type — Social Cause / PSA"
+    author: Director OS
+  category: storytelling
+  knowledge:
+    concept: "Public-service or social-cause messaging built on urgency and a collective-action framing, where the audience is positioned as a participant, not just a viewer."
+    principles:
+      - "Stakes are framed as collective/societal rather than individual/consumer"
+      - "Urgency is built through a clear before/after or ongoing-crisis structure"
+      - "The call to action asks for participation or belief change, not purchase"
+      - "Authenticity (real footage, testimony, restrained aesthetics) often outweighs polish"
+    emotional_effects:
+      - urgency
+      - responsibility
+      - solidarity
+    techniques:
+      - "Use direct-address or testimony-style delivery to build authenticity"
+      - "Contrast a stark 'before' reality with a hopeful or urgent 'after' possibility"
+      - "Favor restrained, less-produced visual language over glossy commercial polish"
+    constraints:
+      - "Over-polished production can undercut perceived authenticity and trust"
+      - "Not suited to product-centric or purchase-driven briefs"
+  applicability:
+    emotions:
+      - urgency
+      - responsibility
+      - solidarity
+    genres:
+      - advertising
+      - social_good
+      - psa
+    keywords:
+      - public_service
+      - urgency
+      - collective_action
+      - authenticity
+  engine_guidance:
+    when_to_use: "Client goal is awareness or behavior change around a social/public issue"
+    recommended_actions:
+      - "Recommend testimony or direct-address delivery for authenticity"
+      - "Suggest restrained, less-glossy visual treatment"
+    avoid:
+      - "Highly polished, product-hero visual language"
+      - "Purchase-driven or feature-led messaging"
+  relationships:
+    related:
+      - ad_type_emotional_resonance
+    conflicts:
+      - ad_type_product_demonstration
+  references:
+    sources:
+      - "General advertising and public-service communication conventions"
+  version: "1.0"

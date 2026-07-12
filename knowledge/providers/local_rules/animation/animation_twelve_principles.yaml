@@ -1,0 +1,60 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: animation_twelve_principles
+    name: "Twelve Principles of Animation (Reference Checklist)"
+    author: Director OS
+  category: visual_style
+  knowledge:
+    concept: "A foundational checklist of classical animation principles used across 2D, 3D, and stop-motion to make motion read as weighted, alive, and appealing, originating from classical Disney animation practice."
+    principles:
+      - "Squash & stretch — communicate weight and flexibility through deformation"
+      - "Anticipation — a small counter-movement prepares the audience for the main action"
+      - "Staging — present one clear idea per frame/moment"
+      - "Straight-ahead vs. pose-to-pose — two complementary approaches to building motion"
+      - "Follow-through & overlapping action — parts of a body/object continue moving at different rates"
+      - "Slow in/slow out — motion accelerates and decelerates rather than moving at constant speed"
+      - "Arcs — natural motion follows curved paths, not straight lines"
+      - "Secondary action — supporting motion reinforces the main action without competing for attention"
+      - "Timing — the number of frames used defines the physical and emotional quality of an action"
+      - "Exaggeration — pushing a pose or action beyond strict realism for clarity and appeal"
+      - "Solid drawing/modeling — maintaining volume and weight consistency in three dimensions"
+      - "Appeal — the design and performance should be inherently watchable and clear"
+    emotional_effects:
+      - alive
+      - weighted
+      - readable
+    techniques:
+      - "Run key poses through this checklist during the design/review stage of any animated shot"
+      - "Prioritize timing and arcs first — they affect perceived quality more than fine detail"
+    constraints:
+      - "A reference checklist, not a rigid formula — over-applying every principle to every frame can feel mechanical"
+  applicability:
+    emotions:
+      - alive
+      - weighted
+      - readable
+    genres:
+      - animation
+    keywords:
+      - squash_stretch
+      - timing
+      - arcs
+      - anticipation
+      - checklist
+  engine_guidance:
+    when_to_use: "Any animated shot needs a quick quality/readability check during Review"
+    recommended_actions:
+      - "Use as a checklist during the Review stage for animated shots"
+      - "Flag missing anticipation, weak arcs, or flat timing as review notes"
+    avoid:
+      - "Treating the list as a mandatory checklist for live-action shots"
+  relationships:
+    related:
+      - animation_2d_hand_drawn
+      - animation_stop_motion_clay
+    conflicts: []
+  references:
+    sources:
+      - "Widely-taught classical animation principles originating from Disney animation practice (paraphrased, not quoted)"
+  version: "1.0"

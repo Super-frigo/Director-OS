@@ -1,0 +1,57 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: cinematographer_hoyte_van_hoytema
+    name: "Hoyte van Hoytema — Large-Format Immersion"
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: "Large-format (65mm/IMAX) photography that keeps lighting motivated and grounded even at massive physical scale, rendered in cool, restrained palettes."
+    principles:
+      - "Shoot large-format to maximize resolution, depth, and physical immersion"
+      - "Keep light sources motivated and physically grounded regardless of scale"
+      - "Minimize artificial fill; let scale itself carry visual weight"
+      - "Favor cool, slightly desaturated palettes over stylized color grading"
+    emotional_effects:
+      - immersive
+      - awe
+      - grounded_scale
+    techniques:
+      - "Use large-format cameras (65mm, IMAX) for key scale-driven sequences"
+      - "Light with practical, motivated sources even in vast environments"
+      - "Keep the grade cool and restrained to preserve a grounded, tactile feel"
+    constraints:
+      - "Large-format gear is heavy and logistically demanding, limiting handheld spontaneity"
+      - "Not suited to intimate, small-scale, stylized comedic material"
+  applicability:
+    emotions:
+      - awe
+      - grounded
+      - immersive
+    genres:
+      - science_fiction
+      - epic
+      - war
+    keywords:
+      - large_format
+      - IMAX
+      - scale
+      - grounded
+  engine_guidance:
+    when_to_use: "Project needs immersive physical scale without sacrificing grounded realism"
+    recommended_actions:
+      - "Recommend large-format framing choices for key establishing/scale beats"
+      - "Keep lighting guidance motivated even in expansive environments"
+    avoid:
+      - "Intimate handheld comedic coverage"
+      - "Highly stylized, saturated color treatment"
+  relationships:
+    related:
+      - director_christopher_nolan
+      - lens_24mm_wide
+    conflicts:
+      - cinematographer_robert_richardson
+  references:
+    sources:
+      - "General critical consensus on van Hoytema's cinematography and technical interviews"
+  version: "1.0"

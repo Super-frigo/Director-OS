@@ -1,0 +1,59 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: cinematographer_emmanuel_lubezki
+    name: "Emmanuel Lubezki — Available Light Immersion"
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: "Prioritizes natural and available light over artificial rigs, combined with unbroken long-take choreography and wide-lens immersive handheld proximity to actors."
+    principles:
+      - "Natural and practical light sources are preferred over artificial fill whenever possible"
+      - "Long, unbroken takes choreograph actors and camera as a single continuous movement"
+      - "Wide lenses keep the camera physically close to actors without distorting intimacy"
+      - "Blocking is built around available light rather than lighting built around blocking"
+    emotional_effects:
+      - immersive
+      - visceral
+      - transcendent
+    techniques:
+      - "Shoot during magic hour or with large natural/window light sources"
+      - "Choreograph extended Steadicam or handheld takes that follow character movement continuously"
+      - "Use wide-angle lenses at close proximity for immersive subjective framing"
+      - "Let actors move freely through practical light rather than hitting lighting marks"
+    constraints:
+      - "Reliance on natural light limits shooting windows and controllability"
+      - "Long unbroken takes require extensive rehearsal and can be logistically demanding"
+  applicability:
+    emotions:
+      - immersive
+      - visceral
+      - transcendent
+    genres:
+      - drama
+      - war
+      - arthouse
+    keywords:
+      - long_take
+      - natural_light
+      - handheld
+      - immersion
+  engine_guidance:
+    when_to_use: "Project wants visceral, continuous, in-the-moment immersion tied to natural light conditions"
+    recommended_actions:
+      - "Recommend long, unbroken takes with continuous camera-actor choreography"
+      - "Favor natural/practical light sources over artificial rigs"
+      - "Suggest wide-lens close proximity for subjective immersion"
+    avoid:
+      - "Heavily controlled studio lighting setups"
+      - "Fast, fragmented multi-camera coverage"
+  relationships:
+    related:
+      - movement_steadicam
+      - light_golden_hour
+    conflicts:
+      - cinematographer_bradford_young
+  references:
+    sources:
+      - "General critical consensus on Lubezki's cinematography and technical interviews"
+  version: "1.0"

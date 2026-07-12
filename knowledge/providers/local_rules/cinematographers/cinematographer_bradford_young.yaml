@@ -1,0 +1,58 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: cinematographer_bradford_young
+    name: "Bradford Young — Low-Key Tonality"
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: "Low-key, often underexposed tonality with deep attention to authentically rendering skin tone across complexions, held together by patient, still camera language."
+    principles:
+      - "Embrace underexposure and low-key contrast rather than defaulting to bright fill"
+      - "Light deliberately for authentic, dignified rendering of skin tone across all complexions"
+      - "Favor patient, still, or slowly-moving camera over kinetic coverage"
+      - "Darkness and shadow are used as texture, not absence of information"
+    emotional_effects:
+      - intimate
+      - contemplative
+      - weighted_stillness
+    techniques:
+      - "Underexpose deliberately, protecting shadow detail in the grade"
+      - "Test and adjust lighting ratios specifically for the actors' skin tones on set"
+      - "Hold static or slow-drift compositions rather than cutting quickly"
+    constraints:
+      - "Low-key underexposure requires careful display calibration to avoid loss of detail"
+      - "Not suited to bright, high-key commercial or comedic tone"
+  applicability:
+    emotions:
+      - intimate
+      - contemplative
+      - weighted
+    genres:
+      - drama
+      - biography
+      - arthouse
+    keywords:
+      - low_key
+      - underexposure
+      - skin_tone
+      - stillness
+  engine_guidance:
+    when_to_use: "Project needs an intimate, dignified, low-key visual register centered on character"
+    recommended_actions:
+      - "Recommend low-key, underexposed lighting guidance"
+      - "Emphasize careful skin-tone rendering in lighting notes"
+      - "Favor static or slow camera movement"
+    avoid:
+      - "High-key bright commercial lighting"
+      - "Fast, kinetic camera movement"
+  relationships:
+    related:
+      - light_low_key_noir
+    conflicts:
+      - cinematographer_emmanuel_lubezki
+      - cinematographer_robert_richardson
+  references:
+    sources:
+      - "General critical consensus on Bradford Young's cinematography and technical interviews"
+  version: "1.0"

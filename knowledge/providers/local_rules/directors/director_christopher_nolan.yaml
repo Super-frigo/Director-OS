@@ -1,0 +1,61 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: director_christopher_nolan
+    name: "Christopher Nolan — Structural Scale"
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: "Large-format, practical-effects-driven filmmaking built around non-linear or parallel time structures. Story architecture and image scale are treated as inseparable."
+    principles:
+      - "Prefers practical effects, real locations, and in-camera stunts over CGI"
+      - "Structures narrative non-linearly or with parallel/intercut timelines"
+      - "Uses large-format photography (IMAX, 65mm, large-format anamorphic) to maximize immersion"
+      - "Sound design and score are tightly interlocked with picture, often overwhelming dialogue"
+    emotional_effects:
+      - awe
+      - cerebral_tension
+      - urgency
+    techniques:
+      - "Shoot key sequences on IMAX or large-format film for scale and clarity"
+      - "Intercut two or three timelines that converge at the climax"
+      - "Favor wide, geometrically precise compositions over intimate coverage"
+      - "Build tension through ticking-clock cross-cutting rather than dialogue"
+    constraints:
+      - "Scale-first approach can read as emotionally cold or clinical"
+      - "Complex structure risks sacrificing character intimacy for architecture"
+      - "Not suited to small, single-location, dialogue-driven drama"
+  applicability:
+    emotions:
+      - awe
+      - tension
+      - cerebral
+    genres:
+      - science_fiction
+      - thriller
+      - epic
+    keywords:
+      - IMAX
+      - nonlinear
+      - practical_effects
+      - time
+      - scale
+  engine_guidance:
+    when_to_use: "Project requires large-scale, structurally ambitious storytelling grounded in physical realism"
+    recommended_actions:
+      - "Favor wide/large-format framings (ELS, LS) over intimate CU coverage"
+      - "Suggest practical, in-camera visual language over VFX-heavy description"
+      - "Consider nonlinear beat ordering in the Story layer"
+    avoid:
+      - "Intimate, low-key indie drama with a single confined setting"
+      - "Loose, handheld naturalism"
+  relationships:
+    related:
+      - director_denis_villeneuve
+      - lens_35mm_standard
+    conflicts:
+      - director_wong_kar_wai
+  references:
+    sources:
+      - "General critical consensus on Nolan's directing style and technical choices"
+  version: "1.0"

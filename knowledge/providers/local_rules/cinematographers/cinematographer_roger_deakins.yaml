@@ -1,0 +1,59 @@
+library:
+  schema_version: "1.0"
+  metadata:
+    id: cinematographer_roger_deakins
+    name: "Roger Deakins — Motivated Minimalism"
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: "Naturalistic, narratively-motivated lighting paired with precise, minimalist geometric composition and a restrained digital intermediate grade."
+    principles:
+      - "Every light source should be justifiable within the world of the story"
+      - "Compositions rely on negative space and clean geometry rather than clutter"
+      - "Embrace shadow — do not over-light a frame to make it 'safe'"
+      - "Digital grading stays restrained and naturalistic rather than stylized"
+    emotional_effects:
+      - understated
+      - grounded
+      - quietly_epic
+    techniques:
+      - "Bounce or diffuse natural light rather than adding hard artificial fill"
+      - "Silhouette subjects against strong practical or natural backlight"
+      - "Use wide, geometrically balanced compositions with generous negative space"
+      - "Keep the DI grade subtle — protect skin tone and shadow detail"
+    constraints:
+      - "Restraint can read as visually plain if the production design is weak"
+      - "Not suited to hyper-stylized, saturated, or expressionist looks"
+  applicability:
+    emotions:
+      - understated
+      - grounded
+      - epic
+    genres:
+      - drama
+      - thriller
+      - western
+    keywords:
+      - motivated_light
+      - negative_space
+      - naturalism
+      - restraint
+  engine_guidance:
+    when_to_use: "Project wants epic scale or gravity without visibly 'designed' lighting"
+    recommended_actions:
+      - "Recommend motivated, source-justified lighting setups"
+      - "Favor wide compositions with strong negative space"
+      - "Suggest silhouette-against-backlight for key emotional beats"
+    avoid:
+      - "Highly saturated, expressionist color treatment"
+      - "Visibly artificial, unmotivated lighting rigs"
+  relationships:
+    related:
+      - director_denis_villeneuve
+      - comp_negative_space
+    conflicts:
+      - cinematographer_robert_richardson
+  references:
+    sources:
+      - "General critical consensus on Deakins's cinematography and technical interviews"
+  version: "1.0"
