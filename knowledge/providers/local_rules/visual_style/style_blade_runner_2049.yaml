@@ -68,6 +68,7 @@ library:
   relationships:
     related:
       - style_denis_villeneuve
+      - director_denis_villeneuve
       - color_teal_orange
     conflicts:
       - style_pixar

@@ -6,55 +6,86 @@ library:
     author: Director OS
   category: cinematography
   knowledge:
-    concept: "Vast, contemplative compositions that dwarf human figures against monumental environments, paired with slow pacing and sound design that carries emotional weight in place of dialogue."
+    concept: "Slow, contemplative cinema where vast compositions dwarf human figures against monumental environments. Camera movement breathes with the audience — every push-in carries emotion, every wide shot asks an existential question. Sound design and score do the emotional work that dialogue is deliberately withheld from doing."
     principles:
-      - "Wide, patient compositions establish scale before intimacy"
-      - "Slow pacing with intentional silence lets images breathe"
-      - "Massive architectural or landscape scale is set against small, vulnerable human moments"
-      - "Sound design and score do emotional work that dialogue is deliberately withheld from doing"
+      - "Camera movement IS emotion — every push-in breathes, every track observes"
+      - "Wide, patient compositions establish scale before intimacy; massive negative space emphasizes human smallness"
+      - "Slow pacing with intentional silence lets images breathe; tension accumulates through stillness before releasing in one deliberate movement"
+      - "Generous duration for the audience to 'enter' the frame, not just see it"
+      - "Nature and architecture are immovable — humans move through them, not vice versa"
+      - "Minimal dialogue — one frame speaks louder than ten lines"
+      - "Reserve saturated color for key objects/characters only; color as narrative signal, not decoration"
     emotional_effects:
       - awe
       - dread
       - contemplative
+      - existential
+      - sublime
+      - isolated
+      - humbled
     techniques:
       - "Use ELS/EST to establish human vs. environment scale before cutting closer"
       - "Slow deliberate push-ins or static holds instead of fast cutting"
-      - "Desaturated earth-tone palettes with sparing, deliberate color accents"
-      - "Natural or strongly motivated lighting sources"
+      - "Desaturated earth-tone palettes (sand, stone, cold gray) with sparing, deliberate color accents"
+      - "Natural or strongly motivated lighting sources — every source is justified (sun, window, lamp)"
+      - "Silhouette + backlight to leave emotions to audience imagination"
+      - "Dark areas allowed to be unclear — darkness as the boundary of information"
+      - "Place characters below 1/3 of the frame to reinforce scale"
+      - "Fixed camera before moving camera — let the audience 'stand' first"
     constraints:
-      - "Pacing is too slow for fast-cut commercial or comedic contexts"
+      - "Pacing is too slow for fast-cut commercial, comedic, or action-heavy contexts"
       - "Restraint can read as emotional distance if overused in intimate scenes"
+      - "Can feel pretentious without genuine thematic depth"
+      - "Not suitable for short-form content that requires immediate payoff"
   applicability:
     emotions:
       - awe
       - dread
       - contemplative
+      - existential
+      - lonely
+      - humbled
     genres:
       - science_fiction
       - drama
       - thriller
+      - epic
+      - arthouse
     keywords:
       - scale
       - silence
       - monumental
       - restraint
+      - slow cinema
+      - negative space
+      - wide composition
+      - desaturated
+      - naturalistic
+      - atmospheric
+      - meditative
   engine_guidance:
-    when_to_use: "Project needs slow-burn, awe-driven visual storytelling with minimal dialogue reliance"
+    when_to_use: "Project needs slow-burn, awe-driven visual storytelling with minimal dialogue reliance and existential weight"
     recommended_actions:
       - "Favor ELS/EST establishing shots with human figures placed small in frame"
       - "Recommend slow push-in or static-hold movement over cutting"
       - "Pull toward desaturated, earth-tone color guidance"
+      - "Give shots room to breathe — longer takes, slower cuts"
     avoid:
       - "Fast cutting"
       - "Handheld chaos"
       - "Comedic or lighthearted tone"
+      - "Heroic low angles"
+      - "Warm, saturated sunsets"
   relationships:
     related:
       - director_christopher_nolan
       - color_desaturated_gray
+      - style_blade_runner_2049
     conflicts:
       - director_wes_anderson
+      - style_pixar
   references:
     sources:
       - "General critical consensus on Villeneuve's directing style and technical choices"
+      - "AI-Director-OS stylebook/denis-villeneuve.md (original reference)"
   version: "1.0"

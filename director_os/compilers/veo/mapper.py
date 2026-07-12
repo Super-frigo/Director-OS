@@ -192,47 +192,113 @@ VEO_COLOR_GRADE_MAP = {
 def map_camera_movement(movement: str) -> str:
     if not movement: return ""
     key = movement.strip().lower()
-    return VEO_CAMERA_MAP.get(key, movement)
+    mapped = VEO_CAMERA_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from director_os.compilers.translation import translate_to_english
+    return translate_to_english(movement)
+    mapped = VEO_CAMERA_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from director_os.compilers.translation import translate_to_english
+    return translate_to_english(movement)
 
 def map_framing(framing: str) -> str:
     if not framing: return ""
     key = framing.strip().lower()
-    return VEO_FRAMING_MAP.get(key, framing)
+    mapped = VEO_FRAMING_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from director_os.compilers.translation import translate_to_english
+    return translate_to_english(framing)
+    mapped = VEO_FRAMING_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from director_os.compilers.translation import translate_to_english
+    return translate_to_english(framing)
 
 def map_lens(lens: str) -> str:
     if not lens: return ""
     key = lens.strip().lower()
-    return VEO_LENS_MAP.get(key, lens)
+    mapped = VEO_LENS_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from director_os.compilers.translation import translate_to_english
+    return translate_to_english(lens)
+    mapped = VEO_LENS_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from director_os.compilers.translation import translate_to_english
+    return translate_to_english(lens)
 
 def map_lighting(lighting: str) -> str:
     if not lighting: return ""
     key = lighting.strip().lower()
-    return VEO_LIGHTING_MAP.get(key, lighting)
+    mapped = VEO_LIGHTING_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from director_os.compilers.translation import translate_to_english
+    return translate_to_english(lighting)
 
 def map_mood(mood: str) -> str:
     if not mood: return ""
     key = mood.strip().lower()
-    return VEO_MOOD_MAP.get(key, mood)
+    mapped = VEO_MOOD_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from director_os.compilers.translation import translate_to_english
+    return translate_to_english(mood)
 
 def map_texture(texture: str) -> str:
     if not texture: return ""
     key = texture.strip().lower().replace(" ", "_")
-    return VEO_TEXTURE_MAP.get(key, texture)
+    mapped = VEO_TEXTURE_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from director_os.compilers.translation import translate_to_english
+    return translate_to_english(texture)
 
 def map_camera_body(body: str) -> str:
     if not body: return ""
     key = body.strip().lower().replace(" ", "_").replace("-", "_")
-    return VEO_CAMERA_BODY_MAP.get(key, body)
+    mapped = VEO_CAMERA_BODY_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from director_os.compilers.translation import translate_to_english
+    return translate_to_english(body)
+    mapped = VEO_CAMERA_BODY_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from director_os.compilers.translation import translate_to_english
+    return translate_to_english(body)
 
 def map_lens_character(char: str) -> str:
     if not char: return ""
     key = char.strip().lower().replace(" ", "_").replace("-", "_")
-    return VEO_LENS_CHARACTER_MAP.get(key, char)
+    mapped = VEO_LENS_CHARACTER_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from director_os.compilers.translation import translate_to_english
+    return translate_to_english(char)
+    mapped = VEO_LENS_CHARACTER_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from director_os.compilers.translation import translate_to_english
+    return translate_to_english(char)
 
 def map_film_stock(stock: str) -> str:
     if not stock: return ""
     key = stock.strip().lower().replace(" ", "_").replace("-", "_")
-    return VEO_FILM_STOCK_MAP.get(key, stock)
+    mapped = VEO_FILM_STOCK_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from director_os.compilers.translation import translate_to_english
+    return translate_to_english(stock)
+    mapped = VEO_FILM_STOCK_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from director_os.compilers.translation import translate_to_english
+    return translate_to_english(stock)
 
 def map_color_grade(grade: str) -> str:
     if not grade: return ""
@@ -240,4 +306,5 @@ def map_color_grade(grade: str) -> str:
     for k, v in VEO_COLOR_GRADE_MAP.items():
         if key in k or k in key:
             return v
-    return grade
+    from director_os.compilers.translation import translate_to_english
+    return translate_to_english(grade)

@@ -156,6 +156,7 @@ class LocalRulesProvider(KnowledgeProvider):
                 score += 0.2
 
             if score > 0:
+                entry.confidence = score
                 results.append(entry)
 
         # Sort by score, apply max_results

@@ -21,8 +21,11 @@ from .mapper import (
 class PromptBuilder:
     """Assembles translated parts into a cinematic, Seedance-optimized prompt."""
 
+    def __init__(self, translator=None):
+        self._tr = translator  # Translator instance or None
     def build(self, intent: dict, layers: dict = None) -> str:
         """Build a rich cinematic prompt, optionally enriched by 6-layer analysis."""
+        _t = self._translate
         vis = intent.get("visual_direction", {})
         cam = intent.get("camera_strategy", {})
         chars = intent.get("character_direction", [])
@@ -35,6 +38,8 @@ class PromptBuilder:
         framing = map_framing(framing_raw) if framing_raw else ""
         char_name = self._get_char_name(chars, 0)
         char_action = self._get_char_action(chars, 0)
+        char_name = _t(char_name) if char_name else ""
+        char_action = _t(char_action) if char_action else ""
 
         if framing and char_name:
             if char_action:
@@ -119,7 +124,7 @@ class PromptBuilder:
 
         atmos = vis.get("atmosphere", "")
         if atmos:
-            core_parts.append(f"{atmos} atmosphere")
+            core_parts.append(f"{_t(atmos)} atmosphere")
 
         render_engine = vis.get("render_engine", "")
         if render_engine:
@@ -152,24 +157,24 @@ class PromptBuilder:
         if render_settings:
             equip_parts.append(f"{render_settings}")
         if equip_parts:
-            brief_parts.append(f"设备参数:{', '.join(equip_parts)}")
+            brief_parts.append(f"EQUIPMENT: {', '.join(equip_parts)}")
 
         scene_parts = []
         if char_name and char_action:
-            scene_parts.append(f"场景:{char_name} {char_action}")
+            scene_parts.append(f"SCENE: {char_name} {char_action}")
         elif char_name:
-            scene_parts.append(f"场景:{char_name}")
+            scene_parts.append(f"SCENE: {char_name}")
 
         color_desc = color_grade or vis.get("color", "")
         if color_desc:
-            scene_parts.append(f"色调:{color_desc}")
+            scene_parts.append(f"COLOR: {color_desc}")
 
         if scene_parts:
             brief_parts.extend(scene_parts)
 
         premise = narrative.get("premise", "")
         if premise:
-            brief_parts.append(f"动作叙事:{premise}")
+            brief_parts.append(f"ACTION: {_t(premise)}")
 
         # Combine prompt with brief
         if brief_parts:
@@ -186,17 +191,17 @@ class PromptBuilder:
             style_anchor = l1.get("style_anchor", "")
             res = l1.get("resolution", "")
             if style_anchor and res:
-                extra.append(f"视觉定位:{style_anchor} | {res}输出")
+                extra.append(f"VISUAL DIRECTION: {_t(style_anchor)} | {res} output")
             elif style_anchor:
-                extra.append(f"视觉定位:{style_anchor}")
+                extra.append(f"VISUAL DIRECTION: {_t(style_anchor)}")
 
             sb = l4.get("storyboard_summary", "")
             if sb:
-                extra.append(f"分镜序列:{sb}")
+                extra.append(f"SHOT SEQUENCE: {_t(sb)}")
 
             specs = l6.get("quality_specifications", [])
             if specs:
-                extra.append(f"质感规格:{'; '.join(specs[:4])}")
+                extra.append(f"TEXTURE SPEC: {'; '.join(specs[:4])}")
 
             if extra:
                 prompt += "\n" + "\n".join(extra)
@@ -230,6 +235,12 @@ class PromptBuilder:
             parts.append(f"camera {movement}")
 
         return ", ".join(parts) if parts else ""
+
+    def _translate(self, text: str) -> str:
+        """Translate free-text through the injected translator (passthrough if none)."""
+        if self._tr is None:
+            return text
+        return self._tr.translate(text)
 
     @staticmethod
     def _get_char_name(chars: list, idx: int = 0) -> str:

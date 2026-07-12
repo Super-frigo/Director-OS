@@ -34,8 +34,16 @@ class SeedanceCompiler(Compiler):
 
     platform = "seedance"
 
-    def __init__(self):
-        self.prompt_builder = PromptBuilder()
+    def __init__(self, translator=None):
+        # Lazy-init translator from environment if not injected
+        if translator is None:
+            from ..translation import Translator, set_translator
+            translator = Translator.create()
+            set_translator(translator)
+        else:
+            from ..translation import set_translator
+            set_translator(translator)
+        self.prompt_builder = PromptBuilder(translator=translator)
 
     def compile(self, production_intent: dict) -> dict:
         """Translate a Production Intent dict into a Seedance Execution Package."""

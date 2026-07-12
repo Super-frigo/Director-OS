@@ -553,7 +553,8 @@ def map_composition(rule: str) -> str:
     if not rule:
         return ""
     parts = [p.strip() for p in rule.split("+")]
-    mapped = [SEEDANCE_COMPOSITION_MAP.get(p, p) for p in parts if p]
+    from ..translation import translate_to_english
+    mapped = [SEEDANCE_COMPOSITION_MAP.get(p, translate_to_english(p)) for p in parts if p]
     return ", ".join(mapped) if mapped else ""
 
 
@@ -582,7 +583,11 @@ def map_lighting(lighting: str) -> str:
     if not lighting:
         return ""
     key = lighting.strip().lower()
-    return SEEDANCE_LIGHTING_MAP.get(key, lighting)
+    mapped = SEEDANCE_LIGHTING_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from ..translation import translate_to_english
+    return translate_to_english(lighting)
 
 
 def map_mood(mood: str) -> str:
@@ -590,7 +595,11 @@ def map_mood(mood: str) -> str:
     if not mood:
         return ""
     key = mood.strip().lower()
-    return SEEDANCE_MOOD_MAP.get(key, mood)
+    mapped = SEEDANCE_MOOD_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from ..translation import translate_to_english
+    return translate_to_english(mood)
 
 
 def map_texture(texture: str) -> str:
@@ -598,7 +607,11 @@ def map_texture(texture: str) -> str:
     if not texture:
         return ""
     key = texture.strip().lower().replace(" ", "_")
-    return SEEDANCE_TEXTURE_MAP.get(key, texture)
+    mapped = SEEDANCE_TEXTURE_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from ..translation import translate_to_english
+    return translate_to_english(texture)
 
 
 def map_camera_body(body: str) -> str:
@@ -606,7 +619,16 @@ def map_camera_body(body: str) -> str:
     if not body:
         return ""
     key = body.strip().lower().replace(" ", "_").replace("-", "_")
-    return SEEDANCE_CAMERA_BODY_MAP.get(key, body)
+    mapped = SEEDANCE_CAMERA_BODY_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from ..translation import translate_to_english
+    return translate_to_english(body)
+    mapped = SEEDANCE_CAMERA_BODY_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from ..translation import translate_to_english
+    return translate_to_english(body)
 
 
 def map_lens_character(char: str) -> str:
@@ -614,7 +636,16 @@ def map_lens_character(char: str) -> str:
     if not char:
         return ""
     key = char.strip().lower().replace(" ", "_").replace("-", "_")
-    return SEEDANCE_LENS_CHARACTER_MAP.get(key, char)
+    mapped = SEEDANCE_LENS_CHARACTER_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from ..translation import translate_to_english
+    return translate_to_english(char)
+    mapped = SEEDANCE_LENS_CHARACTER_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from ..translation import translate_to_english
+    return translate_to_english(char)
 
 
 def map_film_stock(stock: str) -> str:
@@ -622,7 +653,16 @@ def map_film_stock(stock: str) -> str:
     if not stock:
         return ""
     key = stock.strip().lower().replace(" ", "_").replace("-", "_").replace("/", "_")
-    return SEEDANCE_FILM_STOCK_MAP.get(key, stock)
+    mapped = SEEDANCE_FILM_STOCK_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from ..translation import translate_to_english
+    return translate_to_english(stock)
+    mapped = SEEDANCE_FILM_STOCK_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from ..translation import translate_to_english
+    return translate_to_english(stock)
 
 
 def map_render_engine(engine: str) -> str:
@@ -630,7 +670,16 @@ def map_render_engine(engine: str) -> str:
     if not engine:
         return ""
     key = engine.strip().lower().replace(" ", "_").replace("-", "_")
-    return SEEDANCE_RENDER_ENGINE_MAP.get(key, engine)
+    mapped = SEEDANCE_RENDER_ENGINE_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from ..translation import translate_to_english
+    return translate_to_english(engine)
+    mapped = SEEDANCE_RENDER_ENGINE_MAP.get(key, "")
+    if mapped:
+        return mapped
+    from ..translation import translate_to_english
+    return translate_to_english(engine)
 
 
 def map_render_setting(setting: str) -> str:
@@ -641,7 +690,8 @@ def map_render_setting(setting: str) -> str:
     for k, v in SEEDANCE_RENDER_SETTINGS_MAP.items():
         if key in k or k in key:
             return v
-    return setting
+    from ..translation import translate_to_english
+    return translate_to_english(setting)
 
 
 def map_render_settings(settings_str: str) -> str:
@@ -666,4 +716,5 @@ def map_color_grade(grade: str) -> str:
     for k, v in SEEDANCE_COLOR_GRADE_MAP.items():
         if key in k or k in key:
             return v
-    return grade
+    from ..translation import translate_to_english
+    return translate_to_english(grade)

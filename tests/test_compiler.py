@@ -72,6 +72,7 @@ def test_compiler_with_layers():
     prompt = result["execution_package"]["instructions"]["prompt"]
     assert prompt
     assert "4K" in prompt or "视觉定位" in prompt
+    assert "4K" in prompt or "VISUAL DIRECTION" in prompt
 
 
 def test_prompt_builder_basic():
