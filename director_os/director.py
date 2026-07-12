@@ -30,12 +30,17 @@ class Director:
         self.resolver = KnowledgeResolver()
         self.resolver.register(LocalRulesProvider())
 
+        # LLM client reference (set by _init_llm_provider)
+        self._llm_client: object | None = None
+
         # Try to initialize LLM provider from environment
         self._init_llm_provider()
         self._compilers = {
             "seedance": SeedanceCompiler,
             "veo": VeoCompiler,
         }
+        # Agent registry (ADR-009 Step 3) — lazy init on first use
+        self.agents: dict[str, object] = {}
 
     def load_project(self, path: str | Path) -> Project:
         from .loader import load_project
@@ -241,8 +246,98 @@ class Director:
                 model=model,
                 base_url=base_url,
             )
+            self._llm_client = client
             cache = CacheManager()
             self.resolver.set_cache(cache)
             self.resolver.register(LLMProvider(client=client, cache_manager=cache))
         except Exception:
             pass  # LLM init failure is non-fatal — local rules still work
+
+    def _init_agents(self) -> None:
+        """Lazy-init the agent registry after first use."""
+        if self.agents:
+            return
+        from .agents import StoryAgent, CameraAgent, ContinuityAgent
+        self.agents = {
+            "story": StoryAgent(),
+            "camera": CameraAgent(),
+            "continuity": ContinuityAgent(),
+        }
+
+    def run_agent_cycle(
+        self,
+        target_agents: list[str] | None = None,
+    ) -> dict[str, object]:
+        """Dispatch specialist agents and collect their proposals.
+
+        Maps to state machine stages:
+            PLAN → StoryAgent
+            DESIGN → CameraAgent
+            VALIDATE → ContinuityAgent
+
+        Agents work in KB mode by default. When self._llm_client is set,
+        agent.propose() receives it for LLM-powered reasoning.
+
+        Returns a dict with keys: proposals, warnings, stats, state.
+        """
+        self._init_agents()
+        if not self.project:
+            raise RuntimeError("No project loaded")
+
+        # Determine which agents to run based on state
+        state_agents: dict[DirectorState, list[str]] = {
+            DirectorState.PLAN: ["story"],
+            DirectorState.DESIGN: ["camera"],
+            DirectorState.VALIDATE: ["continuity"],
+        }
+        selected = target_agents or state_agents.get(self.state, [])
+        if not selected:
+            return {
+                "proposals": [],
+                "warnings": [f"No agents for state '{self.state.value}'"],
+                "stats": {},
+                "state": self.state.value,
+            }
+
+        all_proposals: list[dict] = []
+        all_warnings: list[str] = []
+        all_stats: dict[str, dict] = {}
+
+        for name in selected:
+            agent = self.agents.get(name)
+            if not agent:
+                all_warnings.append(f"Agent '{name}' not registered")
+                continue
+
+            from .agents.base import AgentRequest
+            req = AgentRequest(
+                agent=name,
+                project_slice=agent.read_project_slice(self.project),
+                context={
+                    "genre": " ".join(self.project.story.genre) if self.project.story.genre else "",
+                    "premise": self.project.story.premise,
+                    "emotion": getattr(self.intent, "narrative_intent", {}).get("premise", ""),
+                    "cycle_id": self.ctx.cycle_id if self.ctx else "",
+                },
+            )
+            result = agent.propose(req, llm_client=self._llm_client)
+            for p in result.proposals:
+                all_proposals.append({
+                    "id": p.proposal_id,
+                    "agent": p.agent,
+                    "module": p.module,
+                    "field": p.field,
+                    "action": p.action,
+                    "value": p.value,
+                    "rationale": p.rationale,
+                    "confidence": p.confidence,
+                })
+            all_warnings.extend(result.warnings)
+            all_stats[name] = result.stats
+
+        return {
+            "proposals": all_proposals,
+            "warnings": all_warnings,
+            "stats": all_stats,
+            "state": self.state.value,
+        }
