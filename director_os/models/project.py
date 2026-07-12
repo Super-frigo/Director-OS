@@ -325,6 +325,20 @@ class Project:
             for cid in scene.characters:
                 if cid not in char_ids:
                     issues.append(f"scene {scene.id}: character {cid!r} not defined")
+
+        # ---- Validation Rule 5: Visual Consistency (STATE_MACHINE §3.6) ----
+        if self.shots and not self.visual_language.style:
+            issues.append("visual_language.style should be set when shots exist")
+
+        # ---- Validation Rule 6: Technical Feasibility (STATE_MACHINE §3.6) ----
+        # Per-shot duration cap for current AI video platforms
+        for shot in self.shots:
+            if shot.duration and shot.duration > 30:
+                issues.append(
+                    f"shot {shot.shot_id}: duration {shot.duration:g}s exceeds "
+                    f"30s platform limit"
+                )
+
         return issues
 
     def is_valid(self) -> bool:

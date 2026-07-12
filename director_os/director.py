@@ -2,6 +2,7 @@
 
 from pathlib import Path
 
+from .state import DirectorState, StateError, CycleContext, TRANSITIONS, path_to
 from .models.project import Project, HistoryEntry
 from .models.production_intent import ProductionIntent
 from .models.execution_package import ExecutionPackage
@@ -21,6 +22,9 @@ class Director:
         self.project: Project | None = None
         self.intent: ProductionIntent | None = None
         self.engine = EnginePipeline()
+        # State machine (ADR-009 Step 2)
+        self.state: DirectorState = DirectorState.IDLE
+        self.ctx: CycleContext | None = None
         # Knowledge Resolution (ADR-008): multi-provider pipeline
         from .knowledge import KnowledgeResolver, LocalRulesProvider
         self.resolver = KnowledgeResolver()
@@ -45,7 +49,11 @@ class Director:
         return self.project
 
     def plan(self) -> ProductionIntent:
-        """Run Engine: Project → ProductionIntent."""
+        """Run Engine: Project → ProductionIntent.
+
+        Requires PLAN or DESIGN state (STATE_MACHINE §3.4-3.5).
+        """
+        self._require_state({DirectorState.PLAN, DirectorState.DESIGN})
         if not self.project:
             raise RuntimeError("No project loaded. Call load_project() or new_project() first.")
         inp = EngineInput(
@@ -56,7 +64,11 @@ class Director:
         return self.intent
 
     def compile(self, platform: str = "seedance") -> ExecutionPackage:
-        """Run Compiler: ProductionIntent → ExecutionPackage."""
+        """Run Compiler: ProductionIntent → ExecutionPackage.
+
+        Requires COMPILE state (STATE_MACHINE §3.8).
+        """
+        self._require_state({DirectorState.COMPILE})
         if not self.intent:
             raise RuntimeError("No intent. Call plan() first.")
         cls = self._compilers.get(platform)
@@ -86,9 +98,70 @@ class Director:
             return ["No project loaded"]
         return self.project.validate()
 
+    # ---- State Machine (ADR-009 Step 2) ------------------------------------
+
+    def start_cycle(self, user_input: str = "") -> CycleContext:
+        """Begin a Creative Cycle: IDLE → UNDERSTAND.
+
+        Creates a fresh CycleContext and stores it on the Director.
+        The LLM (Director's "brain") calls this when it receives user intent.
+        """
+        self._require_state({DirectorState.IDLE})
+        self.ctx = CycleContext(
+            user_input=user_input,
+            state=DirectorState.UNDERSTAND,
+        )
+        self.state = DirectorState.UNDERSTAND
+        return self.ctx
+
+    def transition_to(self, target: DirectorState) -> DirectorState:
+        """Validate and execute a state transition.
+
+        Raises StateError if *target* is not reachable from the current state.
+        Returns the new state on success so the LLM can confirm it.
+        """
+        legal = TRANSITIONS.get(self.state, set())
+        if target not in legal:
+            raise StateError(
+                f"Cannot transition {self.state.value} → {target.value}. "
+                f"Legal next states: {[s.value for s in sorted(legal, key=str)]}"
+            )
+        self.state = target
+        if self.ctx:
+            self.ctx.state = target
+            self.ctx.turn_count += 1
+        return self.state
+
+    def fast_forward_to(self, target: DirectorState) -> DirectorState:
+        """Auto-transition through intermediate states to reach *target*.
+
+        Uses BFS to find the shortest legal path.  Useful for CLI batch
+        mode and tests where manually stepping through every state is
+        impractical.
+        """
+        for state in path_to(self.state, target):
+            self.transition_to(state)
+        return self.state
+
+    def get_legal_transitions(self) -> list[str]:
+        """Return allowed next-state names (for the LLM to decide next action)."""
+        return [s.value for s in sorted(TRANSITIONS.get(self.state, set()), key=str)]
+
+    # ---- Internal guards ---------------------------------------------------
+
+    def _require_state(self, allowed: set[DirectorState]) -> None:
+        """Guard: raise StateError if self.state is not in *allowed*."""
+        if self.state not in allowed:
+            names = [s.value for s in sorted(allowed, key=str)]
+            raise StateError(
+                f"Operation requires state {names}, current state is "
+                f"'{self.state.value}'. Legal next: {self.get_legal_transitions()}"
+            )
+
     def save_project(self, path: str | Path, message: str = "") -> list[str]:
         """Validate, auto-version, and write Project to disk.
 
+        Requires COMMIT state (STATE_MACHINE §3.7).
         Follows Architecture Principle 6 (validation blocks commit) and
         Principle 7 (immutable history).  Every save appends a HistoryEntry
         with auto-incremented version and ISO timestamp.
@@ -96,6 +169,7 @@ class Director:
         Returns the validation issues list (empty if valid, ValueError if
         save is blocked by validation errors).
         """
+        self._require_state({DirectorState.COMMIT})
         if not self.project:
             raise RuntimeError("No project loaded. Call load_project() or new_project() first.")
 

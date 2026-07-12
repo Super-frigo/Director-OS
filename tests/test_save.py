@@ -24,6 +24,7 @@ from director_os.loader import (
     load_project, dump_project, dump_project_with_markdown, save_project_file,
 )
 from director_os.director import Director
+from director_os.state import DirectorState
 
 
 HANGING = ROOT / "projects" / "the_hanging.md"
@@ -227,6 +228,8 @@ def test_director_save_adds_history():
         tmp = Path(f.name)
 
     try:
+        d.start_cycle("test save")
+        d.fast_forward_to(DirectorState.COMMIT)
         d.save_project(tmp, "test save")
         assert len(d.project.history) == old_count + 1
         new_entry = d.project.history[-1]
@@ -249,9 +252,15 @@ def test_director_save_auto_versions():
                                       encoding="utf-8") as f:
         tmp = Path(f.name)
     try:
+        d.start_cycle("save 1")
+        d.fast_forward_to(DirectorState.COMMIT)
         d.save_project(tmp)
         v2 = d.project.metadata.version
         assert v2 != v1
+
+        d.transition_to(DirectorState.IDLE)  # reset for next cycle
+        d.start_cycle("save 2")
+        d.fast_forward_to(DirectorState.COMMIT)
         d.save_project(tmp)
         v3 = d.project.metadata.version
         assert v3 != v2
@@ -270,6 +279,8 @@ def test_save_rejects_invalid_project():
         tmp = Path(f.name)
 
     try:
+        d.start_cycle("test")
+        d.fast_forward_to(DirectorState.COMMIT)
         with pytest.raises(ValueError, match="validation"):
             d.save_project(tmp)
     finally:

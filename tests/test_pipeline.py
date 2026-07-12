@@ -6,6 +6,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from director_os.director import Director
+from director_os.state import DirectorState
 from director_os.models.project import Character, VisualIdentity
 
 
@@ -41,12 +42,15 @@ def test_pipeline():
     assert isinstance(issues, list)
 
     # 2. Engine → plan() should not crash with minimal project
+    d.start_cycle("test")
+    d.fast_forward_to(DirectorState.PLAN)
     intent = d.plan()
     assert intent is not None
     assert intent.creative_goal is not None
     assert isinstance(intent.creative_goal, dict)
 
     # 3. Compiler → compile() should produce a non-empty prompt
+    d.fast_forward_to(DirectorState.COMPILE)
     pkg = d.compile("seedance")
     assert pkg is not None
     prompt = pkg.instructions.get("prompt", "")

@@ -8,5 +8,8 @@ dependencies = [
     "PyYAML>=6.0",
 ]
 
+[project.optional-dependencies]
+mcp = ["mcp[cli]"]
+
 [project.scripts]
 director-os = "director_os.cli:main"

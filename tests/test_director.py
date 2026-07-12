@@ -9,6 +9,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import pytest
 
 from director_os.director import Director
+from director_os.state import DirectorState, StateError
 from director_os.models.project import Project, Character
 
 
@@ -70,6 +71,8 @@ def test_load_project_file_not_found():
 
 def test_plan_requires_project():
     d = Director()
+    d.start_cycle("test")
+    d.fast_forward_to(DirectorState.PLAN)
     with pytest.raises(RuntimeError, match="No project"):
         d.plan()
 
@@ -78,6 +81,8 @@ def test_plan_returns_intent():
     d = Director()
     d.new_project(title="Test", premise="A test")
     d.project.characters.append(Character(id="c1", role="hero"))
+    d.start_cycle("test")
+    d.fast_forward_to(DirectorState.PLAN)
     intent = d.plan()
     assert intent is not None
     assert intent.creative_goal is not None
@@ -91,6 +96,8 @@ def test_plan_returns_intent():
 
 def test_compile_requires_intent():
     d = Director()
+    d.start_cycle("test")
+    d.fast_forward_to(DirectorState.COMPILE)
     with pytest.raises(RuntimeError, match="No intent"):
         d.compile("seedance")
 
@@ -99,7 +106,10 @@ def test_compile_unknown_platform():
     d = Director()
     d.new_project(title="Test", premise="Test")
     d.project.characters.append(Character(id="c1", role="hero"))
+    d.start_cycle("test")
+    d.fast_forward_to(DirectorState.PLAN)
     d.plan()
+    d.fast_forward_to(DirectorState.COMPILE)
     with pytest.raises(ValueError, match="Unknown compiler"):
         d.compile("nonexistent_platform")
 
@@ -108,7 +118,10 @@ def test_compile_seedance():
     d = Director()
     d.new_project(title="Test", premise="Test")
     d.project.characters.append(Character(id="c1", role="hero"))
+    d.start_cycle("test")
+    d.fast_forward_to(DirectorState.PLAN)
     d.plan()
+    d.fast_forward_to(DirectorState.COMPILE)
     pkg = d.compile("seedance")
     assert pkg is not None
     assert pkg.target.get("provider") == "seedance"
@@ -119,7 +132,11 @@ def test_compile_veo():
     d = Director()
     d.new_project(title="Test", premise="Test")
     d.project.characters.append(Character(id="c1", role="hero"))
+    d.start_cycle("test")
+    d.fast_forward_to(DirectorState.PLAN)
     d.plan()
+    d.fast_forward_to(DirectorState.COMPILE)
+    pkg = d.compile("veo")
     pkg = d.compile("veo")
     assert pkg is not None
     assert pkg.target.get("provider") == "veo"

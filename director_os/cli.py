@@ -11,6 +11,7 @@ import sys
 from pathlib import Path
 
 from .director import Director
+from .state import DirectorState
 
 
 def main() -> None:
@@ -40,6 +41,9 @@ def main() -> None:
     save_p.add_argument("path", type=Path)
     save_p.add_argument("--message", "-m", default="", help="Commit message (recorded in history)")
 
+    # ── mcp ────────────────────────────────────────────────────────
+    sub.add_parser("mcp", help="Start MCP server (requires: pip install mcp[cli])")
+
     args = parser.parse_args()
     director = Director()
 
@@ -61,10 +65,14 @@ def main() -> None:
             else:
                 print(f"  Validation: passed")
 
+            # CLI auto-fast-forwards through the state machine
+            director.start_cycle(f"load {args.path}")
+            director.fast_forward_to(DirectorState.PLAN)
             intent = director.plan()
             print(f"  Production Intent generated")
 
             if args.compile:
+                director.fast_forward_to(DirectorState.COMPILE)
                 pkg = director.compile(platform=args.compile)
                 print(f"\n── {args.compile.upper()} Prompt ──")
                 print(pkg.instructions.get("prompt", ""))
@@ -100,7 +108,10 @@ def main() -> None:
         try:
             project = director.load_project(args.path)
             print(f"Project loaded: {project.metadata.title} (v{project.metadata.version})")
+            director.start_cycle(f"save {args.path}")
+            director.fast_forward_to(DirectorState.PLAN)
             director.plan()
+            director.fast_forward_to(DirectorState.COMMIT)
             issues = director.save_project(args.path, message=args.message)
             print(f"Saved: {project.metadata.title} v{project.metadata.version}")
             if issues:
@@ -108,6 +119,10 @@ def main() -> None:
         except Exception as e:
             print(f"Error: {e}", file=sys.stderr)
             sys.exit(1)
+
+    elif args.command == "mcp":
+        from .mcp_server import main as mcp_main
+        mcp_main()
 
 
 if __name__ == "__main__":

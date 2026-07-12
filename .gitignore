@@ -14,3 +14,4 @@ __pycache__/
 
 # Runtime caches (config templates domain_prompts.yaml / warmup_queries.yaml stay tracked)
 knowledge/providers/llm_cache/translation_cache.yaml
+## zcode workspace
