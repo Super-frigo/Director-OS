@@ -311,7 +311,7 @@ class EnginePipeline:
         temporal_design = {
             "pacing": "",
             "motion_style": "",
-            "duration": str(len(shots) * 4) + "s",
+            "duration": _total_shot_duration(shots),
         }
 
         scene = {"scene_id": "", "shot_id": ""}
@@ -372,6 +372,29 @@ def _first_shot_field(shots: list[dict], field: str, default: str = "") -> str:
         if val:
             return val
     return default
+
+
+def _total_shot_duration(shots: list[dict]) -> str:
+    """Sum per-shot durations into a total like '15s'.
+
+    ShotEngine emits duration as '4.0s' / '3s' / '' (empty when unset).
+    Shots without an explicit duration fall back to a 4s default so the
+    total stays a reasonable estimate instead of silently dropping them.
+    """
+    if not shots:
+        return ""
+    total = 0.0
+    for s in shots:
+        raw = s.get("duration", "")
+        if not raw:
+            total += 4.0
+            continue
+        try:
+            total += float(str(raw).rstrip("s"))
+        except (ValueError, AttributeError):
+            total += 4.0
+    # Render as integer when whole (15s) else keep one decimal (15.5s)
+    return f"{int(total)}s" if total.is_integer() else f"{total:g}s"
 
 
 def _safe_guidance(enrichment: dict, key: str) -> dict:

@@ -39,7 +39,7 @@ Director OS 核心规范和架构定义。
 - [x] Veo Compiler
 - [ ] Kling Compiler
 - [ ] Runway Compiler
-- [x] Compiler test suite (244 tests passing)
+- [x] Compiler test suite (265 tests passing)
 
 ## Phase 4: Examples & Projects (Partial)
 
@@ -76,4 +76,4 @@ Director OS 核心规范和架构定义。
 
 ---
 
-*Last updated: 2026-07-12*
+*Last updated: 2026-07-13*

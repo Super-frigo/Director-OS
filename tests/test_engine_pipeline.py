@@ -17,6 +17,7 @@ from director_os.engine.pipeline import (
     EnginePipeline,
     _first_shot_field,
     _get_duration,
+    _total_shot_duration,
 )
 from director_os.models.project import (
     Project, Metadata, Creative, Story, World,
@@ -203,6 +204,46 @@ def test_first_shot_field_returns_default():
 def test_first_shot_field_missing_key():
     shots = [{"other": "val"}]
     assert _first_shot_field(shots, "framing", "N/A") == "N/A"
+
+
+# ============================================================================
+# _total_shot_duration tests
+# ============================================================================
+
+def test_total_shot_duration_sums_values():
+    """Real per-shot durations should be summed, not estimated."""
+    shots = [{"duration": "4.0s"}, {"duration": "4.0s"}, {"duration": "3s"}]
+    assert _total_shot_duration(shots) == "11s"
+
+
+def test_total_shot_duration_integer_rendering():
+    """Whole-second totals render without a decimal point (15s, not 15.0s)."""
+    shots = [{"duration": "5.0s"}, {"duration": "10.0s"}]
+    assert _total_shot_duration(shots) == "15s"
+
+
+def test_total_shot_duration_fractional():
+    """Non-whole totals keep one decimal."""
+    shots = [{"duration": "5.5s"}, {"duration": "4.5s"}]
+    assert _total_shot_duration(shots) == "10s"
+
+
+def test_total_shot_duration_missing_falls_back():
+    """Shots without a duration fall back to the 4s default."""
+    shots = [{"duration": "4.0s"}, {"duration": ""}, {}]
+    # 4.0 + 4 (fallback) + 4 (fallback) = 12s
+    assert _total_shot_duration(shots) == "12s"
+
+
+def test_total_shot_duration_empty():
+    assert _total_shot_duration([]) == ""
+
+
+def test_total_shot_duration_not_times_four():
+    """Regression: must NOT use len(shots)*4 when real durations exist."""
+    shots = [{"duration": "2.0s"}, {"duration": "2.0s"}]
+    # Old buggy behaviour would give 8s; correct sum is 4s.
+    assert _total_shot_duration(shots) == "4s"
 
 
 # ============================================================================
