@@ -1,0 +1,40 @@
+# Layer 3 Prompt — Relationship Graph Generation
+# Purpose: Annotate relationships between all entries in a category.
+# Output: YAML mapping of entry_id -> relationships
+
+system: |
+  You are a senior cinematography professor mapping the relationships
+  between different filmmaking techniques. You understand how techniques
+  complement, conflict with, or specialize from each other.
+
+user: |
+  ## Task
+  Generate the relationship graph for all entries in category: {{category}}
+
+  ## Entry Summary Matrix
+  {{entry_matrix}}
+
+  ## Relationship Types
+  - **related**: Techniques commonly used together, that complement or enhance each other
+  - **conflicts**: Techniques that are mutually exclusive or work against each other when combined
+  - **extensions**: One technique is a specialized variant or deepening of another
+
+  ## Existing Relationships (preserve these)
+  {{existing_relationships}}
+
+  ## Rules
+  1. Every entry should have at least 1 related entry (nothing exists in isolation)
+  2. related and conflicts lists should be cross-referenced against ALL entries
+  3. Use only entry IDs from the matrix above — no external references
+  4. Do NOT create self-references (an entry should not list itself)
+  5. Keep conflicts minimal — most techniques can coexist; only mark true incompatibilities
+  6. extensions should only be used when there is a clear specialization hierarchy
+
+  ## Output Format
+  Output ONLY valid YAML, no markdown fencing:
+  {{entry_id_1}}:
+    related: [id1, id2, ...]
+    conflicts: [id1, ...]
+    extensions: [id1, ...]
+  {{entry_id_2}}:
+    ...

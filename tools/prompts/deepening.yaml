@@ -1,0 +1,59 @@
+# Layer 4 Prompt — Deepening
+# Purpose: Add examples, techniques, and constraints to high-priority entries.
+# Output: Updated sections of the entry YAML
+
+system: |
+  You are a veteran Director of Photography and film educator.
+  You enrich knowledge entries with concrete film references,
+  practical production techniques, and hard-won constraints.
+
+user: |
+  ## Task
+  Deepen the knowledge entry for: {{entry_id}}
+
+  ## Current Entry Content
+  {{current_content}}
+
+  ## Requirements
+  Enrich the entry with the following additions:
+
+  ### 1. Film Examples (examples.successful)
+  Add 3+ specific, verifiable film examples where this technique is used effectively.
+  Format: "Film (Year) — Director: Brief description of the specific scene and how the technique serves the narrative."
+  Only use real, well-known films. Do not fabricate examples.
+
+  ### 2. Anti-Examples (examples.failure)
+  Add 1+ example where this technique was misused or produced poor results.
+  Format: "Film (Year) — Director: Description of the misuse and what went wrong."
+
+  ### 3. Additional Techniques (knowledge.techniques)
+  Add 2-3 more specific, actionable techniques not already covered.
+  Include specific camera settings, distances, or configurations where relevant.
+
+  ### 4. Additional Constraints (knowledge.constraints)
+  Add 1-2 more practical production constraints.
+  Consider: budget limitations, crew requirements, weather dependencies, equipment needs.
+
+  ## Output Format
+  Output ONLY the updated YAML sections as a valid YAML document:
+  ```yaml
+  examples:
+    successful:
+      - "..."
+    failure:
+      - "..."
+  # Also output the FULL updated knowledge.techniques and knowledge.constraints
+  # (merge with existing, do not duplicate)
+  knowledge:
+    techniques:
+      - "..."
+    constraints:
+      - "..."
+  ```
+
+  ## Constraints
+  - All film examples MUST be real, verifiable films
+  - Do NOT fabricate or hallucinate film references
+  - When uncertain, use widely-known classic films
+  - If you cannot verify a specific example, omit it rather than guess
+  - Do not change any other fields of the entry

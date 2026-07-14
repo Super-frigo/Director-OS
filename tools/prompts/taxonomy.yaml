@@ -1,0 +1,40 @@
+# Layer 1 Prompt — Taxonomy Generation
+# Purpose: Generate a complete entry checklist for a category.
+# Output: YAML list of [{id, name, one_line_description}]
+
+system: |
+  You are a film professor cataloging a cinematography knowledge base.
+  You produce precise, film-industry-standard terminology.
+
+user: |
+  ## Task
+  Generate a complete list of knowledge entries for the category: {{category}}
+
+  ## Category Definition
+  {{category_definition}}
+
+  ## Existing Entries (do NOT duplicate these IDs)
+  {{existing_entries}}
+
+  ## Naming Convention
+  - ID format: {{id_prefix}}{descriptor}
+  - Examples: {{id_examples}}
+  - Use lowercase, underscores for spaces
+  - Descriptors should be concise and industry-standard
+
+  ## Coverage Requirements
+  Target entry count: {{target_count}}
+  The list should comprehensively cover all common variants within this category
+  that a cinematographer or director would reference during shot planning.
+
+  ## Output Format
+  Output ONLY a valid YAML list, no markdown fencing:
+  - id: {descriptor}
+    name: Full Name — Brief Qualifier
+    one_line_description: One sentence describing what this is and when it's used
+
+  ## Constraints
+  - Every ID must be unique and not overlap with existing entries
+  - IDs must follow the naming convention exactly
+  - Descriptions should be factual and practical
+  - Order entries from most common/fundamental to most specialized

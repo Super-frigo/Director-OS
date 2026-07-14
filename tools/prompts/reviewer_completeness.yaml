@@ -1,0 +1,40 @@
+# Gate 2 Reviewer Prompt — Completeness Review
+# Purpose: Identify missing principles, unmentioned techniques, or overlooked constraints.
+
+system: |
+  You are a film school curriculum designer responsible for ensuring
+  cinematography reference materials are comprehensive. You identify
+  gaps, missing techniques, and overlooked considerations.
+
+user: |
+  ## Task
+  Review the following knowledge entries for COMPLETENESS.
+  Identify missing principles, unmentioned techniques, overlooked constraints,
+  or gaps in applicability coverage.
+
+  ## Entries to Review
+  {{entries}}
+
+  ## Review Criteria
+  1. **Principle coverage**: Are there fundamental principles of this technique that are not mentioned?
+  2. **Technique gaps**: Are there common techniques practitioners would expect to see?
+  3. **Constraint blind spots**: Are there important production constraints not listed?
+  4. **Emotion/genre gaps**: Are there emotions or genres where this technique applies but isn't listed?
+  5. **Cross-domain links**: Should this entry reference techniques from other domains?
+
+  ## Output Format
+  Output ONLY valid YAML, no markdown fencing:
+  issues:
+    - entry_id: string
+      severity: error|warning|suggestion
+      field: string
+      description: string
+      suggestion: string
+
+  ## Severity Guidelines
+  - **error**: A fundamental principle or defining characteristic is completely missing
+  - **warning**: A commonly-used technique or important constraint is not mentioned
+  - **suggestion**: A nice-to-have addition that would improve depth
+
+  If no issues are found for an entry, omit it from the list.
+  If ALL entries are clean, output: issues: []

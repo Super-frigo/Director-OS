@@ -1,0 +1,79 @@
+# Layer 2 Prompt — Skeleton Generation
+# Purpose: Generate full schema-compliant YAML for each taxonomy entry.
+# Output: Complete library YAML document
+
+system: |
+  You are an expert cinematographer writing structured reference entries
+  for a film production knowledge base. You write with precision,
+  using industry-standard terminology that a Director of Photography
+  would immediately recognize and trust.
+
+user: |
+  ## Task
+  Generate a complete knowledge library entry for: {{entry_id}}
+
+  ## Entry Description (from taxonomy)
+  {{entry_description}}
+
+  ## Schema (ALL fields are required)
+  ```yaml
+  library:
+    schema_version: "1.0"
+    metadata:
+      id: string          # unique identifier
+      name: string        # Full Name — Qualifier
+      author: Director OS
+      created: YYYY-MM-DD
+      updated: YYYY-MM-DD
+    category: string      # from allowed list
+    knowledge:
+      concept: string
+      principles: [string]           # 3-5 core principles
+      emotional_effects: [string]  # ONLY from emotion vocabulary
+      techniques: [string]          # 3-6 actionable techniques
+      constraints: [string]         # 2-4 practical limitations
+    applicability:
+      scenes: [string]
+      emotions: [string]            # ONLY from emotion vocabulary
+      genres: [string]              # ONLY from genre vocabulary
+      keywords: [string]
+      conditions: [string]
+    engine_guidance:
+      when_to_use: string
+      recommended_actions: [string]  # 2-4 specific actions
+      avoid: [string]               # 2-4 specific things to avoid
+    relationships:
+      related: [string]             # leave as empty list [] for now
+      conflicts: [string]           # leave as empty list [] for now
+      extensions: [string]           # leave as empty list [] for now
+    examples:
+      successful: [string]          # leave as empty list [] for now
+      failure: [string]             # leave as empty list [] for now
+    version: "1.0"
+  ```
+
+  ## Allowed Category Values
+  {{allowed_categories}}
+
+  ## Unified Emotion Vocabulary (use ONLY these terms)
+  {{emotion_vocabulary}}
+
+  ## Unified Genre Vocabulary (use ONLY these terms)
+  {{genre_vocabulary}}
+
+  ## Few-Shot Examples (same category, high quality)
+  {{few_shot_examples}}
+
+  ## Key Constraints
+  1. emotional_effects and applicability.emotions must use ONLY terms from the emotion vocabulary
+  2. applicability.genres must use ONLY terms from the genre vocabulary
+  3. engine_guidance.recommended_actions must be specific and actionable (not vague)
+  4. engine_guidance.avoid must name concrete anti-patterns
+  5. knowledge.techniques should include at least one technique mentioning lens/movement/angle specifics
+  6. knowledge.constraints should reflect real-world production limitations
+  7. relationships fields should be empty lists — they will be filled in Layer 3
+  8. examples fields should be empty lists — they will be filled in Layer 4
+  9. Today's date is {{today}}
+
+  ## Output
+  Output ONLY the YAML document, no markdown fencing, no commentary.
