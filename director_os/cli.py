@@ -44,6 +44,9 @@ def main() -> None:
     # ── mcp ────────────────────────────────────────────────────────
     sub.add_parser("mcp", help="Start MCP server (requires: pip install mcp[cli])")
 
+    # ── chat ────────────────────────────────────────────────────────
+    sub.add_parser("chat", help="Interactive chat with Director (requires OPENAI_API_KEY)")
+
     args = parser.parse_args()
     director = Director()
 
@@ -128,6 +131,9 @@ def main() -> None:
         from .mcp_server import main as mcp_main
         mcp_main()
 
+    elif args.command == "chat":
+        _run_chat_mode()
+
 
 def _warn_untranslated(prompt: str, has_llm: bool) -> None:
     """Warn the user if Chinese characters remain in the compiled prompt.
@@ -155,6 +161,40 @@ def _warn_untranslated(prompt: str, has_llm: bool) -> None:
               f"({ratio:.0%}). AI video platforms work best with English. "
               f"Configure OPENAI_API_KEY for fluent translation, or expand "
               f"the offline glossary (director_os/compilers/offline_glossary.py).")
+
+
+def _run_chat_mode() -> None:
+    """Create an LLM client from env vars and launch the interactive chat."""
+    import os
+
+    api_key = os.getenv("OPENAI_API_KEY", "")
+    if not api_key:
+        print(
+            "Error: OPENAI_API_KEY is not set.\n"
+            "  Set it to use the interactive chat:\n"
+            "    export OPENAI_API_KEY=sk-...\n"
+            "  Or for DeepSeek:\n"
+            "    export OPENAI_API_KEY=sk-...\n"
+            "    export OPENAI_BASE_URL=https://api.deepseek.com/v1\n"
+            "    export OPENAI_MODEL=deepseek-chat\n",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
+    from .knowledge.llm_client import OpenAIClient
+    from .chat import run_chat
+
+    model = os.getenv("OPENAI_MODEL", "gpt-4o")
+    base_url = os.getenv("OPENAI_BASE_URL", "")
+
+    client = OpenAIClient(
+        api_key=api_key,
+        model=model,
+        base_url=base_url,
+        temperature=0.7,
+        max_tokens=2048,
+    )
+    run_chat(client)
 
 
 if __name__ == "__main__":
