@@ -1,61 +1,94 @@
 library:
-  schema_version: "1.0"
+  schema_version: '1.0'
   metadata:
     id: color_red_passion
     name: Red — Passion & Danger
     author: Director OS
   category: visual_style
   knowledge:
-    concept: "The most visually dominant color. Signals danger, passion, violence, or heightened emotion. Immediately draws viewer attention."
+    concept: The most visually dominant color. Signals danger, passion, violence,
+      or heightened emotion. Immediately draws viewer attention.
     principles:
-      - "Red is the highest-visibility color in human vision"
-      - "A single red object in a desaturated frame becomes the focal point"
-      - "Red light signals danger or heightened emotional state"
-      - "Desaturated red reads as dried blood, violence past"
+    - Red is the highest-visibility color in human vision
+    - A single red object in a desaturated frame becomes the focal point
+    - Red light signals danger or heightened emotional state
+    - Desaturated red reads as dried blood, violence past
     emotional_effects:
-      - danger
-      - passion
-      - violence
-      - urgency
-      - love
+    - danger
+    - passion
+    - violence
+    - urgency
+    - love
     techniques:
-      - "Use red as accent color in an otherwise cool palette (the red coat effect)"
-      - "Red light on faces for threat or intensity"
-      - "Red practicals (neon signs, tail lights) for urban danger"
-      - "Slow fade to red for fever dream or hyper-intense states"
+    - Use red as accent color in an otherwise cool palette (the red coat effect)
+    - Red light on faces for threat or intensity
+    - Red practicals (neon signs, tail lights) for urban danger
+    - Slow fade to red for fever dream or hyper-intense states
+    - Use of red filters to create a sunset effect, enhancing the romantic or ominous
+      mood of a scene.
+    - Strategic placement of red elements in the frame, such as a red door or a red
+      car, to lead the viewer's eye and create a sense of foreboding.
+    - Infrared photography to achieve a surreal, otherworldly red tone, often used
+      in dream sequences or to depict alternate realities.
     constraints:
-      - "Overuse desensitizes — one red accent per frame maximum"
-      - "Bright red on skin reads as burns or illness"
-      - "Avoid red in scenes where audience should feel calm"
+    - Overuse desensitizes — one red accent per frame maximum
+    - Bright red on skin reads as burns or illness
+    - Avoid red in scenes where audience should feel calm
+    - Limited availability of red practical lights or props may require custom fabrication,
+      which can increase production costs.
+    - Outdoor scenes requiring red lighting effects may be dependent on weather conditions
+      and the setting sun, requiring careful planning and potentially multiple shooting
+      days.
   applicability:
     emotions:
-      - danger
-      - passion
-      - anger
-      - urgency
-      - desire
+    - danger
+    - passion
+    - anger
+    - urgency
+    - desire
     genres:
-      - horror
-      - thriller
-      - romance
-      - action
+    - horror
+    - thriller
+    - romance
+    - action
     keywords:
-      - blood
-      - warning
-      - intensity
-      - love
+    - blood
+    - warning
+    - intensity
+    - love
   engine_guidance:
-    when_to_use: "Scene requires heightened emotional intensity, danger, or a focal point of passion"
+    when_to_use: Scene requires heightened emotional intensity, danger, or a focal
+      point of passion
     recommended_actions:
-      - "Desaturate everything except one red element for maximum focus"
-      - "Use red practical light for threatening environments"
+    - Desaturate everything except one red element for maximum focus
+    - Use red practical light for threatening environments
     avoid:
-      - "Calm or peaceful resolutions"
-      - "Scenes requiring visual neutrality"
+    - Calm or peaceful resolutions
+    - Scenes requiring visual neutrality
   relationships:
     related:
-      - color_blue_cold
-      - color_yellow_warm
+    - color_blue_cold
+    - color_yellow_warm
     conflicts:
-      - color_teal_orange
-  version: "1.0"
+    - color_teal_orange
+    - color_blue_cold
+    - color_green_sick
+    - color_pastel
+  version: '1.0'
+  examples:
+    successful:
+    - 'The Shining (1980) — Director: Stanley Kubrick: The use of red in the hotel''s
+      Overlook lounge, particularly in the scene where Jack (Jack Nicholson) has a
+      drink with the ghostly bartender, creates an eerie atmosphere and heightens
+      the sense of impending danger.'
+    - 'Schindler''s List (1993) — Director: Steven Spielberg: The iconic scene where
+      a girl in a red coat navigates through the black-and-white landscape of the
+      Krakow Ghetto, symbolizing innocence amidst the horrors of the Holocaust.'
+    - 'Saving Private Ryan (1998) — Director: Steven Spielberg: The opening D-Day
+      sequence where the blood-soaked beaches of Normandy create a visceral experience
+      of war''s brutality, with red serving as a stark contrast to the otherwise muted
+      tones.'
+    failure:
+    - 'Batman & Robin (1997) — Director: Joel Schumacher: The overuse of neon colors,
+      including red, in the film''s costumes and sets created a campy and visually
+      overwhelming effect that detracted from the seriousness of the Batman franchise.'

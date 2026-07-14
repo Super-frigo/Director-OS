@@ -1,58 +1,92 @@
 library:
-  schema_version: "1.0"
+  schema_version: '1.0'
   metadata:
     id: light_low_key_noir
     name: Low-Key Noir Lighting
     author: Director OS
   category: lighting
   knowledge:
-    concept: "High-contrast lighting with deep shadows and minimal fill. Key light from a single strong source, leaving large areas of darkness."
+    concept: High-contrast lighting with deep shadows and minimal fill. Key light
+      from a single strong source, leaving large areas of darkness.
     principles:
-      - "Key-to-fill ratio of 8:1 or greater"
-      - "Hard light source from 45-degree upper side"
-      - "Shadows fall across face, hiding half or more of the frame"
-      - "Rim light separates subject from dark background"
+    - Key-to-fill ratio of 8:1 or greater
+    - Hard light source from 45-degree upper side
+    - Shadows fall across face, hiding half or more of the frame
+    - Rim light separates subject from dark background
     emotional_effects:
-      - mystery
-      - danger
-      - moral ambiguity
-      - tension
+    - mystery
+    - danger
+    - moral ambiguity
+    - tension
     techniques:
-      - "Single key light with no fill for maximum contrast"
-      - "Use practical lamps as motivated source"
-      - "Side light for interrogation or revelation scenes"
-      - "Under-light for horror or menace (flashlight from below)"
+    - Single key light with no fill for maximum contrast
+    - Use practical lamps as motivated source
+    - Side light for interrogation or revelation scenes
+    - Under-light for horror or menace (flashlight from below)
+    - 'Negative fill: Use black flags or duvetyne to block unwanted light and deepen
+      the shadows, creating a more dramatic contrast.'
+    - 'Smoke or fog: Introduce atmospheric effects to enhance the mood and make the
+      light appear more dramatic, especially when using a single key light source.'
+    - 'Hard light with grids: Use spotlights with grids to create sharp, well-defined
+      shadows and a more pronounced contrast between light and dark areas.'
     constraints:
-      - "Not suitable for daytime or naturalistic scenes"
-      - "Requires controlled environment (difficult on bright outdoor sets)"
+    - Not suitable for daytime or naturalistic scenes
+    - Requires controlled environment (difficult on bright outdoor sets)
+    - Budget limitations may restrict the use of high-quality smoke machines or the
+      number of high-powered lights available for creating deep shadows.
+    - 'Equipment needs: Requires specialized lighting equipment such as spotlights
+      with grids and the ability to control and shape light effectively.'
   applicability:
     emotions:
-      - fear
-      - suspicion
-      - tension
-      - mystery
+    - fear
+    - suspicion
+    - tension
+    - mystery
     genres:
-      - noir
-      - thriller
-      - horror
-      - psychological_drama
+    - noir
+    - thriller
+    - horror
+    - psychological_drama
     keywords:
-      - interrogation
-      - night
-      - secret
-      - danger
+    - interrogation
+    - night
+    - secret
+    - danger
   engine_guidance:
-    when_to_use: "Scene requires moral ambiguity, hidden information, or psychological tension"
+    when_to_use: Scene requires moral ambiguity, hidden information, or psychological
+      tension
     recommended_actions:
-      - "Combine with DUTCH_ANGLE for maximum disorientation"
-      - "Use SIDE or FRONTAL_45 light position"
+    - Combine with DUTCH_ANGLE for maximum disorientation
+    - Use SIDE or FRONTAL_45 light position
     avoid:
-      - "Happy or resolution scenes"
-      - "Daylight exterior sequences"
+    - Happy or resolution scenes
+    - Daylight exterior sequences
   relationships:
     related:
-      - light chiaroscuro
-      - light rim_only
+    - light chiaroscuro
+    - light rim_only
+    - light_high_key_bright
+    - light_ratio
+    - light_silhouette
     conflicts:
-      - light_high_key_bright
-  version: "1.0"
+    - light_high_key_bright
+  version: '1.0'
+  examples:
+    successful:
+    - 'The Maltese Falcon (1941) — Director: John Huston: The film uses low-key noir
+      lighting to create a sense of mystery and moral ambiguity, particularly in the
+      scene where Sam Spade meets with Cairo in his office, with shadows cast across
+      their faces, enhancing the tension.'
+    - 'Chinatown (1974) — Director: Roman Polanski: The film is a classic example
+      of noir lighting, especially in the scene where Jake Gittes is confronted by
+      Hollis Mulwray''s wife, where the high contrast and shadows create a sense of
+      danger and hidden information.'
+    - 'Sin City (2005) — Directors: Frank Miller and Robert Rodriguez: The film is
+      a graphic novel adaptation that heavily utilizes low-key noir lighting to emphasize
+      the dark and gritty nature of the story, with scenes like Marv''s interrogation
+      under harsh lights and deep shadows.'
+    failure:
+    - 'The Cotton Club (1984) — Director: Francis Ford Coppola: While the film features
+      some noir elements, it occasionally strays into brighter, more colorful scenes
+      that don''t fit the overall tone, diluting the impact of the noir lighting when
+      it is used.'

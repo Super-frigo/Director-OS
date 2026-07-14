@@ -1,51 +1,53 @@
 library:
-  schema_version: "1.0"
+  schema_version: '1.0'
   metadata:
     id: angle_three_quarter
     name: Three-Quarter Angle — The Narrative Workhorse
     author: Director OS (imported from AI-Director-OS shot_library)
   category: cinematography
   knowledge:
-    concept: "Camera at roughly 45 degrees between front and side (or side and back). The most frequently used narrative angle — provides both facial expression AND environmental context in a single frame."
+    concept: Camera at roughly 45 degrees between front and side (or side and back).
+      The most frequently used narrative angle — provides both facial expression AND
+      environmental context in a single frame.
     principles:
-      - "Most versatile storytelling angle — face and environment visible"
-      - "Natural and unobtrusive — the audience doesn't 'notice' the camera"
-      - "Depth: diagonal lines create more dimensional compositions than flat front/side"
-      - "Default angle for narrative filmmaking"
+    - Most versatile storytelling angle — face and environment visible
+    - Natural and unobtrusive — the audience doesn't 'notice' the camera
+    - 'Depth: diagonal lines create more dimensional compositions than flat front/side'
+    - Default angle for narrative filmmaking
     emotional_effects:
-      - natural
-      - narrative
-      - dimensional
-      - versatile
+    - natural
+    - narrative
+    - dimensional
+    - versatile
     techniques:
-      - "Default for most narrative dialogue coverage"
-      - "OTS (over-the-shoulder) is a subset of three-quarter angle"
-      - "Shot-reverse-shot uses three-quarter on each speaker"
+    - Default for most narrative dialogue coverage
+    - OTS (over-the-shoulder) is a subset of three-quarter angle
+    - Shot-reverse-shot uses three-quarter on each speaker
     constraints:
-      - "Less dramatic than extreme angles — use specialty angles for emphasis"
-      - "Can become visually predictable without shot variation"
+    - Less dramatic than extreme angles — use specialty angles for emphasis
+    - Can become visually predictable without shot variation
   applicability:
     emotions:
-      - natural
-      - neutral
-      - narrative
+    - natural
+    - neutral
+    - narrative
     genres:
-      - all
+    - all
     keywords:
-      - three-quarter
-      - 45 degree
-      - narrative angle
-      - default
+    - three-quarter
+    - 45 degree
+    - narrative angle
+    - default
   engine_guidance:
-    when_to_use: "General narrative storytelling — most scenes"
+    when_to_use: General narrative storytelling — most scenes
     recommended_actions:
-      - "Default coverage angle for dialogue and action"
-      - "Reserve extreme angles for dramatic punctuation"
+    - Default coverage angle for dialogue and action
+    - Reserve extreme angles for dramatic punctuation
     avoid:
-      - "When specific dramatic effect requires front/side/Dutch"
+    - When specific dramatic effect requires front/side/Dutch
   relationships:
     related:
-      - angle_front
-      - angle_side
-      - angle_ots
-  version: "1.0"
+    - angle_front
+    - angle_side
+    - angle_ots
+  version: '1.0'

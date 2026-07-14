@@ -1,61 +1,91 @@
 library:
-  schema_version: "1.0"
+  schema_version: '1.0'
   metadata:
     id: light_golden_hour
     name: Golden Hour Natural Light
     author: Director OS
   category: lighting
   knowledge:
-    concept: "Warm, low-angle sunlight during the first and last hour of the day. Soft shadows, warm color temperature (3200K-4300K), long shadows."
+    concept: Warm, low-angle sunlight during the first and last hour of the day. Soft
+      shadows, warm color temperature (3200K-4300K), long shadows.
     principles:
-      - "Low sun angle creates long, dramatic shadows"
-      - "Warm temperature flatters skin tones naturally"
-      - "Light passes through more atmosphere, scattering blue light"
-      - "Creates natural rim light effect"
+    - Low sun angle creates long, dramatic shadows
+    - Warm temperature flatters skin tones naturally
+    - Light passes through more atmosphere, scattering blue light
+    - Creates natural rim light effect
     emotional_effects:
-      - warmth
-      - nostalgia
-      - hope
-      - beauty
-      - transience
+    - warmth
+    - nostalgia
+    - hope
+    - beauty
+    - transience
     techniques:
-      - "Position subject between camera and sun for rim light"
-      - "Use backlight for silhouette with warm edge light"
-      - "Lens flare as intentional cinematic device"
-      - "Combine with 85mm for compressed golden portraits"
+    - Position subject between camera and sun for rim light
+    - Use backlight for silhouette with warm edge light
+    - Lens flare as intentional cinematic device
+    - Combine with 85mm for compressed golden portraits
+    - Use a graduated neutral density (GND) filter to balance the exposure between
+      the bright sky and darker foreground during golden hour.
+    - Position your subject with the sun at a 45-degree angle to achieve a flattering
+      side lighting that accentuates facial features and adds depth to the image.
+    - Utilize a reflector to bounce the golden light back onto your subject's face
+      to fill in shadows and maintain a consistent warm tone across the frame.
     constraints:
-      - "Window of approximately 40 minutes"
-      - "Weather dependent"
-      - "Color temperature shifts rapidly, requiring white balance adjustment"
+    - Window of approximately 40 minutes
+    - Weather dependent
+    - Color temperature shifts rapidly, requiring white balance adjustment
+    - Requires a skilled camera operator to adjust exposure settings and white balance
+      quickly as the light changes.
+    - Limited availability of the ideal golden hour light, necessitating precise scheduling
+      and potentially multiple days of shooting to capture the desired scenes.
   applicability:
     emotions:
-      - hope
-      - love
-      - nostalgia
-      - peace
-      - melancholy
+    - hope
+    - love
+    - nostalgia
+    - peace
+    - melancholy
     genres:
-      - romance
-      - drama
-      - coming_of_age
-      - commercial
+    - romance
+    - drama
+    - coming_of_age
+    - commercial
     keywords:
-      - sunset
-      - warm
-      - dreamlike
-      - memory
+    - sunset
+    - warm
+    - dreamlike
+    - memory
   engine_guidance:
-    when_to_use: "Scene requires warmth, nostalgia, or the feeling of a fleeting beautiful moment"
+    when_to_use: Scene requires warmth, nostalgia, or the feeling of a fleeting beautiful
+      moment
     recommended_actions:
-      - "Use BACK position for silhouette with rim light"
-      - "Combine with WIDE framing for landscape + character"
+    - Use BACK position for silhouette with rim light
+    - Combine with WIDE framing for landscape + character
     avoid:
-      - "Scenes requiring cold clinical atmosphere"
-      - "High-noon temporal setting"
+    - Scenes requiring cold clinical atmosphere
+    - High-noon temporal setting
   relationships:
     related:
-      - light_blue_hour
-      - light_warm_interior
+    - light_blue_hour
+    - light_warm_interior
     conflicts:
-      - light_fluorescent_clinical
-  version: "1.0"
+    - light_fluorescent_clinical
+  version: '1.0'
+  examples:
+    successful:
+    - 'The Godfather (1972) — Director: Francis Ford Coppola: The opening scene in
+      the studio, where Michael Corleone meets with the undertaker, uses golden hour
+      lighting to create a warm, nostalgic atmosphere that contrasts with the dark
+      themes of the film.'
+    - 'Gone with the Wind (1939) — Director: Victor Fleming: The scene where Scarlett
+      O''Hara and Rhett Butler have their final confrontation is bathed in golden
+      hour light, adding to the emotional intensity and the transience of their relationship.'
+    - 'Eternal Sunshine of the Spotless Mind (2004) — Director: Michel Gondry: The
+      scene where Joel and Clementine meet at the beach during sunset uses golden
+      hour lighting to evoke a sense of dreamlike beauty and the fleeting nature of
+      their love.'
+    failure:
+    - 'Titanic (1997) — Director: James Cameron: While the film uses golden hour lighting
+      effectively in many scenes, the infamous ''I''m the king of the world'' scene
+      at sunset is marred by overexposure, washing out the characters and diminishing
+      the impact of the moment.'

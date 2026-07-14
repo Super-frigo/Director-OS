@@ -1,58 +1,89 @@
 library:
-  schema_version: "1.0"
+  schema_version: '1.0'
   metadata:
     id: color_teal_orange
     name: Teal & Orange — The Universal Contrast
     author: Director OS
   category: visual_style
   knowledge:
-    concept: "The dominant Hollywood color scheme. Teal (cyan-blue) in shadows and backgrounds; orange (skin tones + warm accents) in foreground. Natural color opposites on the color wheel."
+    concept: The dominant Hollywood color scheme. Teal (cyan-blue) in shadows and
+      backgrounds; orange (skin tones + warm accents) in foreground. Natural color
+      opposites on the color wheel.
     principles:
-      - "Teal and orange are complementary colors — maximum visual contrast"
-      - "Skin tones naturally fall in the orange range; teal backgrounds make skin pop"
-      - "Teal shadows + orange highlights = instant cinematic look"
-      - "The brain interprets this contrast as 'cinematic' through years of exposure"
+    - Teal and orange are complementary colors — maximum visual contrast
+    - Skin tones naturally fall in the orange range; teal backgrounds make skin pop
+    - Teal shadows + orange highlights = instant cinematic look
+    - The brain interprets this contrast as 'cinematic' through years of exposure
     emotional_effects:
-      - cinematic
-      - polished
-      - commercial
-      - blockbuster
+    - cinematic
+    - polished
+    - commercial
+    - blockbuster
     techniques:
-      - "Grade shadows toward teal, highlights toward orange"
-      - "Use teal practical lights for backgrounds, warm key light on faces"
-      - "Orange/teal split in costume design (blue costume, warm skin)"
-      - "Teal fluorescent light vs warm tungsten — built-in contrast"
+    - Grade shadows toward teal, highlights toward orange
+    - Use teal practical lights for backgrounds, warm key light on faces
+    - Orange/teal split in costume design (blue costume, warm skin)
+    - Teal fluorescent light vs warm tungsten — built-in contrast
+    - Utilize color temperature filters on lights to create a teal hue in the background
+      and an orange glow on the foreground.
+    - Adjust camera white balance settings to emphasize teal in the shadows and enhance
+      the orange tones in the highlights.
+    - Use color grading software to fine-tune the teal and orange balance in post-production,
+      ensuring the skin tones remain natural and the contrast is visually appealing.
     constraints:
-      - "Overuse feels formulaic and artificial"
-      - "Not suitable for period films requiring naturalistic palettes"
-      - "Character diversity requires careful teal adjustment for different skin tones"
+    - Overuse feels formulaic and artificial
+    - Not suitable for period films requiring naturalistic palettes
+    - Character diversity requires careful teal adjustment for different skin tones
+    - Budget limitations may restrict the ability to purchase or rent high-quality
+      color grading software or hire skilled colorists.
+    - Weather conditions can affect outdoor shooting, making it challenging to maintain
+      consistent teal and orange lighting, especially in natural daylight.
   applicability:
     emotions:
-      - polished
-      - energetic
-      - commercial
+    - polished
+    - energetic
+    - commercial
     genres:
-      - action
-      - blockbuster
-      - science_fiction
-      - thriller
+    - action
+    - blockbuster
+    - science_fiction
+    - thriller
     keywords:
-      - blockbuster
-      - contrast
-      - commercial
-      - hollywood
+    - blockbuster
+    - contrast
+    - commercial
+    - hollywood
   engine_guidance:
-    when_to_use: "Project requires mainstream cinematic polish and strong visual contrast"
+    when_to_use: Project requires mainstream cinematic polish and strong visual contrast
     recommended_actions:
-      - "Set shadow color to teal, highlight color to warm orange"
-      - "Use complementary costume and production design"
+    - Set shadow color to teal, highlight color to warm orange
+    - Use complementary costume and production design
     avoid:
-      - "Period or naturalistic dramas requiring authentic palettes"
-      - "Scenes where audience should feel cold and un-cinematic"
+    - Period or naturalistic dramas requiring authentic palettes
+    - Scenes where audience should feel cold and un-cinematic
   relationships:
     related:
-      - color_blue_cold
-      - color_yellow_warm
+    - color_blue_cold
+    - color_yellow_warm
+    - color_green_sick
+    - color_neon
     conflicts:
-      - color_green_sick
-  version: "1.0"
+    - color_green_sick
+    - color_desaturated_gray
+    - color_monochrome
+    - color_red_passion
+  version: '1.0'
+  examples:
+    successful:
+    - 'The Dark Knight (2008) — Director: Christopher Nolan: The film extensively
+      uses teal and orange color grading, especially in the night scenes, to create
+      a gritty and cinematic atmosphere.'
+    - 'Avatar (2009) — Director: James Cameron: The film utilizes teal and orange
+      to contrast the lush, blue-green alien world with the warm, orange human characters.'
+    - 'The Matrix (1999) — Director: Lana and Lilly Wachowski: The film''s iconic
+      ''bullet time'' scenes feature a teal and orange color scheme that enhances
+      the futuristic and surreal feel.'
+    failure:
+    - 'The Emoji Movie (2017) — Director: Tony Leondis: The overuse of teal and orange
+      in this animated film led to a visually unappealing and overly artificial look,
+      detracting from the storytelling.'

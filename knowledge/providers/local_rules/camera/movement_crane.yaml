@@ -1,60 +1,64 @@
 library:
-  schema_version: "1.0"
+  schema_version: '1.0'
   metadata:
     id: movement_crane
     name: Crane / Boom Shot
     author: Director OS
   category: cinematography
   knowledge:
-    concept: "Camera mounted on a crane or jib arm, enabling vertical movement. Reveals scale, transitions between ground and God's-eye view."
+    concept: Camera mounted on a crane or jib arm, enabling vertical movement. Reveals
+      scale, transitions between ground and God's-eye view.
     principles:
-      - "Vertical movement changes power dynamics (low→high = gaining perspective)"
-      - "Rising reveals scale — the world is bigger than the character knows"
-      - "Descending enters a space or descends into narrative depth"
-      - "Smooth, slow crane moves feel timeless and epic"
+    - Vertical movement changes power dynamics (low→high = gaining perspective)
+    - Rising reveals scale — the world is bigger than the character knows
+    - Descending enters a space or descends into narrative depth
+    - Smooth, slow crane moves feel timeless and epic
     emotional_effects:
-      - awe
-      - transcendence
-      - revelation
-      - scale
-      - finality
+    - awe
+    - transcendence
+    - revelation
+    - scale
+    - finality
     techniques:
-      - "Slow rise from MS to ELS for epic reveals"
-      - "Descend from high to low to enter a scene with authority"
-      - "Combined crane + track for complex 3D movement"
-      - "Crane down to eye level = settling into a character's world"
+    - Slow rise from MS to ELS for epic reveals
+    - Descend from high to low to enter a scene with authority
+    - Combined crane + track for complex 3D movement
+    - Crane down to eye level = settling into a character's world
     constraints:
-      - "Requires crane equipment and space"
-      - "Slow setup time — not for fast-turnaround shooting"
-      - "Indoor use limited by ceiling height"
+    - Requires crane equipment and space
+    - Slow setup time — not for fast-turnaround shooting
+    - Indoor use limited by ceiling height
   applicability:
     emotions:
-      - awe
-      - revelation
-      - transcendence
-      - finality
+    - awe
+    - revelation
+    - transcendence
+    - finality
     genres:
-      - epic
-      - science_fiction
-      - period_drama
-      - musical
+    - epic
+    - science_fiction
+    - period_drama
+    - musical
     keywords:
-      - reveal
-      - scale
-      - elevation
-      - God's_eye
+    - reveal
+    - scale
+    - elevation
+    - God's_eye
   engine_guidance:
-    when_to_use: "Scene needs a dramatic reveal of scale, transition between worlds, or a sense of finality"
+    when_to_use: Scene needs a dramatic reveal of scale, transition between worlds,
+      or a sense of finality
     recommended_actions:
-      - "Use for opening and closing shots of a film"
-      - "Combine with ELS framing for maximum scale"
+    - Use for opening and closing shots of a film
+    - Combine with ELS framing for maximum scale
     avoid:
-      - "Intimate dialogue scenes"
-      - "Fast-paced action (crane is too slow)"
+    - Intimate dialogue scenes
+    - Fast-paced action (crane is too slow)
   relationships:
     related:
-      - movement_static
-      - movement_dolly_in
+    - movement_static
+    - movement_dolly_in
+    - movement_pedestal_down
+    - movement_pedestal_up
     conflicts:
-      - movement_handheld
-  version: "1.0"
+    - movement_handheld
+  version: '1.0'

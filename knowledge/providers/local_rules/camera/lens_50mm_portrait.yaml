@@ -1,49 +1,80 @@
 library:
-  schema_version: "1.0"
+  schema_version: '1.0'
   metadata:
     id: lens_50mm_portrait
     name: 50mm — Natural Portrait
     author: Director OS
   category: cinematography
   knowledge:
-    concept: "Focal length closest to human single-eye perspective. Flattering for portraiture with minimal distortion."
+    concept: Focal length closest to human single-eye perspective. Flattering for
+      portraiture with minimal distortion.
     principles:
-      - "Slightly narrower than 35mm, reducing background distraction"
-      - "Natural proportion rendering — no facial distortion at MCU distance"
-      - "Compromise between environmental context and subject focus"
+    - Slightly narrower than 35mm, reducing background distraction
+    - Natural proportion rendering — no facial distortion at MCU distance
+    - Compromise between environmental context and subject focus
     emotional_effects:
-      - honesty
-      - presence
-      - calm
+    - honesty
+    - presence
+    - calm
     techniques:
-      - "MCU framing for character introductions"
-      - "OTS shots in dialogue — feels natural, not voyeuristic"
-      - "Match with DEEP_FOCUS for documentary-style observation"
+    - MCU framing for character introductions
+    - OTS shots in dialogue — feels natural, not voyeuristic
+    - Match with DEEP_FOCUS for documentary-style observation
+    - Use a 50mm lens for close-ups to capture the subtle nuances of a character's
+      facial expressions, enhancing the emotional impact of the scene.
+    - Employ a 50mm lens for over-the-shoulder shots in dialogue scenes to maintain
+      a natural perspective and avoid the distortion associated with wider or longer
+      lenses.
+    - Utilize a 50mm lens in combination with a shallow depth of field to isolate
+      the subject from the background, creating a sense of intimacy and focus on the
+      character.
     constraints:
-      - "Less dramatic than 85mm for emotional peaks"
-      - "Not wide enough for strong environmental statements"
+    - Less dramatic than 85mm for emotional peaks
+    - Not wide enough for strong environmental statements
+    - The use of a 50mm lens may require careful lighting to avoid flat or unflattering
+      portraits, especially in low-light conditions.
+    - In tight spaces or when shooting handheld, a 50mm lens may limit the ability
+      to capture wide environmental context, necessitating creative framing and camera
+      movement.
   applicability:
     emotions:
-      - honesty
-      - presence
-      - quiet
+    - honesty
+    - presence
+    - quiet
     genres:
-      - drama
-      - documentary
-      - comedy
+    - drama
+    - documentary
+    - comedy
     keywords:
-      - portrait
-      - conversation
-      - introduction
+    - portrait
+    - conversation
+    - introduction
   engine_guidance:
-    when_to_use: "Character needs to be present without dramatic commentary from the camera"
+    when_to_use: Character needs to be present without dramatic commentary from the
+      camera
     recommended_actions:
-      - "Primary lens for character introduction shots"
-      - "Default for calm dialogue in medium framing"
+    - Primary lens for character introduction shots
+    - Default for calm dialogue in medium framing
     avoid:
-      - "High-intensity emotional climaxes (use 85mm instead)"
+    - High-intensity emotional climaxes (use 85mm instead)
   relationships:
     related:
-      - lens_35mm_standard
-      - lens_85mm_compression
-  version: "1.0"
+    - lens_35mm_standard
+    - lens_85mm_compression
+  version: '1.0'
+  examples:
+    successful:
+    - 'The Godfather (1972) — Director: Francis Ford Coppola: The opening scene with
+      Bonasera and Vito Corleone uses a 50mm lens to create a natural and intimate
+      portrait, emphasizing the emotional gravity of the request being made.'
+    - 'Goodfellas (1990) — Director: Martin Scorsese: The scene where Henry Hill introduces
+      Karen to the mobsters at the Copacabana uses a 50mm lens to capture the honesty
+      and presence of the characters, making the audience feel part of the conversation.'
+    - 'Lost in Translation (2003) — Director: Sofia Coppola: The film uses 50mm lenses
+      for many of the scenes between Bob and Charlotte, creating a sense of calm and
+      presence that helps to convey their developing relationship.'
+    failure:
+    - 'Man of Steel (2013) — Director: Zack Snyder: While the film uses a variety
+      of lenses, the climactic battle scenes between Superman and Zod are shot with
+      wider lenses, which could have been more impactful with the 50mm lens to emphasize
+      the personal and emotional stakes of the conflict.'

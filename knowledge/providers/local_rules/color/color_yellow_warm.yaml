@@ -1,59 +1,66 @@
 library:
-  schema_version: "1.0"
+  schema_version: '1.0'
   metadata:
     id: color_yellow_warm
     name: Yellow & Gold — Warmth & Decay
     author: Director OS
   category: visual_style
   knowledge:
-    concept: "The color of sunlight, warmth, nostalgia, and also sickness and decay. Context determines interpretation — warm gold = positive; sulfur yellow = toxic."
+    concept: The color of sunlight, warmth, nostalgia, and also sickness and decay.
+      Context determines interpretation — warm gold = positive; sulfur yellow = toxic.
     principles:
-      - "Warm yellow (golden) signals safety, comfort, and memory"
-      - "Harsh yellow (sulfur, fluorescent) signals sickness, danger, or decay"
-      - "Yellow is the most reflective color — pushes forward visually"
-      - "Aging film stock naturally yellows — this signals age/nostalgia"
+    - Warm yellow (golden) signals safety, comfort, and memory
+    - Harsh yellow (sulfur, fluorescent) signals sickness, danger, or decay
+    - Yellow is the most reflective color — pushes forward visually
+    - Aging film stock naturally yellows — this signals age/nostalgia
     emotional_effects:
-      - warmth
-      - nostalgia
-      - decay
-      - toxicity
-      - memory
+    - warmth
+    - nostalgia
+    - decay
+    - toxicity
+    - memory
     techniques:
-      - "Golden hour lighting for warmth and beauty"
-      - "Yellow grade shift for flashback or memory sequences"
-      - "Sulfur/greenish yellow for toxic environments or sickness"
-      - "Warm tungsten practicals for cozy interiors"
+    - Golden hour lighting for warmth and beauty
+    - Yellow grade shift for flashback or memory sequences
+    - Sulfur/greenish yellow for toxic environments or sickness
+    - Warm tungsten practicals for cozy interiors
     constraints:
-      - "Pure yellow on skin reads as jaundice or sickness"
-      - "Excessive yellow without contrast looks flat and aged"
-      - "Warm grading reduces perceived image sharpness"
+    - Pure yellow on skin reads as jaundice or sickness
+    - Excessive yellow without contrast looks flat and aged
+    - Warm grading reduces perceived image sharpness
   applicability:
     emotions:
-      - warmth
-      - nostalgia
-      - sickness
-      - memory
+    - warmth
+    - nostalgia
+    - sickness
+    - memory
     genres:
-      - drama
-      - romance
-      - period
-      - horror
+    - drama
+    - romance
+    - period
+    - horror
     keywords:
-      - golden_hour
-      - memory
-      - warmth
-      - decay
+    - golden_hour
+    - memory
+    - warmth
+    - decay
   engine_guidance:
-    when_to_use: "Scene requires warmth, nostalgia, or the feeling of a memory — OR sickness and decay depending on yellow tone"
+    when_to_use: Scene requires warmth, nostalgia, or the feeling of a memory — OR
+      sickness and decay depending on yellow tone
     recommended_actions:
-      - "Use golden yellow for positive warmth and flashbacks"
-      - "Use greenish-yellow for toxic or sick environments"
+    - Use golden yellow for positive warmth and flashbacks
+    - Use greenish-yellow for toxic or sick environments
     avoid:
-      - "Scenes requiring clinical coldness (use blue instead)"
+    - Scenes requiring clinical coldness (use blue instead)
   relationships:
     related:
-      - color_red_passion
-      - light_golden_hour
+    - color_red_passion
+    - light_golden_hour
+    - color_earth_tone
+    - color_pastel
+    - color_teal_orange
     conflicts:
-      - color_blue_cold
-  version: "1.0"
+    - color_blue_cold
+    - color_desaturated_gray
+    - color_green_sick
+  version: '1.0'

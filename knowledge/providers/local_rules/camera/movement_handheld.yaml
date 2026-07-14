@@ -1,63 +1,90 @@
 library:
-  schema_version: "1.0"
+  schema_version: '1.0'
   metadata:
     id: movement_handheld
     name: Handheld Camera
     author: Director OS
   category: cinematography
   knowledge:
-    concept: "Camera operated without stabilization, held by the operator. Natural human micro-movements, breathing rhythm, and slight instability."
+    concept: Camera operated without stabilization, held by the operator. Natural
+      human micro-movements, breathing rhythm, and slight instability.
     principles:
-      - "Deliberate instability communicates subjective reality"
-      - "Breathing rhythm of operator transfers to the frame"
-      - "Intensity of movement scales with emotional intensity"
-      - "Audience feels the presence of an observing human"
+    - Deliberate instability communicates subjective reality
+    - Breathing rhythm of operator transfers to the frame
+    - Intensity of movement scales with emotional intensity
+    - Audience feels the presence of an observing human
     emotional_effects:
-      - urgency
-      - immediacy
-      - vulnerability
-      - authenticity
-      - chaos
+    - urgency
+    - immediacy
+    - vulnerability
+    - authenticity
+    - chaos
     techniques:
-      - "Calm handheld (slight sway) for intimate documentary feel"
-      - "Agitated handheld for panic, chase, or combat"
-      - "Sit camera on a surface for pseudo-static between handheld sections"
-      - "Wide lenses reduce perceived shakiness; long lenses amplify it"
+    - Calm handheld (slight sway) for intimate documentary feel
+    - Agitated handheld for panic, chase, or combat
+    - Sit camera on a surface for pseudo-static between handheld sections
+    - Wide lenses reduce perceived shakiness; long lenses amplify it
+    - Use a 'run-and-gun' approach with a lightweight camera setup for fast-paced
+      action sequences, capturing the intensity and chaos of the moment.
+    - Employ a 'hip-rig' or 'vest' to stabilize the camera while still maintaining
+      the natural movement and rhythm of handheld shooting.
+    - Adjust shutter speed to match the frame rate for a smoother image that still
+      conveys the handheld aesthetic.
     constraints:
-      - "Excessive handheld causes audience discomfort or nausea"
-      - "Not suitable for formal or ceremonial scenes"
-      - "Long takes require physical endurance from operator"
+    - Excessive handheld causes audience discomfort or nausea
+    - Not suitable for formal or ceremonial scenes
+    - Long takes require physical endurance from operator
+    - Handheld work requires a physically fit camera operator to manage the camera's
+      weight and movement over extended periods.
+    - In outdoor scenes, wind can cause unwanted noise in the camera rig, requiring
+      additional soundproofing or post-production solutions.
   applicability:
     emotions:
-      - urgency
-      - panic
-      - authenticity
-      - chaos
-      - vulnerability
+    - urgency
+    - panic
+    - authenticity
+    - chaos
+    - vulnerability
     genres:
-      - horror
-      - documentary
-      - action
-      - war
-      - thriller
+    - horror
+    - documentary
+    - action
+    - war
+    - thriller
     keywords:
-      - immediacy
-      - reality
-      - unstable
-      - subjective
+    - immediacy
+    - reality
+    - unstable
+    - subjective
   engine_guidance:
-    when_to_use: "Scene needs immediacy, documentary authenticity, or subjective instability"
+    when_to_use: Scene needs immediacy, documentary authenticity, or subjective instability
     recommended_actions:
-      - "Use for chase, combat, or panic sequences"
-      - "Calm handheld for intimate revelations"
+    - Use for chase, combat, or panic sequences
+    - Calm handheld for intimate revelations
     avoid:
-      - "Formal ceremonies, executions, solemn moments"
-      - "Wide establishing shots (static serves better)"
+    - Formal ceremonies, executions, solemn moments
+    - Wide establishing shots (static serves better)
   relationships:
     related:
-      - movement_steadicam
-      - movement_tracking
+    - movement_steadicam
+    - movement_tracking
     conflicts:
-      - movement_static
-      - movement_crane
-  version: "1.0"
+    - movement_static
+    - movement_crane
+    - movement_dolly_in
+    - movement_push_pull
+  version: '1.0'
+  examples:
+    successful:
+    - 'Saving Private Ryan (1998) — Steven Spielberg: During the D-Day landing sequence,
+      the handheld camera work captures the chaos and immediacy of war, putting the
+      audience in the boots of the soldiers.'
+    - 'The Blair Witch Project (1999) — Eduardo Sánchez and Daniel Myrick: The entire
+      film is shot using handheld cameras, creating a sense of realism and unease
+      that amplifies the horror.'
+    - 'City of God (2002) — Fernando Meirelles and Kátia Lund: The handheld camera
+      work in the favela sequences adds to the urgency and authenticity of the environment.'
+    failure:
+    - 'Cloverfield (2008) — Matt Reeves: While the handheld style was intended to
+      create a sense of realism and immediacy, some viewers found the constant shakiness
+      to be disorienting and nauseating, detracting from the overall experience.'

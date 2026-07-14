@@ -1,60 +1,95 @@
 library:
-  schema_version: "1.0"
+  schema_version: '1.0'
   metadata:
     id: color_blue_cold
     name: Blue — Cold & Distance
     author: Director OS
   category: visual_style
   knowledge:
-    concept: "The color of cold, distance, technology, and emotional detachment. In cinema, blue often represents isolation, night, or the absence of humanity."
+    concept: The color of cold, distance, technology, and emotional detachment. In
+      cinema, blue often represents isolation, night, or the absence of humanity.
     principles:
-      - "Cool tones push elements visually to the background"
-      - "Blue light signifies night even in well-lit scenes"
-      - "Increasing blue saturation intensifies emotional coldness"
-      - "Mixed with green = sickly/artificial; mixed with cyan = technological"
+    - Cool tones push elements visually to the background
+    - Blue light signifies night even in well-lit scenes
+    - Increasing blue saturation intensifies emotional coldness
+    - Mixed with green = sickly/artificial; mixed with cyan = technological
     emotional_effects:
-      - coldness
-      - isolation
-      - melancholy
-      - detachment
-      - technology
+    - coldness
+    - isolation
+    - melancholy
+    - detachment
+    - technology
     techniques:
-      - "Color grade shadows toward blue for night scenes"
-      - "Blue practical lights (neon, monitor glow) for technological environments"
-      - "Blue backlight on skin creates separation and coldness simultaneously"
-      - "Full blue monochrome for post-human or digital spaces"
+    - Color grade shadows toward blue for night scenes
+    - Blue practical lights (neon, monitor glow) for technological environments
+    - Blue backlight on skin creates separation and coldness simultaneously
+    - Full blue monochrome for post-human or digital spaces
+    - Use a blue gel on key light sources to subtly cool down the skin tones and create
+      a sense of distance or coldness in character interactions.
+    - Apply a blue color correction filter on the camera lens to achieve a consistent
+      blue hue across the entire scene, enhancing the sense of a cold or technological
+      environment.
+    - Utilize blue LED lights for practical lighting in scenes set in futuristic or
+      technological settings to create a realistic and immersive atmosphere.
     constraints:
-      - "Pure blue on skin tones reads as unrealistic or horror"
-      - "Excessive blue suppresses emotional warmth — audience fatigue"
+    - Pure blue on skin tones reads as unrealistic or horror
+    - Excessive blue suppresses emotional warmth — audience fatigue
+    - Outdoor night scenes requiring blue tones may necessitate additional lighting
+      equipment to achieve the desired color temperature without relying on artificial
+      lighting.
+    - The use of blue in practical lighting may require specialized LED fixtures or
+      gels that can handle the specific color temperature, which could be cost-prohibitive
+      on a tight budget.
   applicability:
     emotions:
-      - sadness
-      - loneliness
-      - coldness
-      - detachment
+    - sadness
+    - loneliness
+    - coldness
+    - detachment
     genres:
-      - science_fiction
-      - thriller
-      - noir
-      - horror
+    - science_fiction
+    - thriller
+    - noir
+    - horror
     keywords:
-      - night
-      - cold
-      - technology
-      - isolation
+    - night
+    - cold
+    - technology
+    - isolation
   engine_guidance:
-    when_to_use: "Scene requires emotional distance, technological atmosphere, or nighttime realism"
+    when_to_use: Scene requires emotional distance, technological atmosphere, or nighttime
+      realism
     recommended_actions:
-      - "Shift shadow tones toward blue for melancholic night scenes"
-      - "Use cyan-blue for futuristic or digital environments"
+    - Shift shadow tones toward blue for melancholic night scenes
+    - Use cyan-blue for futuristic or digital environments
     avoid:
-      - "Romantic or warm reunion scenes"
-      - "Scenes requiring audience emotional warmth"
+    - Romantic or warm reunion scenes
+    - Scenes requiring audience emotional warmth
   relationships:
     related:
-      - color_teal_orange
-      - color_green_sick
+    - color_teal_orange
+    - color_green_sick
+    - color_desaturated_gray
+    - color_monochrome
+    - color_neon
+    - color_red_passion
     conflicts:
-      - color_yellow_warm
-      - color_red_passion
-  version: "1.0"
+    - color_yellow_warm
+    - color_red_passion
+    - color_earth_tone
+  version: '1.0'
+  examples:
+    successful:
+    - 'The Matrix (1999) — Director: The Wachowskis: The film uses a strong blue hue,
+      particularly in scenes involving the digital world, to emphasize the cold, technological,
+      and detached nature of the Matrix itself.'
+    - 'Inception (2010) — Director: Christopher Nolan: The dream world scenes are
+      often bathed in blue tones, symbolizing the artificial and cold nature of the
+      subconscious.'
+    - 'Minority Report (2002) — Director: Steven Spielberg: The futuristic interface
+      and environments are dominated by blue light, creating a sense of advanced technology
+      and emotional detachment.'
+    failure:
+    - 'The Happening (2008) — Director: M. Night Shyamalan: The film''s heavy-handed
+      use of blue filters to create a sense of dread and unnaturalness was criticized
+      for being too overt and detracting from the narrative.'

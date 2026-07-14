@@ -1,58 +1,65 @@
 library:
-  schema_version: "1.0"
+  schema_version: '1.0'
   metadata:
     id: light_direction_emotion
     name: Light Direction — Emotional Vocabulary
     author: Director OS (imported from AI-Director-OS shot_library)
   category: lighting
   knowledge:
-    concept: "Each light source direction carries inherent emotional meaning. Side light creates duality and inner conflict. Backlight creates mystery and transcendence. Underlight evokes terror. Top light suggests judgment. Front light is honest and open. Ambient light immerses in solitude."
+    concept: Each light source direction carries inherent emotional meaning. Side
+      light creates duality and inner conflict. Backlight creates mystery and transcendence.
+      Underlight evokes terror. Top light suggests judgment. Front light is honest
+      and open. Ambient light immerses in solitude.
     principles:
-      - "Side Light: split, dual personality, inner struggle — character between good and evil"
-      - "Backlight/Rim Light: mystery, hope, transcendence — character at a crossroads"
-      - "Underlight: terror, threat, inhuman — villains, monsters, fear"
-      - "Top Light: judgment, oppression, sacred — interrogation, church, fate descending"
-      - "Front Light: honesty, no concealment — truth moments, POV shots"
-      - "Ambient Light: immersion, wordless solitude — loneliness, contemplation"
+    - 'Side Light: split, dual personality, inner struggle — character between good
+      and evil'
+    - 'Backlight/Rim Light: mystery, hope, transcendence — character at a crossroads'
+    - 'Underlight: terror, threat, inhuman — villains, monsters, fear'
+    - 'Top Light: judgment, oppression, sacred — interrogation, church, fate descending'
+    - 'Front Light: honesty, no concealment — truth moments, POV shots'
+    - 'Ambient Light: immersion, wordless solitude — loneliness, contemplation'
     emotional_effects:
-      - varies_by_direction
+    - varies_by_direction
     techniques:
-      - "Side light for characters with moral ambiguity"
-      - "Rim light to separate subject from dark background"
-      - "Underlight from practical sources for horror scenes"
-      - "Top light with hard quality for interrogation atmosphere"
+    - Side light for characters with moral ambiguity
+    - Rim light to separate subject from dark background
+    - Underlight from practical sources for horror scenes
+    - Top light with hard quality for interrogation atmosphere
     constraints:
-      - "Some directions require controlled environment"
-      - "Underlight can feel cartoonishly villainous without subtlety"
+    - Some directions require controlled environment
+    - Underlight can feel cartoonishly villainous without subtlety
   applicability:
     emotions:
-      - tension
-      - mystery
-      - fear
-      - honesty
-      - solitude
+    - tension
+    - mystery
+    - fear
+    - honesty
+    - solitude
     genres:
-      - all
+    - all
     keywords:
-      - light direction
-      - side light
-      - backlight
-      - rim light
-      - underlight
-      - top light
-      - front light
-      - ambient
+    - light direction
+    - side light
+    - backlight
+    - rim light
+    - underlight
+    - top light
+    - front light
+    - ambient
   engine_guidance:
-    when_to_use: "Selecting lighting direction for a shot based on emotional intent"
+    when_to_use: Selecting lighting direction for a shot based on emotional intent
     recommended_actions:
-      - "Match direction to character's emotional state and narrative context"
-      - "Use side light for morally complex characters, backlight for hope"
+    - Match direction to character's emotional state and narrative context
+    - Use side light for morally complex characters, backlight for hope
     avoid:
-      - "Using underlight for sympathetic characters"
-      - "Front light for mystery or suspense"
+    - Using underlight for sympathetic characters
+    - Front light for mystery or suspense
   relationships:
     related:
-      - light_quality
-      - light_ratio
-      - light_color_temperature
-  version: "1.0"
+    - light_quality
+    - light_ratio
+    - light_color_temperature
+    - light_emotion_mapping
+    - light_silhouette
+    - light_special_effects
+  version: '1.0'

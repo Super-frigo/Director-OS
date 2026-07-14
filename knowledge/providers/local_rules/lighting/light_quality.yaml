@@ -1,54 +1,89 @@
 library:
-  schema_version: "1.0"
+  schema_version: '1.0'
   metadata:
     id: light_quality
     name: Light Quality — The Hardness of Emotion
     author: Director OS (imported from AI-Director-OS shot_library)
   category: lighting
   knowledge:
-    concept: "Light quality ranges from hard (sharp, defined shadows) to soft (diffuse, gradual falloff). Hard light reveals truth and creates tension; soft light comforts and romanticizes. The choice between them is a choice about how the audience perceives reality."
+    concept: Light quality ranges from hard (sharp, defined shadows) to soft (diffuse,
+      gradual falloff). Hard light reveals truth and creates tension; soft light comforts
+      and romanticizes. The choice between them is a choice about how the audience
+      perceives reality.
     principles:
-      - "Hard Light: sharp shadow edges, high contrast, reveals texture and imperfection"
-      - "Hard light = emotional sharpness, cruelty, truth, drama"
-      - "Soft Light: gentle shadow falloff, wraps around subjects, flattering"
-      - "Soft light = warmth, memory, romance, safety"
-      - "Mixed light = the complexity of the present moment"
+    - 'Hard Light: sharp shadow edges, high contrast, reveals texture and imperfection'
+    - Hard light = emotional sharpness, cruelty, truth, drama
+    - 'Soft Light: gentle shadow falloff, wraps around subjects, flattering'
+    - Soft light = warmth, memory, romance, safety
+    - Mixed light = the complexity of the present moment
     emotional_effects:
-      - varies
+    - varies
     techniques:
-      - "Hard light: small, distant source — direct sun, bare bulb"
-      - "Soft light: large, close source — diffusion frame, softbox, overcast sky"
-      - "Hard light for film noir, westerns, interrogation scenes"
-      - "Soft light for romance, flashbacks, children's stories"
-      - "Mix hard key with soft fill for depth without cruelty"
+    - 'Hard light: small, distant source — direct sun, bare bulb'
+    - 'Soft light: large, close source — diffusion frame, softbox, overcast sky'
+    - Hard light for film noir, westerns, interrogation scenes
+    - Soft light for romance, flashbacks, children's stories
+    - Mix hard key with soft fill for depth without cruelty
+    - 'Bounce Hard Light: Position a small, intense light source at an angle to the
+      subject and use a reflective surface to bounce the light, creating a softer
+      transition from highlights to shadows.'
+    - 'Edge Lighting: Place a hard light source just outside the frame to create a
+      rim light that defines the subject''s轮廓, adding depth and separation from the
+      background.'
+    - 'Mixed Lighting: Combine hard and soft light sources to create a balanced scene
+      with both dramatic highlights and soft fill light that softens shadows and reduces
+      contrast.'
     constraints:
-      - "Hard light can be unflattering to subjects — requires intentionality"
-      - "Soft light can feel flat without directional variation"
+    - Hard light can be unflattering to subjects — requires intentionality
+    - Soft light can feel flat without directional variation
+    - 'Weather Conditions: Hard light is often associated with direct sunlight, which
+      can limit shooting to specific times of day or require waiting for cloud cover
+      to modify the light.'
+    - 'Space Limitations: Hard light setups with small, distant sources may require
+      more space to position the light without it being obstructed, which can be a
+      constraint in tight shooting locations.'
   applicability:
     emotions:
-      - tension
-      - warmth
-      - truth
-      - romance
-      - drama
+    - tension
+    - warmth
+    - truth
+    - romance
+    - drama
     genres:
-      - all
+    - all
     keywords:
-      - hard light
-      - soft light
-      - diffusion
-      - shadow edge
-      - light quality
+    - hard light
+    - soft light
+    - diffusion
+    - shadow edge
+    - light quality
   engine_guidance:
-    when_to_use: "Determining the emotional texture of light for a scene"
+    when_to_use: Determining the emotional texture of light for a scene
     recommended_actions:
-      - "Hard light for scenes of confrontation, revelation, or harsh reality"
-      - "Soft light for intimate moments, romance, or nostalgic flashbacks"
+    - Hard light for scenes of confrontation, revelation, or harsh reality
+    - Soft light for intimate moments, romance, or nostalgic flashbacks
     avoid:
-      - "Soft light in harsh truth-telling scenes"
-      - "Hard light in gentle, comforting moments"
+    - Soft light in harsh truth-telling scenes
+    - Hard light in gentle, comforting moments
   relationships:
     related:
-      - light_direction_emotion
-      - light_ratio
-  version: "1.0"
+    - light_direction_emotion
+    - light_ratio
+    - light_color_temperature
+    - light_emotion_mapping
+  version: '1.0'
+  examples:
+    successful:
+    - 'Chinatown (1974) — Director: Roman Polanski: The film uses hard light to create
+      a harsh and gritty atmosphere, especially in the scenes involving the protagonist''s
+      confrontations with corruption and deceit.'
+    - 'Gone with the Wind (1939) — Director: Victor Fleming: The soft light used in
+      the romantic scenes between Scarlett O''Hara and Rhett Butler creates a sense
+      of warmth and nostalgia, contrasting with the harsh realities of the Civil War.'
+    - 'The Godfather (1972) — Director: Francis Ford Coppola: The use of hard light
+      in the infamous ''baptism'' scene highlights the brutal truth and drama of the
+      mafia world, with stark shadows emphasizing the characters'' moral dichotomies.'
+    failure:
+    - 'Twilight (2008) — Director: Catherine Hardwicke: The film''s attempt to depict
+      a romantic fantasy often falls flat due to overuse of soft light, which can
+      feel unrealistic and lack the depth needed for the narrative''s emotional complexity.'

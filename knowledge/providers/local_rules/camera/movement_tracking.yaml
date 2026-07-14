@@ -1,60 +1,96 @@
 library:
-  schema_version: "1.0"
+  schema_version: '1.0'
   metadata:
     id: movement_tracking
     name: Tracking Shot / Lateral Move
     author: Director OS
   category: cinematography
   knowledge:
-    concept: "Camera moves parallel to subject movement. The most natural way to follow action while maintaining consistent distance and framing."
+    concept: Camera moves parallel to subject movement. The most natural way to follow
+      action while maintaining consistent distance and framing.
     principles:
-      - "Camera moves alongside subject at matching speed"
-      - "Maintains constant framing while revealing background context"
-      - "Audience travels with the character — creates companionship"
-      - "Subject can move through changing environments in one continuous shot"
+    - Camera moves alongside subject at matching speed
+    - Maintains constant framing while revealing background context
+    - Audience travels with the character — creates companionship
+    - Subject can move through changing environments in one continuous shot
     emotional_effects:
-      - journey
-      - progression
-      - companionship
-      - determination
-      - escape
+    - journey
+    - progression
+    - companionship
+    - determination
+    - escape
     techniques:
-      - "Track at walking pace for natural movement (standard speed)"
-      - "Track ahead of subject to reveal destination"
-      - "Track behind subject to emphasize pursuit or escape"
-      - "Track through obstacles (doorways, crowds) for environmental immersion"
+    - Track at walking pace for natural movement (standard speed)
+    - Track ahead of subject to reveal destination
+    - Track behind subject to emphasize pursuit or escape
+    - Track through obstacles (doorways, crowds) for environmental immersion
+    - Use a slider dolly for smooth, controlled lateral movements, especially in confined
+      spaces or for precise tracking.
+    - Employ a handheld camera with a wide-angle lens to capture a dynamic tracking
+      shot that conveys a sense of urgency or immediacy.
+    - Utilize a drone for aerial tracking shots to follow a subject over long distances
+      or through varied terrains, adding a unique perspective to the scene.
     constraints:
-      - "Requires dolly track, steadicam, or gimbal"
-      - "Complex choreography between camera and subject"
-      - "Uneven terrain limits equipment options"
+    - Requires dolly track, steadicam, or gimbal
+    - Complex choreography between camera and subject
+    - Uneven terrain limits equipment options
+    - Limited budget may restrict the use of advanced equipment like drones or high-end
+      stabilizing systems, potentially affecting the quality of the tracking shot.
+    - Weather conditions, such as rain or strong winds, can impact the stability of
+      the camera and the feasibility of certain tracking shots, especially when using
+      outdoor equipment like dolly tracks or drones.
   applicability:
     emotions:
-      - determination
-      - journey
-      - escape
-      - progression
+    - determination
+    - journey
+    - escape
+    - progression
     genres:
-      - action
-      - thriller
-      - drama
-      - adventure
+    - action
+    - thriller
+    - drama
+    - adventure
     keywords:
-      - follow
-      - journey
-      - movement
-      - continuous
+    - follow
+    - journey
+    - movement
+    - continuous
   engine_guidance:
-    when_to_use: "Character is moving through space with purpose, or environment needs to unfold alongside the action"
+    when_to_use: Character is moving through space with purpose, or environment needs
+      to unfold alongside the action
     recommended_actions:
-      - "Use for chase sequences, arrivals, departures"
-      - "Track through doorways for seamlessness"
+    - Use for chase sequences, arrivals, departures
+    - Track through doorways for seamlessness
     avoid:
-      - "Still dialogue scenes (static or push serves better)"
-      - "Subject standing still (use static or dolly instead)"
+    - Still dialogue scenes (static or push serves better)
+    - Subject standing still (use static or dolly instead)
   relationships:
     related:
-      - movement_dolly_in
-      - movement_steadicam
+    - movement_dolly_in
+    - movement_steadicam
+    - movement_arc
+    - movement_dolly_out
+    - movement_follow
+    - movement_handheld
+    - movement_push_pull
+    - movement_truck
+    - movement_whip_pan
     conflicts:
-      - movement_static
-  version: "1.0"
+    - movement_static
+  version: '1.0'
+  examples:
+    successful:
+    - 'Goodfellas (1990) — Director: Martin Scorsese: The opening scene where Ray
+      Liotta''s character walks through the club, with the camera tracking alongside
+      him, establishes the character''s power and the environment''s seediness.'
+    - 'Saving Private Ryan (1998) — Director: Steven Spielberg: The D-Day landing
+      scene uses lateral tracking shots to convey the chaos and intensity of the battle,
+      following soldiers as they move across the beach.'
+    - 'The Godfather (1972) — Director: Francis Ford Coppola: The tracking shot during
+      the baptism scene follows Michael Corleone, highlighting his transformation
+      into the family''s new don while the camera moves through the church.'
+    failure:
+    - 'The Amazing Spider-Man 2 (2014) — Director: Mark Webb: The excessive use of
+      shaky camera work during action sequences can detract from the tracking shot''s
+      ability to maintain a clear narrative and spatial awareness, leading to viewer
+      disorientation.'

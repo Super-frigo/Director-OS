@@ -1,57 +1,59 @@
 library:
-  schema_version: "1.0"
+  schema_version: '1.0'
   metadata:
     id: angle_back
     name: Back Angle — Following and Mystery
     author: Director OS (imported from AI-Director-OS shot_library)
   category: cinematography
   knowledge:
-    concept: "Camera positioned behind the subject, viewing their back. The follower's perspective — we move with the character into the unknown. Creates anticipation, mystery, and shared journey."
+    concept: Camera positioned behind the subject, viewing their back. The follower's
+      perspective — we move with the character into the unknown. Creates anticipation,
+      mystery, and shared journey.
     principles:
-      - "We follow the character — we don't know what they see"
-      - "Face is hidden — emotions are inferred from body language alone"
-      - "The character and audience share the same 'forward' direction"
-      - "The unknown ahead creates suspense and anticipation"
+    - We follow the character — we don't know what they see
+    - Face is hidden — emotions are inferred from body language alone
+    - The character and audience share the same 'forward' direction
+    - The unknown ahead creates suspense and anticipation
     emotional_effects:
-      - anticipation
-      - mystery
-      - journey
-      - followership
-      - unknown
+    - anticipation
+    - mystery
+    - journey
+    - followership
+    - unknown
     techniques:
-      - "Use for entrance into unknown spaces"
-      - "Tracking behind character = audience follows their journey"
-      - "POV from behind reveals what the character cannot see"
-      - "Pull-back from behind = leaving, loss, or retreat"
+    - Use for entrance into unknown spaces
+    - Tracking behind character = audience follows their journey
+    - POV from behind reveals what the character cannot see
+    - Pull-back from behind = leaving, loss, or retreat
     constraints:
-      - "Cannot show facial reactions — relies on body language"
-      - "Extended use can frustrate audience"
+    - Cannot show facial reactions — relies on body language
+    - Extended use can frustrate audience
   applicability:
     emotions:
-      - anticipation
-      - mystery
-      - journey
-      - suspense
+    - anticipation
+    - mystery
+    - journey
+    - suspense
     genres:
-      - thriller
-      - adventure
-      - horror
-      - mystery
+    - thriller
+    - adventure
+    - horror
+    - mystery
     keywords:
-      - back
-      - follow
-      - over-shoulder
-      - walk-away
+    - back
+    - follow
+    - over-shoulder
+    - walk-away
   engine_guidance:
-    when_to_use: "Audience should share the character's journey into the unknown"
+    when_to_use: Audience should share the character's journey into the unknown
     recommended_actions:
-      - "Use at scene beginnings as character enters new space"
-      - "Tracking back-angle for walk-and-talk sequences"
+    - Use at scene beginnings as character enters new space
+    - Tracking back-angle for walk-and-talk sequences
     avoid:
-      - "When facial reaction is critical to the moment"
-      - "Emotional climaxes requiring direct expression"
+    - When facial reaction is critical to the moment
+    - Emotional climaxes requiring direct expression
   relationships:
     related:
-      - angle_ots
-      - angle_side
-  version: "1.0"
+    - angle_ots
+    - angle_side
+  version: '1.0'

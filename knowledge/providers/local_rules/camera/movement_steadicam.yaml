@@ -1,61 +1,64 @@
 library:
-  schema_version: "1.0"
+  schema_version: '1.0'
   metadata:
     id: movement_steadicam
     name: Steadicam — Flowing Subjective Movement
     author: Director OS (imported from AI-Director-OS shot_library)
   category: cinematography
   knowledge:
-    concept: "Camera stabilized on a body-mounted rig, allowing smooth, flowing movement through spaces. The character and camera move as one — creates seamless, subjective tracking. The preferred tool for long takes."
+    concept: Camera stabilized on a body-mounted rig, allowing smooth, flowing movement
+      through spaces. The character and camera move as one — creates seamless, subjective
+      tracking. The preferred tool for long takes.
     principles:
-      - "Smooth, gliding movement — stabilizes human walking motion"
-      - "Camera becomes a floating observer, not a fixed witness"
-      - "Can follow characters through complex spaces and transitions"
-      - "Preferred for long, unbroken takes (oners)"
+    - Smooth, gliding movement — stabilizes human walking motion
+    - Camera becomes a floating observer, not a fixed witness
+    - Can follow characters through complex spaces and transitions
+    - Preferred for long, unbroken takes (oners)
     emotional_effects:
-      - flow
-      - immersion
-      - continuity
-      - grace
-      - journey
+    - flow
+    - immersion
+    - continuity
+    - grace
+    - journey
     techniques:
-      - "Use for following characters through doors, corridors, crowds"
-      - "Circle around characters in conversation for dynamic coverage"
-      - "Lead character from behind = audience follows their journey"
-      - "Slow steadicam reveal from behind object = elegant setup"
+    - Use for following characters through doors, corridors, crowds
+    - Circle around characters in conversation for dynamic coverage
+    - Lead character from behind = audience follows their journey
+    - Slow steadicam reveal from behind object = elegant setup
     constraints:
-      - "Requires skilled operator and rehearsal"
-      - "Complex blocking — must choreograph actors and camera path"
-      - "Not suitable for hyper-stylized, locked-off compositions"
+    - Requires skilled operator and rehearsal
+    - Complex blocking — must choreograph actors and camera path
+    - Not suitable for hyper-stylized, locked-off compositions
   applicability:
     emotions:
-      - flow
-      - immersion
-      - continuity
-      - journey
+    - flow
+    - immersion
+    - continuity
+    - journey
     genres:
-      - drama
-      - thriller
-      - horror
-      - action
+    - drama
+    - thriller
+    - horror
+    - action
     keywords:
-      - steadicam
-      - stabilizer
-      - floating
-      - long take
-      - oner
+    - steadicam
+    - stabilizer
+    - floating
+    - long take
+    - oner
   engine_guidance:
-    when_to_use: "Scene benefits from fluid, continuous movement through complex space"
+    when_to_use: Scene benefits from fluid, continuous movement through complex space
     recommended_actions:
-      - "Use for walk-and-talk sequences"
-      - "Lead character through environmental reveals"
+    - Use for walk-and-talk sequences
+    - Lead character through environmental reveals
     avoid:
-      - "Scenes requiring formal, locked-off composition"
-      - "When camera should be static and observational"
+    - Scenes requiring formal, locked-off composition
+    - When camera should be static and observational
   relationships:
     related:
-      - movement_tracking
-      - movement_handheld
+    - movement_tracking
+    - movement_handheld
+    - movement_follow
     conflicts:
-      - movement_static
-  version: "1.0"
+    - movement_static
+  version: '1.0'

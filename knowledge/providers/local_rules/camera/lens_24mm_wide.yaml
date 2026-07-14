@@ -1,56 +1,91 @@
 library:
-  schema_version: "1.0"
+  schema_version: '1.0'
   metadata:
     id: lens_24mm_wide
     name: 24mm — Wide Environmental
     author: Director OS
   category: cinematography
   knowledge:
-    concept: "Wide-angle lens emphasizing environmental context and spatial relationships. Slight perspective distortion at edges."
+    concept: Wide-angle lens emphasizing environmental context and spatial relationships.
+      Slight perspective distortion at edges.
     principles:
-      - "Expansive field of view captures environment as much as subject"
-      - "Foreground emphasis — objects closer to camera appear larger"
-      - "Creates sense of scale, isolation, or overwhelm"
+    - Expansive field of view captures environment as much as subject
+    - Foreground emphasis — objects closer to camera appear larger
+    - Creates sense of scale, isolation, or overwhelm
     emotional_effects:
-      - isolation
-      - awe
-      - insignificance
-      - exposure
+    - isolation
+    - awe
+    - insignificance
+    - exposure
     techniques:
-      - "ELS and LS framing for establishing shots"
-      - "Place subject small in frame to emphasize loneliness"
-      - "Slight low angle exaggerates scale of environments"
+    - ELS and LS framing for establishing shots
+    - Place subject small in frame to emphasize loneliness
+    - Slight low angle exaggerates scale of environments
+    - Use a 24mm lens to create a 'Dutch angle' for a dramatic effect, capturing the
+      environment and subject at an extreme tilt to convey disorientation or unease.
+    - Employ the 24mm lens for tracking shots to capture both the action and the surrounding
+      environment, enhancing the sense of movement within a larger space.
+    - Utilize the lens for low-light conditions by increasing the aperture to allow
+      more light in, though be mindful of the resulting depth of field.
     constraints:
-      - "Edge distortion can be unflattering for tight close-ups"
-      - "Group shots require careful positioning to avoid distortion"
+    - Edge distortion can be unflattering for tight close-ups
+    - Group shots require careful positioning to avoid distortion
+    - The use of a 24mm lens can be limited by the availability of natural or artificial
+      light, as it requires more illumination than longer lenses to achieve the same
+      exposure.
+    - The lens may require additional stabilization equipment like a gimbal or Steadicam
+      for smooth tracking shots, especially in environments with uneven terrain or
+      tight spaces.
   applicability:
     emotions:
-      - loneliness
-      - awe
-      - fear
-      - freedom
-      - insignificance
+    - loneliness
+    - awe
+    - fear
+    - freedom
+    - insignificance
     genres:
-      - science_fiction
-      - western
-      - epic
-      - horror (for vulnerability)
+    - science_fiction
+    - western
+    - epic
+    - horror (for vulnerability)
     keywords:
-      - establishment
-      - isolation
-      - environment
+    - establishment
+    - isolation
+    - environment
   engine_guidance:
-    when_to_use: "Scene needs to establish location, scale, or character isolation within environment"
+    when_to_use: Scene needs to establish location, scale, or character isolation
+      within environment
     recommended_actions:
-      - "Use as first shot of a scene (OPENING beats)"
-      - "Combine with deep space composition for maximum depth"
+    - Use as first shot of a scene (OPENING beats)
+    - Combine with deep space composition for maximum depth
     avoid:
-      - "Intimate dialogue coverage"
-      - "Shot-reverse-shot patterns"
+    - Intimate dialogue coverage
+    - Shot-reverse-shot patterns
   relationships:
     related:
-      - lens_35mm_standard
-      - lens_14mm_ultrawide
+    - lens_35mm_standard
+    - lens_14mm_ultrawide
+    - lens_18mm_wide
     conflicts:
-      - lens_85mm_compression
-  version: "1.0"
+    - lens_85mm_compression
+    - lens_100mm_medium_tele
+    - lens_135mm_tele
+    - lens_200mm_long_tele
+    - lens_400mm_extreme_tele
+  version: '1.0'
+  examples:
+    successful:
+    - 'Lawrence of Arabia (1962) — Director: David Lean: The opening scene where the
+      camera slowly zooms out to reveal the vast desert and Lawrence standing alone,
+      emphasizing his isolation and the enormity of the landscape.'
+    - 'The Lord of the Rings: The Fellowship of the Ring (2001) — Director: Peter
+      Jackson: The establishing shots of the Shire and Rivendell, showcasing the scale
+      and beauty of Middle Earth, capturing the environmental context.'
+    - 'Birdman (2014) — Director: Alejandro González Iñárritu: The single-take illusion
+      is enhanced by using a 24mm lens to create a sense of space and continuity within
+      the confined backstage setting.'
+    failure:
+    - 'The Human Centipede (2009) — Director: Tom Six: The use of a 24mm lens in tight,
+      claustrophobic scenes within the house could have been more effective with a
+      longer lens to emphasize the characters'' confinement and distress, but instead,
+      the wide lens flattens the space, reducing the intended discomfort.'

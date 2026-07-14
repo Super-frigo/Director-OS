@@ -1,56 +1,91 @@
 library:
-  schema_version: "1.0"
+  schema_version: '1.0'
   metadata:
     id: lens_85mm_compression
     name: 85mm — Portrait & Compression
     author: Director OS
   category: cinematography
   knowledge:
-    concept: "Telephoto focal length that compresses spatial depth and isolates the subject. Standard for close-ups and emotional intensity."
+    concept: Telephoto focal length that compresses spatial depth and isolates the
+      subject. Standard for close-ups and emotional intensity.
     principles:
-      - "Narrow field of view forces viewer focus on subject"
-      - "Background compression creates intimacy and tension"
-      - "Shallow depth of field separates subject from environment"
+    - Narrow field of view forces viewer focus on subject
+    - Background compression creates intimacy and tension
+    - Shallow depth of field separates subject from environment
     emotional_effects:
-      - intimacy
-      - tension
-      - obsession
-      - vulnerability
+    - intimacy
+    - tension
+    - obsession
+    - vulnerability
     techniques:
-      - "CU and MCU framing for emotional close-ups"
-      - "Use to visually isolate a character in a crowd"
-      - "Rack focus between foreground and background for POV shifts"
+    - CU and MCU framing for emotional close-ups
+    - Use to visually isolate a character in a crowd
+    - Rack focus between foreground and background for POV shifts
+    - Use of 85mm lens for low-angle shots to create a sense of grandeur and power,
+      as seen in many historical or epic films where a character's authority is emphasized.
+    - Employing the 85mm lens for high-angle shots to create a sense of vulnerability
+      or isolation, particularly effective in scenes where a character is overwhelmed
+      by their environment or situation.
+    - Utilizing the 85mm lens for tracking shots that follow a character through a
+      crowd, compressing the background to keep the focus on the subject while conveying
+      the sense of being surrounded.
     constraints:
-      - "Requires more distance from subject (not for tight spaces)"
-      - "Not suitable for establishing shots or environmental context"
+    - Requires more distance from subject (not for tight spaces)
+    - Not suitable for establishing shots or environmental context
+    - Limited by the need for a controlled environment with minimal atmospheric haze,
+      as the 85mm lens can exaggerate the appearance of haze, reducing image clarity.
+    - Requires a skilled focus puller due to the shallow depth of field, which can
+      be challenging to manage, especially in scenes with moving subjects or when
+      rapid focus changes are needed.
   applicability:
     emotions:
-      - intimacy
-      - tension
-      - fear
-      - desire
-      - suspicion
+    - intimacy
+    - tension
+    - fear
+    - desire
+    - suspicion
     genres:
-      - thriller
-      - romance
-      - psychological_drama
-      - horror
+    - thriller
+    - romance
+    - psychological_drama
+    - horror
     keywords:
-      - close_up
-      - revelation
-      - confrontation
+    - close_up
+    - revelation
+    - confrontation
   engine_guidance:
-    when_to_use: "Scene requires emotional closeness or psychological intensity"
+    when_to_use: Scene requires emotional closeness or psychological intensity
     recommended_actions:
-      - "Use in THE_FACE type beats (character reaction shots)"
-      - "Pair with SHALLOW_FOCUS to emphasize a single subject"
+    - Use in THE_FACE type beats (character reaction shots)
+    - Pair with SHALLOW_FOCUS to emphasize a single subject
     avoid:
-      - "Action sequences (too narrow, disorienting)"
-      - "Establishing shots or location reveals"
+    - Action sequences (too narrow, disorienting)
+    - Establishing shots or location reveals
   relationships:
     related:
-      - lens_50mm_portrait
-      - lens_135mm_tele
+    - lens_50mm_portrait
+    - lens_135mm_tele
+    - lens_100mm_medium_tele
     conflicts:
-      - lens_35mm_standard
-  version: "1.0"
+    - lens_35mm_standard
+    - lens_14mm_ultrawide
+    - lens_18mm_wide
+    - lens_24mm_wide
+  version: '1.0'
+  examples:
+    successful:
+    - 'Gone with the Wind (1939) — Director: Victor Fleming: In the scene where Scarlett
+      O''Hara (Vivien Leigh) and Rhett Butler (Clark Gable) share an intense moment,
+      the 85mm lens is used to compress the background, isolating the characters and
+      intensifying their emotional tension.'
+    - 'The Godfather (1972) — Director: Francis Ford Coppola: The opening scene where
+      Bonasera asks Don Corleone for a favor uses an 85mm lens to compress the space
+      and create a sense of intimacy and power dynamics.'
+    - 'Titanic (1997) — Director: James Cameron: The scene where Rose (Kate Winslet)
+      is being painted by Jack (Leonardo DiCaprio) utilizes an 85mm lens to create
+      a sense of intimacy and focus on the characters'' emotional vulnerability.'
+    failure:
+    - 'Man of Steel (2013) — Director: Zack Snyder: The use of an 85mm lens in action
+      sequences can be disorienting due to the narrow field of view, which can make
+      it difficult for the audience to follow the fast-paced action and spatial relationships
+      between characters.'

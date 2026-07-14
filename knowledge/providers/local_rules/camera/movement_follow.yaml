@@ -1,60 +1,62 @@
 library:
-  schema_version: "1.0"
+  schema_version: '1.0'
   metadata:
     id: movement_follow
     name: Follow Shot — Audience Walks Beside
     author: Director OS (imported from AI-Director-OS shot_library)
   category: cinematography
   knowledge:
-    concept: "Camera moves alongside or behind a character as they move through space. The audience walks with the character — we share their journey in real-time. Creates a sense of companionship and shared purpose."
+    concept: Camera moves alongside or behind a character as they move through space.
+      The audience walks with the character — we share their journey in real-time.
+      Creates a sense of companionship and shared purpose.
     principles:
-      - "Audience moves WITH the character, not watching from outside"
-      - "Creates real-time duration — we experience the journey's length"
-      - "The character leads, the camera follows — character is in control"
-      - "Side follow = companionship; back follow = observation"
+    - Audience moves WITH the character, not watching from outside
+    - Creates real-time duration — we experience the journey's length
+    - The character leads, the camera follows — character is in control
+    - Side follow = companionship; back follow = observation
     emotional_effects:
-      - journey
-      - companionship
-      - real-time
-      - presence
-      - shared experience
+    - journey
+    - companionship
+    - real-time
+    - presence
+    - shared experience
     techniques:
-      - "Side tracking: walk beside character at same speed"
-      - "Back tracking: follow behind — we see what they see"
-      - "Front tracking: walking backward ahead of character = we lead"
-      - "Follow through doors and tight spaces for spatial continuity"
+    - 'Side tracking: walk beside character at same speed'
+    - 'Back tracking: follow behind — we see what they see'
+    - 'Front tracking: walking backward ahead of character = we lead'
+    - Follow through doors and tight spaces for spatial continuity
     constraints:
-      - "Requires space for camera and crew to move"
-      - "Sidewalk/urban locations need pedestrian management"
-      - "Can feel aimless without destination or narrative purpose"
+    - Requires space for camera and crew to move
+    - Sidewalk/urban locations need pedestrian management
+    - Can feel aimless without destination or narrative purpose
   applicability:
     emotions:
-      - journey
-      - presence
-      - urgency
-      - determination
+    - journey
+    - presence
+    - urgency
+    - determination
     genres:
-      - adventure
-      - action
-      - thriller
-      - documentary
+    - adventure
+    - action
+    - thriller
+    - documentary
     keywords:
-      - follow
-      - tracking
-      - walking shot
-      - journey
+    - follow
+    - tracking
+    - walking shot
+    - journey
   engine_guidance:
-    when_to_use: "Character is on a journey and audience should experience it in real-time"
+    when_to_use: Character is on a journey and audience should experience it in real-time
     recommended_actions:
-      - "Use for arrival, departure, or passage through significant space"
-      - "Pair with wide lens for environment context during movement"
+    - Use for arrival, departure, or passage through significant space
+    - Pair with wide lens for environment context during movement
     avoid:
-      - "Stationary dialogue scenes"
-      - "When time compression serves the narrative better"
+    - Stationary dialogue scenes
+    - When time compression serves the narrative better
   relationships:
     related:
-      - movement_steadicam
-      - movement_tracking
+    - movement_steadicam
+    - movement_tracking
     conflicts:
-      - movement_static
-  version: "1.0"
+    - movement_static
+  version: '1.0'

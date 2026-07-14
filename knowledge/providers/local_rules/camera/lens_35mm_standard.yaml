@@ -1,53 +1,87 @@
 library:
-  schema_version: "1.0"
+  schema_version: '1.0'
   metadata:
     id: lens_35mm_standard
     name: 35mm — The Standard
     author: Director OS
   category: cinematography
   knowledge:
-    concept: "Field of view approximating human natural perception. Minimal distortion. The most versatile storytelling lens."
+    concept: Field of view approximating human natural perception. Minimal distortion.
+      The most versatile storytelling lens.
     principles:
-      - "Wide enough to include context, tight enough for intimacy"
-      - "No noticeable compression or expansion of space"
-      - "Neutral perspective that does not draw attention to itself"
+    - Wide enough to include context, tight enough for intimacy
+    - No noticeable compression or expansion of space
+    - Neutral perspective that does not draw attention to itself
     emotional_effects:
-      - grounded
-      - objective
-      - documentary
+    - grounded
+    - objective
+    - documentary
     techniques:
-      - "Use for dialogue scenes to maintain spatial honesty"
-      - "Default lens when narrative should speak, not the camera"
-      - "Works equally well for MS and full-body framing"
+    - Use for dialogue scenes to maintain spatial honesty
+    - Default lens when narrative should speak, not the camera
+    - Works equally well for MS and full-body framing
+    - Use a 35mm lens for handheld camera work to create a more dynamic and naturalistic
+      feel, especially in scenes with a lot of movement or action.
+    - Employ a 35mm lens in combination with a shallow depth of field to isolate subjects
+      while still providing a sense of context and environment, enhancing the storytelling.
+    - Utilize a 35mm lens for tracking shots to maintain a consistent perspective
+      and distance from the subject, creating a smooth and engaging visual narrative.
     constraints:
-      - "Not ideal for dramatic compression (use 85mm+)"
-      - "Not ideal for extreme environmental context (use 24mm-)"
+    - Not ideal for dramatic compression (use 85mm+)
+    - Not ideal for extreme environmental context (use 24mm-)
+    - Limited low-light performance may require additional lighting equipment or higher
+      ISO settings, impacting the overall production budget and post-production workflow.
+    - The versatility of the 35mm lens can lead to overuse, resulting in a lack of
+      visual variety in a film. Careful planning and creative choices are necessary
+      to balance its use with other lenses for a more dynamic visual language.
   applicability:
     emotions:
-      - neutral
-      - contemplative
-      - grounded
+    - neutral
+    - contemplative
+    - grounded
     genres:
-      - drama
-      - documentary
-      - noir
-      - realism
+    - drama
+    - documentary
+    - noir
+    - realism
     keywords:
-      - conversation
-      - observation
-      - everyday
+    - conversation
+    - observation
+    - everyday
   engine_guidance:
-    when_to_use: "Default storytelling scenarios where camera should not impose a strong subjective feeling"
+    when_to_use: Default storytelling scenarios where camera should not impose a strong
+      subjective feeling
     recommended_actions:
-      - "Set as primary lens for dialogue-heavy scenes"
-      - "Combine with EYE_LEVEL angle for maximum neutrality"
+    - Set as primary lens for dialogue-heavy scenes
+    - Combine with EYE_LEVEL angle for maximum neutrality
     avoid:
-      - "Scenes requiring psychological distortion"
-      - "Action sequences needing spatial exaggeration"
+    - Scenes requiring psychological distortion
+    - Action sequences needing spatial exaggeration
   relationships:
     related:
-      - lens_50mm_portrait
-      - lens_24mm_wide
+    - lens_50mm_portrait
+    - lens_24mm_wide
     conflicts:
-      - lens_85mm_compression
-  version: "1.0"
+    - lens_85mm_compression
+    - lens_100mm_medium_tele
+    - lens_135mm_tele
+    - lens_200mm_long_tele
+  version: '1.0'
+  examples:
+    successful:
+    - 'The Godfather (1972) — Francis Ford Coppola: The opening scene in Bonasera''s
+      office uses a 35mm lens to capture the dialogue between Bonasera and Vito Corleone,
+      providing a grounded and neutral perspective that allows the narrative to unfold
+      naturally.'
+    - 'Goodfellas (1990) — Martin Scorsese: The iconic dinner scene at the Italian
+      restaurant, where Henry and Karen meet the mobsters, is shot with a 35mm lens,
+      creating an intimate and realistic atmosphere that draws the audience into the
+      world of the mob.'
+    - 'Whiplash (2014) — Damien Chazelle: The intense practice sessions between Andrew
+      and Fletcher are often shot with a 35mm lens, maintaining spatial honesty and
+      a neutral perspective that heightens the emotional intensity of the scenes.'
+    failure:
+    - 'Transformers (2007) — Michael Bay: The action sequences are heavily reliant
+      on fast cuts and extreme wide-angle lenses, which would have benefited from
+      the grounded perspective of a 35mm lens to provide a more immersive and coherent
+      viewing experience.'

@@ -1,59 +1,98 @@
 library:
-  schema_version: "1.0"
+  schema_version: '1.0'
   metadata:
     id: movement_static
     name: Static Camera
     author: Director OS
   category: cinematography
   knowledge:
-    concept: "Camera remains fixed on a tripod or solid surface. No physical movement during the shot. The oldest and most fundamental camera technique."
+    concept: Camera remains fixed on a tripod or solid surface. No physical movement
+      during the shot. The oldest and most fundamental camera technique.
     principles:
-      - "Zero camera movement — all narrative information comes from within the frame"
-      - "Audience becomes an observer, not a participant"
-      - "Movement inside the frame (actors, objects) gains relative emphasis"
-      - "Longer static shots build anticipation or discomfort"
+    - Zero camera movement — all narrative information comes from within the frame
+    - Audience becomes an observer, not a participant
+    - Movement inside the frame (actors, objects) gains relative emphasis
+    - Longer static shots build anticipation or discomfort
     emotional_effects:
-      - observation
-      - tension
-      - formality
-      - stillness
-      - inevitability
+    - observation
+    - tension
+    - formality
+    - stillness
+    - inevitability
     techniques:
-      - "Lock tripod firmly — even micro-shake breaks the effect"
-      - "Use with deep composition so the eye explores the frame"
-      - "Hold past the comfortable point to create tension"
-      - "Static + slow-mo creates dreamlike detachment"
+    - Lock tripod firmly — even micro-shake breaks the effect
+    - Use with deep composition so the eye explores the frame
+    - Hold past the comfortable point to create tension
+    - Static + slow-mo creates dreamlike detachment
+    - Use a prime lens for a shallow depth of field to draw attention to specific
+      subjects within the frame while blurring the background.
+    - Position the camera at eye level to create a more natural and relatable perspective
+      for the viewer.
+    - Utilize a wide-angle lens to capture more of the environment and create a sense
+      of space, which can be particularly effective in establishing shots or when
+      the setting is as important as the characters.
     constraints:
-      - "Risk of visual boredom without strong composition or subject movement"
-      - "Not suitable for action sequences without alternating coverage"
+    - Risk of visual boredom without strong composition or subject movement
+    - Not suitable for action sequences without alternating coverage
+    - The need for a sturdy tripod and a level surface to ensure stability, which
+      may not always be available in all shooting locations.
+    - The requirement for precise lighting setups, as static shots leave little room
+      for掩饰 any lighting imperfections or shadows that may detract from the scene.
   applicability:
     emotions:
-      - tension
-      - calm
-      - inevitability
-      - observation
+    - tension
+    - calm
+    - inevitability
+    - observation
     genres:
-      - noir
-      - drama
-      - thriller
-      - documentary
+    - noir
+    - drama
+    - thriller
+    - documentary
     keywords:
-      - tripod
-      - locked_off
-      - formal
-      - patient
+    - tripod
+    - locked_off
+    - formal
+    - patient
   engine_guidance:
-    when_to_use: "Scene demands observation, formality, or the weight of an unstoppable moment"
+    when_to_use: Scene demands observation, formality, or the weight of an unstoppable
+      moment
     recommended_actions:
-      - "Use for execution scenes, interrogations, ceremonial moments"
-      - "Combine with deep focus for maximum frame exploration"
+    - Use for execution scenes, interrogations, ceremonial moments
+    - Combine with deep focus for maximum frame exploration
     avoid:
-      - "Chaotic or POV sequences"
-      - "Moments requiring subjective instability"
+    - Chaotic or POV sequences
+    - Moments requiring subjective instability
   relationships:
     related:
-      - movement_slow_push
-      - movement_pan
+    - movement_slow_push
+    - movement_pan
+    - movement_crane
+    - movement_push_pull
     conflicts:
-      - movement_handheld
-  version: "1.0"
+    - movement_handheld
+    - movement_arc
+    - movement_follow
+    - movement_steadicam
+    - movement_tilt
+    - movement_tracking
+    - movement_truck
+    - movement_whip_pan
+  version: '1.0'
+  examples:
+    successful:
+    - 'The Godfather (1972) — Director: Francis Ford Coppola: The opening scene with
+      Bonasera asking Vito Corleone for help. The static camera places the audience
+      as an observer in the room, emphasizing the dialogue and the power dynamics
+      between the characters.'
+    - 'Rear Window (1954) — Director: Alfred Hitchcock: The film''s opening sequence,
+      which uses a static camera to establish the apartment complex and the voyeuristic
+      nature of the protagonist''s observations.'
+    - '12 Angry Men (1957) — Director: Sidney Lumet: Throughout the film, the static
+      camera captures the intense deliberations among the jurors, emphasizing the
+      claustrophobic environment and the weight of their decisions.'
+    failure:
+    - 'Battleship Potemkin (1925) — Director: Sergei Eisenstein: Although a classic
+      film, one might argue that the static camera during the Odessa Steps scene fails
+      to convey the chaos and dynamism of the massacre, which could have been more
+      effectively portrayed with more camera movement to heighten the emotional impact.'
