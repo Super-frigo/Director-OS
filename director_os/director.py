@@ -42,6 +42,11 @@ class Director:
         # Agent registry (ADR-009 Step 3) — lazy init on first use
         self.agents: dict[str, object] = {}
 
+    @property
+    def has_llm(self) -> bool:
+        """True if an LLM client is configured (for knowledge + translation)."""
+        return self._llm_client is not None
+
     def load_project(self, path: str | Path) -> Project:
         from .loader import load_project
         self.project = load_project(path)
@@ -341,3 +346,42 @@ class Director:
             "stats": all_stats,
             "state": self.state.value,
         }
+
+    def apply_proposals(self, proposals: list[dict]) -> dict[str, list]:
+        """Apply agent proposals back onto the loaded Project, closing the loop.
+
+        Each proposal is a dict with keys: module, field, action, value
+        (the shape produced by ``run_agent_cycle``). Supports actions
+        "set" / "append" / "remove"; "suggest" is recorded but skipped.
+
+        Returns a report dict:
+            {"applied": [...], "skipped": [...], "errors": [...]}
+        so callers (CLI, MCP, tests) can show what changed.
+
+        Resolves paths via director_os.proposal_applier, which handles
+        dataclass trees, dicts, and lists interchangeably.
+        """
+        if not self.project:
+            raise RuntimeError("No project loaded")
+        from .proposal_applier import apply_proposal, ApplyError
+
+        applied: list[str] = []
+        skipped: list[str] = []
+        errors: list[str] = []
+        for p in proposals:
+            module = p.get("module", "")
+            field = p.get("field", "")
+            action = p.get("action", "set")
+            value = p.get("value")
+            label = f"{action} {module}.{field}" if field else f"{action} {module}"
+            try:
+                ok = apply_proposal(
+                    self.project, module, field, action, value,
+                )
+                if ok:
+                    applied.append(label)
+                else:
+                    skipped.append(label)
+            except ApplyError as exc:
+                errors.append(f"{label}: {exc}")
+        return {"applied": applied, "skipped": skipped, "errors": errors}

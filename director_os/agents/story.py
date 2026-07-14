@@ -87,7 +87,7 @@ class StoryAgent(AgentBase):
         for beat_name, beat_type in beat_map.items():
             proposals.append(self._make_proposal(
                 module="story_beats",
-                field=f"append",
+                field="",
                 action="append",
                 value={"beat": beat_name, "type": beat_type},
                 rationale=f"Recommended {beat_type} beat for {genre} genre",

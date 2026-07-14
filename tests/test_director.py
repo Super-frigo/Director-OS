@@ -175,3 +175,129 @@ def test_director_initialises_library():
     d = Director()
     assert d.resolver is not None
     assert d.resolver.provider_count > 0  # resolver registered in __init__
+
+
+# ============================================================================
+# apply_proposals()
+# ============================================================================
+
+
+def test_apply_proposals_set_simple():
+    d = Director()
+    d.new_project(title="Test", premise="Old premise")
+    result = d.apply_proposals([
+        {"module": "story", "field": "premise", "action": "set", "value": "New premise"}
+    ])
+    assert d.project.story.premise == "New premise"
+    assert len(result["applied"]) == 1
+    assert len(result["errors"]) == 0
+
+
+def test_apply_proposals_set_nested():
+    d = Director()
+    d.new_project(title="Test")
+    result = d.apply_proposals([
+        {"module": "visual_language", "field": "style", "action": "set", "value": "noir"}
+    ])
+    assert d.project.visual_language.style == "noir"
+    assert result["applied"]
+
+
+def test_apply_proposals_set_deeply_nested():
+    d = Director()
+    d.new_project(title="Test")
+    # visual_language.color is a dict by default
+    result = d.apply_proposals([
+        {"module": "visual_language", "field": "color.palette", "action": "set", "value": "cold gray"}
+    ])
+    vc = d.project.visual_language.color
+    assert isinstance(vc, dict) and vc.get("palette") == "cold gray"
+
+
+def test_apply_proposals_append():
+    """StoryAgent proposes append to story_beats."""
+    d = Director()
+    d.new_project(title="Test")
+    result = d.apply_proposals([
+        {"module": "story_beats", "field": "", "action": "append",
+         "value": {"beat": "OPENING", "type": "OPENING", "emotion": "calm"}}
+    ])
+    assert len(d.project.story_beats) == 1
+    assert d.project.story_beats[0].beat == "OPENING"
+    assert result["applied"]
+
+
+def test_apply_proposals_suggest_is_skipped():
+    d = Director()
+    d.new_project(title="Test")
+    result = d.apply_proposals([
+        {"module": "story", "field": "premise", "action": "suggest", "value": "maybe this?"}
+    ])
+    assert d.project.story.premise == ""  # unchanged
+    assert len(result["skipped"]) == 1
+    assert result["skipped"][0] == "suggest story.premise"
+
+
+def test_apply_proposals_errors_reported():
+    d = Director()
+    d.new_project(title="Test")
+    result = d.apply_proposals([
+        {"module": "nonexistent", "field": "x", "action": "set", "value": 1}
+    ])
+    assert len(result["errors"]) >= 1
+    assert result["errors"][0].startswith("set nonexistent.x")
+
+
+def test_apply_proposals_no_project():
+    d = Director()
+    with pytest.raises(RuntimeError, match="No project"):
+        d.apply_proposals([])
+
+
+def test_apply_proposals_complex_path_with_index():
+    d = Director()
+    d.new_project(title="Test")
+    from director_os.models.project import Shot, Subject
+    d.project.shots = [Shot(shot_id="s1"), Shot(shot_id="s2")]
+    result = d.apply_proposals([
+        {"module": "shots", "field": "shots[0].framing", "action": "set", "value": "CU"}
+    ])
+    assert d.project.shots[0].framing == "CU"
+    assert d.project.shots[1].framing == ""  # unchanged
+    assert result["applied"]
+
+
+def test_apply_proposals_multiple_mixed():
+    d = Director()
+    d.new_project(title="Test", premise="old")
+    result = d.apply_proposals([
+        {"module": "story", "field": "premise", "action": "set", "value": "new"},
+        {"module": "story", "field": "theme", "action": "suggest", "value": "justice"},
+        {"module": "metadata", "field": "status", "action": "set", "value": "Draft"},
+    ])
+    assert d.project.story.premise == "new"
+    assert d.project.metadata.status == "Draft"
+    assert len(result["applied"]) == 2
+    assert len(result["skipped"]) == 1
+    assert len(result["errors"]) == 0
+
+
+# ============================================================================
+# run_agent_cycle + apply_proposals integration
+# ============================================================================
+
+
+def test_run_and_apply_cycle():
+    d = Director()
+    d.new_project(title="Test", premise="A noir detective story")
+    d.start_cycle("test")
+    d.fast_forward_to(DirectorState.PLAN)
+    cycle = d.run_agent_cycle()
+    # Story agent produces beat recommendations
+    proposals = cycle["proposals"]
+    assert len(proposals) > 0, "agent should produce proposals"
+    # Apply them back
+    result = d.apply_proposals(proposals)
+    assert result["applied"], "at least one proposal should be applied"
+    # The first story_beat append should have created beats
+    assert d.project.story_beats, "story_beats should be populated after apply"
