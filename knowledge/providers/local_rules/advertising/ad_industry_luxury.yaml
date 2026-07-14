@@ -1,0 +1,97 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: ad_industry_luxury
+    name: Ad Industry Convention — Luxury
+    author: Director OS
+  category: storytelling
+  knowledge:
+    concept: >-
+      Luxury advertising conventions emphasizing exclusivity, craftsmanship heritage,
+      and aspirational lifestyle. The product is positioned as art — its value is
+      implied through atmosphere, not stated through features. Visual language favors
+      restrained elegance, negative space, and cinematic beauty. The audience
+      should feel that the brand exists on a plane above ordinary commerce.
+    principles:
+    - Exclusivity is signaled through restraint, not abundance — less is more
+    - Heritage and craftsmanship are told through material detail, not narration
+    - The audience aspires to the lifestyle, not the product — the product is the key
+    - Sound and music are chosen for emotional elevation, not energy
+    - Casting favors classical beauty standards aligned with brand identity
+    - Brand logo reveal is understated — a whisper, not a shout
+    emotional_effects:
+    - aspiration
+    - prestige
+    - sophistication
+    - desire
+    techniques:
+    - Generous use of negative space and slow pacing to signal confidence
+    - Close-ups on craftsmanship details (stitching, engraving, material grain)
+    - Architectural or natural environments as compositional extensions of the product
+    - Desaturated or richly toned color grading — never saturated or flashy
+    - Single, sustained camera movements (slow dolly, crane) for cinematic gravity
+    - Minimal text overlay — let the image carry the message
+    - End on product alone or with a single human element in composed stillness
+    constraints:
+    - Very high production value threshold — low-quality execution actively harms brand
+    - Requires deep understanding of the specific luxury house codes and heritage
+    - Small audience targeting limits distribution strategy options
+    - Over-explaining the product contradicts the principle of exclusivity through mystery
+  applicability:
+    emotions:
+    - aspiration
+    - prestige
+    - sophistication
+    - elegance
+    genres:
+    - advertising
+    - luxury
+    - fashion
+    - fragrance
+    - watch
+    keywords:
+    - luxury
+    - heritage
+    - craftsmanship
+    - exclusivity
+    - prestige
+    - haute
+  engine_guidance:
+    when_to_use: >-
+      Project brief targets luxury brand in fashion, watches, jewelry, fragrance,
+      spirits, or hospitality. Any format where the brand identity is built on
+      exclusivity and heritage.
+    recommended_actions:
+    - Recommend restrained, slow camera movements (dolly, crane) for cinematic elegance
+    - Suggest desaturated or golden-warm color grading aligned with brand codes
+    - Prioritize negative space and compositional balance over visual density
+    - For AI video: describe the atmosphere, material quality, and environment
+      rather than product features
+    avoid:
+    - Fast cutting, aggressive motion, or high-energy pacing — contradicts luxury
+    - Product feature explanation — luxury implies understanding without explanation
+    - Saturated, neon, or high-contrast color palettes
+  relationships:
+    related:
+    - ad_industry_fashion
+    - ad_type_brand_story
+    - color_desaturated_gray
+    - color_yellow_warm
+    - lens_85mm_compression
+    - movement_crane
+    conflicts:
+    - ad_type_product_demonstration
+    - animation_motion_graphics_kinetic
+    - color_neon
+  examples:
+    successful:
+    - 'Chanel No. 5 campaigns — Various directors (Baz Luhrmann, Joe Wright, Martin
+      Scorsese): Each iteration reimagines the perfume as a cinematic romance, never
+      explaining the product but always evoking desire through visual poetry.'
+    - 'Cartier "L''Odyssée" (2012): A panther (brand motif) journeys through
+      global landscapes in a single, continuous CG shot — pure visual metaphor for
+      heritage, journey, and the brand''s global presence.'
+    failure:
+    - Luxury ads that feature price points, feature lists, or promotional offers
+      — these transform aspiration into transaction and damage brand positioning.
+  version: '1.0'

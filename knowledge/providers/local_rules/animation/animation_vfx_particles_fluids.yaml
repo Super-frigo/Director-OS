@@ -1,0 +1,91 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: animation_vfx_particles_fluids
+    name: VFX Animation — Particles, Fluids, Cloth Simulation
+    author: Director OS
+  category: visual_style
+  knowledge:
+    concept: Computer-generated visual effects simulation covering particle systems
+      (smoke, fire, sparks, debris), fluid dynamics (water, ocean, blood), and
+      soft-body cloth physics. These are physics-driven, not hand-keyed — the
+      artist sets parameters and initial conditions, and the solver produces
+      emergent, organic motion.
+    principles:
+    - Physics solvers produce emergent, non-repeatable motion that feels organic
+    - Simulation quality scales with particle count and solver iterations
+    - Art direction happens through forces, emitters, and constraints, not keyframes
+    - Layered compositing (render passes) is standard — sim elements are combined
+      with live-action or CG elements in post
+    emotional_effects:
+    - awe
+    - destruction
+    - wonder
+    - danger
+    techniques:
+    - Use particle emitters for fire, smoke, sparks, rain, snow, magical auras
+    - Fluid solvers for water splashes, ocean surfaces, blood, and viscous liquids
+    - Cloth simulation for fabric in wind, capes, flowing garments, destruction debris
+    - Pyro simulations (volumetric) for explosions, dust clouds, atmospheric haze
+    - Rigid-body fracture for glass breaking, wall demolition, vehicle impacts
+    - Combine multiple sim layers (smoke + fire + debris) for complex FX shots
+    - Use motion blur and depth of field to integrate simulated elements into live plates
+    constraints:
+    - Computationally expensive — simulation times range from minutes to hours per frame
+    - Requires specialized software (Houdini, Maya, Blender, EmberGen) and technical skill
+    - Hard to art-direct precisely — iterative refinement is often needed
+    - Simulation caching can produce very large files; pipeline management is critical
+  applicability:
+    emotions:
+    - awe
+    - danger
+    - wonder
+    - chaos
+    genres:
+    - action
+    - science_fiction
+    - fantasy
+    - disaster
+    keywords:
+    - particles
+    - fluid_simulation
+    - cloth_simulation
+    - pyro
+    - vfx
+    - destruction
+    - volumetric
+  engine_guidance:
+    when_to_use: >-
+      Project needs physics-driven visual effects such as fire, water, smoke,
+      fabric dynamics, or destruction debris that cannot be achieved with
+      traditional animation or live-action alone.
+    recommended_actions:
+    - Identify which natural phenomena are needed and select appropriate solver type
+    - For AI video generation, describe the visual result (not the technique): 'torrential
+      rain with splashing puddles' rather than 'fluid sim with 10M particles'
+    - Use layered descriptions: foreground particle action + midground fluid + background haze
+    - Specify interaction with characters or objects for grounding the effect
+    avoid:
+    - Using VFX terminology in prompts meant for AI video models — describe the visual
+      outcome instead
+    - Overloading a single shot with too many simultaneous simulations
+  relationships:
+    related:
+    - animation_3d_stylized_cel_shaded
+    - animation_twelve_principles
+    conflicts: []
+  examples:
+    successful:
+    - 'Interstellar (2014) — Director: Christopher Nolan: The black hole Gargantua
+      visualization combined volumetric accretion disk simulation with gravitational
+      lensing physics for scientifically grounded awe.'
+    - 'Blade Runner 2049 (2017) — Director: Denis Villeneuve: Dust-filled environments
+      and atmospheric particle work created a tactile, polluted-future aesthetic
+      grounded in real-world physics.'
+    - 'Avatar (2009) — Director: James Cameron: Water simulation for Pandora bioluminescent
+      pools and fluid creature motion set a new benchmark for CG fluid dynamics.'
+    failure:
+    - 'The Mummy (2017) — Director: Alex Kurtzman: Over-reliance on dense particle
+      simulations (sand storms, zero-gravity debris) created visual noise that
+      obscured character action and emotional stakes.'
+  version: '1.0'

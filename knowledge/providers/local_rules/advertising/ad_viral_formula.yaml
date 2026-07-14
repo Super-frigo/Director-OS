@@ -1,0 +1,93 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: ad_viral_formula
+    name: Ad Strategy — Viral Formula Analysis
+    author: Director OS
+  category: storytelling
+  knowledge:
+    concept: >-
+      Structured analysis of viral advertising formulas — repeatable creative
+      patterns that maximize organic sharing and social amplification. Viral ads
+      exploit specific cognitive triggers: surprise, emotional intensity, relatability,
+      social identity signaling, and the desire to share an experience. These are
+      not random — they follow identifiable structural patterns.
+    principles:
+    - The first 3 seconds must contain a hook — a visual or emotional disruption
+    - Emotional intensity (high or low) drives sharing more than informational content
+    - Unexpected twists or reveals create a "must-share" moment
+    - Social identity content (who I am / who I want to be) has higher share velocity
+    - Simplicity wins — single, clear idea outperforms complex narratives
+    - Music and rhythm are structural tools, not decoration — they set shareable tempo
+    emotional_effects:
+    - surprise
+    - delight
+    - shock
+    - identification
+    techniques:
+    - Pattern-reversal: establish expectation, then subvert it in the final seconds
+    - Emotional spike: compress the strongest emotion into the shareable moment (usually
+      the ending)
+    - Loop-friendly structure: the last shot connects back to the first for repeat viewing
+    - Relatability casting: use everyday people rather than actors for authenticity
+    - Challenge or participation mechanic: "tag someone who..." for algorithmic amplification
+    - Thumbnail-optimized opening frame: high contrast, clear subject, readable at small size
+    - Shorter is better: 6-15 seconds is the viral sweet spot for organic reach
+    constraints:
+    - Virality is not guaranteed — same formula, different results per execution
+    - Algorithm dependency means platform-specific optimization is required
+    - Shock value without substance generates views but not brand affinity
+    - Rapid trend cycles mean viral formulas have short effective lifespans
+  applicability:
+    emotions:
+    - surprise
+    - delight
+    - nostalgia
+    - humor
+    genres:
+    - advertising
+    - social_media
+    - viral
+    keywords:
+    - viral
+    - shareable
+    - hook
+    - twist
+    - surprise
+    - loop
+    - social
+  engine_guidance:
+    when_to_use: >-
+      Project brief targets social media distribution with organic reach objectives.
+      Any format where sharing and engagement are primary KPIs over brand building.
+    recommended_actions:
+    - Recommend 6-15 second format for maximum organic reach
+    - Structure for pattern-reversal: establish normal, subvert expectation
+    - Design the final frame as the shareable moment (the "still" that gets screenshotted)
+    - Suggest loop-friendly compositions where end connects to beginning
+    - Prioritize single, clear visual idea over narrative complexity
+    avoid:
+    - Over-explaining or narrating — viral content is experienced, not told
+    - Opening on branding — kills the organic discovery hook
+    - Formats longer than 30s for pure viral objectives
+  relationships:
+    related:
+    - format_short_form_duration
+    - platform_vertical_social
+    - ad_type_emotional_resonance
+    conflicts:
+    - ad_type_brand_story
+  examples:
+    successful:
+    - 'Old Spice "The Man Your Man Could Smell Like" (2010) — Director: Tom Kuntz:
+      Single-take, rapid-fire visual gag sequence with Isaiah Mustafa speaking directly
+      to camera subverted the category (masculine grooming) through absurdist humor
+      and direct address — 40M views in one week.'
+    - 'Dollar Shave Club "Our Blades Are F***ing Great" (2012): A founder speaking
+      directly to camera in a warehouse, using humor and anti-premium positioning,
+      turned a $4,500 production into 26M views and launched a billion-dollar brand.'
+    failure:
+    - Brands that attempt manufactured virality through controversy without
+      authentic creative merit — the backlash damages brand equity more than
+      the views help it.
+  version: '1.0'

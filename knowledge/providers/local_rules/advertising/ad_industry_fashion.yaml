@@ -1,0 +1,90 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: ad_industry_fashion
+    name: Ad Industry Convention — Fashion
+    author: Director OS
+  category: storytelling
+  knowledge:
+    concept: >-
+      Fashion advertising conventions prioritizing aesthetic beauty, texture detail,
+      model movement, and mood over narrative. The garment or collection is art
+      — lighting, color grading, and composition serve the look, not the story.
+      Editing rhythm is deliberately slow and editorial.
+    principles:
+    - The look IS the story — narrative is optional, aesthetic is mandatory
+    - Texture and fabric detail require close framing and controlled lighting
+    - Model movement should feel organic, not performative — walk, gesture, pose
+    - Color grading is a primary creative tool; looks are often monochrome or desaturated
+    - Sound design is minimal — ambient or abstract scores, rarely dialogue
+    - Location serves as backdrop texture, never as narrative setting
+    emotional_effects:
+    - desire
+    - elegance
+    - exclusivity
+    - aspiration
+    techniques:
+    - Use slow, deliberate camera movements — dolly in, gentle tracking
+    - Close-ups on fabric texture, stitching, and accessories with shallow depth of field
+    - Full-body shots with generous negative space for editorial composition
+    - Desaturated or high-contrast grading for a magazine-editorial feel
+    - Natural light or soft, diffused studio setups for flattering skin and fabric rendering
+    - Model direction: subtle, continuous movement rather than static posing
+    - Transition between looks via match-cut or in-camera whip rather than hard edits
+    constraints:
+    - Talent casting is critical — the model's physicality carries the entire visual
+    - Wardrobe changes within a single piece require careful continuity management
+    - Over-styling or excessive VFX can undermine the editorial authenticity
+  applicability:
+    emotions:
+    - desire
+    - elegance
+    - sophistication
+    - exclusivity
+    genres:
+    - advertising
+    - fashion
+    - editorial
+    - luxury
+    keywords:
+    - fashion
+    - editorial
+    - style
+    - lookbook
+    - garment
+    - texture
+  engine_guidance:
+    when_to_use: >-
+      Project brief targets fashion brand, collection launch, or editorial content.
+      Any format where clothing, accessories, or personal style is the central subject.
+    recommended_actions:
+    - Recommend shallow depth of field for fabric and texture emphasis
+    - Suggest desaturated or monochrome color grading for editorial mood
+    - Prioritize slow dolly and tracking movements over handheld
+    - For AI video: describe the model's movement quality and the garment's interaction
+      with light and motion
+    avoid:
+    - Fast cutting or aggressive motion — fashion demands contemplative pacing
+    - Heavy narrative structure — let the visuals speak
+    - Saturated, high-energy color palettes unless brand identity demands it
+  relationships:
+    related:
+    - ad_industry_luxury
+    - color_desaturated_gray
+    - color_monochrome
+    - movement_dolly_in
+    - lens_85mm_compression
+    conflicts:
+    - ad_type_product_demonstration
+  examples:
+    successful:
+    - 'Dior "Secret Garden" campaigns — Various directors: Shot at Versailles with
+      slow, ethereal model movement through baroque architecture, establishing Dior
+      as heritage-meets-dream through pure visual luxury.'
+    - 'Nike "Write the Future" (2010) — Director: Alejandro González Iñárritu:
+      While sports-focused, the fashion-forward treatment of footballers as style
+      icons in hyperreal environments bridged fashion aesthetics with athletic storytelling.'
+    failure:
+    - Heavily narrated fashion films that explain the collection verbally rather than
+      letting the garments speak visually — the fashion audience disengages.
+  version: '1.0'

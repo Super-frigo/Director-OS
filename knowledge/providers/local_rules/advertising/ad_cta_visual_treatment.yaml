@@ -1,0 +1,97 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: ad_cta_visual_treatment
+    name: Ad Strategy — Call-to-Action Visual Treatment
+    author: Director OS
+  category: storytelling
+  knowledge:
+    concept: >-
+      Visual treatment strategies for call-to-action (CTA) moments in advertising.
+      The CTA is the conversion moment — the frame that drives the viewer from
+      passive watching to active engagement (click, visit, buy, share). How the CTA
+      is visually composed determines its effectiveness: integration vs. interruption,
+      subtlety vs. urgency, motion vs. stillness.
+    principles:
+    - CTA visual treatment must match the preceding emotional tone — a jarring CTA
+      destroys the brand moment
+    - The CTA frame is the last impression — it carries disproportionate weight on
+      brand recall and action
+    - Motion CTAs (animated elements, transitions into the action) outperform static
+      overlays in attention capture
+    - Duration of CTA visibility matters: too short = missed, too long = annoying
+    - Visual hierarchy: the CTA element must be the single most prominent element in
+      its frame without competing with the creative content
+    emotional_effects:
+    - urgency
+    - curiosity
+    - trust
+    - excitement
+    techniques:
+    - Integrated CTA: the product or action naturally appears within the final beat
+      of the story — feels organic, not like an ad
+    - Card-style CTA: a clean, branded card slides in with the action button — works
+      for performance-focused formats
+    - End-card composition: brand logo + tagline + action button on a neutral background
+      — standard for 15s/30s pre-roll
+    - Animated CTA: subtle pulse, glow, or motion on the action element draws the eye
+    - Narrated CTA: voiceover delivers the action instruction while visual shows the
+      brand — dual-channel reinforcement
+    - QR code integration: static code in a composed frame with surrounding context
+    - Minimize text — one verb + one destination (e.g. "Shop Now", "Learn More")
+    constraints:
+    - Different platforms have different CTA placement rules and safe zones
+    - Mobile screens limit readable text to ~5 words maximum on a CTA
+    - Brand guidelines often prescribe exact CTA placement, color, and animation
+  applicability:
+    emotions:
+    - urgency
+    - curiosity
+    - trust
+    - excitement
+    genres:
+    - advertising
+    - commercial
+    - social_media
+    keywords:
+    - cta
+    - call_to_action
+    - conversion
+    - end_card
+    - click
+    - shop
+    - action
+  engine_guidance:
+    when_to_use: >-
+      Project needs a conversion-oriented final frame for any ad format. Essential
+      for performance marketing, social ads, and pre-roll placements.
+    recommended_actions:
+    - Design the CTA as an organic extension of the final creative beat
+    - Use motion (subtle pulse or transition) to draw attention without disruption
+    - Limit CTA text to one verb + one destination for mobile readability
+    - For AI video: describe the CTA as a composed final frame with brand mark
+      and action element
+    avoid:
+    - Hard-cutting from emotional storytelling to a sales-frame CTA — the tonal
+      whiplash undermines both the story and the conversion
+    - Cluttered CTAs with multiple action options — one action per frame
+    - CTAs that cover more than 15% of the frame area
+  relationships:
+    related:
+    - format_short_form_duration
+    - platform_vertical_social
+    - ad_type_product_demonstration
+    conflicts: []
+  examples:
+    successful:
+    - 'Nike "Just Do It" end cards: The swoosh logo on black with "Just Do It"
+      text is the industry benchmark for a CTA that IS the brand — no additional
+      action button needed because the tagline IS the call to action.'
+    - 'Spotify "Wrapped" CTA integration: The data visualization naturally concludes
+      with a "Share Your Wrapped" moment — the CTA is the experience itself, not
+      an interruption layered on top.'
+    failure:
+    - Pre-roll ads that build emotional storytelling for 10 seconds then hard-cut
+      to a fluorescent "BUY NOW" card — the tonal rupture abandons every emotion
+      the creative just built.
+  version: '1.0'

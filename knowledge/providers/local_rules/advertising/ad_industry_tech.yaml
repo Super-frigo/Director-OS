@@ -1,0 +1,90 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: ad_industry_tech
+    name: Ad Industry Convention — Technology
+    author: Director OS
+  category: storytelling
+  knowledge:
+    concept: >-
+      Technology advertising conventions emphasizing innovation, human benefit,
+      clean minimalism, and future-vision aesthetics. Products are positioned as
+      enablers of human potential — the device disappears into the experience.
+      Visual language favors clean surfaces, data visualization, and seamless
+      integration of digital and physical worlds.
+    principles:
+    - Product enables human moment — technology is the invisible facilitator
+    - Clean, minimalist visual language reinforces sophistication and reliability
+    - UI/UX screen time should be brief and contextual, never the hero
+    - Future-forward aesthetics without dystopia — optimistic technology
+    - Casting diversity signals universal applicability of the product
+    - Sound design often uses ambient or musical beds rather than voiceover
+    emotional_effects:
+    - wonder
+    - empowerment
+    - possibility
+    - connection
+    techniques:
+    - Open on a human moment (connection, creation, discovery) before revealing tech
+    - Use clean, bright lighting — white or soft-neutral environments for product shots
+    - Show product in hand or in use, not isolated on a pedestal
+    - Brief, fluid UI animations with touch gestures to demonstrate interaction
+    - Close-ups on materials (glass, metal, fabric) for premium feel
+    - Data visualization or abstract motion graphics for feature explanation
+    - End on human expression — smile, nod, wide eyes — not the product
+    constraints:
+    - Screen-based products are hard to film compellingly — reflections and glare
+    - Feature-heavy messaging clutters the emotional narrative
+    - Tech advertising fatigue — audiences are skeptical of utopian tech promises
+    - Rapid product cycles mean creative assets have short shelf lives
+  applicability:
+    emotions:
+    - wonder
+    - empowerment
+    - connection
+    - possibility
+    genres:
+    - advertising
+    - technology
+    - commercial
+    keywords:
+    - technology
+    - innovation
+    - device
+    - digital
+    - app
+    - smart
+    - future
+  engine_guidance:
+    when_to_use: >-
+      Project brief targets tech brand, product launch, or app promotion where
+      the product is a digital device, software, or smart service.
+    recommended_actions:
+    - Lead with human benefit, reveal product mid-piece
+    - Use bright, clean environments with high-key lighting
+    - Recommend motion graphics or kinetic typography for feature demonstrations
+    - For AI video: describe the human interaction moment, not the product specs
+    avoid:
+    - Opening on the product or feature list — starts a sales pitch, not a story
+    - Dark, moody aesthetics unless brand identity is specifically premium/dark
+    - Extended screen UI time — audiences disengage from screen-on-screen content
+  relationships:
+    related:
+    - ad_type_product_demonstration
+    - animation_motion_graphics_kinetic
+    - light_high_key_bright
+    conflicts:
+    - ad_industry_luxury
+    - color_desaturated_gray
+  examples:
+    successful:
+    - 'Apple "1984" (1984) — Director: Ridley Scott: A single, dramatized human moment
+      of rebellion established Apple as the antithesis of corporate conformity —
+      the product was never shown, only hinted at in the closing tagline.'
+    - 'Apple "Welcome Home" (2018) — Director: Spike Jonze: An ordinary apartment
+      transforms around a woman listening to HomePod, using practical set distortion
+      and continuous motion to visualize how music reshapes physical space.'
+    failure:
+    - Tech ads that lead with feature lists or spec comparisons fail to create
+      emotional connection — they become product catalogs, not brand stories.
+  version: '1.0'

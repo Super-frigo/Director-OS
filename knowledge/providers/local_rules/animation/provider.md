@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Provides structured knowledge about animation styles and techniques for animation-class projects: 2D hand-drawn, 3D cel-shaded (三渲二), stop-motion, motion graphics, the twelve principles of animation, and frame rate conventions.
+Provides structured knowledge about animation styles and techniques for animation-class projects: 2D hand-drawn, 3D cel-shaded (三渲二), stop-motion, motion graphics, the twelve principles of animation, VFX simulation (particles, fluids, cloth), and frame rate conventions.
 
 ## Resolution Strategy
 
@@ -14,14 +14,13 @@ Keyword matching via jieba tokenization (ADR-007). Category: `visual_style` — 
 
 ## When LLM Extension Is Needed
 
-- VFX animation (particles, fluids, cloth simulation) — planned but not yet covered
 - Hybrid techniques combining multiple animation styles
 - Project-specific animation pipeline decisions beyond style guidance
 
 ## Entry Count
 
-5 YAML entries (2D hand-drawn, 3D cel-shaded, stop-motion, motion graphics, twelve principles) + 1 REF reference (frame rate quick reference, excluded from Engine retrieval).
+6 YAML entries (2D hand-drawn, 3D cel-shaded, stop-motion, motion graphics, twelve principles, VFX particles/fluids/cloth) + 1 REF reference (frame rate quick reference, excluded from Engine retrieval).
 
 ## Not Yet Covered
 
-- Visual Effects Animation (particles, fluids, cloth simulation)
+- None — all planned domains are populated.

@@ -1,0 +1,86 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: ad_industry_automotive
+    name: Ad Industry Convention — Automotive
+    author: Director OS
+  category: storytelling
+  knowledge:
+    concept: >-
+      Automotive advertising conventions emphasizing motion, engineering precision,
+      landscape scale, and aspirational lifestyle. Cars are filmed in dynamic motion
+      through dramatic environments; speed, control, and terrain are visual metaphors
+      for the driver experience.
+    principles:
+    - Car is the hero subject — every shot exists to showcase the vehicle
+    - Motion is primary: tracking, aerial, and tunnel shots communicate speed and control
+    - Environment scales the car's capability — desert for endurance, mountain for power, city for agility
+    - Sound design carries half the commercial — engine notes, tire on surface, wind
+    - Product reveal is a cinematic event, often the visual climax of the piece
+    emotional_effects:
+    - aspiration
+    - power
+    - freedom
+    - precision
+    techniques:
+    - Open on landscape to establish scale before the car enters frame
+    - Use tracking shots at vehicle speed for visceral motion feel
+    - Low angles and ground-level cameras emphasize stance and road presence
+    - Drone/aerial for dramatic mountain switchback or desert highway sequences
+    - Interior shots use clean, minimal lighting to showcase dashboard design
+    - Close on design details (grille, headlights, wheel) for craftsmanship storytelling
+    - End on a hero static shot or driving-into-horizon silhouette
+    constraints:
+    - Car cinematography requires specialized rigging (suction mounts, chase cars, process trailers)
+    - Reflection management on curved car surfaces demands careful lighting control
+    - Short formats (15s) limit storytelling to a single visual idea — usually one driving sequence
+  applicability:
+    emotions:
+    - aspiration
+    - power
+    - freedom
+    - prestige
+    genres:
+    - advertising
+    - automotive
+    - commercial
+    keywords:
+    - automotive
+    - car
+    - vehicle
+    - driving
+    - speed
+    - precision
+  engine_guidance:
+    when_to_use: >-
+      Project brief targets automotive brand with motion, performance, or lifestyle
+      positioning. Any format where a vehicle is the central subject.
+    recommended_actions:
+    - Prioritize wide/establishing shots showing the car in a dramatic environment
+    - Use tracking or follow movement for driving sequences
+    - Recommend golden-hour or twilight lighting for premium automotive mood
+    - For AI video: describe the car's motion and environment interaction precisely
+    avoid:
+    - Static showroom shots without environmental context
+    - Dialogue-heavy approaches — automotive ads are predominantly visual
+  relationships:
+    related:
+    - ad_type_brand_story
+    - ad_type_product_demonstration
+    - light_golden_hour
+    - movement_tracking
+    - movement_follow
+    conflicts: []
+  examples:
+    successful:
+    - 'BMW "The Hire" series (2001-2002) — Various directors: Clive Owen-driven short
+      films used Hollywood directors (John Woo, Guy Ritchie, Ang Lee) to position
+      BMW through cinematic driving action, establishing the benchmark for branded
+      automotive content.'
+    - 'Volvo "Epic Split" (2013) — Director: Andreas Nilsson: Jean-Claude Van Damme
+      performing a split between two trucks demonstrated Volvo Dynamic Steering
+      through a single, unbroken, jaw-dropping stunt — proof-of-concept as spectacle.'
+    failure:
+    - Generic showroom walkarounds with narration fail to differentiate — the car
+      becomes a product listing rather than an aspiration vehicle.
+  version: '1.0'

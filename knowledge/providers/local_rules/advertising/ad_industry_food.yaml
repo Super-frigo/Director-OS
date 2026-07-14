@@ -1,0 +1,90 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: ad_industry_food
+    name: Ad Industry Convention — Food & Beverage
+    author: Director OS
+  category: storytelling
+  knowledge:
+    concept: >-
+      Food and beverage advertising conventions emphasizing sensory stimulation,
+      appetite appeal, and social context. The product must look irresistible —
+      lighting, color, and motion are engineered to trigger hunger and thirst.
+      Sound design (sizzle, pour, crunch) is equally critical as visuals.
+    principles:
+    - Appetite appeal is the primary objective — every creative decision serves this
+    - Close-up product hero shots with shallow depth of field isolate the food
+    - Warm color temperature (golden, amber) enhances natural food colors
+    - Motion highlights texture and freshness — steam, pour, drip, sizzle, melt
+    - Social context (sharing, gathering) adds emotional layer beyond the product
+    - Sound design carries up to 50% of the sensory experience
+    emotional_effects:
+    - craving
+    - comfort
+    - joy
+    - togetherness
+    techniques:
+    - Use macro or close-up shots of product with condensation, steam, or gloss
+    - Warm backlighting through liquids (beer, wine, juice) reveals color and clarity
+    - Slow-motion pour, drizzle, or sprinkle for texture emphasis
+    - Sizzle and crunch sounds on every bite, tear, or pour action
+    - Golden-hour or warm-studio lighting to enhance appetite appeal
+    - Human hands interacting with product for scale, relatability, and craving trigger
+    - Social gathering shots for emotional positioning (family, friends, date night)
+    constraints:
+    - Food styling is a specialized skill — unstyled real food photographs poorly
+    - Time constraints: hot food cools, ice melts, sauces congeal under studio lights
+    - Health-conscious audiences may respond negatively to indulgent positioning
+  applicability:
+    emotions:
+    - craving
+    - comfort
+    - joy
+    - nostalgia
+    genres:
+    - advertising
+    - food
+    - beverage
+    - commercial
+    keywords:
+    - food
+    - beverage
+    - appetite
+    - recipe
+    - cooking
+    - dining
+    - taste
+  engine_guidance:
+    when_to_use: >-
+      Project brief targets food, beverage, restaurant, or grocery brand. Any
+      format where the product is edible or drinkable.
+    recommended_actions:
+    - Recommend warm, golden-hour lighting for maximum appetite appeal
+    - Prioritize close-up and macro shots with shallow depth of field
+    - Suggest slow-motion for pour, drip, sizzle, and steam moments
+    - For AI video: describe steam, sizzle, glossy surfaces, and warm color
+    avoid:
+    - Cold or blue-toned lighting that suppresses appetite signals
+    - Static, lifeless product shots without motion or interaction
+    - Over-processing that makes food look artificial or unappetizing
+  relationships:
+    related:
+    - ad_type_product_demonstration
+    - ad_type_emotional_resonance
+    - light_golden_hour
+    - color_yellow_warm
+    conflicts:
+    - color_blue_cold
+    - color_green_sick
+  examples:
+    successful:
+    - 'KFC "Finger Lickin'' Good" campaigns: Close-up slow-motion shots of crispy
+      chicken with audible crunch sounds created immediate craving response through
+      pure sensory stimulation.'
+    - 'Coca-Cola polar bear campaigns: Combined cold-product visual language (ice,
+      condensation, arctic blue) with warm emotional storytelling (family sharing,
+      holiday togetherness) to position a cold beverage as a source of warmth.'
+    failure:
+    - Food ads shot with flat, overhead lighting that removes all texture and dimension
+      from the product — the food looks clinical rather than appetizing.
+  version: '1.0'

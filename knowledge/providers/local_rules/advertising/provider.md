@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Provides structured knowledge about advertising types, formats, and creative conventions: brand story, product demonstration, emotional resonance, social cause/PSA, duration structures (15s/30s/60s), and platform formats (vertical social vs. horizontal).
+Provides structured knowledge about advertising types, formats, industry conventions, and creative strategy: brand story, product demonstration, emotional resonance, social cause/PSA, industry verticals (automotive, fashion, tech, food, luxury), viral formula analysis, CTA visual treatment, duration structures (15s/30s/60s), and platform formats (vertical social vs. horizontal).
 
 ## Resolution Strategy
 
@@ -14,16 +14,13 @@ Keyword matching via jieba tokenization (ADR-007). Category: `storytelling` — 
 
 ## When LLM Extension Is Needed
 
-- Industry conventions (automotive, fashion, tech, food, luxury) — planned but not yet covered
-- Viral formula analysis
-- Call-to-action visual treatment refinement
+- Trending platform-specific creative conventions (TikTok, YouTube Shorts, Instagram Reels format evolution)
+- Category-specific sub-vertical conventions beyond the five major industries covered
 
 ## Entry Count
 
-6 YAML entries: 4 ad types (brand story, product demonstration, emotional resonance, social cause/PSA) + 2 format/platform entries (short-form duration structure, vertical social).
+14 YAML entries: 4 ad types (brand story, product demonstration, emotional resonance, social cause/PSA) + 5 industry conventions (automotive, fashion, tech, food, luxury) + 2 strategy entries (viral formula, CTA visual treatment) + 2 format/platform entries (short-form duration structure, vertical social) + 1 REF reference.
 
 ## Not Yet Covered
 
-- Industry Conventions (automotive, fashion, tech, food, luxury)
-- Viral Formula Analysis
-- CTA visual treatment refinement
+- Trending platform-specific creative conventions (fast-moving, better suited to LLM provider)
