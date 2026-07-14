@@ -79,6 +79,10 @@ def main() -> None:
                 if pkg.validation.get("warnings"):
                     print(f"\n  Warnings: {pkg.validation['warnings']}")
 
+                # Translation quality check: warn if Chinese remains in the prompt
+                _warn_untranslated(pkg.instructions.get("prompt", ""),
+                                   has_llm=director.has_llm)
+
         except FileNotFoundError as e:
             print(f"Error: {e}", file=sys.stderr)
             sys.exit(1)
@@ -123,6 +127,34 @@ def main() -> None:
     elif args.command == "mcp":
         from .mcp_server import main as mcp_main
         mcp_main()
+
+
+def _warn_untranslated(prompt: str, has_llm: bool) -> None:
+    """Warn the user if Chinese characters remain in the compiled prompt.
+
+    AI video platforms (Seedance/Veo/Kling) perform better with English
+    prompts. If the offline glossary left CJK text behind, point the user
+    at the fix (configure an LLM for fluent translation).
+    """
+    from .compilers.offline_glossary import has_cjk
+
+    if not has_cjk(prompt):
+        return
+
+    import re
+    cjk_chars = len(re.findall(r'[\u4e00-\u9fff]', prompt))
+    total_chars = len(prompt)
+    ratio = cjk_chars / total_chars if total_chars else 0
+
+    if has_llm:
+        print(f"\n  ⚠ Note: {cjk_chars} Chinese characters remain in the prompt "
+              f"({ratio:.0%}). The LLM may have skipped some fields — consider "
+              f"re-running or reviewing the project source.")
+    else:
+        print(f"\n  ⚠ Note: {cjk_chars} Chinese characters remain in the prompt "
+              f"({ratio:.0%}). AI video platforms work best with English. "
+              f"Configure OPENAI_API_KEY for fluent translation, or expand "
+              f"the offline glossary (director_os/compilers/offline_glossary.py).")
 
 
 if __name__ == "__main__":

@@ -138,15 +138,40 @@ class Translator:
         return self._client is not None
 
     def translate(self, text: str) -> str:
-        """Translate text to English. Returns original text if no client or on error."""
+        """Translate text to English.
+
+        Resolution order:
+            1. Empty/pure-ASCII text → returned unchanged.
+            2. LLM client configured → fluent translation, cached.
+            3. No client → offline glossary fallback (literal, term-by-term).
+
+        Returns original text only if it contains no CJK, or on LLM error
+        with no glossary coverage.
+        """
         if not text or not text.strip():
-            return text
-        if not self._client:
             return text
 
         # CJK gate: no Chinese characters -> passthrough (no cache, no LLM)
         if not _HAS_CJK.search(text):
             return text
+
+        # Path 2: LLM translation (cached for determinism)
+        if self._client:
+            cached = self._cache.get(text)
+            if cached is not None:
+                return cached
+            try:
+                result = self._client.chat(self.SYSTEM_PROMPT, text)
+                result = result.strip().strip('"').strip("'")
+                if result:
+                    self._cache.put(text, result)
+                    return result
+            except Exception:
+                pass  # fall through to offline glossary
+
+        # Path 3: offline glossary fallback (no LLM required)
+        from .offline_glossary import translate_offline
+        return translate_offline(text)
 
         # Deterministic: check cache
         cached = self._cache.get(text)

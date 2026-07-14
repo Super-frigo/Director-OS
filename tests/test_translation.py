@@ -10,6 +10,11 @@ from director_os.compilers.translation import (
     translate_to_english,
     set_translator,
 )
+from director_os.compilers.offline_glossary import (
+    translate_offline,
+    has_cjk,
+    coverage,
+)
 
 
 # ============================================================================
@@ -103,13 +108,20 @@ def test_cjk_gate_symbols_only_passthrough(tmp_path):
 
 
 # ============================================================================
-# Translator - no client
+# Translator - no client (offline glossary fallback)
 # ============================================================================
 
-def test_translator_no_client_returns_original():
+def test_translator_no_client_english_passthrough():
     t = Translator(client=None)
-    result = t.translate("some text")
-    assert result == "some text"
+    assert t.translate("some English text") == "some English text"
+
+
+def test_translator_no_client_chinese_uses_glossary():
+    """Without LLM, Chinese text is translated via offline glossary."""
+    t = Translator(client=None)
+    result = t.translate("寒冷潮\u6e7f的夜晚")  # 寒冷潮湿的夜晚
+    assert "cold" in result.lower()
+    assert "damp" in result.lower()
 
 
 def test_translator_no_client_empty_string():
@@ -147,14 +159,16 @@ def test_translator_caches_and_reuses(tmp_path):
     mock_client.chat.assert_called_once()
 
 
-def test_translator_client_error_returns_original(tmp_path):
+def test_translator_client_error_falls_back_to_glossary(tmp_path):
+    """LLM error -> fall back to offline glossary, not raw Chinese."""
     mock_client = MagicMock()
     mock_client.chat.side_effect = RuntimeError("API down")
     mock_client.model_name = "test-model"
 
     t = Translator(client=mock_client, cache_dir=tmp_path)
-    result = t.translate("\u4e00\u4e9b\u4e2d\u6587\u6587\u672c")
-    assert result == "\u4e00\u4e9b\u4e2d\u6587\u6587\u672c"
+    result = t.translate("\u538b\u6291\u7684\u591c\u665a")  # 压抑的夜晚
+    # Glossary translation, not raw Chinese
+    assert "oppressive" in result.lower()
 
 
 def test_translator_has_client():
@@ -239,6 +253,7 @@ def test_seedance_compiler_translates_free_text(tmp_path):
 
 
 def test_seedance_compiler_no_translator_preserves_original():
+    """Without LLM, glossary translates Chinese to English equivalents."""
     from director_os.compilers.seedance.compiler import SeedanceCompiler
 
     compiler = SeedanceCompiler(translator=None)
@@ -251,4 +266,69 @@ def test_seedance_compiler_no_translator_preserves_original():
 
     result = compiler.compile(intent)
     prompt = result["execution_package"]["instructions"]["prompt"]
-    assert "\u4fa6\u63a2" in prompt
+    # Glossary fallback: Chinese should be at least partially translated
+    assert "detective" in prompt.lower() or "oppressive" in prompt.lower() or \
+           "night" in prompt.lower(), f"prompt should contain glossary translations: {prompt[:100]}"
+
+
+# ============================================================================
+# Offline Glossary
+# ============================================================================
+
+
+def test_has_cjk_positive():
+    assert has_cjk("\u4e2d\u6587\u6587\u672c") is True
+
+
+def test_has_cjk_negative():
+    assert has_cjk("English text only") is False
+
+
+def test_has_cjk_empty():
+    assert has_cjk("") is False
+
+
+def test_translate_offline_full_coverage():
+    """Known glossary terms should all be translated."""
+    result = translate_offline("寒冷 潮湿 压抑")
+    assert "cold" in result
+    assert "damp" in result
+    assert "oppressive" in result
+
+
+def test_translate_offline_longest_match():
+    """Multi-word phrases win over individual characters."""
+    result = translate_offline("粗粝的胶片颗粒感,哑光")
+    assert "coarse film grain" in result
+    assert "matte" in result
+
+
+def test_translate_offline_unknown_chinese_passthrough():
+    """Unrecognized CJK should be left as-is."""
+    result = translate_offline("Hello \u5668\u5177\u7684\u540d\u79f0 World")
+    assert "Hello" in result
+    assert "World" in result
+
+
+def test_translate_offline_no_cjk():
+    assert translate_offline("ARRI Alexa65") == "ARRI Alexa65"
+
+
+def test_translate_offline_empty():
+    assert translate_offline("") == ""
+
+
+def test_coverage_full():
+    c = coverage("寒冷潮湿的夜晚")
+    assert c > 0.9
+
+
+def test_coverage_zero():
+    c = coverage("no cjk here")
+    assert c == 1.0
+
+
+def test_coverage_partial():
+    # Mix known glossary terms + unrecognized CJK
+    c = coverage("the \u538b\u6291 \u73ab\u7470 \u82b1\u56ed at night")
+    assert 0.0 < c < 1.0
