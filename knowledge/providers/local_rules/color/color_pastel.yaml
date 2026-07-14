@@ -1,0 +1,63 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: color_pastel
+    name: Pastel — Soft & Dreamy
+    author: Director OS
+  category: visual_style
+  knowledge:
+    concept: A palette of soft, low-saturation, light-valued hues — pinks, mints,
+      lavenders, pale yellows. The color of innocence, nostalgia, fairy tales, and
+      dreamlike serenity. Wes Anderson's signature palette.
+    principles:
+    - Low saturation and high value create gentle, non-threatening tone
+    - Soft hue contrasts feel harmonious rather than dramatic
+    - Strongly associated with childhood, memory, and idealized worlds
+    - Pastel palettes flatten emotional intensity toward warmth and safety
+    emotional_effects:
+    - innocence
+    - nostalgia
+    - serenity
+    - whimsy
+    techniques:
+    - Pastel production design — walls, costumes, props in soft hues
+    - Soft, lifted shadows in color grade for gentle tonal range
+    - Pastel practicals (neon, gels) for soft colored accents
+    - Combine with HIGH_KEY lighting for maximum softness
+    constraints:
+    - Can feel saccharine or childish without grounding elements
+    - Low contrast can flatten image — needs texture elsewhere
+    - Not suitable for intense drama, thriller, or horror
+  applicability:
+    emotions:
+    - innocence
+    - nostalgia
+    - serenity
+    - whimsy
+    genres:
+    - comedy
+    - romance
+    - coming_of_age
+    - animation
+    keywords:
+    - pastel
+    - soft
+    - dreamy
+    - whimsical
+  engine_guidance:
+    when_to_use: Scene needs innocence, nostalgia, fairy-tale quality, or whimsical
+      lightness
+    recommended_actions:
+    - Use pastel production design for idealized or memory worlds
+    - Combine with soft lighting for maximum gentleness
+    avoid:
+    - Intense drama, thriller, or horror
+    - Scenes requiring gritty realism
+  relationships:
+    related:
+    - color_yellow_warm
+    - color_earth_tone
+    conflicts:
+    - color_neon
+    - color_red_passion
+  version: '1.0'

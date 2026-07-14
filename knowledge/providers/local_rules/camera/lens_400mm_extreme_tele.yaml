@@ -1,0 +1,65 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: lens_400mm_extreme_tele
+    name: 400mm — Extreme Telephoto
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: Extreme telephoto focal length producing total spatial compression. Depth
+      is annihilated; the frame becomes a flat graphic plane. Used for surveillance,
+      wildlife, sports, and moments where the camera must remain a distant, hidden
+      observer.
+    principles:
+    - Complete perspective flattening — foreground and infinity appear on the same
+      plane
+    - Depth of field is measured in centimeters even at moderate apertures
+    - Camera operates at extreme distance — inherently covert or observational
+    - Atmospheric haze, heat shimmer, and dust are visible image elements
+    emotional_effects:
+    - voyeurism
+    - dread
+    - isolation
+    - grandeur
+    techniques:
+    - Compress distant subject against distant background for flat graphic effect
+    - Use atmospheric haze as a visible textural element
+    - Exploit tiny DOF to isolate subject from busy surroundings
+    - Track subject precisely with focus puller for dynamic isolation
+    constraints:
+    - Requires very large working distance — outdoor or large-stage locations only
+    - Heavy, large, and demanding — requires robust tripod and focus puller
+    - Atmospheric conditions (heat shimmer, haze) limit usable sharpness
+  applicability:
+    emotions:
+    - voyeurism
+    - dread
+    - isolation
+    - grandeur
+    genres:
+    - war
+    - thriller
+    - sports
+    - documentary
+    keywords:
+    - extreme_telephoto
+    - surveillance
+    - flattening
+    - distance
+  engine_guidance:
+    when_to_use: Scene needs covert surveillance, extreme distance observation, or
+      total graphic flattening
+    recommended_actions:
+    - Use for sniper POV, wildlife, or distant surveillance beats
+    - Exploit atmospheric haze for layered textural depth
+    avoid:
+    - Scenes where spatial depth perception is critical for the narrative (e.g., tracking distance between characters)
+    - Handheld or unstabilized setups
+  relationships:
+    related:
+    - lens_200mm_long_tele
+    - lens_135mm_tele
+    conflicts:
+    - lens_14mm_ultrawide
+    - lens_24mm_wide
+  version: '1.0'

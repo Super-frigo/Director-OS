@@ -1,0 +1,85 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: framing_cu
+    name: Close-Up (CU)
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: Framing showing the full face from forehead to chin. The primary shot
+      for emotional transmission — the audience reads every micro-expression. The
+      narrative core of dialogue and reaction coverage.
+    principles:
+    - Full face fills frame — performance is the entire content
+    - Direct line to audience empathy and emotional understanding
+    - The default shot for emotional beats and reaction shots
+    - Context is removed — pure focus on inner state
+    emotional_effects:
+    - intimacy
+    - empathy
+    - tension
+    - honesty
+    techniques:
+    - CU for reaction shots in dialogue exchanges
+    - CU for emotional revelations and confession beats
+    - Match with 85mm lens for flattering compression
+    - Slow dolly in on CU for building emotional pressure
+    - Rack focus to shift audience attention between subjects in the frame.
+    - Use a shallow depth of field to isolate the subject from the background, emphasizing
+      their emotional state.
+    constraints:
+    - Taxing in long unbroken stretches — audience needs wider relief
+    - Demands precise performance and focus
+    - Overuse in dialogue creates claustrophobic rhythm
+    - Requires a controlled environment to minimize distractions and focus on the
+      actor's performance.
+    - Demands skilled lighting to ensure the actor's face is well-lit and expressive.
+  applicability:
+    emotions:
+    - intimacy
+    - empathy
+    - tension
+    - honesty
+    genres:
+    - drama
+    - romance
+    - thriller
+    - all
+    keywords:
+    - close_up
+    - cu
+    - face
+    - emotion
+  engine_guidance:
+    when_to_use: Scene needs direct emotional transmission, reaction coverage, or
+      character intimacy
+    recommended_actions:
+    - Default shot for emotional beats and reaction shots in dialogue
+    - Pair with 85mm lens for flattering portraiture
+    avoid:
+    - Establishing shots or spatial orientation
+    - Action sequences requiring spatial context
+  relationships:
+    related:
+    - framing_ecu
+    - framing_ms
+    - shot_size_reference
+    conflicts:
+    - framing_ls
+    - framing_els
+  version: '1.0'
+  examples:
+    successful:
+    - 'Citizen Kane (1941) — Orson Welles: The breakfast scene where Kane and his
+      wife Emily are framed in close-ups, showcasing their emotional disconnect and
+      the breakdown of their marriage.'
+    - 'The Godfather (1972) — Francis Ford Coppola: The scene where Michael Corleone
+      (Al Pacino) confronts the corrupt police captain McCluskey, with the close-up
+      highlighting Michael''s transformation into the head of the family.'
+    - 'Good Will Hunting (1997) — Gus Van Sant: The therapy sessions between Will
+      Hunting (Matt Damon) and Sean Maguire (Robin Williams) are often shot in close-ups,
+      emphasizing the emotional journey and the development of their relationship.'
+    failure:
+    - 'The Room (2003) — Tommy Wiseau: The film notoriously misuses close-ups, often
+      cutting to them at random moments, breaking the narrative flow and failing to
+      convey any emotional depth.'

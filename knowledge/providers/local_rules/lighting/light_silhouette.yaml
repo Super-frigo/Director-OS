@@ -1,0 +1,62 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: light_silhouette
+    name: Silhouette Lighting
+    author: Director OS
+  category: lighting
+  knowledge:
+    concept: Subject is rendered as a dark shape against a bright background. All
+      key light comes from behind; no fill on the subject. The most extreme form of
+      backlight — identity is concealed, only form and gesture remain.
+    principles:
+    - Strong backlight with zero fill on subject's front
+    - Subject becomes pure graphic shape — identity abstracted
+    - Maximum mystery — the audience sees form but not detail
+    - Gesture and posture become the entire performance
+    emotional_effects:
+    - mystery
+    - isolation
+    - dread
+    - grandeur
+    techniques:
+    - Place bright source (window, sunset, light panel) directly behind subject
+    - Expose for the bright background — subject falls to pure black
+    - Use for dramatic entrances, dream sequences, or death imagery
+    - Combine with smoke or haze for visible light beams around the silhouette
+    constraints:
+    - Zero facial information — not for dialogue or emotion beats
+    - Requires a significantly brighter background than foreground
+    - Can feel overly stylized without narrative motivation
+  applicability:
+    emotions:
+    - mystery
+    - isolation
+    - dread
+    - grandeur
+    genres:
+    - noir
+    - thriller
+    - science_fiction
+    - drama
+    keywords:
+    - silhouette
+    - backlight
+    - rim
+    - shadow
+  engine_guidance:
+    when_to_use: Scene needs mystery, graphic abstraction, or dramatic concealment
+      of identity
+    recommended_actions:
+    - Use for dramatic entrances and dream or memory sequences
+    - Expose for bright background to drop subject to black
+    avoid:
+    - Dialogue scenes where facial performance matters
+    - Scenes requiring emotional detail or identification
+  relationships:
+    related:
+    - light_low_key_noir
+    - light_direction_emotion
+    conflicts:
+    - light_high_key_bright
+  version: '1.0'

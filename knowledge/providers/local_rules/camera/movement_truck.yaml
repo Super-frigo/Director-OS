@@ -1,0 +1,64 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: movement_truck
+    name: Truck — Lateral Move
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: Camera moves laterally (left or right) while maintaining the same forward-facing
+      direction. Unlike a pan (which rotates in place), a truck physically translates
+      sideways. Creates parallax and spatial relationship between elements.
+    principles:
+    - Lateral translation reveals depth through parallax — near and far shift at different
+      rates
+    - Maintains consistent framing angle while changing position
+    - Creates sense of surveying, scanning, or accompanying alongside
+    - Speed of truck controls energy — slow for contemplation, fast for action
+    emotional_effects:
+    - discovery
+    - tension
+    - urgency
+    - serenity
+    techniques:
+    - Slow truck across a landscape for contemplative survey
+    - Fast truck alongside running character for dynamic parallel action
+    - Truck to reveal a hidden element entering frame from the side
+    - Combine with TRACKING for complex two-axis moves
+    constraints:
+    - Requires dolly track, slider, or stabilizer — not a handheld move
+    - Wide lenses enhance parallax; long lenses flatten the effect
+    - Needs clear lateral path for the dolly or rig
+  applicability:
+    emotions:
+    - discovery
+    - tension
+    - urgency
+    - serenity
+    genres:
+    - drama
+    - action
+    - western
+    - documentary
+    keywords:
+    - truck
+    - lateral
+    - sideways
+    - parallax
+  engine_guidance:
+    when_to_use: Scene needs lateral movement to survey, accompany alongside, or reveal
+      through parallax
+    recommended_actions:
+    - Use to follow characters moving sideways through space
+    - Combine with wide lens for strong parallax depth cues
+    avoid:
+    - Scenes where forward/backward movement is the primary action
+    - Tight spaces without room for lateral track
+  relationships:
+    related:
+    - movement_tracking
+    - movement_dolly_in
+    - movement_arc
+    conflicts:
+    - movement_static
+  version: '1.0'

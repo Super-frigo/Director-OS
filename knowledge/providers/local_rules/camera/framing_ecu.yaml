@@ -1,0 +1,63 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: framing_ecu
+    name: Extreme Close-Up (ECU)
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: Framing distance showing a single detail — eyes, mouth, fingers, or an
+      object — at extreme magnification. The character becomes abstracted; detail
+      becomes the subject. The most intense and intimate shot size.
+    principles:
+    - Single detail fills the frame — context is completely eliminated
+    - Maximum emotional intensity — the audience cannot look away
+    - Used sparingly — overuse exhausts and disorients the audience
+    - Abstraction from character to pure symbol or sensation
+    emotional_effects:
+    - intensity
+    - intimacy
+    - dread
+    - obsession
+    techniques:
+    - ECU on eyes for realizations, lies, or hidden emotions
+    - ECU on hands for tension, violence, or tenderness
+    - ECU on object detail for clue or revelation beats
+    - Pair with long lens for extremely shallow depth of field
+    constraints:
+    - Exhausting in series — always provide wider relief
+    - Can feel exploitative or gratuitous without motivation
+    - Performance detail becomes microscopic — actors must be precise
+  applicability:
+    emotions:
+    - intensity
+    - intimacy
+    - dread
+    - obsession
+    genres:
+    - thriller
+    - horror
+    - romance
+    - drama
+    keywords:
+    - extreme_close_up
+    - ecu
+    - detail
+    - micro
+  engine_guidance:
+    when_to_use: Scene needs maximum emotional intensity or revelation of a critical
+      detail
+    recommended_actions:
+    - Reserve for moments of peak intensity or critical information
+    - Pair with 85mm+ lens for razor-thin depth of field
+    avoid:
+    - Routine coverage — ECU is a punctuation mark, not a sentence
+    - Establishing or contextual beats
+  relationships:
+    related:
+    - framing_cu
+    - shot_size_reference
+    conflicts:
+    - framing_els
+    - framing_ls
+  version: '1.0'

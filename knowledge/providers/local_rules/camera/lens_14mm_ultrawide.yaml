@@ -1,0 +1,63 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: lens_14mm_ultrawide
+    name: 14mm — Ultra-Wide & Distortion
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: Extreme wide-angle focal length producing dramatic perspective distortion.
+      Edges stretch noticeably; close objects dominate while distant objects recede
+      rapidly. Creates immersive, almost fisheye-like spatial sensation.
+    principles:
+    - Extreme perspective exaggeration — near objects loom, far objects shrink
+    - Deep focus is near-universal — most of the frame is acceptably sharp
+    - Strong edge distortion stretches anything near frame borders
+    - Vertical lines converge dramatically when camera is tilted
+    emotional_effects:
+    - disorientation
+    - claustrophobia
+    - awe
+    - unease
+    techniques:
+    - Point camera straight ahead to minimize converging verticals in architecture
+    - Move camera physically close to subjects for immersive, dominant foreground
+    - Use for chase sequences where walls seem to press inward
+    - Pair with low angle to exaggerate scale of architecture or figures
+    constraints:
+    - Faces distort badly at close range — avoid for portraiture
+    - Edge stretching is obvious and distracting for product or graphic content
+    - Difficult to isolate subject — environment overwhelms
+  applicability:
+    emotions:
+    - disorientation
+    - claustrophobia
+    - awe
+    - unease
+    genres:
+    - horror
+    - science_fiction
+    - action
+    keywords:
+    - ultra_wide
+    - distortion
+    - immersion
+    - confined_space
+  engine_guidance:
+    when_to_use: Scene needs extreme spatial distortion, claustrophobic immersion,
+      or overwhelming architectural scale
+    recommended_actions:
+    - Use for confined-space sequences where environment presses on characters
+    - Combine with MOVEMENT_TRACKING for dynamic perspective shifts
+    avoid:
+    - Close-up portraiture — facial distortion is unflattering
+    - Scenes requiring visual honesty or documentary neutrality
+  relationships:
+    related:
+    - lens_24mm_wide
+    - lens_18mm_wide
+    conflicts:
+    - lens_85mm_compression
+    - lens_135mm_tele
+    - lens_400mm_extreme_tele
+  version: '1.0'

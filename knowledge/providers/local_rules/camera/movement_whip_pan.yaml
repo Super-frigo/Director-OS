@@ -1,0 +1,62 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: movement_whip_pan
+    name: Whip Pan — Sudden Reorientation
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: Extremely fast horizontal camera rotation on a fixed point. The frame
+      blurs into motion streaks, then snaps to a new composition. Creates sudden energy,
+      transition, or concealment of a cut.
+    principles:
+    - Speed creates motion blur that masks the transition between two compositions
+    - Used to hide cuts — two whip pans can be joined into one apparent move
+    - Direction of whip signals spatial relationship between two subjects
+    - Energy of the motion transfers directly to audience adrenaline
+    emotional_effects:
+    - urgency
+    - chaos
+    - panic
+    - surprise
+    techniques:
+    - Whip between two speakers in fast dialogue for comic or chaotic effect
+    - Whip pan to hide a cut — end on blur, begin on blur, match in edit
+    - Whip to a sudden event (explosion, entrance) for shock reveal
+    - Multiple rapid whips to simulate panic or disorientation
+    constraints:
+    - Causes motion sickness if overused or too fast
+    - Blurred transition hides information — not suitable for clarity
+    - Requires precise timing and operator skill
+  applicability:
+    emotions:
+    - urgency
+    - chaos
+    - panic
+    - surprise
+    genres:
+    - action
+    - comedy
+    - thriller
+    - war
+    keywords:
+    - whip_pan
+    - fast_pan
+    - transition
+    - energy
+  engine_guidance:
+    when_to_use: Scene needs sudden energy, chaotic transition, or concealed cut between
+      two compositions
+    recommended_actions:
+    - Use to connect fast dialogue exchanges with kinetic energy
+    - Use to hide cuts in long-take sequences
+    avoid:
+    - Formal or contemplative scenes
+    - Scenes where audience needs to read environmental detail
+  relationships:
+    related:
+    - movement_tilt
+    - movement_tracking
+    conflicts:
+    - movement_static
+  version: '1.0'

@@ -1,0 +1,62 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: lens_18mm_wide
+    name: 18mm — Wide Establishing
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: Strong wide-angle lens offering expansive field of view with moderate,
+      controllable distortion. The sweet spot between 14mm's extremity and 24mm's
+      environmental framing. Popular for architecture, interiors, and epic landscapes.
+    principles:
+    - Wide field of view captures complete environments without extreme edge stretch
+    - Perspective exaggeration is noticeable but manageable
+    - Deep focus across most of the frame at moderate apertures
+    - Verticals remain straight when camera is level
+    emotional_effects:
+    - grandeur
+    - exposure
+    - isolation
+    - serenity
+    techniques:
+    - Use for establishing shots in tight interiors where 24mm is too narrow
+    - Level the camera for distortion-free architectural framing
+    - Place subject off-center for dynamic negative-space compositions
+    - Combine with EYE_LEVEL for honest environmental portraiture
+    constraints:
+    - Some edge distortion remains — avoid placing important details at frame borders
+    - Subjects appear small unless positioned close to camera
+    - Group shots need careful arrangement to manage perspective
+  applicability:
+    emotions:
+    - grandeur
+    - serenity
+    - isolation
+    - awe
+    genres:
+    - science_fiction
+    - architecture
+    - documentary
+    - western
+    keywords:
+    - wide_angle
+    - establishing
+    - architecture
+    - interior
+  engine_guidance:
+    when_to_use: Scene needs expansive environmental framing with controllable distortion,
+      especially in tight or architectural spaces
+    recommended_actions:
+    - Primary choice for interior establishing shots where 24mm is too tight
+    - Level camera for straight architectural verticals
+    avoid:
+    - Close portraiture
+    - Handheld documentation without stabilization — shakiness is amplified
+  relationships:
+    related:
+    - lens_14mm_ultrawide
+    - lens_24mm_wide
+    conflicts:
+    - lens_85mm_compression
+  version: '1.0'

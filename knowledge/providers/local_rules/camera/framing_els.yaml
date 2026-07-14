@@ -1,0 +1,63 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: framing_els
+    name: Extreme Long Shot (ELS)
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: Framing where the character is a small figure — sometimes barely visible
+      — within a vast environment. The character is dwarfed by landscape or architecture.
+      Used for epic scale, total isolation, or philosophical smallness.
+    principles:
+    - Character is reduced to a dot within overwhelming space
+    - Environment is the subject; character is a detail
+    - Maximum emotional distance — the audience is a distant god
+    - Used for epic scale, isolation, or existential statement
+    emotional_effects:
+    - insignificance
+    - awe
+    - isolation
+    - grandeur
+    techniques:
+    - ELS for epic landscape establishment
+    - ELS to emphasize total isolation and smallness
+    - ELS for scene transitions showing vast geography
+    - Pair with ultra-wide lens for maximum environmental dominance
+    constraints:
+    - Character is unidentifiable — not for dialogue or emotion
+    - Requires spectacular or meaningful environment to justify
+    - Can feel pretentious without narrative motivation
+  applicability:
+    emotions:
+    - insignificance
+    - awe
+    - isolation
+    - grandeur
+    genres:
+    - western
+    - science_fiction
+    - epic
+    - war
+    keywords:
+    - extreme_long_shot
+    - els
+    - epic
+    - vast
+  engine_guidance:
+    when_to_use: Scene needs epic scale, total isolation, or philosophical statement
+      about human smallness
+    recommended_actions:
+    - Use for epic landscape establishment and scene transitions
+    - Emphasize isolation by making character a small figure in vast space
+    avoid:
+    - Any scene requiring character identification or emotion
+    - Interior or confined locations
+  relationships:
+    related:
+    - framing_ls
+    - shot_size_reference
+    conflicts:
+    - framing_ecu
+    - framing_cu
+  version: '1.0'

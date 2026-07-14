@@ -1,0 +1,63 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: color_neon
+    name: Neon — Electric Urban Night
+    author: Director OS
+  category: visual_style
+  knowledge:
+    concept: A palette of saturated, electric hues — magenta, cyan, electric blue,
+      hot pink — associated with neon signs, nighttime cityscapes, and artificial
+      light. The color of urban nightlife, cyberpunk, and lonely splendor.
+    principles:
+    - High-saturation artificial colors create immediate urban-night identity
+    - Neon acts as both light source and color palette simultaneously
+    - Strongly associated with desire, danger, and technological alienation
+    - Mixing complementary neons (magenta + cyan) creates electric tension
+    emotional_effects:
+    - desire
+    - alienation
+    - danger
+    - energy
+    techniques:
+    - Use neon practicals (signs, bar lights) as primary color sources
+    - Grade shadows toward saturated blue/magenta for neon bleed effect
+    - Wet streets to reflect and multiply neon colors
+    - Combine with low-key lighting for maximum neon pop against darkness
+    constraints:
+    - Can feel derivative or style-over-substance without narrative grounding
+    - Saturated color on skin can look sickly or unrealistic
+    - Requires practical or post-production neon sources — not achievable in daylight
+  applicability:
+    emotions:
+    - desire
+    - alienation
+    - danger
+    - energy
+    genres:
+    - cyberpunk
+    - noir
+    - thriller
+    - music_video
+    keywords:
+    - neon
+    - electric
+    - urban_night
+    - saturated
+  engine_guidance:
+    when_to_use: Scene needs urban nightlife atmosphere, cyberpunk aesthetic, or electric
+      artificial energy
+    recommended_actions:
+    - Use neon practicals as primary color sources for night exteriors
+    - Wet streets to reflect neon and deepen the palette
+    avoid:
+    - Daytime scenes — neon reads as muted in bright light
+    - Naturalistic or period settings
+  relationships:
+    related:
+    - color_blue_cold
+    - color_teal_orange
+    conflicts:
+    - color_pastel
+    - color_earth_tone
+  version: '1.0'

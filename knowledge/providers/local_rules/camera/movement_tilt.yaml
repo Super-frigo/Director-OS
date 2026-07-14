@@ -1,0 +1,63 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: movement_tilt
+    name: Tilt — Vertical Rotation
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: Camera rotates vertically on a fixed point (pivoting up or down). Unlike
+      a pedestal (which translates), a tilt changes the camera's viewing angle without
+      moving position. Used to reveal vertical information or follow vertical action.
+    principles:
+    - Rotation on fixed point — camera position stays, angle changes
+    - Reveals vertical information — tall objects, heights, depths
+    - Tilt up for aspiration, grandeur, or revelation
+    - Tilt down for grounding, diminishment, or descension
+    emotional_effects:
+    - awe
+    - dread
+    - discovery
+    - vulnerability
+    techniques:
+    - Tilt up a tall building or character to emphasize scale and power
+    - Tilt down to a dead body or object on the ground for revelation
+    - Tilt to follow a character falling or rising
+    - Fast tilt for energy or disorientation; slow tilt for contemplation
+    constraints:
+    - Vertical lines converge when tilted — extreme tilts distort architecture
+    - Limited to vertical reveal — not for horizontal scanning
+    - Requires tripod with fluid head for smooth execution
+    - Subject framing changes continuously during tilt — plan end frame carefully
+  applicability:
+    emotions:
+    - awe
+    - dread
+    - discovery
+    - vulnerability
+    genres:
+    - drama
+    - horror
+    - science_fiction
+    - western
+    keywords:
+    - tilt
+    - vertical_rotation
+    - reveal_height
+    - pivot
+  engine_guidance:
+    when_to_use: Scene needs to reveal vertical information or follow vertical action
+      from a fixed camera position
+    recommended_actions:
+    - Tilt up to establish scale of architecture or powerful characters
+    - Tilt down to reveal ground-level detail or fallen subjects
+    avoid:
+    - Horizontal reveals — use pan instead
+    - Extended tilts — converging verticals become distracting
+  relationships:
+    related:
+    - movement_whip_pan
+    - movement_pedestal_up
+    conflicts:
+    - movement_static
+  version: '1.0'

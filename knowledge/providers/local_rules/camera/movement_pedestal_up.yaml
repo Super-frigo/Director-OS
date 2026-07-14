@@ -1,0 +1,64 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: movement_pedestal_up
+    name: Pedestal Up — Vertical Rise
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: Camera physically rises straight up while maintaining the same tilt angle.
+      Unlike a tilt (which rotates the camera on a fixed point), a pedestal translates
+      the entire camera upward without changing its orientation. Used to reveal vertical
+      scale or follow rising action.
+    principles:
+    - Camera elevation changes without rotation — vertical lines stay straight
+    - Reveals subjects or details at different heights smoothly
+    - Maintains consistent subject framing as camera and subject move vertically together
+    - Creates sense of ascent, growth, or rising importance
+    emotional_effects:
+    - grandeur
+    - awe
+    - triumph
+    - aspiration
+    techniques:
+    - Rise to reveal full height of architecture or monument
+    - Follow character standing up from seated position smoothly
+    - Ascend alongside a character climbing stairs or a ladder
+    - Reveal detail from floor to ceiling in a single smooth move
+    constraints:
+    - Requires a pedestal, jib, or Technocrane — not achievable handheld
+    - Limited vertical range on most equipment
+    - Less dynamic than a crane — subtler movement
+  applicability:
+    emotions:
+    - grandeur
+    - awe
+    - triumph
+    - aspiration
+    genres:
+    - science_fiction
+    - fantasy
+    - epic
+    - drama
+    keywords:
+    - pedestal
+    - vertical_rise
+    - reveal_height
+    - ascent
+  engine_guidance:
+    when_to_use: Scene needs smooth vertical reveal of height, or to follow action
+      moving upward
+    recommended_actions:
+    - Use to reveal full architectural scale in a single move
+    - Follow a standing character without tilt distortion
+    avoid:
+    - Horizontal action — use truck or tracking instead
+    - Scenes requiring dramatic perspective shift — use crane
+  relationships:
+    related:
+    - movement_pedestal_down
+    - movement_crane
+    - movement_tilt
+    conflicts:
+    - movement_pedestal_down
+  version: '1.0'

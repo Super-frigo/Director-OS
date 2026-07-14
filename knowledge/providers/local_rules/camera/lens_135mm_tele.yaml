@@ -1,0 +1,67 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: lens_135mm_tele
+    name: 135mm — Long Telephoto Portrait
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: Long telephoto focal length producing extreme compression and razor-thin
+      depth of field. Backgrounds dissolve into soft bokeh; subjects appear stacked
+      against distant elements. Creates powerful voyeuristic and obsessive framing.
+    principles:
+    - Extreme compression collapses spatial depth — near and far elements appear adjacent
+    - Depth of field becomes critically thin, isolating the subject as a floating
+      plane
+    - Working distance is significant — the camera observes from afar
+    - Perspective flattening abstracts the subject from environment
+    emotional_effects:
+    - obsession
+    - voyeurism
+    - isolation
+    - intensity
+    techniques:
+    - Long-lens surveillance framing for voyeuristic observation
+    - Compress subject against distant landmark for symbolic juxtaposition
+    - Rack focus across multiple planes for layered revelation
+    - Use shallow DOF to reduce cluttered backgrounds to pure color
+    constraints:
+    - Very long working distance required — impractical in tight locations
+    - Critical focus is difficult — even small subject movement can miss focus
+    - Atmospheric haze and heat shimmer affect image quality at distance
+  applicability:
+    emotions:
+    - obsession
+    - desire
+    - voyeurism
+    - isolation
+    genres:
+    - thriller
+    - psychological_drama
+    - romance
+    - mystery
+    keywords:
+    - telephoto
+    - compression
+    - surveillance
+    - voyeurism
+  engine_guidance:
+    when_to_use: Scene needs voyeuristic distance, obsessive focus, or symbolic compression
+      of subject against distant elements
+    recommended_actions:
+    - Use for surveillance and voyeuristic observation beats
+    - Compress character against distant symbol for thematic effect
+    avoid:
+    - Action sequences requiring spatial awareness
+    - Tight locations where working distance is impossible
+  relationships:
+    related:
+    - lens_100mm_medium_tele
+    - lens_200mm_long_tele
+    - lens_400mm_extreme_tele
+    - lens_85mm_compression
+    conflicts:
+    - lens_24mm_wide
+    - lens_35mm_standard
+    - lens_14mm_ultrawide
+  version: '1.0'

@@ -1,0 +1,63 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: movement_dolly_out
+    name: Dolly Out / Pull Back
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: Camera physically moves away from the subject on a track or wheeled platform.
+      Reveals context, creates emotional distance, or signals release. The spatial
+      opposite of dolly in — perspective changes, parallax shifts outward.
+    principles:
+    - Physically retreating changes spatial relationships — subject shrinks, environment
+      grows
+    - Creates emotional distancing — audience is pushed away from subject
+    - Often used to reveal context or scale that was hidden in tighter framing
+    - Slow pull = contemplation; fast pull = shock or revelation of scale
+    emotional_effects:
+    - isolation
+    - release
+    - realization
+    - abandonment
+    techniques:
+    - Slow pull to reveal subject is alone in vast space
+    - Fast pull to reveal scope of environment or crowd
+    - Pull back from dead body as scene ends — emotional release
+    - Combine with LS framing for maximum isolation effect
+    constraints:
+    - Requires track or dolly equipment and clear path behind camera
+    - Loses subject detail rapidly — not for emotional climaxes
+    - Can feel anticlimactic if used at the wrong narrative moment
+  applicability:
+    emotions:
+    - isolation
+    - release
+    - realization
+    - abandonment
+    genres:
+    - drama
+    - horror
+    - thriller
+    - science_fiction
+    keywords:
+    - pull_back
+    - reveal
+    - distancing
+    - withdrawal
+  engine_guidance:
+    when_to_use: Scene needs to reveal context, create emotional distance, or signal
+      release at end of a beat
+    recommended_actions:
+    - Use at end of scene to release tension and reveal context
+    - Combine with LS for isolation effect
+    avoid:
+    - Emotional climaxes that need intimacy
+    - Action sequences — tracking serves better
+  relationships:
+    related:
+    - movement_dolly_in
+    - movement_tracking
+    conflicts:
+    - movement_dolly_in
+  version: '1.0'

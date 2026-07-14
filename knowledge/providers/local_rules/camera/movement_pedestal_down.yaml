@@ -1,0 +1,62 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: movement_pedestal_down
+    name: Pedestal Down — Vertical Descent
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: Camera physically descends straight down while maintaining tilt angle.
+      The spatial opposite of pedestal up. Used to lower the audience into a scene,
+      follow descending action, or emphasize lowness, grounding, or burial.
+    principles:
+    - Camera descends without rotation — vertical lines remain straight
+    - Creates sense of descent, grounding, or sinking
+    - Follows downward action smoothly without perspective distortion
+    - Lowering the camera often lowers the emotional tone
+    emotional_effects:
+    - dread
+    - melancholy
+    - vulnerability
+    - grounding
+    techniques:
+    - Descend to reveal detail at ground level — a body, an object, a clue
+    - Follow character sitting or falling down smoothly
+    - Lower into a trench, grave, or low space for claustrophobic effect
+    - End scene by descending to floor level as character collapses
+    constraints:
+    - Requires pedestal, jib, or Technocrane equipment
+    - Limited vertical range on standard equipment
+    - Can feel anticlimactic without narrative motivation
+  applicability:
+    emotions:
+    - dread
+    - melancholy
+    - vulnerability
+    - grounding
+    genres:
+    - horror
+    - drama
+    - war
+    - mystery
+    keywords:
+    - pedestal
+    - vertical_descent
+    - lower
+    - reveal_ground
+  engine_guidance:
+    when_to_use: Scene needs smooth vertical descent, to follow downward action, or
+      reveal ground-level detail
+    recommended_actions:
+    - Use to reveal ground-level detail — objects, bodies, clues
+    - Follow a falling or collapsing character smoothly
+    avoid:
+    - Triumphant or aspirational moments — use pedestal up
+    - Horizontal action sequences
+  relationships:
+    related:
+    - movement_pedestal_up
+    - movement_crane
+    conflicts:
+    - movement_pedestal_up
+  version: '1.0'

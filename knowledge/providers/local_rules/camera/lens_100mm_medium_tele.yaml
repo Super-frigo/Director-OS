@@ -1,0 +1,64 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: lens_100mm_medium_tele
+    name: 100mm — Medium Telephoto
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: Medium telephoto focal length with stronger compression than 85mm. The
+      classic close-up and portrait lens, offering flattering facial rendering with
+      significant background separation. Stepping stone between portrait compression
+      and long telephoto isolation.
+    principles:
+    - Stronger background compression than 85mm pulls distant elements visually closer
+    - Shallow depth of field at wide apertures isolates subject decisively
+    - Flattering facial proportions at CU distance with no distortion
+    - Narrower field of view requires greater camera-to-subject distance
+    emotional_effects:
+    - intimacy
+    - obsession
+    - tension
+    - vulnerability
+    techniques:
+    - Tight CU for emotional climaxes and revelations
+    - Rack focus between subject and distant background for realization beats
+    - Compress busy backgrounds into a soft bokeh field behind subject
+    - Match with SHALLOW_FOCUS for maximum subject isolation
+    constraints:
+    - Requires significant working distance — not suitable for tight spaces
+    - Camera shake is more visible than on shorter lenses — needs support
+    - Background compression can flatten spatial depth confusingly
+  applicability:
+    emotions:
+    - intimacy
+    - tension
+    - obsession
+    - desire
+    genres:
+    - romance
+    - thriller
+    - psychological_drama
+    - drama
+    keywords:
+    - close_up
+    - portrait
+    - compression
+    - isolation
+  engine_guidance:
+    when_to_use: Scene needs stronger emotional compression than 85mm — a step tighter
+      for climactic or obsessive moments
+    recommended_actions:
+    - Use for tight CU in emotional climaxes and revelation beats
+    - Pair with SHALLOW_FOCUS for decisive subject isolation
+    avoid:
+    - Handheld work without stabilization
+    - Wide establishing shots
+  relationships:
+    related:
+    - lens_85mm_compression
+    - lens_135mm_tele
+    conflicts:
+    - lens_35mm_standard
+    - lens_24mm_wide
+  version: '1.0'

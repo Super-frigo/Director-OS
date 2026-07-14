@@ -1,0 +1,93 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: framing_ms
+    name: Medium Shot (MS)
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: Framing from the waist up. The narrative workhorse — shows character
+      expression and body language simultaneously. Balances emotional information
+      with enough context for action and dialogue.
+    principles:
+    - Waist-up framing shows face and gesture together
+    - The most naturalistic conversational distance
+    - Balances emotional detail with spatial and physical context
+    - Default framing for narrative exposition and dialogue
+    emotional_effects:
+    - grounded
+    - neutral
+    - presence
+    - honesty
+    techniques:
+    - MS for standard dialogue coverage
+    - MS for action beats requiring both face and body
+    - Two-shot MS for dialogue exchanges between characters
+    - Pair with 35mm or 50mm lens for natural perspective
+    - Use medium shots to establish character interactions in a scene, positioning
+      the camera at a distance that captures both the characters' upper bodies and
+      some background context.
+    - Adjust camera height to align with the eye level of the subjects, enhancing
+      the realism and relatability of the shot.
+    - Incorporate slight camera movements, such as pans or tilts, to subtly shift
+      focus between characters or to emphasize a change in emotion or action within
+      the scene.
+    constraints:
+    - Less emotionally intense than CU — not for peak moments
+    - Background detail can distract from subject
+    - Can feel neutral or flat without strong blocking
+    - Medium shots require sufficient space to capture both the characters and some
+      background context, which may be limited on smaller sets or locations.
+    - Achieving the right balance between foreground and background elements can be
+      challenging, necessitating careful set design, lighting, and composition to
+      ensure the subject remains the focus of the shot.
+  applicability:
+    emotions:
+    - grounded
+    - neutral
+    - presence
+    - honesty
+    genres:
+    - drama
+    - comedy
+    - all
+    keywords:
+    - medium_shot
+    - ms
+    - waist_up
+    - narrative
+  engine_guidance:
+    when_to_use: Standard narrative coverage, dialogue scenes, and beats requiring
+      both expression and gesture
+    recommended_actions:
+    - Default framing for dialogue and exposition
+    - Use 35-50mm lens for natural perspective
+    avoid:
+    - Peak emotional moments requiring pure facial intensity
+    - Establishing shots requiring full environment
+  relationships:
+    related:
+    - framing_cu
+    - framing_ls
+    - shot_size_reference
+    conflicts: []
+  version: '1.0'
+  examples:
+    successful:
+    - 'The Godfather (1972) — Director: Francis Ford Coppola: In the scene where Michael
+      Corleone (Al Pacino) confronts Virgil ''The Turk'' Sollozzo and Captain McCluskey,
+      the medium shot is used to capture both the characters'' expressions and the
+      tension in their body language, effectively conveying the gravity of the situation.'
+    - 'Pulp Fiction (1994) — Director: Quentin Tarantino: The diner scene between
+      Jules Winnfield (Samuel L. Jackson) and Vincent Vega (John Travolta) uses medium
+      shots to balance their expressions and body language, enhancing the dialogue
+      and character dynamics.'
+    - 'Good Will Hunting (1997) — Director: Gus Van Sant: The therapy sessions between
+      Will Hunting (Matt Damon) and Sean Maguire (Robin Williams) are framed in medium
+      shots, allowing the audience to see both the characters'' faces and body language,
+      which is crucial for the emotional depth of the scenes.'
+    failure:
+    - 'The Room (2003) — Director: Tommy Wiseau: The film is notorious for its misuse
+      of medium shots, often framing characters awkwardly against busy backgrounds
+      that distract from the performances, and failing to effectively balance emotional
+      detail with spatial context.'

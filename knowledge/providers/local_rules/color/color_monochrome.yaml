@@ -1,0 +1,62 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: color_monochrome
+    name: Monochrome — Single Color Dominance
+    author: Director OS
+  category: visual_style
+  knowledge:
+    concept: A palette dominated by a single hue or tone, with minimal variation.
+      Creates strong visual identity, dreamlike atmosphere, or thematic emphasis.
+      The monochrome strips away distraction to focus on form and emotion.
+    principles:
+    - Single dominant hue creates immediate visual identity
+    - Reduced color information focuses attention on form, light, and movement
+    - Strongly associated with memory, dream, or stylized states
+    - Color choice determines emotional reading — blue/cold, sepia/nostalgia, etc.
+    emotional_effects:
+    - dreamlike
+    - nostalgic
+    - stylized
+    - melancholy
+    techniques:
+    - Full monochrome (single color) for dream, memory, or stylized sequences
+    - Duotone (two related hues) for subtle variation within discipline
+    - Sepia monochrome for period or nostalgic flashback
+    - Desaturated near-monochrome for naturalistic but unified palette
+    constraints:
+    - Can feel artificial or gimmicky without narrative motivation
+    - Loses informational depth — color cues are lost
+    - Not suitable for scenes requiring realistic color identification
+  applicability:
+    emotions:
+    - dreamlike
+    - nostalgic
+    - stylized
+    - melancholy
+    genres:
+    - art_film
+    - noir
+    - science_fiction
+    - drama
+    keywords:
+    - monochrome
+    - single_color
+    - unified
+    - stylized
+  engine_guidance:
+    when_to_use: Scene needs strong visual identity, dreamlike atmosphere, or thematic
+      color emphasis
+    recommended_actions:
+    - Use for dream, memory, or stylized sequences
+    - Choose dominant hue based on emotional target
+    avoid:
+    - Realistic scenes requiring full color information
+    - Scenes where multiple characters need color-coded distinction
+  relationships:
+    related:
+    - color_desaturated_gray
+    - color_blue_cold
+    conflicts:
+    - color_teal_orange
+  version: '1.0'

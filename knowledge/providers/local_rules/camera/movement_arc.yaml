@@ -1,0 +1,63 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: movement_arc
+    name: Arc — Curved Orbit
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: Camera moves in a curved path around a subject, maintaining relatively
+      consistent distance. Combines truck and dolly motions into an orbital move.
+      Creates dynamic three-dimensional sense of a subject and reveals multiple sides
+      smoothly.
+    principles:
+    - Curved path around subject reveals three-dimensional form continuously
+    - Background shifts behind a stationary subject — dynamic without subject motion
+    - Creates sense of orbit, circling, or ritual around the subject
+    - Maintains subject size in frame while changing perspective radically
+    emotional_effects:
+    - obsession
+    - tension
+    - intimacy
+    - grandeur
+    techniques:
+    - Slow arc around stationary character for contemplative portrait
+    - Fast arc for chaotic or disorienting energy around action
+    - Full 360-degree arc for ritual, dream, or transcendence
+    - Partial arc to reveal a character's reaction from a new angle
+    constraints:
+    - Requires Steadicam, gimbal, or curved dolly track — complex setup
+    - Difficult to light — lights become visible as camera orbits
+    - Can cause disorientation if too fast or too frequent
+  applicability:
+    emotions:
+    - obsession
+    - tension
+    - intimacy
+    - grandeur
+    genres:
+    - drama
+    - romance
+    - action
+    - musical
+    keywords:
+    - arc
+    - orbit
+    - circling
+    - curved_move
+  engine_guidance:
+    when_to_use: Scene needs dynamic perspective change around a stationary subject,
+      or ritual/circling energy
+    recommended_actions:
+    - Use for contemplative character portraits with spatial depth
+    - Full or partial arc around a couple for romantic intensity
+    avoid:
+    - Action requiring directional clarity — arc can disorient
+    - Scenes with complex lighting that cannot rotate with camera
+  relationships:
+    related:
+    - movement_tracking
+    - movement_truck
+    conflicts:
+    - movement_static
+  version: '1.0'

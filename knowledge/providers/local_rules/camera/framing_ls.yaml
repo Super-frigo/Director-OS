@@ -1,0 +1,64 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: framing_ls
+    name: Long Shot (LS)
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: Framing where the character occupies roughly one-quarter to one-third
+      of frame height. Environment begins to dominate; the character is clearly situated
+      within their surroundings. Used for establishing, isolation, and epic scale.
+    principles:
+    - Character is small within a larger environmental context
+    - Environment and spatial relationship become primary content
+    - Creates emotional distance — the audience observes rather than feels
+    - Essential for establishing geography and scale
+    emotional_effects:
+    - isolation
+    - awe
+    - contemplative
+    - exposure
+    techniques:
+    - LS for scene establishment and spatial orientation
+    - LS to emphasize character isolation within environment
+    - LS for action requiring full body and surroundings
+    - Pair with wide lens for expansive environmental context
+    constraints:
+    - Facial expression is unreadable — not for emotional detail
+    - Requires carefully composed environment — background matters
+    - Can feel cold or distant without tighter coverage
+  applicability:
+    emotions:
+    - isolation
+    - awe
+    - contemplative
+    - exposure
+    genres:
+    - western
+    - science_fiction
+    - epic
+    - drama
+    keywords:
+    - long_shot
+    - ls
+    - full_body
+    - environment
+  engine_guidance:
+    when_to_use: Scene needs spatial establishment, environmental context, or character
+      isolation within a larger space
+    recommended_actions:
+    - Use as first shot of a scene to establish geography
+    - Pair with wide lens for expansive isolation
+    avoid:
+    - Emotional climaxes requiring facial detail
+    - Dialogue beats where performance nuance matters
+  relationships:
+    related:
+    - framing_ms
+    - framing_els
+    - shot_size_reference
+    conflicts:
+    - framing_ecu
+    - framing_cu
+  version: '1.0'

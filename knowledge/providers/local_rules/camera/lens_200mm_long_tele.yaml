@@ -1,0 +1,64 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: lens_200mm_long_tele
+    name: 200mm — Long Telephoto Isolation
+    author: Director OS
+  category: cinematography
+  knowledge:
+    concept: Powerful long telephoto focal length collapsing depth to graphic flatness.
+      The lens of choice for surveillance, sports, and extreme subject isolation.
+      Backgrounds become pure color washes; characters float in compressed space.
+    principles:
+    - Extreme perspective compression flattens three-dimensional space to two-dimensional
+      graphic
+    - Depth of field is paper-thin — focus becomes a precise creative choice
+    - Camera observes from substantial distance — inherent voyeurism
+    - Atmospheric conditions visibly affect the image at long range
+    emotional_effects:
+    - voyeurism
+    - isolation
+    - obsession
+    - dread
+    techniques:
+    - Photograph subject against distant background for symbolic compression
+    - Use thin DOF to reduce environment to abstract color field
+    - Track focus precisely on moving subject for dynamic isolation
+    - Exploit atmospheric haze for layered depth in compressed space
+    constraints:
+    - Substantial working distance required — specialist locations only
+    - Camera support is mandatory — even breathing shifts framing
+    - Focus pulling on moving subjects is extremely demanding
+  applicability:
+    emotions:
+    - voyeurism
+    - dread
+    - isolation
+    - obsession
+    genres:
+    - thriller
+    - sports
+    - war
+    - mystery
+    keywords:
+    - long_telephoto
+    - surveillance
+    - isolation
+    - compression
+  engine_guidance:
+    when_to_use: Scene needs extreme surveillance distance, symbolic compression,
+      or total background abstraction
+    recommended_actions:
+    - Use for surveillance, sniper, or observation beats
+    - Compress character against distant monument for symbolic power
+    avoid:
+    - Dialogue scenes — distance kills intimacy of performance
+    - Confined interior locations
+  relationships:
+    related:
+    - lens_135mm_tele
+    - lens_400mm_extreme_tele
+    conflicts:
+    - lens_24mm_wide
+    - lens_35mm_standard
+  version: '1.0'

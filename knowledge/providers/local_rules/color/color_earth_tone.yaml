@@ -1,0 +1,63 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: color_earth_tone
+    name: Earth Tone — Natural & Grounded
+    author: Director OS
+  category: visual_style
+  knowledge:
+    concept: A palette of natural, desaturated warm hues — browns, ochres, olives,
+      rusts, terracottas. The color of earth, wood, leather, and landscape. Creates
+      grounded, authentic, timeless atmosphere.
+    principles:
+    - Natural warm hues create immediate sense of authenticity and grounding
+    - Low-to-medium saturation feels organic and unmanufactured
+    - Strongly associated with period, rural, western, and naturalistic settings
+    - Earth tones harmonize naturally — low risk of clashing
+    emotional_effects:
+    - grounded
+    - nostalgia
+    - warmth
+    - authenticity
+    techniques:
+    - Earth-tone production design — wood, leather, stone, natural fabrics
+    - Warm, slightly desaturated color grade for naturalistic unity
+    - Use golden hour or warm tungsten light to enhance earth tones
+    - Combine with texture (wood grain, fabric weave) for tactile depth
+    constraints:
+    - Can feel muted or dull without a contrasting accent color
+    - Limited emotional range — not suitable for high-intensity genres
+    - Risk of monotony without variation in value and texture
+  applicability:
+    emotions:
+    - grounded
+    - nostalgia
+    - warmth
+    - authenticity
+    genres:
+    - western
+    - period
+    - drama
+    - documentary
+    keywords:
+    - earth_tone
+    - natural
+    - grounded
+    - organic
+  engine_guidance:
+    when_to_use: Scene needs grounded authenticity, period atmosphere, or naturalistic
+      warmth
+    recommended_actions:
+    - Use earth-tone production design for period or rural settings
+    - Enhance with warm natural light (golden hour, tungsten)
+    avoid:
+    - Futuristic or technological environments
+    - Scenes requiring high emotional intensity or artificial style
+  relationships:
+    related:
+    - color_yellow_warm
+    - color_pastel
+    conflicts:
+    - color_neon
+    - color_blue_cold
+  version: '1.0'

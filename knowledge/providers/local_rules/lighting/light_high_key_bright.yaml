@@ -1,0 +1,63 @@
+library:
+  schema_version: '1.0'
+  metadata:
+    id: light_high_key_bright
+    name: High-Key Bright Lighting
+    author: Director OS
+  category: lighting
+  knowledge:
+    concept: Low-contrast, brightly lit style with minimal shadows. Key-to-fill ratio
+      near 1:1 or 2:1. The light of comedy, sitcoms, commercials, and innocence. Everything
+      is visible; nothing is hidden.
+    principles:
+    - Key-to-fill ratio of 2:1 or lower — shadows are minimal
+    - Bright, even illumination across the entire frame
+    - Nothing is concealed — emotional honesty and openness
+    - Flattens depth — focus is on content, not atmosphere
+    emotional_effects:
+    - innocence
+    - joy
+    - safety
+    - comedy
+    techniques:
+    - Large soft sources from multiple directions to fill all shadows
+    - Overhead lighting grids for uniform sitcom-style illumination
+    - Bounce fill to eliminate shadows under eyes and chins
+    - Slight overexposure for bright, clean commercial aesthetic
+    constraints:
+    - Flattens image — lacks depth and dramatic texture
+    - Cannot hide imperfections or create mood
+    - Not suitable for drama, thriller, or emotional complexity
+  applicability:
+    emotions:
+    - innocence
+    - joy
+    - safety
+    - comedy
+    genres:
+    - comedy
+    - commercial
+    - family
+    - sitcom
+    keywords:
+    - high_key
+    - bright
+    - low_contrast
+    - flat
+  engine_guidance:
+    when_to_use: Scene requires innocence, comedy, safety, or commercial brightness
+      with nothing hidden
+    recommended_actions:
+    - Use for comedy, sitcom, and commercial content
+    - Fill all shadows for honest, open emotional tone
+    avoid:
+    - Drama, thriller, or any scene requiring mystery
+    - Scenes where atmosphere and texture matter
+  relationships:
+    related:
+    - light_low_key_noir
+    - light_ratio
+    conflicts:
+    - light_low_key_noir
+    - light_silhouette
+  version: '1.0'
