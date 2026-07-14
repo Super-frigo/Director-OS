@@ -297,7 +297,9 @@ class Project:
     output_profile: OutputProfile = field(default_factory=OutputProfile)
     history: list[HistoryEntry] = field(default_factory=list)
     story_beats: list[StoryBeat] = field(default_factory=list)
-    production_intent: ProductionDesign = field(default_factory=ProductionDesign)
+    # NOTE: loaded via _production() (ProductionDesign) for backward compat;
+    # unused by compilers — Director.plan() builds ProductionIntent independently.
+    production_intent: dict = field(default_factory=dict)
 
     def validate(self) -> list[str]:
         issues: list[str] = []
